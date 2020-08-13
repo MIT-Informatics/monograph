@@ -53,11 +53,7 @@ KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid(rows=vars(period), cols = vars(backlist_oa))
 
 ## Present as Standard plot
-# plot(charges.plot)
-
-# present as interactive plot
-ggplotly(charges.plot)
-
+plot(charges.plot)
 ```
 ### Interactive charges exploration
 ```{r}
