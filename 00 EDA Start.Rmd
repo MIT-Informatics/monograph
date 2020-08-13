@@ -33,6 +33,7 @@ require(gt) # well formatted tables
 require(plotly)
 require(leaflet)
 require(crosstalk)
+require(htmlwidgets)
 # server-side interactive graphics
 require(shiny)
 require(shinyjs)
