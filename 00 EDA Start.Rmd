@@ -3,10 +3,10 @@ title: "Exploratory Analysis"
 output: html_notebook
 ---
 
-Required libraries
-```{r message=FALSE}
+```{r message=FALSE, include=FALSE}
+#Required libraries
 
-# Tidyverse for data scince and exploration
+# Tidyverse for data science and exploration
 require(dplyr)
 require(tidyr)
 require(readr)
@@ -42,3 +42,26 @@ require(ExPanDaR)
 
 
 ```
+## Exploring KU Book Processing Charges
+```{r message=FALSE, include=FALSE }
+# read KU data frame
+KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
+```
+### Comparison of charges by year and backlist
+```{r}
+# create faceted plot object
+charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid(rows=vars(period), cols = vars(backlist_oa))
+
+## Present as Standard plot
+# plot(charges.plot)
+
+# present as interactive plot
+ggplotly(charges.plot)
+
+```
+### Interactive charges exploration
+```{r}
+ggplotly(charges.plot)
+
+```
+
