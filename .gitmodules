@@ -1,0 +1,3 @@
+[submodule "Public Data/openapc-de"]
+	path = Public Data/openapc-de
+	url = https://github.com/OpenAPC/openapc-de
