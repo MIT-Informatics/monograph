@@ -54,10 +54,14 @@ charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid
 
 ## Present as Standard plot
 plot(charges.plot)
+
+# this plot will render publicly https://htmlpreview.github.io/?https://github.com/MIT-Informatics/monograph/blob/master/00%20EDA%20Start.nb.html
 ```
 ### Interactive charges exploration
 ```{r}
 ggplotly(charges.plot)
+
+# interactive plots do not render through htmlpreview, we'll need to set up a github pages branch
 
 ```
 
