@@ -61,7 +61,11 @@ plot(charges.plot)
 ```{r}
 ggplotly(charges.plot)
 
-# interactive plots do not render through htmlpreview, we'll need to set up a github pages branch
+# interactive plots do not render through htmlpreview, notebookhas to be copied (e.g. to "demo.html" to _sites folder)
+
+# https://mit-informatics.github.io/monograph/demo.html
+
+
 
 ```
 ### Interactive Dataset Exploration 
