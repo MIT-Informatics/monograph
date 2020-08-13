@@ -1,3 +1,7 @@
 [submodule "Public Data/openapc-de"]
 	path = Public Data/openapc-de
 	url = https://github.com/OpenAPC/openapc-de
+[submodule "_site"]
+	path = _site
+	url = https://github.com/MIT-Informatics/monograph
+	branch = gh-pages
