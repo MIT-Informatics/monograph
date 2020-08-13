@@ -74,4 +74,5 @@ KUbpc.df %>% ExPanD(df=.       ,title="KU Book Processing Charges",export_nb_opt
 
 # ExPanD uses shiny() which works running R locally, but isn't going to work through github. Could publish through shinyapps.io (low usage only), or export  a non-interactive notebook it
 
+# see: https://drmaltman.shinyapps.io/demo/
 ```
