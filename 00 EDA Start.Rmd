@@ -68,5 +68,6 @@ charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid
 ```{r}
 # ggplotly(charges.plot)
 
+# see: https://drmaltman.shinyapps.io/demo/
 ```
 
