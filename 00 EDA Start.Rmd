@@ -45,33 +45,28 @@ require(ExPanDaR)
 ## Exploring KU Book Processing Charges
 ```{r message=FALSE, include=FALSE }
 # read KU data frame
-KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
+KUbpc.df <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/bpc.csv")
+
+head(KUbpc.df)
+summarise(KUbpc.df)
+
 ```
 ### Comparison of charges by year and backlist
 ```{r}
 # create faceted plot object
 charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid(rows=vars(period), cols = vars(backlist_oa))
 
+
 ## Present as Standard plot
-plot(charges.plot)
+# plot(charges.plot)
 
-# this plot will render publicly https://htmlpreview.github.io/?https://github.com/MIT-Informatics/monograph/blob/master/00%20EDA%20Start.nb.html
+# present as interactive plot
+# ggplotly(charges.plot)
+
 ```
-### Interactive plot exploration
+### Interactive charges exploration
 ```{r}
-ggplotly(charges.plot)
-
-# interactive plots do not render through htmlpreview, notebookhas to be copied (e.g. to "demo.html" to _sites folder)
-
-# https://mit-informatics.github.io/monograph/demo.html
-
-
+# ggplotly(charges.plot)
 
 ```
-### Interactive Dataset Exploration 
-```{r}
-KUbpc.df %>% ExPanD(df=.       ,title="KU Book Processing Charges",export_nb_option = TRUE)
 
-# ExPanD uses shiny() which works running R locally, but isn't going to work through github. Could publish through shinyapps.io (low usage only), or export  a non-interactive notebook it
-
-```
