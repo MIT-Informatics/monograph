@@ -1754,21 +1754,37 @@ summary {
 <div id="exploring-ku-book-processing-charges" class="section level2">
 <h2>Exploring KU Book Processing Charges</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyByZWFkIEtVIGRhdGEgZnJhbWVcbktVYnBjLmRmIDwtIHJlYWRfY3N2KFwiUHVibGljIERhdGEvb3BlbmFwYy1kZS9kYXRhL2JwYy5jc3ZcIilcblxuaGVhZCA8LSBoZWFkKEtVYnBjLmRmKVxudmlldyhoZWFkKVxuXG5zdW1tYXJpemVkID0gc3VtbWFyeShLVWJwYy5kZilcbnZpZXcoc3VtbWFyaXplZClcblxuZ2dwbG90KGRhdGE9S1VicGMuZGYsIGFlcyhLVWJwYy5kZiRpbnN0aXR1dGlvbikpICsgZ2VvbV9iYXIoKSBcblxuZ2dwbG90KGRhdGE9S1VicGMuZGYsIGFlcyhLVWJwYy5kZiRldXJvKSkgKyBnZW9tX2hpc3RvZ3JhbSgpXG5cbmBgYCJ9 -->
+<pre class="r"><code># read KU data frame
+KUbpc.df &lt;- read_csv(&quot;Public Data/openapc-de/data/bpc.csv&quot;)
+
+head &lt;- head(KUbpc.df)
+view(head)
+
+summarized = summary(KUbpc.df)
+view(summarized)
+
+ggplot(data=KUbpc.df, aes(KUbpc.df$institution)) + geom_bar() 
+
+ggplot(data=KUbpc.df, aes(KUbpc.df$euro)) + geom_histogram()
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="comparison-of-charges-by-year-and-backlist" class="section level3">
 <h3>Comparison of charges by year and backlist</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjcmVhdGUgZmFjZXRlZCBwbG90IG9iamVjdFxuY2hhcmdlcy5wbG90IDwtIEtVYnBjLmRmICU+JSBnZ3Bsb3QoYWVzKGV1cm8pKStnZW9tX2hpc3RvZ3JhbShiaW5zPTYpK2ZhY2V0X2dyaWQocm93cz12YXJzKHBlcmlvZCksIGNvbHMgPSB2YXJzKGJhY2tsaXN0X29hKSlcblxuXG4jIyBQcmVzZW50IGFzIFN0YW5kYXJkIHBsb3RcbiMgcGxvdChjaGFyZ2VzLnBsb3QpXG5cbiMgcHJlc2VudCBhcyBpbnRlcmFjdGl2ZSBwbG90XG4jIGdncGxvdGx5KGNoYXJnZXMucGxvdClcblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjcmVhdGUgZmFjZXRlZCBwbG90IG9iamVjdFxuY2hhcmdlcy5wbG90IDwtIEtVYnBjLmRmICU+JSBnZ3Bsb3QoYWVzKGV1cm8pKStnZW9tX2hpc3RvZ3JhbShiaW5zPTYpK2ZhY2V0X2dyaWQocm93cz12YXJzKHBlcmlvZCksIGNvbHMgPSB2YXJzKGJhY2tsaXN0X29hKSlcblxuXG4jIyBQcmVzZW50IGFzIFN0YW5kYXJkIHBsb3RcbiBwbG90KGNoYXJnZXMucGxvdClcblxuIyB0aGlzIHBsb3Qgd2lsbCByZW5kZXIgcHVibGljbHkgaHR0cHM6Ly9odG1scHJldmlldy5naXRodWIuaW8vP2h0dHBzOi8vZ2l0aHViLmNvbS9NSVQtSW5mb3JtYXRpY3MvbW9ub2dyYXBoL2Jsb2IvbWFzdGVyLzAwJTIwRURBJTIwU3RhcnQubmIuaHRtbFxuXG5gYGAifQ== -->
 <pre class="r"><code># create faceted plot object
 charges.plot &lt;- KUbpc.df %&gt;% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid(rows=vars(period), cols = vars(backlist_oa))
 
 
 ## Present as Standard plot
-# plot(charges.plot)
+ plot(charges.plot)
 
-# present as interactive plot
-# ggplotly(charges.plot)
+# this plot will render publicly https://htmlpreview.github.io/?https://github.com/MIT-Informatics/monograph/blob/master/00%20EDA%20Start.nb.html
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -1778,9 +1794,27 @@ charges.plot &lt;- KUbpc.df %&gt;% ggplot(aes(euro))+geom_histogram(bins=6)+face
 <h3>Interactive charges exploration</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBnZ3Bsb3RseShjaGFyZ2VzLnBsb3QpXG5cbmBgYCJ9 -->
-<pre class="r"><code># ggplotly(charges.plot)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIGdncGxvdGx5KGNoYXJnZXMucGxvdClcbiMgaHR0cHM6Ly9taXQtaW5mb3JtYXRpY3MuZ2l0aHViLmlvL21vbm9ncmFwaC9kZW1vLmh0bWxcblxuYGBgIn0= -->
+<pre class="r"><code> ggplotly(charges.plot)
+# https://mit-informatics.github.io/monograph/demo.html
 </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<pre><code>### Interactive Dataset Exploration 
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuS1VicGMuZGYgJT4lIEV4UGFuRChkZj0uICAgICAgICx0aXRsZT1cIktVIEJvb2sgUHJvY2Vzc2luZyBDaGFyZ2VzXCIsZXhwb3J0X25iX29wdGlvbiA9IFRSVUUpXG4jIEV4UGFuRCB1c2VzIHNoaW55KCkgd2hpY2ggd29ya3MgcnVubmluZyBSIGxvY2FsbHksIGJ1dCBpc24ndCBnb2luZyB0byB3b3JrIHRocm91Z2ggZ2l0aHViLiBDb3VsZCBwdWJsaXNoIHRocm91Z2ggc2hpbnlhcHBzLmlvIChsb3cgdXNhZ2Ugb25seSksIG9yIGV4cG9ydCAgYSBub24taW50ZXJhY3RpdmUgbm90ZWJvb2sgaXRcbiMgc2VlOiBodHRwczovL2RybWFsdG1hbi5zaGlueWFwcHMuaW8vZGVtby9cbmBgYCJ9 --&gt;
+
+```r
+KUbpc.df %&gt;% ExPanD(df=.       ,title=&quot;KU Book Processing Charges&quot;,export_nb_option = TRUE)
+# ExPanD uses shiny() which works running R locally, but isn&#39;t going to work through github. Could publish through shinyapps.io (low usage only), or export  a non-interactive notebook it
+# see: https://drmaltman.shinyapps.io/demo/</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1788,7 +1822,7 @@ charges.plot &lt;- KUbpc.df %&gt;% ggplot(aes(euro))+geom_histogram(bins=6)+face
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgQW5hbHlzaXMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyIG1lc3NhZ2U9RkFMU0UsIGluY2x1ZGU9RkFMU0V9CiNSZXF1aXJlZCBsaWJyYXJpZXMKCiMgVGlkeXZlcnNlIGZvciBkYXRhIHNjaWVuY2UgYW5kIGV4cGxvcmF0aW9uCnJlcXVpcmUoZHBseXIpCnJlcXVpcmUodGlkeXIpCnJlcXVpcmUocmVhZHIpCnJlcXVpcmUodGliYmxlKQpyZXF1aXJlKHN0cmluZ3IpCnJlcXVpcmUocHVycnIpCnJlcXVpcmUoZm9yY2F0cykKcmVxdWlyZShybGFuZykKCiMgZW5oYW5jZXMgdGlkeXZlcnNlCnJlcXVpcmUodGlkeWxvZykgIyBhZGRpdGlvbmFsIGxvZ2dpbmcKcmVxdWlyZShtYWdyaXR0cikgIyBhZGRpdGlvbmFsIGRhdGEgcGlwZSBzeW50YXgKCgojIGZvciByZWFkaW5nIGRhdGEgaW4gbXVsdGlwbGUgZm9ybWF0cwpyZXF1aXJlKHJlYWR4bCkKcmVxdWlyZShoYXZlbikKCiMgdmlzdWFsIGFuYWx5c2lzCnJlcXVpcmUoZ2dwbG90MikKcmVxdWlyZShHR2FsbHkpICMgZXh0ZW5zaW9ucyB0byBnZ3Bsb3QKcmVxdWlyZShndCkgIyB3ZWxsIGZvcm1hdHRlZCB0YWJsZXMKIyBjbGllbnQtc2lkZSBpbnRlcmFjdGl2ZSBwdWJsaXNoYWJsZSBncmFwaGljcwpyZXF1aXJlKHBsb3RseSkKcmVxdWlyZShsZWFmbGV0KQpyZXF1aXJlKGNyb3NzdGFsaykKcmVxdWlyZShodG1sd2lkZ2V0cykKIyBzZXJ2ZXItc2lkZSBpbnRlcmFjdGl2ZSBncmFwaGljcwpyZXF1aXJlKHNoaW55KQpyZXF1aXJlKHNoaW55anMpCiMgQ2FubmVkIEludGVyYWN0aXZlIEVEQSAKcmVxdWlyZShFeFBhbkRhUikKCgpgYGAKIyMgRXhwbG9yaW5nIEtVIEJvb2sgUHJvY2Vzc2luZyBDaGFyZ2VzCmBgYHtyIG1lc3NhZ2U9RkFMU0UsIGluY2x1ZGU9RkFMU0UgfQojIHJlYWQgS1UgZGF0YSBmcmFtZQpLVWJwYy5kZiA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL09wZW5BUEMvb3BlbmFwYy1kZS9tYXN0ZXIvZGF0YS9icGMuY3N2IikKCmhlYWQoS1VicGMuZGYpCnN1bW1hcmlzZShLVWJwYy5kZikKCmBgYAojIyMgQ29tcGFyaXNvbiBvZiBjaGFyZ2VzIGJ5IHllYXIgYW5kIGJhY2tsaXN0CmBgYHtyfQojIGNyZWF0ZSBmYWNldGVkIHBsb3Qgb2JqZWN0CmNoYXJnZXMucGxvdCA8LSBLVWJwYy5kZiAlPiUgZ2dwbG90KGFlcyhldXJvKSkrZ2VvbV9oaXN0b2dyYW0oYmlucz02KStmYWNldF9ncmlkKHJvd3M9dmFycyhwZXJpb2QpLCBjb2xzID0gdmFycyhiYWNrbGlzdF9vYSkpCgoKIyMgUHJlc2VudCBhcyBTdGFuZGFyZCBwbG90CiMgcGxvdChjaGFyZ2VzLnBsb3QpCgojIHByZXNlbnQgYXMgaW50ZXJhY3RpdmUgcGxvdAojIGdncGxvdGx5KGNoYXJnZXMucGxvdCkKCmBgYAojIyMgSW50ZXJhY3RpdmUgY2hhcmdlcyBleHBsb3JhdGlvbgpgYGB7cn0KIyBnZ3Bsb3RseShjaGFyZ2VzLnBsb3QpCgpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmF0b3J5IEFuYWx5c2lzIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KYGBge3IgbWVzc2FnZT1GQUxTRSwgaW5jbHVkZT1GQUxTRX0NCiNSZXF1aXJlZCBsaWJyYXJpZXMNCg0KIyBUaWR5dmVyc2UgZm9yIGRhdGEgc2NpZW5jZSBhbmQgZXhwbG9yYXRpb24NCnJlcXVpcmUoZHBseXIpDQpyZXF1aXJlKHRpZHlyKQ0KcmVxdWlyZShyZWFkcikNCnJlcXVpcmUodGliYmxlKQ0KcmVxdWlyZShzdHJpbmdyKQ0KcmVxdWlyZShwdXJycikNCnJlcXVpcmUoZm9yY2F0cykNCnJlcXVpcmUocmxhbmcpDQoNCiMgZW5oYW5jZXMgdGlkeXZlcnNlDQpyZXF1aXJlKHRpZHlsb2cpICMgYWRkaXRpb25hbCBsb2dnaW5nDQpyZXF1aXJlKG1hZ3JpdHRyKSAjIGFkZGl0aW9uYWwgZGF0YSBwaXBlIHN5bnRheA0KDQoNCiMgZm9yIHJlYWRpbmcgZGF0YSBpbiBtdWx0aXBsZSBmb3JtYXRzDQpyZXF1aXJlKHJlYWR4bCkNCnJlcXVpcmUoaGF2ZW4pDQoNCiMgdmlzdWFsIGFuYWx5c2lzDQpyZXF1aXJlKGdncGxvdDIpDQpyZXF1aXJlKEdHYWxseSkgIyBleHRlbnNpb25zIHRvIGdncGxvdA0KcmVxdWlyZShndCkgIyB3ZWxsIGZvcm1hdHRlZCB0YWJsZXMNCiMgY2xpZW50LXNpZGUgaW50ZXJhY3RpdmUgcHVibGlzaGFibGUgZ3JhcGhpY3MNCnJlcXVpcmUocGxvdGx5KQ0KcmVxdWlyZShsZWFmbGV0KQ0KcmVxdWlyZShjcm9zc3RhbGspDQpyZXF1aXJlKGh0bWx3aWRnZXRzKQ0KIyBzZXJ2ZXItc2lkZSBpbnRlcmFjdGl2ZSBncmFwaGljcw0KcmVxdWlyZShzaGlueSkNCnJlcXVpcmUoc2hpbnlqcykNCiMgQ2FubmVkIEludGVyYWN0aXZlIEVEQSANCnJlcXVpcmUoRXhQYW5EYVIpDQoNCg0KYGBgDQojIyBFeHBsb3JpbmcgS1UgQm9vayBQcm9jZXNzaW5nIENoYXJnZXMNCmBgYHtyICB9DQojIHJlYWQgS1UgZGF0YSBmcmFtZQ0KS1VicGMuZGYgPC0gcmVhZF9jc3YoIlB1YmxpYyBEYXRhL29wZW5hcGMtZGUvZGF0YS9icGMuY3N2IikNCg0KaGVhZCA8LSBoZWFkKEtVYnBjLmRmKQ0KdmlldyhoZWFkKQ0KDQpzdW1tYXJpemVkID0gc3VtbWFyeShLVWJwYy5kZikNCnZpZXcoc3VtbWFyaXplZCkNCg0KZ2dwbG90KGRhdGE9S1VicGMuZGYsIGFlcyhLVWJwYy5kZiRpbnN0aXR1dGlvbikpICsgZ2VvbV9iYXIoKSANCg0KZ2dwbG90KGRhdGE9S1VicGMuZGYsIGFlcyhLVWJwYy5kZiRldXJvKSkgKyBnZW9tX2hpc3RvZ3JhbSgpDQoNCmBgYA0KIyMjIENvbXBhcmlzb24gb2YgY2hhcmdlcyBieSB5ZWFyIGFuZCBiYWNrbGlzdA0KYGBge3J9DQojIGNyZWF0ZSBmYWNldGVkIHBsb3Qgb2JqZWN0DQpjaGFyZ2VzLnBsb3QgPC0gS1VicGMuZGYgJT4lIGdncGxvdChhZXMoZXVybykpK2dlb21faGlzdG9ncmFtKGJpbnM9NikrZmFjZXRfZ3JpZChyb3dzPXZhcnMocGVyaW9kKSwgY29scyA9IHZhcnMoYmFja2xpc3Rfb2EpKQ0KDQoNCiMjIFByZXNlbnQgYXMgU3RhbmRhcmQgcGxvdA0KIHBsb3QoY2hhcmdlcy5wbG90KQ0KDQojIHRoaXMgcGxvdCB3aWxsIHJlbmRlciBwdWJsaWNseSBodHRwczovL2h0bWxwcmV2aWV3LmdpdGh1Yi5pby8/aHR0cHM6Ly9naXRodWIuY29tL01JVC1JbmZvcm1hdGljcy9tb25vZ3JhcGgvYmxvYi9tYXN0ZXIvMDAlMjBFREElMjBTdGFydC5uYi5odG1sDQoNCmBgYA0KIyMjIEludGVyYWN0aXZlIGNoYXJnZXMgZXhwbG9yYXRpb24NCmBgYHtyfQ0KIGdncGxvdGx5KGNoYXJnZXMucGxvdCkNCiMgaHR0cHM6Ly9taXQtaW5mb3JtYXRpY3MuZ2l0aHViLmlvL21vbm9ncmFwaC9kZW1vLmh0bWwNCg0KYGBgDQpgYGANCiMjIyBJbnRlcmFjdGl2ZSBEYXRhc2V0IEV4cGxvcmF0aW9uIA0KYGBge3J9DQpLVWJwYy5kZiAlPiUgRXhQYW5EKGRmPS4gICAgICAgLHRpdGxlPSJLVSBCb29rIFByb2Nlc3NpbmcgQ2hhcmdlcyIsZXhwb3J0X25iX29wdGlvbiA9IFRSVUUpDQojIEV4UGFuRCB1c2VzIHNoaW55KCkgd2hpY2ggd29ya3MgcnVubmluZyBSIGxvY2FsbHksIGJ1dCBpc24ndCBnb2luZyB0byB3b3JrIHRocm91Z2ggZ2l0aHViLiBDb3VsZCBwdWJsaXNoIHRocm91Z2ggc2hpbnlhcHBzLmlvIChsb3cgdXNhZ2Ugb25seSksIG9yIGV4cG9ydCAgYSBub24taW50ZXJhY3RpdmUgbm90ZWJvb2sgaXQNCiMgc2VlOiBodHRwczovL2RybWFsdG1hbi5zaGlueWFwcHMuaW8vZGVtby8NCmBgYA0KDQo=</div>
 
 
 
