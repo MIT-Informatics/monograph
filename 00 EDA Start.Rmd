@@ -45,10 +45,17 @@ require(ExPanDaR)
 ## Exploring KU Book Processing Charges
 ```{r message=FALSE, include=FALSE }
 # read KU data frame
-KUbpc.df <- read_csv("https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/bpc.csv")
+KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 
-head(KUbpc.df)
-summarise(KUbpc.df)
+head <- head(KUbpc.df)
+view(head)
+
+summarized = summary(KUbpc.df)
+view(summarized)
+
+ggplot(data=KUbpc.df, aes(KUbpc.df$institution)) + geom_bar() 
+
+ggplot(data=KUbpc.df, aes(KUbpc.df$euro)) + geom_histogram()
 
 ```
 ### Comparison of charges by year and backlist
@@ -68,6 +75,5 @@ charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid
 ```{r}
 # ggplotly(charges.plot)
 
-# see: https://drmaltman.shinyapps.io/demo/
 ```
 
