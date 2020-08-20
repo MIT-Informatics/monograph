@@ -114,13 +114,13 @@ sorted_counts %>% filter(n > 24)
 filtered <- filter(KUbpc.df, KUbpc.df$publisher == 'transcript Verlag' | 
                      KUbpc.df$publisher == 'Duke University Press' | 
                      KUbpc.df$publisher == 'University of Michigan Press' | 
-                     KUbpc.df$publisher == 'Manchester University Press	' | 
-                     KUbpc.df$publisher == 'Pluto Press	' | 
-                     KUbpc.df$publisher == 'Liverpool University Press	' | 
+                     KUbpc.df$publisher == 'Manchester University Press' | 
+                     KUbpc.df$publisher == 'Pluto Press' | 
+                     KUbpc.df$publisher == 'Liverpool University Press' | 
                      KUbpc.df$publisher == 'Berghahn Books' | 
-                     KUbpc.df$publisher == 'Cornell University Press	' | 
-                     KUbpc.df$publisher == 'Edinburgh University Press	' | 
-                     KUbpc.df$publisher == 'Northwestern University Press	')
+                     KUbpc.df$publisher == 'Cornell University Press' | 
+                     KUbpc.df$publisher == 'Edinburgh University Press' | 
+                     KUbpc.df$publisher == 'Northwestern University Press')
 
 head(filtered)
 
