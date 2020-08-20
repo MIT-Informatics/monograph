@@ -3,7 +3,7 @@ title: "Exploratory Analysis"
 output: html_notebook
 ---
 
-```{r message=FALSE, include=FALSE}
+```{r}
 #Required libraries
 
 # Tidyverse for data science and exploration
@@ -58,6 +58,78 @@ ggplot(data=KUbpc.df, aes(KUbpc.df$institution)) + geom_bar()
 ggplot(data=KUbpc.df, aes(KUbpc.df$euro)) + geom_histogram()
 
 ```
+## Exploratory Data Analysis
+```{r  }
+
+ggplot(data=KUbpc.df) + geom_bar(mapping = aes(x = KUbpc.df$doab))
+
+# Date to Doab
+date_doab <- KUbpc.df %>% ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$period, colour = KUbpc.df$doab)) + geom_freqpoly(binwidth = 0.1)
+ggplotly(date_doab)
+
+# publisher_euro <- KUbpc.df %>% 
+# ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$publisher, colour = KUbpc.df$euro)) + geom_freqpoly(binwidth = 0.1)
+
+# Institution to Euro
+ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$euro)) + geom_freqpoly(mapping = aes(colour = KUbpc.df$institution), binwidth = 500)
+
+```
+## Exploratory Data Analysis (Cont.)
+```{r  }
+# Top 10 Publisher to Euro
+
+# count(KUbpc.df, publisher, sort = TRUE)
+# top_publisher <- data.frame(KUbpc.df)
+# 
+# top_publisher %>%
+#   group_by(top_publisher$publisher) %>%
+#   summarize(Count=n()) %>%
+#   top_n(10)
+
+# # get names of the species with counts >= 10
+# frequent_publishers <- publisher_counts %>%
+#     filter(n >= 10) %>%
+#     select(publisher_counts$publisher)
+# 
+# head(frequent_publishers)
+
+# # filter out the less-frequent species
+# KUbpc.df <- KUbpc.df %>%
+#     filter(KUbpc.df$publisher %in% frequent_publishers$publisher)
+# 
+# view(KUbpc.df)
+
+
+# count records per species
+publisher_counts <- KUbpc.df %>%
+    group_by(publisher) %>%
+    tally
+
+sorted_counts = arrange(publisher_counts, desc(n))
+
+sorted_counts %>% filter(n > 24)
+
+# KUbpc.df %>% filter(KUbpc.df$publisher %in% sorted_counts$publisher)
+
+filtered <- filter(KUbpc.df, KUbpc.df$publisher == 'transcript Verlag' | 
+                     KUbpc.df$publisher == 'Duke University Press' | 
+                     KUbpc.df$publisher == 'University of Michigan Press' | 
+                     KUbpc.df$publisher == 'Manchester University Press	' | 
+                     KUbpc.df$publisher == 'Pluto Press	' | 
+                     KUbpc.df$publisher == 'Liverpool University Press	' | 
+                     KUbpc.df$publisher == 'Berghahn Books' | 
+                     KUbpc.df$publisher == 'Cornell University Press	' | 
+                     KUbpc.df$publisher == 'Edinburgh University Press	' | 
+                     KUbpc.df$publisher == 'Northwestern University Press	')
+
+head(filtered)
+
+euro_publisher <- filtered %>% ggplot(data=filtered, mapping = aes(x = filtered$euro)) + geom_freqpoly(mapping = aes(colour = filtered$publisher), binwidth = 500)
+
+ggplotly(euro_publisher)
+
+
+```
 ### Comparison of charges by year and backlist
 ```{r}
 # create faceted plot object
@@ -78,6 +150,7 @@ charges.plot <- KUbpc.df %>% ggplot(aes(euro))+geom_histogram(bins=6)+facet_grid
 ```
 ```
 ### Interactive Dataset Exploration 
+```
 ```{r}
 KUbpc.df %>% ExPanD(df=.       ,title="KU Book Processing Charges",export_nb_option = TRUE)
 # ExPanD uses shiny() which works running R locally, but isn't going to work through github. Could publish through shinyapps.io (low usage only), or export  a non-interactive notebook it
