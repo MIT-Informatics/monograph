@@ -47,11 +47,8 @@ require(ExPanDaR)
 # read KU data frame
 KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 
-head <- head(KUbpc.df)
-view(head)
-
-summarized = summary(KUbpc.df)
-view(summarized)
+head(KUbpc.df)
+head(summary(KUbpc.df))
 
 ggplot(data=KUbpc.df, aes(KUbpc.df$institution)) + geom_bar() 
 
@@ -80,27 +77,6 @@ ggplotly(institution_euro)
 #### How do the top 25% of publishers divide up charges (in Euro)?
 ```{r  }
 
-# count(KUbpc.df, publisher, sort = TRUE)
-# top_publisher <- data.frame(KUbpc.df)
-# 
-# top_publisher %>%
-#   group_by(top_publisher$publisher) %>%
-#   summarize(Count=n()) %>%
-#   top_n(10)
-
-# # get names of the species with counts >= 10
-# frequent_publishers <- publisher_counts %>%
-#     filter(n >= 10) %>%
-#     select(publisher_counts$publisher)
-# 
-# head(frequent_publishers)
-
-# # filter out the less-frequent species
-# KUbpc.df <- KUbpc.df %>%
-#     filter(KUbpc.df$publisher %in% frequent_publishers$publisher)
-# 
-# view(KUbpc.df)
-
 publisher_counts <- KUbpc.df %>%
     group_by(publisher) %>%
     tally
@@ -127,12 +103,33 @@ head(filtered)
 euro_publisher <- filtered %>% 
   ggplot(data=filtered, mapping = aes(x = filtered$publisher, y = filtered$euro), 
          aes(x = filtered$publisher, y = filtered$euro)) + 
-  geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  # geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  geom_count(aes(color = ..n.., group = euro)) + 
   scale_size_area(max_size = 10) + 
   guides(color = 'legend') + 
-  ylim(0, 9000)
+  # ylim(0, 9000) + 
+  theme(axis.text = element_text(size = rel(0.75))) +
+  scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17))
 
+# ggplot:
 ggplotly(euro_publisher)
+
+# crosstalk:
+ft <- highlight_key(filtered)
+gg_ft <- ggplot(data=ft, mapping = aes(x = filtered$publisher, y = filtered$euro)) + 
+  geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17))
+cross_ft <- bscols(
+  filter_select("publisher", "Select a publisher", ft, ~publisher),
+  ggplotly(gg_ft, dynamicTicks = TRUE),
+  widths = c(12, 12)
+)
+
+bscols(cross_ft)
+
+# shared_euro_publisher <- SharedData$new(filtered)
+# leaflet(shared_euro_publisher) %>% addMarkers()
+# data.table::data.table(shared_euro_publisher)
 
 
 ```
