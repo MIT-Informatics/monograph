@@ -71,12 +71,14 @@ ggplotly(date_doab)
 # ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$publisher, colour = KUbpc.df$euro)) + geom_freqpoly(binwidth = 0.1)
 
 # Institution to Euro
-ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$euro)) + geom_freqpoly(mapping = aes(colour = KUbpc.df$institution), binwidth = 500)
+institution_euro <- KUbpc.df %>% ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$euro)) + geom_freqpoly(mapping = aes(colour = KUbpc.df$institution), binwidth = 500)
+
+ggplotly(institution_euro)
 
 ```
 ## Exploratory Data Analysis (Cont.)
+#### How do the top 25% of publishers divide up charges (in Euro)?
 ```{r  }
-# Top 10 Publisher to Euro
 
 # count(KUbpc.df, publisher, sort = TRUE)
 # top_publisher <- data.frame(KUbpc.df)
@@ -99,32 +101,36 @@ ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$euro)) + geom_freqpoly(mapping 
 # 
 # view(KUbpc.df)
 
-
-# count records per species
 publisher_counts <- KUbpc.df %>%
     group_by(publisher) %>%
     tally
 
 sorted_counts = arrange(publisher_counts, desc(n))
 
+total_n = sum(sorted_counts$n)
+quarter_n = 0.25 * total_n
+new_n = sum(sorted_counts$n[0:6])
+
 sorted_counts %>% filter(n > 24)
 
-# KUbpc.df %>% filter(KUbpc.df$publisher %in% sorted_counts$publisher)
+# filtered <- filter(KUbpc.df$publisher %in% sorted_counts$publisher)
 
-filtered <- filter(KUbpc.df, KUbpc.df$publisher == 'transcript Verlag' | 
-                     KUbpc.df$publisher == 'Duke University Press' | 
-                     KUbpc.df$publisher == 'University of Michigan Press' | 
-                     KUbpc.df$publisher == 'Manchester University Press' | 
-                     KUbpc.df$publisher == 'Pluto Press' | 
-                     KUbpc.df$publisher == 'Liverpool University Press' | 
-                     KUbpc.df$publisher == 'Berghahn Books' | 
-                     KUbpc.df$publisher == 'Cornell University Press' | 
-                     KUbpc.df$publisher == 'Edinburgh University Press' | 
-                     KUbpc.df$publisher == 'Northwestern University Press')
+filtered <- filter(KUbpc.df, KUbpc.df$publisher == 'transcript Verlag' |
+                     KUbpc.df$publisher == 'Duke University Press' |
+                     KUbpc.df$publisher == 'University of Michigan Press' |
+                     KUbpc.df$publisher == 'Manchester University Press' |
+                     KUbpc.df$publisher == 'Pluto Press' |
+                     KUbpc.df$publisher == 'Liverpool University Press')
 
 head(filtered)
 
-euro_publisher <- filtered %>% ggplot(data=filtered, mapping = aes(x = filtered$euro)) + geom_freqpoly(mapping = aes(colour = filtered$publisher), binwidth = 500)
+euro_publisher <- filtered %>% 
+  ggplot(data=filtered, mapping = aes(x = filtered$publisher, y = filtered$euro), 
+         aes(x = filtered$publisher, y = filtered$euro)) + 
+  geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  scale_size_area(max_size = 10) + 
+  guides(color = 'legend') + 
+  ylim(0, 9000)
 
 ggplotly(euro_publisher)
 
