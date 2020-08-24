@@ -50,31 +50,30 @@ KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 head(KUbpc.df)
 head(summary(KUbpc.df))
 
-ggplot(data=KUbpc.df, aes(KUbpc.df$institution)) + geom_bar() 
+ggplot(data = KUbpc.df, aes(KUbpc.df$institution)) + geom_bar() 
 
-ggplot(data=KUbpc.df, aes(KUbpc.df$euro)) + geom_histogram()
+ggplot(data = KUbpc.df, aes(KUbpc.df$euro)) + geom_histogram()
 
 ```
-## Exploratory Data Analysis
+## General Exploratory Data Analysis
 ```{r  }
 
-ggplot(data=KUbpc.df) + geom_bar(mapping = aes(x = KUbpc.df$doab))
+ggplot(data = KUbpc.df) + geom_bar(mapping = aes(x = KUbpc.df$doab))
 
 # Date to Doab
-date_doab <- KUbpc.df %>% ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$period, colour = KUbpc.df$doab)) + geom_freqpoly(binwidth = 0.1)
+date_doab <- KUbpc.df %>% ggplot(data = KUbpc.df, mapping = aes(x = KUbpc.df$period, colour = KUbpc.df$doab)) + geom_freqpoly(binwidth = 0.1)
 ggplotly(date_doab)
 
 # publisher_euro <- KUbpc.df %>% 
-# ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$publisher, colour = KUbpc.df$euro)) + geom_freqpoly(binwidth = 0.1)
+# ggplot(data = KUbpc.df, mapping = aes(x = KUbpc.df$publisher, colour = KUbpc.df$euro)) + geom_freqpoly(binwidth = 0.1)
 
 # Institution to Euro
-institution_euro <- KUbpc.df %>% ggplot(data=KUbpc.df, mapping = aes(x = KUbpc.df$euro)) + geom_freqpoly(mapping = aes(colour = KUbpc.df$institution), binwidth = 500)
+institution_euro <- KUbpc.df %>% ggplot(data = KUbpc.df, mapping = aes(x = KUbpc.df$euro)) + geom_freqpoly(mapping = aes(colour = KUbpc.df$institution), binwidth = 500)
 
 ggplotly(institution_euro)
 
 ```
-## Exploratory Data Analysis (Cont.)
-#### How do the top 25% of publishers divide up charges (in Euro)?
+## Question: How do the top 25% of publishers divide up charges (in Euro)?
 ```{r  }
 
 publisher_counts <- KUbpc.df %>%
@@ -101,7 +100,7 @@ filtered <- filter(KUbpc.df, KUbpc.df$publisher == 'transcript Verlag' |
 head(filtered)
 
 euro_publisher <- filtered %>% 
-  ggplot(data=filtered, mapping = aes(x = filtered$publisher, y = filtered$euro), 
+  ggplot(data = filtered, mapping = aes(x = filtered$publisher, y = filtered$euro), 
          aes(x = filtered$publisher, y = filtered$euro)) + 
   # geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
   geom_count(aes(color = ..n.., group = euro)) + 
@@ -116,7 +115,7 @@ ggplotly(euro_publisher)
 
 # crosstalk:
 ft <- highlight_key(filtered)
-gg_ft <- ggplot(data=ft, mapping = aes(x = filtered$publisher, y = filtered$euro)) + 
+gg_ft <- ggplot(data = ft, mapping = aes(x = filtered$publisher, y = filtered$euro)) + 
   geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
   scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17))
 cross_ft <- bscols(
@@ -130,6 +129,21 @@ bscols(cross_ft)
 # shared_euro_publisher <- SharedData$new(filtered)
 # leaflet(shared_euro_publisher) %>% addMarkers()
 # data.table::data.table(shared_euro_publisher)
+
+
+```
+## Question: What type of business model do the top 25% publishers use?
+```{r  }
+
+oa_type <- filtered %>% 
+  ggplot(data = filtered, mapping = aes(x = filtered$publisher, colour = filtered$backlist_oa), fill = filtered$backlist_oa) +
+  geom_bar(position = "fill", width = 0.7, fill="#EAEAEA") +
+  labs(title = "Business Model OA for Publishers", x = "Top 25% of Publishers", y = "Proportion", color = 'Types of OA') +
+  theme(axis.text = element_text(size = rel(0.75))) +
+  scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17)) +
+  scale_color_brewer(palette = "Set1")
+
+ggplotly(oa_type)
 
 
 ```
