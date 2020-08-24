@@ -105,9 +105,8 @@ euro_publisher <- filtered %>%
   # geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
   geom_count(aes(color = ..n.., group = euro)) + 
   scale_size_area(max_size = 10) + 
-  guides(color = 'legend') + 
-  # ylim(0, 9000) + 
   theme(axis.text = element_text(size = rel(0.75))) +
+  labs(title = "How Publishers Divide Charges", x = "Top 25% of Publishers", y = "Price (Euro)", color = 'Number of Copies') +
   scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17))
 
 # ggplot:
@@ -117,6 +116,7 @@ ggplotly(euro_publisher)
 ft <- highlight_key(filtered)
 gg_ft <- ggplot(data = ft, mapping = aes(x = filtered$publisher, y = filtered$euro)) + 
   geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  labs(title = "How Publishers Divide Charges", x = "Top 25% of Publishers", y = "Price (Euro)", color = 'Number of Copies') +
   scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17))
 cross_ft <- bscols(
   filter_select("publisher", "Select a publisher", ft, ~publisher),
@@ -145,6 +145,53 @@ oa_type <- filtered %>%
 
 ggplotly(oa_type)
 
+# crosstalk:
+ft <- highlight_key(filtered)
+oa_ft <- ggplot(data = ft, mapping = aes(x = ft$publisher, colour = ft$backlist_oa), fill = ft$backlist_oa) +
+  geom_bar(position = "fill", width = 0.7) +
+  labs(title = "Business Model OA for Publishers", x = "Top 25% of Publishers", y = "Proportion of Backlist OA", color = 'Types of OA') +
+  theme(axis.text = element_text(size = rel(0.75))) +
+  scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17))
+# cross_oa_ft <- bscols(
+#   filter_select("publisher", "Select a publisher", ft, ~publisher),
+#   ggplotly(oa_ft, dynamicTicks = TRUE),
+#   # widths = c(12, 12)
+# )
+
+# bscols(cross_oa_ft)
+
+
+```
+## Question: Did OA business models of the top 25% publishers change per year?
+```{r  }
+
+oa_time <- function(pub_name) {
+  pub_ft <- filter(filtered, filtered$publisher == pub_name)
+  
+  pub_oa <- pub_ft %>% 
+    ggplot(data = pub_ft, mapping = aes(x = pub_ft$period, colour = pub_ft$backlist_oa), fill = pub_ft$backlist_oa) +
+    geom_bar(position = "fill", width = 0.7, fill="#EAEAEA") +
+    labs(title = paste(pub_name, "'s OA Through the Years", sep = ""), 
+         x = "Years", y = "Proportion of Backlist OA", color = 'Types of OA') +
+    theme(axis.text = element_text(size = rel(0.75))) +
+    scale_x_discrete(limits=c(2017, 2018, 2019)) +
+    scale_color_brewer(palette = "Set1")
+
+  ggplotly(pub_oa)
+  
+}
+
+oa_time("transcript Verlag")
+
+oa_time("Duke University Press")
+
+oa_time("University of Michigan Press")
+
+oa_time("Manchester University Press")
+
+oa_time("Pluto Press")
+
+oa_time("Liverpool University Press")
 
 ```
 ### Comparison of charges by year and backlist
