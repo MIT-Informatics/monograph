@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+
+<responseDate>2020-08-24T18:51:59Z</responseDate>
+<request verb="ListRecords" metadataPrefix="oai_dc" set="publisher_1194">https://www.doabooks.org/oai</request>
+
+<ListRecords>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:15383</identifier>
+<datestamp>2019-01-17T16:58:07Z</datestamp>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:15384</identifier>
+<datestamp>2020-05-04T09:53:55Z</datestamp>
+<setSpec>Philosophy_and_Religion</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Dante and Aquinas</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33215/1/533879.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:15384</dc:identifier>    <dc:identifier>ISBN: 9781909188037</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bad</dc:identifier>
+    <dc:creator>Ryan, Christopher</dc:creator>
+    <dc:creator>Took, John</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Christopher Ryan’s study of Dante and Aquinas, touching on issues of nature and grace, of explicit and implicit faith, and of desire and destiny, is intended to mark the difference between them in key areas of theological sensibility. Re-shaped and revised by John Took on the basis of papers made available to him from Christopher Ryan’s estate, it seeks to deepen our understanding of one of the great cultural encounters in European letters. (DOI: 10.5334/bad)</dc:description>
+    <dc:subject>theology</dc:subject>
+    <dc:subject>dante alighieri</dc:subject>
+    <dc:subject>reverend christopher ryan</dc:subject>
+    <dc:subject>thomas aquinas</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:15390</identifier>
+<datestamp>2019-01-17T16:54:23Z</datestamp>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:15412</identifier>
+<datestamp>2019-01-17T16:50:31Z</datestamp>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:15423</identifier>
+<datestamp>2020-05-04T09:53:57Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Open Source, Free Software e Open Format nei processi di ricerca archeologica Atti del II Workshop (Genova, 11 maggio 2007)</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33211/1/533883.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:15423</dc:identifier>    <dc:identifier>ISBN: 9781909188150</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bae</dc:identifier>
+    <dc:creator>Costa, Stefano</dc:creator>
+    <dc:creator>Luca Pesce, Giovanni</dc:creator>
+       <dc:language>Italian</dc:language>
+    <dc:description>Archaeology---Open source---Software---archeologica (DOI: http://dx.doi.org/10.5334/bae)</dc:description>
+    <dc:subject>open source</dc:subject>
+    <dc:subject>archeologica</dc:subject>
+    <dc:subject>archaeology</dc:subject>
+    <dc:subject>software</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:15566</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Earth_and_Environmental_Sciences</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Imagining the Future City</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33213/1/533881.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:15566</dc:identifier>    <dc:identifier>ISBN: 9781909188181</dc:identifier>
+    <dc:identifier>ISBN: 9781909188198</dc:identifier>
+    <dc:identifier>ISBN: 9781909188204</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bag</dc:identifier>
+    <dc:creator>Paskins, James</dc:creator>
+    <dc:creator>Bell, Sarah</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>London is one of the world’s leading cities. It is home to an extraordinary concentration and diversity of people, industries, politics, religions and ideas, and plays an important role in our highly globalised and tightly networked modern world. What does the future hold for London? Investigating any aspect of the city’s future reveals a complex picture of interrelations and dependencies. The London 2062 Programme from University College London brings a new, cross-disciplinary and highly collaborative approach to investigating this complexity. The programme crosses departmental boundaries within the university, and promotes active collaboration between leading academics and those who shape London through policy and practice.  This book approaches the question of London’s future by considering the city in terms of Connections, Things, Power and Dreams.</dc:description>
+    <dc:subject>sustainable cities</dc:subject>
+    <dc:subject>london 2062</dc:subject>
+    <dc:subject>architecture and planning</dc:subject>
+    <dc:subject>technology and civil engineering</dc:subject>
+    <dc:subject>ucl grand challenges</dc:subject>
+    <dc:subject>future cities</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:15580</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Reading With My Eyes Open</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33210/1/533884.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:15580</dc:identifier>    <dc:identifier>ISBN: 9781909188211</dc:identifier>
+    <dc:identifier>ISBN: 9781909188228</dc:identifier>
+    <dc:identifier>ISBN: 9781909188235</dc:identifier>
+    <dc:identifier>DOI: 10.5334/baj</dc:identifier>
+    <dc:creator>Quist, Gerdi</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Untangling the various approaches to language teaching and their history, Gerdi Quist maps recent thinking in language studies at university. Using an interdisciplinary theoretical framework, drawn from educational philosophy, cultural studies, intercultural studies and language pedagogy, the author discusses the many tensions and currents in contemporary language teaching.    The author puts forward an alternative pedagogy, that of a cultuurtekst-perspective, which engages learners at complex linguistic and cultural levels. In discussing the case study in which this approach is tested, the author develops her argument for embracing various critical perspectives through the personal engagement of students. From the start the author acknowledges her own engaged position as a language teacher in a liberal humanistic educational environment. She adopts a self -critical perspective through which her engagement with adverse student reaction leads to deepening insights both for the author and her students as part of the non-linear process of learning.     Gerdi Quist teaches Dutch language and lectures on multiculturalism and intercultural communication. Recent publications included a book chapter and journal articles on language pedagogy and intercultural communication.   (DOI: http://dx.doi.org/10.5334/baj)</dc:description>
+    <dc:subject>cultural complexity</dc:subject>
+    <dc:subject>intercultural communication</dc:subject>
+    <dc:subject>language pedagogy</dc:subject>
+    <dc:subject>culture</dc:subject>
+    <dc:subject>educational philosophy</dc:subject>
+    <dc:subject>language teaching</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:15590</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Writing as Material Practice</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33206/1/533915.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:15590</dc:identifier>    <dc:identifier>ISBN: 9781909188242</dc:identifier>
+    <dc:identifier>ISBN: 9781909188259</dc:identifier>
+    <dc:identifier>ISBN: 9781909188266</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bai</dc:identifier>
+    <dc:creator>E. Piquette, Kathryn</dc:creator>
+    <dc:creator>D. Whitehouse, Ruth</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Writing as Material Practice grapples with the issue of writing as a form of material culture in its ancient and more recent manifestations, and in the contexts of production and consumption. Fifteen case studies explore the artefactual nature of writing — the ways in which materials, techniques, colour, scale, orientation and visibility inform the creation of inscribed objects and spaces, as well as structure subsequent engagement, perception and meaning making. Covering a temporal span of some 5000 years, from c.3200 BCE to the present day, and ranging in spatial context from the Americas to the Near East, the chapters in this volume bring a variety of perspectives which contribute to both specific and broader questions of writing materialities.  The authors also aim to place past graphical systems in their social contexts so they can be understood in relation to the people who created and attributed meaning to writing and associated symbolic modes through a diverse array of individual and wider social practices.  (DOI: http://dx.doi.org/10.5334/bai)</dc:description>
+    <dc:subject>material culture</dc:subject>
+    <dc:subject>artefact</dc:subject>
+    <dc:subject>archaeology</dc:subject>
+    <dc:subject>symbolism</dc:subject>
+    <dc:subject>writing</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:16261</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>The Past in the Present</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33207/1/533913.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:16261</dc:identifier>    <dc:identifier>ISBN: 9781909188273</dc:identifier>
+    <dc:identifier>ISBN: 9781909188280</dc:identifier>
+    <dc:identifier>ISBN: 9781909188297</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bak</dc:identifier>
+    <dc:creator>Poulios, Ioannis</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>The Past in the Present deals with the complexities in the operation and management of living heritage sites. It presents a new interpretation of such sites based on the concept of continuity, and its evolution to the present. It is demonstrated that the current theoretical framework and practice of conservation, as best epitomised in a values-based approach and the World Heritage concept, is based on discontinuity created between the monuments (considered to belong to the past) and the people of the present, thus seemingly unable to embrace living heritage sites. From this position, the study suggests an innovative approach that views communities and sites as an inseparable entity: a Living Heritage Approach. This approach brings a new insight into key concepts such as authenticity and sustainable development. Through the use of the monastic site of Meteora, Greece, as a case study, the discussion generated aims to shift the focus of conservation from ‘preservation’ towards a continual process of ‘creation’ in an ongoing present, attempting to change the way heritage is perceived, protected and, more importantly, further created.    “The Past in the Present is an important and much-needed contribution to the debate about living heritage – and it is particularly significant in the context of the heritage of the past in the modern world. Anyone concerned with how the past is, or should be, integrated within modern lives and identities will need to read this book.” – Leslie Brubaker, Director, Centre for Byzantine, Ottoman and Modern Greek Studies, University of Birmingham, UK.    “This interesting and thoroughly researched book by Ioannis Poulios is a useful tool in promoting the Living Heritage Approach, and provides a sound theoretical basis for future work. Living Heritage Approach is a paradigm shift that suggests a new way of addressing conservation for our heritage. ICCROM is proud to have introduced this approach, also with the contribution of Ioannis.” – Gamini Wijesuriya, Project Manager, ICCROM.  (DOI: http://dx.doi.org/10.5334/bak)</dc:description>
+    <dc:subject>living heritage approach</dc:subject>
+    <dc:subject>iccrom</dc:subject>
+    <dc:subject>conservation</dc:subject>
+    <dc:subject>world heritage</dc:subject>
+    <dc:subject>community participation</dc:subject>
+    <dc:subject>sustainable development</dc:subject>
+    <dc:subject>meteora, greece</dc:subject>
+    <dc:subject>living heritage</dc:subject>
+    <dc:subject>authenticity</dc:subject>
+    <dc:subject>monastic site</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2014</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:16636</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Ebooks in education</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33214/1/533880.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:16636</dc:identifier>    <dc:identifier>ISBN: 9781909188372</dc:identifier>
+    <dc:identifier>ISBN: 9781909188389</dc:identifier>
+    <dc:identifier>ISBN: 9781909188396</dc:identifier>
+    <dc:identifier>ISBN: 9781909188402</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bal</dc:identifier>
+    <dc:creator>Woodward, Hazel</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Ebooks are coming of age in education, as this exciting collection commissioned by Jisc demonstrates. Case studies, reflecting ebook success stories across the higher and further education sectors, include:    - An innovative app to encourage ebook take-up in a Welsh college.    - A partnership between a library and research centre to create open access monographs and midigraphs.    - Several examples of creative negotiations with ebook publishers.  Insight chapters address hot topics in the ebook universe, including:    - The changing world of access to scholarly digital content in the mobile environment.    - The challenges faced by the library as online distance learning moves from margin to mainstream.    - How ebooks have the potential to meet a wide range of accessibility needs.    - Experimentation with ebooks as a shared service.  This collection will provide inspiration and guidance to institutions as they develop projects and services to support students and researchers and will be of interest to library practitioners, publishers, ebook vendors, information professionals, teachers, lecturers and students.   Jisc, in collaboration with Ubiquity Press, is pleased to be making this publication available open access on a CC-BY licence.   (DOI: http://dx.doi.org//10.5334/bal)</dc:description>
+    <dc:subject>vision</dc:subject>
+    <dc:subject>education</dc:subject>
+    <dc:subject>ebooks</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2014</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:16637</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Battle for Open: How openness won and why it doesn&apos;t feel like victory</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33217/1/533876.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:16637</dc:identifier>    <dc:identifier>ISBN: 9781909188334</dc:identifier>
+    <dc:identifier>ISBN: 9781909188341</dc:identifier>
+    <dc:identifier>ISBN: 9781909188358</dc:identifier>
+    <dc:identifier>ISBN: 9781909188365</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bam</dc:identifier>
+    <dc:creator>Weller, Martin</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>With the success of open access publishing, Massive open online courses (MOOCs) and open education practices, the open approach to education has moved from the periphery to the mainstream. This marks a moment of victory for the open education movement, but at the same time the real battle for the direction of openness begins. As with the green movement, openness now has a market value and is subject to new tensions, such as venture capitalists funding MOOC companies. This is a crucial time for determining the future direction of open education. In this volume, Martin Weller examines four key areas that have been central to the developments within open education: open access, MOOCs, open education resources and open scholarship. Exploring the tensions within these key arenas, he argues that ownership over the future direction of openness is significant to all those with an interest in education.  (DOI: http://dx.doi.org//10.5334/bam)</dc:description>
+    <dc:subject>oers</dc:subject>
+    <dc:subject>open source</dc:subject>
+    <dc:subject>open education</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2014</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:16641</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Science_General</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Issues in Open Research Data</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33212/1/533882.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:16641</dc:identifier>    <dc:identifier>ISBN: 9781909188303</dc:identifier>
+    <dc:identifier>ISBN: 9781909188310</dc:identifier>
+    <dc:identifier>ISBN: 9781909188327</dc:identifier>
+    <dc:identifier>ISBN: 9781909188419</dc:identifier>
+    <dc:identifier>DOI: 10.5334/ban</dc:identifier>
+    <dc:creator>Moore, Sam</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>In 2010 the Panton Principles for Open Data in Science were published. These principles were founded upon the idea that &apos;Science is based on building on, reusing and openly criticising the published body of scientific knowledge’ (http://pantonprinciples.org) and they provide a succinct list of the fundamentals to observe when making your data open. Intended for a broad audience of academics, publishers and librarians, Issues in Research Data explores the implications of the Panton Principles through a number of perspectives on open research data in the sciences and beyond. The book features chapters by open data experts in a range of academic disciplines, covering practical information on licensing, ethics, and advice for data curators, alongside more theoretical issues surrounding the adoption of open data. As the book is open access, each chapter can stand alone from the main volume so that communities can host, distribute, build upon and remix the content that is relevant to them. Readers can access the online version via the QR code or DOI link at the front of the book.  (DOI: http://dx.doi.org//10.5334/ban)</dc:description>
+    <dc:subject>open data</dc:subject>
+    <dc:subject>information studies</dc:subject>
+    <dc:subject>research data</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2014</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:17293</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Earth_and_Environmental_Sciences</setSpec>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Thinking Beyond Sectors for Sustainable Development</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33175/1/560103.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:17293</dc:identifier>    <dc:identifier>ISBN: 9781909188426</dc:identifier>
+    <dc:identifier>ISBN: 9781909188433</dc:identifier>
+    <dc:identifier>ISBN: 9781909188440</dc:identifier>
+    <dc:identifier>ISBN: 9781909188457</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bao</dc:identifier>
+    <dc:creator>Yap, Christopher</dc:creator>
+    <dc:creator>Waage, Jeff</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;This book brings together a series of working papers, produced by interdisciplinary groups of academics within the project, on progress made under the Millennium Development Goals and introduces current debates surrounding the Sustainable Development Goals and the post-2015 agenda. Originating from an interdisciplinary, multi-institution research collaboration, Thinking Beyond Sectors for Sustainable Development, funded by UCL Grand Challenges. The project brought together over thirty academics from UCL, SOAS, London School of Hygiene and Tropical Medicine, Birkbeck, Institute of Education, and the Royal Veterinary College, and was coordinated by the London International Development Centre (LIDC). The book explores potential interactions between sustainable development goals in the post-2015 development agenda.  Introduced and edited by Prof Jeff  Waage (LIDC) and Christopher Yap (LIDC), chapters are dedicated to the topics of Biodiversity and Ecosystems, Human Health, Urban Poverty, Climate and Climate Change, Population Growth, Food and Agriculture, Information, Education and Knowledge, and Governance. Each chapter reflects on the three principle questions of 1) What is the historical process by which goal setting in this sector has developed?, 2) What progress has been achieved with this sector through MDGs and other processes? and 3) What is the current debate about future goal setting?&quot;</dc:description>
+    <dc:subject>interdisciplinarity</dc:subject>
+    <dc:subject>governance</dc:subject>
+    <dc:subject>public policy</dc:subject>
+    <dc:subject>international development</dc:subject>
+    <dc:subject>sustainable development goals (sdgs)</dc:subject>
+    <dc:subject>post-2015</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:17466</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>Philosophy_and_Religion</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Science_General</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Mobile Research Methods</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33043/1/577278.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:17466</dc:identifier>    <dc:identifier>ISBN: 9781909188532</dc:identifier>
+    <dc:identifier>ISBN: 9781909188549</dc:identifier>
+    <dc:identifier>ISBN: 9781909188556</dc:identifier>
+    <dc:identifier>ISBN: 9781909188563</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bar</dc:identifier>
+    <dc:creator>Toninelli, Daniele</dc:creator>
+    <dc:creator>Pinter, Robert</dc:creator>
+    <dc:creator>Pedraza, de, Pablo</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Daily activity sees data constantly flowing through cameras, the internet, satellites, radio frequencies, sensors, private appliances, cars, smartphones, tablets and the like. Among all the tools currently used, mobile devices, especially mobile phones, smartphones and tablets, are the most widespread, with their use becoming prevalent in everyday life within both developed and developing countries. Shopping, reading newspapers, participating in forums, projecting and completing surveys, communicating with friends and making new ones, filing tax returns and getting involved in politics are all examples of how ingrained mobile technology is to modern lifestyleMobile devices allow a wide range of heterogeneous activities and, as a result, have great potential in terms of the different types of data that can be collected. The use of mobile devices to collect, analyse and apply research data is explored here. This book focuses on the use of mobile devices in various research contexts, aiming to provide a detailed and updated knowledge on what is a comparatively new field of study. This is done considering different aspects: main methodological possibilities and issues; comparison and integration with more traditional survey modes or ways of participating in research; quality of collected data; use in commercial market research; representativeness of studies based only on the mobile-population; analysis of the current spread of mobile devices in several countries, and so on. Thus, the book provides interesting research findings from a wide range of countries and contexts. This book was developed in the framework of WebDataNet’s Task Force 19. WebDataNet, was created in 2009 by a group of researchers focusing on the discussion on data collection methods. Supported by the European Union programme for the Coordination of Science and Technology, WebDataNet has become a unique, multidisciplinary network that has brought together leading web-based data collection experts from several institutions, disciplines, and relevant backgrounds from more than 35 different countries.</dc:description>
+    <dc:subject>survey methodology</dc:subject>
+    <dc:subject>mobile devices</dc:subject>
+    <dc:subject>unintended mobile response</dc:subject>
+    <dc:subject>web surveys</dc:subject>
+    <dc:subject>research methods</dc:subject>
+    <dc:subject>mobile web surveys</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:17467</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>The Value of the University Armed Service Units</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33042/1/577279.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:17467</dc:identifier>    <dc:identifier>ISBN: 9781909188570</dc:identifier>
+    <dc:identifier>ISBN: 9781909188587</dc:identifier>
+    <dc:identifier>ISBN: 9781909188594</dc:identifier>
+    <dc:identifier>ISBN: 9781909188600</dc:identifier>
+    <dc:identifier>DOI: 10.5334/baq</dc:identifier>
+    <dc:creator>J. Williams, Alison</dc:creator>
+    <dc:creator>Woodward, Rachel</dc:creator>
+    <dc:creator>Neil Jenkings, K.</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>This book provides a comprehensive assessment of the value of the university armed service units – the University Officer Training Corps, University Royal Naval Units and University Air Squadrons. The units, many of which date back to the early 20th century, exist in order to provide students at UK universities with an experience of the British armed forces. Participation in the units is entirely voluntary, and there is no expectation that students will go on to join the armed forces on graduation, although a proportion of students each year do so.The Value of the University Armed Service Units brings together the results of a research project which explored what the value of the units might be to student participants, to graduates in civilian jobs who had the experience as students, to the armed forces, to universities whose students take part in the units, and to employers of graduates with service unit experience. This book draws on quantitative and qualitative research data to explore whether, how, and why the units have value to these different groups. Significant conclusions include the extent to which the units are able to assist students with the development of their transferable (graduate) skills; the potential significance of the units for future recruitment to the armed forces, particularly the Reserves; and the effect of unit experience in developing an informed understanding of the role and function of the British armed forces amongst the wider civilian population.</dc:description>
+    <dc:subject>skills</dc:subject>
+    <dc:subject>military</dc:subject>
+    <dc:subject>armed forces</dc:subject>
+    <dc:subject>social science</dc:subject>
+    <dc:subject>university</dc:subject>
+    <dc:subject>higher education</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:17468</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Högskolans ansvar</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/33044/1/577277.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:17468</dc:identifier>    <dc:identifier>ISBN: 9781909188495</dc:identifier>
+    <dc:identifier>ISBN: 9781909188501</dc:identifier>
+    <dc:identifier>ISBN: 9781909188518</dc:identifier>
+    <dc:identifier>ISBN: 9781909188525</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bap</dc:identifier>
+    <dc:creator>Casson, Andrew</dc:creator>
+       <dc:language>Swedish</dc:language>
+    <dc:description>What should a university be? How can universities make a sounder and more lasting contribution to better lives and better societies in a globalised world? From a Swedish perspective, this new book challenges current ideas about what higher education is for. It presents fifteen principles for future development that range from a discussion of the nature of knowledge to the responsibility of the university in the development of society. Universities must become better at allowing and encouraging students to develop independence of thought and action through self-formation, bildung, and personal growth rather than merely preparing them for a specific job, the books says, using a historical perspective to consider these issues.</dc:description>
+    <dc:subject>philosophy of education</dc:subject>
+    <dc:subject>academic teaching and learning</dc:subject>
+    <dc:subject>higher education policy development</dc:subject>
+    <dc:subject>higher education design and administration</dc:subject>
+    <dc:subject>higher education and society</dc:subject>
+    <dc:subject>higher education</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:18092</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Science_General</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Gouvernance du secteur de la Sécurité</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32914/1/588817.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:18092</dc:identifier>    <dc:identifier>ISBN: 9781909188716</dc:identifier>
+    <dc:identifier>ISBN: 9781909188723</dc:identifier>
+    <dc:identifier>ISBN: 9781909188730</dc:identifier>
+    <dc:identifier>ISBN: 9781909188747</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bav</dc:identifier>
+    <dc:creator>Chappuis, Fairlie</dc:creator>
+    <dc:creator>Bryden, Alan</dc:creator>
+       <dc:language>French</dc:language>
+    <dc:description>&quot;Many efforts have been undertaken to address dysfunctional security sector governance in West Africa. However, security sector reform (SSR) has fallen short of radical – transformational – change to the fundamental structures of power and governance in the region. Looking more closely at specific examples of SSR in six West African countries, Learning from West African Experiences in Security Sector Governance explores both progress and reversals in efforts by national stakeholders and their international partners to positively influence security sector governance dynamics. Written by eminent national experts based on their personal experiences of these reform contexts, this study offers new insights and practical lessons that should inform processes to improve democratic security sector governance in West Africa and beyond. This book is written in French:  De nombreux efforts ont été déployés afin d’améliorer la gestion défaillante du secteur de la sécurité en Afrique de l’Ouest. Mais il ne suffit pas d’instaurer une réforme du secteur de la sécurité (RSS) pour changer de manière radicale, voire transformationnelle, la structure fondamentale du pouvoir et de la gouvernance dans la région. À partir de plusieurs exemples de RSS dans six des pays ouest-africains, l’ouvrage Gouvernance du secteur de la Sécurité : Leçons des expériences ouest-africaines examine non seulement les progrès accomplis par des acteurs nationaux et leurs partenaires internationaux en vue de renforcer la dynamique de la gouvernance du secteur de la sécurité, mais aussi les revers. Rédigée par d’éminents experts nationaux, auteurs ayant puisé dans leur expérience personnelle de ces contextes de réforme, l’étude livre des enseignements novateurs et pragmatiques visant à faciliter la mise en oeuvre d’une gouvernance démocratique du secteur de la sécurité en Afrique de l’Ouest et au-delà.  An English translation of this book can be viewed, for free, at: http://dx.doi.org/10.5334/bau&quot;</dc:description>
+    <dc:subject>west africa</dc:subject>
+    <dc:subject>domestic security</dc:subject>
+    <dc:subject>development</dc:subject>
+    <dc:subject>democracy</dc:subject>
+    <dc:subject>security sector governance</dc:subject>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:18093</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Science_General</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Learning from West African Experiences in Security Sector Governance</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32915/1/588816.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:18093</dc:identifier>    <dc:identifier>ISBN: 9781909188679</dc:identifier>
+    <dc:identifier>ISBN: 9781909188686</dc:identifier>
+    <dc:identifier>ISBN: 9781909188693</dc:identifier>
+    <dc:identifier>ISBN: 9781909188709</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bau</dc:identifier>
+    <dc:creator>Chappuis, Fairlie</dc:creator>
+    <dc:creator>Bryden, Alan</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Many efforts have been undertaken to address dysfunctional security sector governance in West Africa. However, security sector reform (SSR) has fallen short of radical – transformational – change to the fundamental structures of power and governance in the region. Looking more closely at specific examples of SSR in six West African countries, Learning from West African Experiences in Security Sector Governance explores both progress and reversals in efforts by national stakeholders and their international partners to positively influence security sector governance dynamics. Written by eminent national experts based on their personal experiences of these reform contexts, this study offers new insights and practical lessons that should inform processes to improve democratic security sector governance in West Africa and beyond. “This volume has markedly moved the ball forward in the continuous efforts to better understand SSR experiments, specifically in West Africa. Through what could be dubbed ‘street level analysis of SSR’ (their concept of “micro-dynamics of SSR”), the editors have introduced a perceptive and innovative vista through which to examine and take stock of SSR processes. A must read volume for academics and practitioners of SSR alike in order to integrate the lessons and add to their knowledge base the valuable insights contained in the various chapters.” — Dr. Boubacar N’Diaye, Executive Committee Chair, African Security Sector Network (ASSN); Professor of Political Science and Pan-African Studies, The College of Wooster, USA  A French translation of this book can be viewed, for free, at: http://dx.doi.org/10.5334/bav&quot;</dc:description>
+    <dc:subject>west africa</dc:subject>
+    <dc:subject>domestic security</dc:subject>
+    <dc:subject>development</dc:subject>
+    <dc:subject>democracy</dc:subject>
+    <dc:subject>security sector governance</dc:subject>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:18094</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Science_General</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Garden Learning: A Study on European Botanic Gardens&apos; Collaborative Learning Processes</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32922/1/588798.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:18094</dc:identifier>    <dc:identifier>ISBN: 9781909188631</dc:identifier>
+    <dc:identifier>ISBN: 9781909188648</dc:identifier>
+    <dc:identifier>ISBN: 9781909188655</dc:identifier>
+    <dc:identifier>ISBN: 9781909188662</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bas</dc:identifier>
+    <dc:creator>Kapelari, Suzanne</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;From 2007-2013 the European 7th Framework Program Science in Society (FP7) funded a multitude of formal and informal educational institutions to join forces and engage in alternative ways to teach science—inside and outside the classroom—all over Europe. This book reports on one of these projects named INQUIRE which was developed and implemented to support 14 Botanic Gardens and Natural History Museums in 11 European countries, to establish a collaborative learning network and expand their understanding of inquiry based science teaching (IBST). Suzanne Kapelari provides insight into the complex theoretical background and practical considerations that informed the project design and which guided the consortium through a three-year process of collaborative knowledge creation. ‘Expansive Learning Theory’ is fundamental to this approach and places emphasis on communities as learners, on transformation and creation of culture, on horizontal movement and hybridization of knowledge, and on the formation of theoretical concepts.  This book is to be considered for planning and running international science education projects as well as a multifaceted theoretical underpinning of teaching. It serves as a conceptual and practical resource for formal and informal science educators and project managers.  This project has received funding from the European Union’s Seventh Framework Programme for research, technological development and demonstration under grant agreement no 266616.&quot;</dc:description>
+    <dc:subject>expansive learning</dc:subject>
+    <dc:subject>inquiry based science education</dc:subject>
+    <dc:subject>international project management</dc:subject>
+    <dc:subject>biology education research</dc:subject>
+    <dc:subject>botanic garden education</dc:subject>
+    <dc:subject>learning outside the classroom</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:19013</identifier>
+<datestamp>2018-06-30T02:04:01Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:19586</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Agriculture_and_Food_Sciences</setSpec>
+<setSpec>Health_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>Philosophy_and_Religion</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Animal (De)liberation</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32163/1/613714.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:19586</dc:identifier>    <dc:identifier>ISBN: 9781909188846</dc:identifier>
+    <dc:identifier>ISBN: 9781909188839</dc:identifier>
+    <dc:identifier>ISBN: 9781909188853</dc:identifier>
+    <dc:identifier>ISBN: 9781909188860</dc:identifier>
+    <dc:identifier>ISBN: 9781909188877</dc:identifier>
+    <dc:identifier>ISBN: 9781909188846</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bay</dc:identifier>
+    <dc:creator>Deckers, Jan</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;In this book, Jan Deckers addresses the most crucial question that people must deliberate in relation to how we should treat other animals: whether we should eat animal products. Many people object to the consumption of animal products from the conviction that it inflicts pain, suffering, and death upon animals. This book argues that a convincing ethical theory cannot be based on these important concerns: rather, it must focus on our interest in human health. Tending to this interest demands not only that we extend speciesism—the attribution of special significance to members of our own species merely because they belong to the same species as ourself—towards nonhuman animals, but also that we safeguard the integrity of nature.  In this light, projects that aim to engineer the genetic material of animals to reduce their capacities to feel pain and to suffer are morally suspect. The same applies to projects that aim to develop in-vitro flesh, even if the production of such flesh should be welcomed on other grounds.  The theory proposed in this book is accompanied by a political goal, the ‘vegan project’, which strives for a qualified ban on the consumption of animal products. Deckers also provides empirical evidence that some support for this goal exists already, and his analysis of the views of others—including those of slaughterhouse workers—reveals that the vegan project stands firm in spite of public opposition.  Many charges have been pressed against vegan diets, including: that they alienate human beings from nature; that they increase human food security concerns; and that they are unsustainable. Deckers argues that these charges are legitimate in some cases, but that, in many situations, vegan diets are actually superior.  For those who remain doubtful, the book also contains an appendix that considers whether vegan diets might actually be nutritionally adequate.&quot;</dc:description>
+    <dc:subject>vegan agriculture</dc:subject>
+    <dc:subject>animals</dc:subject>
+    <dc:subject>speciesism</dc:subject>
+    <dc:subject>holistic health</dc:subject>
+    <dc:subject>genetic engineering</dc:subject>
+    <dc:subject>veganism</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:19587</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>Earth_and_Environmental_Sciences</setSpec>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>Science_General</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>The Multi-Agent Transport Simulation MATSim</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32162/1/613715.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:19587</dc:identifier>    <dc:identifier>ISBN: 9781909188754</dc:identifier>
+    <dc:identifier>ISBN: 9781909188761</dc:identifier>
+    <dc:identifier>ISBN: 9781909188778</dc:identifier>
+    <dc:identifier>ISBN: 9781909188785</dc:identifier>
+    <dc:identifier>DOI: 10.5334/baw</dc:identifier>
+    <dc:creator>Nagel, Kai</dc:creator>
+    <dc:creator>Horni, Andreas</dc:creator>
+    <dc:creator>W. Axhausen, Kay</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;The MATSim (Multi-Agent Transport Simulation) software project was started around 2006 with the goal of generating traffic and congestion patterns by following individual synthetic travelers through their daily or weekly activity programme. It has since then evolved from a collection of stand-alone C++ programs to an integrated Java-based framework which is publicly hosted, open-source available, automatically regression tested. It is currently used by about 40 groups throughout the world. This book takes stock of the current status. The first part of the book gives an introduction to the most important concepts, with the intention of enabling a potential user to set up and run basic simulations.The second part of the book describes how the basic functionality can be extended, for example by adding schedule-based public transit, electric or autonomous cars, paratransit, or within-day replanning. For each extension, the text provides pointers to the additional documentation and to the code base. It is also discussed how people with appropriate Java programming skills can write their own extensions, and plug them into the MATSim core.  The project has started from the basic idea that traffic is a consequence of human behavior, and thus humans and their behavior should be the starting point of all modelling, and with the intuition that when simulations with 100 million particles are possible in computational physics, then behavior-oriented simulations with 10 million travelers should be possible in travel behavior research. The initial implementations thus combined concepts from computational physics and complex adaptive systems with concepts from travel behavior research. The third part of the book looks at theoretical concepts that are able to describe important aspects of the simulation system; for example, under certain conditions the code becomes a Monte Carlo engine sampling from a discrete choice model. Another important aspect is the interpretation of the MATSim score as utility in the microeconomic sense, opening up a connection to benefit cost analysis.  Finally, the book collects use cases as they have been undertaken with MATSim. All current users of MATSim were invited to submit their work, and many followed with sometimes crisp and short and sometimes longer contributions, always with pointers to additional references.  We hope that the book will become an invitation to explore, to build and to extend agent-based modeling of travel behavior from the stable and well tested core of MATSim documented here.&quot;</dc:description>
+    <dc:subject>large-scale simulation</dc:subject>
+    <dc:subject>choice modeling</dc:subject>
+    <dc:subject>transport planning</dc:subject>
+    <dc:subject>transport modeling</dc:subject>
+    <dc:subject>agent-based modeling</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:19810</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Reconsidering Cultural Heritage in East Asia</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32078/1/617903.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:19810</dc:identifier>    <dc:identifier>ISBN: 9781909188884</dc:identifier>
+    <dc:identifier>ISBN: 9781909188891</dc:identifier>
+    <dc:identifier>ISBN: 9781909188907</dc:identifier>
+    <dc:identifier>ISBN: 9781909188914</dc:identifier>
+    <dc:identifier>DOI: 10.5334/baz</dc:identifier>
+    <dc:creator>Matsuda, Akira</dc:creator>
+    <dc:creator>Elena Mengoni, Luisa</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>The concept of ‘cultural heritage’ has acquired increasing currency in culture, politics and societies in East Asia. However, in spite of a number of research projects in this field, our understanding of how the past and its material expressions have been perceived, conceptualised and experienced in this part of the world, and how these views affect contemporary local practices and notions of identity, particularly in a period of rapid economic development and increasing globalisation, is still very unclear. Preoccupation with cultural heritage - expressed in the rapid growth of national and private museums, the expansion of the antiquities’ market, revitalisation of local traditions, focus on ‘intangible cultural heritage’ and the development of cultural tourism - is something that directly or indirectly affects national policies and international relations. An investigation of how the concept of ‘cultural heritage’ has been and continues to be constructed in East Asia, drawing on several case studies taken from China, Japan and Korea, is thus timely and worthwhile.</dc:description>
+    <dc:subject>east asia</dc:subject>
+    <dc:subject>korea</dc:subject>
+    <dc:subject>heritage</dc:subject>
+    <dc:subject>monuments</dc:subject>
+    <dc:subject>japan</dc:subject>
+    <dc:subject>china</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:19816</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Agriculture_and_Food_Sciences</setSpec>
+<setSpec>Earth_and_Environmental_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>European Handbook of Crowdsourced Geographic Information</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/32079/1/617901.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:19816</dc:identifier>    <dc:identifier>ISBN: 9781909188792</dc:identifier>
+    <dc:identifier>ISBN: 9781909188808</dc:identifier>
+    <dc:identifier>ISBN: 9781909188815</dc:identifier>
+    <dc:identifier>ISBN: 9781909188822</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bax</dc:identifier>
+    <dc:creator>Haklay, Muki</dc:creator>
+    <dc:creator>Ostermann, Frank</dc:creator>
+    <dc:creator>Kettunen, Juhani</dc:creator>
+    <dc:creator>Capineri, Cristina</dc:creator>
+    <dc:creator>Antoniou, Vyron</dc:creator>
+    <dc:creator>Purves, Ross</dc:creator>
+    <dc:creator>Huang, Haosheng</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;This book focuses on the study of the remarkable new source of geographic information that has become available in the form of user-generated content accessible over the Internet through mobile and Web applications. The exploitation, integration and application of these sources, termed volunteered geographic information (VGI) or crowdsourced geographic information (CGI), offer scientists an unprecedented opportunity to conduct research on a variety of topics at multiple scales and for diversified objectives. The Handbook is organized in five parts, addressing the fundamental questions: What motivates citizens to provide such information in the public domain, and what factors govern/predict its validity?What methods might be used to validate such information? Can VGI be framed within the larger domain of sensor networks, in which inert and static sensors are replaced or combined by intelligent and mobile humans equipped with sensing devices? What limitations are imposed on VGI by differential access to broadband Internet, mobile phones, and other communication technologies, and by concerns over privacy? How do VGI and crowdsourcing enable innovation applications to benefit human society?  Chapters examine how crowdsourcing techniques and methods, and the VGI phenomenon, have motivated a multidisciplinary research community to identify both fields of applications and quality criteria depending on the use of VGI. Besides harvesting tools and storage of these data, research has paid remarkable attention to these information resources, in an age when information and participation is one of the most important drivers of development.  The collection opens questions and points to new research directions in addition to the findings that each of the authors demonstrates. Despite rapid progress in VGI research, this Handbook also shows that there are technical, social, political and methodological challenges that require further studies and research.&quot;</dc:description>
+    <dc:subject>crowdsourcing</dc:subject>
+    <dc:subject>geospatial information</dc:subject>
+    <dc:subject>volunteered geographic information</dc:subject>
+    <dc:subject>spatial data</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:20714</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Turn on the light on science</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31740/1/625335.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:20714</dc:identifier>    <dc:identifier>ISBN: 9781911529040</dc:identifier>
+    <dc:identifier>ISBN: 9781911529057</dc:identifier>
+    <dc:identifier>ISBN: 9781911529064</dc:identifier>
+    <dc:identifier>ISBN: 9781911529071</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bba</dc:identifier>
+    <dc:creator>Tintori, Antonio</dc:creator>
+    <dc:creator>Palomba, Rossella</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Scientists deserve public recognition. The ways that they are depicted, however, are severely limited in physical and personal traits, helping to establish and enhance stereotypes under the general title of ‘scientist’. These stereotypes range from the arrogant researcher who wants to rule the world, to the lab coat wearing ‘nerdy’ genius, but all generally fall to an extreme view of an existing perception of what a scientist should look and be like. For example, the popular image of ‘a scientist’ overlooks the presence of women almost entirely unless attributed to specific subjects and/or with narrow character depictions. The implications can be far-reaching. Young people, being heavily swayed by what they see and hear in the media, may avoid scientific careers because of these limited or unflattering portrayals of the scientific community, regardless of whether they reflect real life. Based on findings from the Light’13 project, this book examines such stereotypes and questions whether it is possible to adjust people’s perception of scientists and to increase interest in science and scientific careers through a series of specific actions and events.&quot;</dc:description>
+    <dc:subject>gender stereotypes in science</dc:subject>
+    <dc:subject>interaction-based science communication</dc:subject>
+    <dc:subject>stereotypes&apos; removal</dc:subject>
+    <dc:subject>young people and stem</dc:subject>
+    <dc:subject>stereotypes on scientists</dc:subject>
+    <dc:subject>stereotypes</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:21601</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>Science_General</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Open</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31551/1/627025.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:21601</dc:identifier>    <dc:identifier>ISBN: 9781911529002</dc:identifier>
+    <dc:identifier>ISBN: 9781911529019</dc:identifier>
+    <dc:identifier>ISBN: 9781911529026</dc:identifier>
+    <dc:identifier>ISBN: 9781911529033</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbc</dc:identifier>
+    <dc:creator>Jhangiani, Rajiv</dc:creator>
+    <dc:creator>Biswas-Diener, Robert</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Affordable education. Transparent science. Accessible scholarship. These ideals are slowly becoming a reality thanks to the open education, open science, and open access movements. Running separate—if parallel—courses, they all share a philosophy of equity, progress, and justice. This book shares the stories, motives, insights, and practical tips from global leaders in the open movement.&quot;</dc:description>
+    <dc:subject>psychology</dc:subject>
+    <dc:subject>open educational resources</dc:subject>
+    <dc:subject>open access</dc:subject>
+    <dc:subject>open pedagogy</dc:subject>
+    <dc:subject>open science</dc:subject>
+    <dc:subject>open textbooks</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:21618</identifier>
+<datestamp>2018-06-30T02:04:01Z</datestamp>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:23012</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Agriculture_and_Food_Sciences</setSpec>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>&quot;Production Ergonomics</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31300/1/631952.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:23012</dc:identifier>    <dc:identifier>ISBN: 9781911529125</dc:identifier>
+    <dc:identifier>ISBN: 9781911529132</dc:identifier>
+    <dc:identifier>ISBN: 9781911529149</dc:identifier>
+    <dc:identifier>ISBN: 9781911529156</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbe</dc:identifier>
+    <dc:creator>Berlin, Cecilia</dc:creator>
+    <dc:creator>Adams, Caroline</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Production ergonomics – the science and practice of designing industrial workplaces to optimize human well-being and system performance – is a complex challenge for a designer. Humans are a valuable and flexible resource in any system of creation, and as long as they stay healthy, alert and motivated, they perform well and also become more competent over time, which increases their value as a resource. However, if a system designer is not mindful or aware of the many threats to health and system performance that may emerge, the end result may include inefficiency, productivity losses, low working morale, injuries and sick-leave. To help budding system designers and production engineers tackle these design challenges holistically, this book offers a multi-faceted orientation in the prerequisites for healthy and effective human work. We will cover physical, cognitive and organizational aspects of ergonomics, and provide both the individual human perspective and that of groups and populations, ending up with a look at global challenges that require workplaces to become more socially and economically sustainable. This book is written to give you a warm welcome to the subject, and to provide a solid foundation for improving industrial workplaces to attract and retain healthy and productive staff in the long run.&quot;</dc:description>
+    <dc:subject>human factors</dc:subject>
+    <dc:subject>ergonomics</dc:subject>
+    <dc:subject>safety</dc:subject>
+    <dc:subject>manufacturing</dc:subject>
+    <dc:subject>production</dc:subject>
+    <dc:subject>work environment</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:23013</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Doing the Right Thing</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31307/1/631934.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:23013</dc:identifier>    <dc:identifier>ISBN: 9781909188921</dc:identifier>
+    <dc:identifier>ISBN: 9781909188938</dc:identifier>
+    <dc:identifier>ISBN: 9781909188945</dc:identifier>
+    <dc:identifier>ISBN: 9781909188952</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbb</dc:identifier>
+    <dc:creator>Klamer, Arjo</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;This book is for all those who are seeking a human perspective on economic and organizational processes. It lays the foundations for a value based approach to the economy. The key questions are: “What is important to you or your organization?” “What is this action or that organization good for?”  The book is directed at the prevalence of instrumentalist thinking in the current economy and responds to the calls for another economy.  Another economy demands another economics. The value based approach is another economics; it focuses on values and on the most important goods such as families, homes, communities, knowledge, and art. It places economic processes in their cultural context.  What does it take to do the right thing, as a person, as an organization, as a society? What is the good to strive for? This book gives directions for the answers.  The value based approach restores the ancient idea that quality of life and of society is what the economy is all about. It advocates shifting the focus from quantities (“how much?”) to qualities (“what is important?”).</dc:description>
+    <dc:subject>share economy</dc:subject>
+    <dc:subject>value based approach</dc:subject>
+    <dc:subject>creative commons</dc:subject>
+    <dc:subject>culture and economy</dc:subject>
+    <dc:subject>values</dc:subject>
+    <dc:subject>shared good</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:23016</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Biology_and_Life_Sciences</setSpec>
+<setSpec>Mathematics_and_Statistics</setSpec>
+<setSpec>Health_Sciences</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Publishing Addiction Science</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31301/1/631951.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:23016</dc:identifier>    <dc:identifier>ISBN: 9781911529088</dc:identifier>
+    <dc:identifier>ISBN: 9781911529095</dc:identifier>
+    <dc:identifier>ISBN: 9781911529101</dc:identifier>
+    <dc:identifier>ISBN: 9781911529118</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbd</dc:identifier>
+    <dc:creator>Babor, Thomas</dc:creator>
+    <dc:creator>O&apos;Reilly, Jean</dc:creator>
+    <dc:creator>Miovský, Michal</dc:creator>
+    <dc:creator>Stenius, Kerstin</dc:creator>
+    <dc:creator>Candon, Paul</dc:creator>
+    <dc:creator>Pates, Richard</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Publishing Addiction Science is a comprehensive guide for addiction scientists facing the complex process of contributing to scholarly journals. Written by an international group of addiction journal editors and their colleagues, it discusses how to write research articles and systematic reviews, choose a journal, respond to reviewers’ reports, become a reviewer, and resolve the often difficult authorship, ethical and citation issues that arise in addiction science publishing. As a “Guide for the Perplexed,” Publishing Addiction Science helps novice as well as experienced researchers to deal with these challenges. It is suitable for university courses and forms the basis of the training workshops offered by the International Society of Addiction Journal Editors (ISAJE).  Co-sponsored by ISAJE and the scientific journal Addiction, the third edition of Publishing Addiction Science gives special attention to the challenges faced by researchers from developing and non-English-speaking countries and features new chapters on guidance for clinician-scientists and the growth of infrastructure and career opportunities in addiction science.&quot;</dc:description>
+    <dc:subject>publication ethics</dc:subject>
+    <dc:subject>addiction science</dc:subject>
+    <dc:subject>scientific integrity</dc:subject>
+    <dc:subject>responsible conduct of research</dc:subject>
+    <dc:subject>authorship</dc:subject>
+    <dc:subject>competing interests</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:23541</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>Philosophy_and_Religion</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Thoughts and Ways of Thinking</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31191/1/635202.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:23541</dc:identifier>    <dc:identifier>ISBN: 9781911529200</dc:identifier>
+    <dc:identifier>ISBN: 9781911529217</dc:identifier>
+    <dc:identifier>ISBN: 9781911529224</dc:identifier>
+    <dc:identifier>ISBN: 9781911529231</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbh</dc:identifier>
+    <dc:creator>Brown, Benjamin</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Why do we think differently from one another? Why do religious people adhere to their faith even against reason, whilst atheist thinkers label it “nonsense”? Why do some judges turn more to moral values and others less? Why do we attach different meanings to the same words? These questions can be tackled on psychological or sociological levels, but we can also analyze the subjects on the epistemological level. That is the purpose of this book.  Thoughts and Ways of Thinking offers Source Theory as a single explanation for epistemic processes and their religious, legal and linguistic derivatives. The idea is simple: our senses, our understanding, our memory, the testimonies that we trust, and many other objects transmit data to us and so shape our beliefs. In this function they serve as our truth sources. Different beliefs stem from different sources or different hierarchies between same sources. This notion is formalized here through the new tool of Source Calculus, and, after balancing its relativistic consequences by adding pragmatic constraints, it is applied to the philosophies of religion, law and language. With this unified theory, old doubts are framed in new perspectives, and some of them even find their solution.&quot;</dc:description>
+    <dc:subject>reason and revelation conflict</dc:subject>
+    <dc:subject>relativism</dc:subject>
+    <dc:subject>source theory</dc:subject>
+    <dc:subject>naming</dc:subject>
+    <dc:subject>sources of law</dc:subject>
+    <dc:subject>truth</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:23878</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Earth_and_Environmental_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Mapping and the Citizen Sensor</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31138/1/637890.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:23878</dc:identifier>    <dc:identifier>ISBN: 9781911529194</dc:identifier>
+    <dc:identifier>ISBN: 9781911529163</dc:identifier>
+    <dc:identifier>ISBN: 9781911529170</dc:identifier>
+    <dc:identifier>ISBN: 9781911529187</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbf</dc:identifier>
+    <dc:creator>See, Linda</dc:creator>
+    <dc:creator>Mooney, Peter</dc:creator>
+    <dc:creator>Foody, Giles</dc:creator>
+    <dc:creator>Antoniou, Vyron</dc:creator>
+    <dc:creator>Olteanu-Raimond, Ana-Maria</dc:creator>
+    <dc:creator>Fritz, Steffen</dc:creator>
+    <dc:creator>Costa Fonte, Cidália</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Maps are a fundamental resource in a diverse array of applications ranging from everyday activities, such as route planning through the legal demarcation of space to scientific studies, such as those seeking to understand biodiversity and inform the design of nature reserves for species conservation. For a map to have value, it should provide an accurate and timely representation of the phenomenon depicted and this can be a challenge in a dynamic world. Fortunately, mapping activities have benefitted greatly from recent advances in geoinformation technologies. Satellite remote sensing, for example, now offers unparalleled data acquisition and authoritative mapping agencies have developed systems for the routine production of maps in accordance with strict standards. Until recently, much mapping activity was in the exclusive realm of authoritative agencies but technological development has also allowed the rise of the amateur mapping community. The proliferation of inexpensive and highly mobile and location aware devices together with Web 2.0 technology have fostered the emergence of the citizen as a source of data. Mapping presently benefits from vast amounts of spatial data as well as people able to provide observations of geographic phenomena, which can inform map production, revision and evaluation. The great potential of these developments is, however, often limited by concerns. The latter span issues from the nature of the citizens through the way data are collected and shared to the quality and trustworthiness of the data. This book reports on some of the key issues connected with the use of citizen sensors in mapping. It arises from a European Co-operation in Science and Technology (COST) Action, which explored issues linked to topics ranging from citizen motivation, data acquisition, data quality and the use of citizen derived data in the production of maps that rival, and sometimes surpass, maps arising from authoritative agencies.</dc:description>
+    <dc:subject>mapping</dc:subject>
+    <dc:subject>geographical information</dc:subject>
+    <dc:subject>crowdsourcing</dc:subject>
+    <dc:subject>volunteered geographic information (vgi)</dc:subject>
+    <dc:subject>citizen science</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:23879</identifier>
+<datestamp>2018-12-20T16:51:56Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:23880</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Migration of the Ukrainian Population</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/31137/1/637891.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:23880</dc:identifier>    <dc:identifier>ISBN: 9781909188983</dc:identifier>
+    <dc:identifier>ISBN: 9781909188990</dc:identifier>
+    <dc:identifier>ISBN: 9781909188969</dc:identifier>
+    <dc:identifier>ISBN: 9781909188976</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbg</dc:identifier>
+    <dc:creator>Bilan, Yuriy</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Ukraine is a &apos;border&apos; society, situated culturally and socio-politically between Eurasian and Euro-Atlantic poles of attraction. The influence of these two distinct cultures can be seen throughout Ukrainian society, but particularly in its migration patterns. In this book, Dr Hab. Y. Bilan analyses external migration from Ukraine using the system analysis approach combining econometric analysis and statistical modelling, historiographical and institutional analyses along with quantitative and qualitative sociological analysis with special attention to media discourse and congregational, demographic, gender and regional dimensions.&quot;</dc:description>
+    <dc:subject>migrations</dc:subject>
+    <dc:subject>labour</dc:subject>
+    <dc:subject>push and pull factors of migration</dc:subject>
+    <dc:subject>ukraine</dc:subject>
+    <dc:subject>comparative study</dc:subject>
+    <dc:subject>imagined geography</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:25016</identifier>
+<datestamp>2020-08-04T17:24:23Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>CLARIN in the Low Countries</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/30870/1/641502.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:25016</dc:identifier>    <dc:identifier>ISBN: 9781911529248</dc:identifier>
+    <dc:identifier>ISBN: 9781911529255</dc:identifier>
+    <dc:identifier>ISBN: 9781911529262</dc:identifier>
+    <dc:identifier>ISBN: 9781911529279</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbi</dc:identifier>
+    <dc:creator>Odijk, Jan</dc:creator>
+    <dc:creator>van Hessen, Arjan</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;This book describes the results of activities undertaken to construct the CLARIN research infrastructure in the Low Countries, i.e., in the Netherlands and in Flanders (the Dutch-speaking part of Belgium). CLARIN is a European research infrastructure for humanities and social science researchers that work with natural language data. This book introduces the CLARIN infrastructure, describes various aspects of the technical implementation of the infrastructure, and introduces data, applications and software services created in the Low Countries for a wide variety of humanities disciplines. These enable researchers to accelerate their research activities and to base their conclusions on a much larger and richer empirical base than was possible before, thus providing a basis for carrying out groundbreaking research in which old questions can be investigated in new ways and new questions can be raised and investigated for the first time.  Given CLARIN’s focus on language data, linguistics and particularly syntax are prominently present. However, other humanities disciplines that work with natural language data such as history, literary studies, religion studies, media studies, political studies, and philosophy are represented as well. The book is a must read for humanities scholars and students who want to understand and use the potential that the Digital Humanities offer, as well as for computer scientists and developers of research infrastructures, in particular for researchers working on the CLARIN infrastructure in other countries.&quot;</dc:description>
+    <dc:subject>taalportaal</dc:subject>
+    <dc:subject>netherlands</dc:subject>
+    <dc:subject>digital humanities</dc:subject>
+    <dc:subject>ckcc</dc:subject>
+    <dc:subject>research infrastructure</dc:subject>
+    <dc:subject>clarin eric</dc:subject>
+    <dc:subject>clarin</dc:subject>
+    <dc:subject>clarin-nl</dc:subject>
+    <dc:subject>nederlab</dc:subject>
+    <dc:subject>flanders</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2017</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:26760</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Digital Classics Outside the Echo-Chamber</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/30115/1/649985.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:26760</dc:identifier>    <dc:identifier>ISBN: 9781909188464</dc:identifier>
+    <dc:identifier>ISBN: 9781909188488</dc:identifier>
+    <dc:identifier>ISBN: 9781909188471</dc:identifier>
+    <dc:identifier>ISBN: 9781909188617</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bat</dc:identifier>
+    <dc:creator>Romanello, Matteo</dc:creator>
+    <dc:creator>Bodard, Gabriel</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>This volume, edited by the organizers of the “Digital Classicist” seminars series, presents research in classical studies, digital classics and digital humanities, bringing together scholarship that addresses the impact of the study of classical antiquity through computational methods on audiences such as scientists, heritage professionals, students and the general public. Within this context, chapters tackle particular aspects, from epigraphy, papyrology and manuscripts, via Greek language, linguistics and literature, to imaging and modelling of artefacts, architecture, and technologies and methods in digital classics research. The book is aimed for scholars in the various fields of history, classical studies, digital humanities and archaeology. It will also be of interest to researchers in library and information sciences, informatics and pedagogy.</dc:description>
+    <dc:subject>History</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27035</identifier>
+<datestamp>2019-01-17T16:54:06Z</datestamp>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Strindberg and Autobiography</dc:title>
+    <dc:identifier>http://www.oapen.org/download/?type=document&amp;docid=533910</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27035</dc:identifier>    <dc:identifier>ISBN: 9781909188099</dc:identifier>
+    <dc:identifier>ISBN: 9781909188013</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bab</dc:identifier>
+    <dc:creator>Robinson, Michael</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>This is a book about Strindberg and about the nature of autobiographical writing. In this sensitive and discerning study, Michael Robinson has turned aside from the more traditional biographical approach to Strindberg. Instead he sets out to explore the highly idiosyncratic way in which Strindberg projected himself in language, looking at the problems which this brought in its trail, and laying bare the subterfuges it engendered. </dc:description>
+    <dc:subject>august strindberg</dc:subject>
+    <dc:subject>biography</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>http://creativecommons.org/licenses/by/3.0/</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27036</identifier>
+<datestamp>2019-01-17T16:50:17Z</datestamp>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Studies in Strindberg</dc:title>
+    <dc:identifier>http://www.oapen.org/download/?type=document&amp;docid=533911</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27036</dc:identifier>    <dc:identifier>ISBN: 9781909188105</dc:identifier>
+    <dc:identifier>ISBN: 9781909188020</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bac</dc:identifier>
+    <dc:creator>Robinson, Michael</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>In this volume Strindberg&apos;s accomplishments as a dramatist are set against his achievements in other fields, as an autobiographer, painter, letter writer and theatre director. There are studies of individual plays, in which Strindberg&apos;s theatre is related both to naturalism and the theatre of the absurd, and of the role played by his life-long interest in historical drama. </dc:description>
+    <dc:subject>august strindberg</dc:subject>
+    <dc:subject>theatre</dc:subject>
+    <dc:subject>inferno</dc:subject>
+    <dc:subject>drama</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>http://creativecommons.org/licenses/by/3.0/</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header status="deleted">
+<identifier>oai:doab-books:27037</identifier>
+<datestamp>2018-10-29T08:23:26Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27038</identifier>
+<datestamp>2019-01-17T16:57:53Z</datestamp>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Conversations with Kenelm</dc:title>
+    <dc:identifier>http://www.oapen.org/download/?type=document&amp;docid=533878</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27038</dc:identifier>    <dc:identifier>ISBN: 9781909188082</dc:identifier>
+    <dc:identifier>ISBN: 9781909188006</dc:identifier>
+    <dc:identifier>DOI: 10.5334/baa</dc:identifier>
+    <dc:creator>Took, John</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>In a celebratory moment of the Paradiso, Dante has Thomas go round the circle of sage spirits identifying each in turn in point of proper calling and confirming how it is that self is everywhere present to the other-than-self as a co-efficient of being in the endless and endlessly varied instantiation of that being. The image, at once perfectly Dantean and perfectly resplendent, underlies and informs these conversations of mine with Kenelm; for if in reading and rereading the cherished text, I have from time to time felt the need to enter a qualification, it is a matter here, as in the high consistory of paradise, of otherness as both contained and as authorized by sameness, as conditioned and set free by it for a life of its own. Never, in other words, is it a question in what follows of the stark alternativism of the sed contra, but instead a matter of formed friendship, of the kind of friendship which, conceived in love, makes for a sweet choreography of the spirit. (DOI: 10.5334/baa)</dc:description>
+    <dc:subject>commedia</dc:subject>
+    <dc:subject>dante</dc:subject>
+    <dc:subject>kenelm foster</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>http:// creativecommons.org/licenses/by/3.0/</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27039</identifier>
+<datestamp>2020-02-19T10:33:54Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Measuring the Impact of Peacebuilding Interventions on Rule of Law and Security Institutions</dc:title>
+    <dc:identifier>http://oapen.org/search?identifier=1004241;keyword=Measuring%20the%20Impact%20of%20Peacebuilding%20Interventions%20on%20Rule%20of%20Law%20and%20Security%20Institutions</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27039</dc:identifier>    <dc:identifier>ISBN: 9781911529330</dc:identifier>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date></dc:date>
+    <dc:type>book</dc:type>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27040</identifier>
+<datestamp>2018-10-29T08:30:02Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>The Rule of Law and Security Sector Reform</dc:title>
+    <dc:identifier>https://www.ubiquitypress.com/site/books/10.5334/bbp/download/2162/</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27040</dc:identifier>    <dc:identifier>ISBN: 9781911529323</dc:identifier>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date></dc:date>
+    <dc:type>book</dc:type>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27041</identifier>
+<datestamp>2020-02-19T10:32:52Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>International Intervention and the Use of Force</dc:title>
+    <dc:identifier>http://oapen.org/search?identifier=1004239;keyword=international%20intervention</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27041</dc:identifier>    <dc:identifier>ISBN: 9781911529316</dc:identifier>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date></dc:date>
+    <dc:type>book</dc:type>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27042</identifier>
+<datestamp>2020-02-19T10:35:24Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>UN Use of Private Military and Security Companies</dc:title>
+    <dc:identifier>http://oapen.org/search?identifier=1004238;keyword=UN%20Use%20of%20Private%20Military%20and%20Security%20Companies:%20Practices%20and%20Policies</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27042</dc:identifier>    <dc:identifier>ISBN: 9781911529309</dc:identifier>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date></dc:date>
+    <dc:type>book</dc:type>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27043</identifier>
+<datestamp>2020-08-04T17:18:27Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Arab Uprisings and Armed Forces</dc:title>
+    <dc:identifier>http://oapen.org/search?identifier=1004237;keyword=Arab%20Uprisings%20and%20Armed%20Forces:%20Between%20Openness%20and%20Resistance</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27043</dc:identifier>    <dc:identifier>ISBN: 9781911529293</dc:identifier>
+    <dc:identifier>DOI: https://doi.org/10.5334/bbm</dc:identifier>
+    <dc:creator>Derek Lutterbeck</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Since late 2010, an unprecedented wave of protests has swept across much of the Arab world. The aim of this paper is to examine the role of the armed forces when confronted with anti-regime uprisings that demand greater political freedoms or even regime change. Drawing on the cases of Tunisia, Egypt, Libya, Bahrain, Yemen and Syria, it argues that the degree of institutionalization of the armed forces and their relationship to society at large can account for different responses to pro-reform uprisings.</dc:description>
+    <dc:subject>Armed forces, Security Sector Reform, Good Governance, Arab spring, transition, civil military relations</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2011</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:27044</identifier>
+<datestamp>2020-02-19T10:34:50Z</datestamp>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Security Sector Reform</dc:title>
+    <dc:identifier>http://oapen.org/search?identifier=1004236;keyword=Security%20Sector%20Reform:%20Narrowing%20the%20Gap%20between%20Theory%20and%20Practice</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:27044</dc:identifier>    <dc:identifier>ISBN: 9781911529286</dc:identifier>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date></dc:date>
+    <dc:type>book</dc:type>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:31492</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Rethinking Community Policing in International Police Reform</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/28339/1/rethinking-community-policing-in-international-police-reform.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:31492</dc:identifier>    <dc:identifier>ISBN: 9781911529453</dc:identifier>
+    <dc:identifier>ISBN: 9781911529446</dc:identifier>
+    <dc:identifier>ISBN: 9781911529460</dc:identifier>
+    <dc:identifier>ISBN: 9781911529477</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bcb</dc:identifier>
+    <dc:creator>Kocak, Deniz</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Community policing has often been promoted, particularly in liberal democratic societies, as the best approach to align police services with the principles of good security sector governance (SSG). The stated goal of the community policing approach is to reduce fear of crime within communities, and to overcome mutual distrust between the police and the communities they serve by promoting police citizen partnerships. This SSR Paper traces the historical origins of the concept of community policing in Victorian Great Britain and analyses the processes of transfer, implementation, and adaptation of approaches to community policing in Imperial and post-war Japan, Singapore, and Timor-Leste. The study identifies the factors that were conducive or constraining to the establishment of community policing in each case. It concludes that basic elements of police professionalism and local ownership are necessary preconditions for successfully implementing community policing according to the principles of good SSG. Moreover, external initiatives for community policing must be more closely aligned to the realities of the local context.</dc:description>
+    <dc:subject>Singapore</dc:subject>
+    <dc:subject>Timor-Leste</dc:subject>
+    <dc:subject>Governance</dc:subject>
+    <dc:subject>Police</dc:subject>
+    <dc:subject>reform</dc:subject>
+    <dc:subject>Community</dc:subject>
+    <dc:subject>policing</dc:subject>
+    <dc:subject>Security</dc:subject>
+    <dc:subject>sector</dc:subject>
+    <dc:subject>reform</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2018</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32375</identifier>
+<datestamp>2020-05-04T09:12:09Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Integrating SSR and SALW Programming</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25835/1/integrating-ssr-and-salw-programming.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32375</dc:identifier>    <dc:identifier>ISBN: 9781911529439</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bca</dc:identifier>
+    <dc:creator>Burt, Geoff</dc:creator>
+    <dc:creator>Sedra, Mark</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Security sector reform (SSR) and small arms and lights weapons (SALW) reduction and control programmes have become staples of peacebuilding policy and practice in fragile, failed and conflict-affected states (FFCAS). There is wide agreement in the peacebuilding field that the two areas are intricately interconnected and mutually reinforcing. However, this consensus has rarely translated into integrated programming on the ground. Drawing on a diverse set of case studies, this paper presents a renewed argument for robust integration of SSR and SALW programming. The failure to exploit innate synergies between the two areas in the field has not merely resulted in missed opportunities to leverage scarce resources and capacity, but has caused significant programmatic setbacks that have harmed wider prospects for peace and stability. With the SSR model itself in a period of conceptual transition, the time is ripe for innovation. A renewed emphasis on integrating SSR and SALW programming in FFCAS, while not a wholly new idea, represents a potential avenue for change that could deliver significant dividends in the field. The paper offers some preliminary ideas on how to achieve this renewed integration in practice.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>SALW</dc:subject>
+    <dc:subject> arms control</dc:subject>
+    <dc:subject>peacebuilding</dc:subject>
+    <dc:subject>statebuilding</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32376</identifier>
+<datestamp>2020-05-04T09:12:19Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Linking Mine Action and SSR through Human Security</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25836/1/linking-mine-action-and-ssr-through-human-security.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32376</dc:identifier>    <dc:identifier>ISBN: 9781911529422</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbz</dc:identifier>
+    <dc:creator>Rapillard, Pascal</dc:creator>
+    <dc:creator>Maspoli , Gianluca</dc:creator>
+    <dc:creator>Massleberg, Åsa</dc:creator>
+    <dc:creator>Hofmann , Ursign</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Security sector reform (SSR) and mine action share a strong common conceptual basis, which draws from a shared understanding of security. They both reflect a conceptualization of security that is not limited to the level of the state, but takes into account security threats and needs at societal and individual levels. This common basis provides opportunities for synergies between SSR and mine action. However, empirical evidence demonstrates that the strong conceptual basis is not fully reflected in concrete activities, and the linkages remain limited and underexplored. Despite this gap, there are positive examples showing the potential for synergies between SSR and mine action. Ultimately, this paper maintains that the concept of human security provides a comprehensive framework which can bridge the differences and open broader opportunities for cooperation, which in turn will increase the impact of interventions in SSR and mine action.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>mine action</dc:subject>
+    <dc:subject>demining</dc:subject>
+    <dc:subject>human security</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32377</identifier>
+<datestamp>2020-05-04T09:12:18Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>DDR and SSR in War-to-Peace Transition</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25837/1/ddr-and-ssr-in-war-to-peace-transition.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32377</dc:identifier>    <dc:identifier>ISBN: 9781911529415</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bby</dc:identifier>
+    <dc:creator>von Dyck, Christopher</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>While disarmament, demobilization and reintegration (DDR) and security sector reform (SSR) have become integral statebuilding tools in post-conflict states, the existing empirical literature examining their relationship has focused on supply-side considerations related to the programming of both processes. In practice, though, DDR and SSR are implemented in the wider context of war-to-peace transitions where the state is attempting to establish a monopoly over the use of force and legitimize itself in the eyes of domestic and international communities. This paper therefore assumes that to identify opportunities and constraints for establishing closer practical linkages between DDR and SSR it is important to take the local politics into consideration. It examines two past externally driven peacebuilding interventions in West Africa, namely Liberia and Sierra Leone, featuring cases in which the central state had essentially fragmented or collapsed. Through this comparative analysis, the paper aims to provide a stepping-stone for future studies examining demand-side considerations of DDR and SSR in post-conflict contexts.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>peacebuilding</dc:subject>
+    <dc:subject>transition</dc:subject>
+    <dc:subject>DDR</dc:subject>
+    <dc:subject>demobilization</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2016</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32378</identifier>
+<datestamp>2020-05-04T09:12:17Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Business and Security Sector Reform</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25838/1/business-and-security-sector-reform.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32378</dc:identifier>    <dc:identifier>ISBN: 9781911529408</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbx</dc:identifier>
+    <dc:creator>Rosa Mendes, Pedro</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Challenges to security and human rights involving extractive and other industries are addressed in a framework known as business and human rights (BHR), which shares many challenges and goals with SSR. This paper describes the grounds where BHR and SSR coincide in principles, actors and activities and which synergies can be built on that base. Opportunities for bridging BHR and SSR are drawn from a systematic comparison of case studies on Guinea, Colombia and Papua New Guinea. BHR and SSR should ideally cohere instead of collide.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>business</dc:subject>
+    <dc:subject>human rights</dc:subject>
+    <dc:subject>risk assessment</dc:subject>
+    <dc:subject>corporate responsibility</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32379</identifier>
+<datestamp>2020-05-04T09:12:16Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Towards an International Code of Conduct for Private Security Providers:</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25839/1/towards-an-international-code-of-conduct-for-private-security-providers.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32379</dc:identifier>    <dc:identifier>ISBN: 9781911529392</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbw</dc:identifier>
+    <dc:creator>Buzatu, Anne-Marie</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>The use of private security companies (PSCs) to perform services that are traditionally associated with the state presents a challenge to regulatory and oversight frameworks. Analyzing developments leading to the International Code of Conduct for Security Providers (ICOC) and the ICOC Association, this paper argues that a multistakeholder approach to develop standards adapted for the private sector and which creates governance and oversight mechanisms fills some of the governance gaps found in traditional regulatory approaches.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>ICOC</dc:subject>
+    <dc:subject>private security companies</dc:subject>
+    <dc:subject>oversight</dc:subject>
+    <dc:subject>standard</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32380</identifier>
+<datestamp>2020-05-04T09:12:19Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Money Matters</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25840/1/money-matters.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32380</dc:identifier>    <dc:identifier>ISBN: 9781911529385</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbv</dc:identifier>
+    <dc:creator>Ommundsen, Thorodd</dc:creator>
+    <dc:creator>Keane , Rory</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Although the financial sustainability of United Nations (UN) support to institutional capacity building in post-conflict contexts may be the least analysed topic on the peacebuilding agenda, understanding the costs of rebuilding and maintaining the security sector should be one of the most important priorities for security sector reform (SSR) practitioners today. Through innovative partnerships between the UN and the World Bank, a new and important practice area in public financial management of the security sector is beginning to take shape. This paper traces the new demands placed on peacekeeping operations to â  get more bang for every peacekeeping buckâ  , and explores how to match SSR priorities and recurring costs in the security sector with available resources over the long term. In presenting the lessons learned from the security sector public expenditure review conducted by the UN and the World Bank in Liberia in 2012, the first such review jointly undertaken by the two organizations, the paper seeks to illustrate how the discussion on right-sizing of the security sector can go hand in hand with a discussion on right-financing in order to help prioritize key reforms pragmatically in light of the available fiscal space. Specifically, the paper provides SSR practitioners with insights into the challenges often encountered when assisting national authorities to address the political economy of SSR, and how to navigate those dilemmas.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>finance</dc:subject>
+    <dc:subject>budget</dc:subject>
+    <dc:subject>sustainability</dc:subject>
+    <dc:subject>Liberia</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2015</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32381</identifier>
+<datestamp>2020-05-04T09:12:15Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Dealing with the Past in Security Sector Reform</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25841/1/dealing-with-the-past-in-security-sector-reform.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32381</dc:identifier>    <dc:identifier>ISBN: 9781911529378</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbu</dc:identifier>
+    <dc:creator>Mayer-Rieckh, Alexander</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Security sector reform (SSR) and transitional justice processes often occur alongside each other in societies emerging from conflict or authoritarian rule, involve many of the same actors, are supported by some of the same partner countries and impact on each other. Yet the relationship between SSR and transitional justice, or â  dealing with the pastâ   (DwP) as it is also called, remains underexplored and is often marked by ignorance and resistance. While SSR and transitional justice processes can get into each otherâ  s way, this paper argues that SSR and DwP are intrinsically linked and can complement each other. SSR can make for better transitional justice and vice versa. Transitional justice needs SSR to prevent a recurrence of abuses, an essential element of justice. SSR can learn from transitional justice not only that it is better to deal with rather than ignore an abusive past but also how to address an abusive legacy in the security sector. The validity of these assumptions is tested in two case studies: the police reform process in Bosnia and Herzegovina after 1995 and the SSR process in Nepal after 2006.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject> transitional justice</dc:subject>
+    <dc:subject>human rights</dc:subject>
+    <dc:subject>post-conflict</dc:subject>
+    <dc:subject>transition</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32382</identifier>
+<datestamp>2020-05-04T09:12:17Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>The &quot;Democratic Soldier&quot;</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25842/1/the-democratic-soldier.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32382</dc:identifier>    <dc:identifier>ISBN: 9781911529361</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbt</dc:identifier>
+    <dc:creator>Mannitz, Sabine</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>Since the end of the Cold War almost all European countries have reformed their armed forces, focusing on downsizing, internationalization and professionalization. This paper examines how these changes in security sector governance have affected the normative model underlying the militaryâ  s relationship to democracy, using the image of the â  democratic soldierâ  . Drawing on a comparative analysis of 12 post-socialist, traditional and consolidated democracies in Europe, the different dimensions of the national conception of soldiering are analysed based on the official norms that define a countryâ  s military and the ways in which individual members of the armed forces see their role. Cases converge around the new idea of professional soldiering as a merging of civilian skills with military virtues in the context of the militaryâ  s new post-Cold War missions. Yet despite this convergence, research also shows that specific aspects of national traditions and context continue to influence the actual practice of soldiering in each case. The contradictions that result between these old and new visions of the role of the military and the soldier illustrate the tensions that exist between political goals and defence reform dynamics.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>civil‐military relations</dc:subject>
+    <dc:subject>military reform</dc:subject>
+    <dc:subject>military power</dc:subject>
+    <dc:subject>armed forces</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32383</identifier>
+<datestamp>2020-05-04T09:12:18Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>The Paradox of Gendarmeries</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25843/1/the-paradox-of-gendarmeries.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32383</dc:identifier>    <dc:identifier>ISBN: 9781911529354</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbs</dc:identifier>
+    <dc:creator>Lutterbeck, Derek</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>This paper describes and explains the evolution of gendarmerie-type forces, i.e. police forces with a military status, over the past three decades. It focuses on their institutional features and functions, including material and human resources, and uses case studies from Europe, the Middle East and North Africa to illustrate these characteristics in different contexts. The overall development of gendarmeries has been a somewhat paradoxical one. On the one hand, most of these forces have witnessed a considerable expansion, and come to assume an increasingly prominent role in addressing many of the currently most important security challenges, ranging from border control and counterterrorism to public order tasks in international peace operations. On the other hand, there has also been a trend towards the demilitarization of gendarmeries, which in some European countries has ultimately led to their dissolution and integration into the civilian police. The paper suggests an explanation of these seemingly contradictory developments with reference to two broad â   and at least partly opposing â   trends: the convergence of internal and external security agendas, which to a large extent is a post-Cold War phenomenon; and the demilitarization of internal security, which is a more long-term historical trend and part of the more general democratization process. Based on this analysis, the paper predicts that in the long run gendarmeries are likely to be further demilitarized, eventually losing their formal military status, although in the context of international peace operations militarized gendarmerie forces are expected to play an increasingly significant part.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>gendarmerie</dc:subject>
+    <dc:subject>police</dc:subject>
+    <dc:subject>paramilitary</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2013</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:32384</identifier>
+<datestamp>2020-05-04T09:12:16Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Mapping Evolving Internal Roles of the Armed Forces</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25844/1/mapping-evolving-internal-roles-of-the-armed-forces.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:32384</dc:identifier>    <dc:identifier>ISBN: 9781911529347</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbr</dc:identifier>
+    <dc:creator>Krupanski, Marc</dc:creator>
+    <dc:creator>Schnabel , Albrecht</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>It is widely assumed, at least from a Western perspective, that the armed forces provide national defence against external threats. In reality, within many consolidated Western democracies the armed forces are assuming an increasingly wide range of internal roles and tasks. These can include domestic security roles and the provision of humanitarian assistance in situations of natural or humanitarian catastrophe, often under the command and control of different civilian agencies. This SSR Paper seeks to make sense of this complex reality. Different internal roles of armed forces are analysed, drawing on the cases of Austria, Belgium, Canada, Denmark, Finland, France, Germany, Italy, Luxembourg, Netherlands, Norway, Spain, Sweden, the United Kingdom and the United States of America. Through carefully examining evolving internal roles and identifying patterns and lessons from these experiences, this SSR Paper provides an important contribution to understanding the evolving nature of contemporary armed forces.</dc:description>
+    <dc:subject>security sector reform</dc:subject>
+    <dc:subject>good governance</dc:subject>
+    <dc:subject>armed forces</dc:subject>
+    <dc:subject>deployment</dc:subject>
+    <dc:subject>law enforcement</dc:subject>
+    <dc:subject>disaster assistance</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2012</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:33340</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>Earth_and_Environmental_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Pro-ecological Restructuring of Companies</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/25145/1/pro-ecological-restructuring-of-companies.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:33340</dc:identifier>    <dc:identifier>ISBN: 9781911529491</dc:identifier>
+    <dc:identifier>ISBN: 9781911529484</dc:identifier>
+    <dc:identifier>ISBN: 9781911529507</dc:identifier>
+    <dc:identifier>ISBN: 9781911529514</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbk</dc:identifier>
+    <dc:creator>Gąsior , Aleksandra</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;This book presents a practical approach to pro-environmental challenges faced by companies in the process of restructuring.  It contains a broad variety of case studies from different economic sectors, and small and large businesses, in four European countries: Ukraine, Romania, Germany and Poland. The studies are the results of surveys of companies that had either already restructured or were planning to, and reveal both the weaknesses and strengths in these practices. The book is divided into three parts: explorations of how political and legal factors are embedded in a company’s strategy and how they influence the company’s behaviour; analyses of companies’ activities on matching restructuring with ecology; and approaches to ecoinnovations within the companies.  The case studies throughout the book show that the restructuring of a company is an opportunity for the implementation of proecological action and “green” business models. The authors trust that the experiences and good practices of others will prove valuable both for future businessmen (i.e. students), but also for academics and representatives of local government, central environmental agencies, owners and managers of enterprises to be restructured.&quot;</dc:description>
+    <dc:subject>Pro-ecological behaviour</dc:subject>
+    <dc:subject>Process of restructuring</dc:subject>
+    <dc:subject>Environment</dc:subject>
+    <dc:subject>Management in companies</dc:subject>
+    <dc:subject>Innovations</dc:subject>
+    <dc:subject>Case study</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2019</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:35840</identifier>
+<datestamp>2020-05-04T09:05:25Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>Biology_and_Life_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Application of Molecular Methods and Raman Microscopy</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/24807/1/application.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:35840</dc:identifier>    <dc:identifier>ISBN: 9781911529538</dc:identifier>
+    <dc:identifier>ISBN: 9781911529521</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bbj</dc:identifier>
+    <dc:creator>Nikšić , Miomir</dc:creator>
+    <dc:creator>Lazić, Dejan</dc:creator>
+    <dc:creator>Vucelić-Radović, Biljana</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;This book has been prepared with the aim to present the application of these two state-of-the art technologies in agricultural sciences and food technology, and to explain the protocols for analyses of different plant, animal, microbiological and food samples as well as for different biotechnology procedures.  Selected methods and protocols which are used in plant stress physiology, weed science, fruit breeding research, microbial ecology, plant virus and fungus diagnostics, phytobacteriology, fishery, food biochemistry, food materials and food technology are described. Special adaptation of certain protocols is required for application in each of these sciences, for every type of GMO organism, food technology raw material, and food technology product, as well as for every type of bacteria, virus, fungus or fungus-like organism, for each type of raw material in terms of plant host species, plant organs, year period and conditions in the laboratory.  Application of molecular methods, primarily qPCR, and Raman microscopy/ spectroscopy in agricultural and food sciences provides substantial opportunity for increased production efficiency, food safety, better product quality and improvement of plant and animal health.  This book is aimed for students, scientists and professionals working in the field of agriculture and food technology.&quot;</dc:description>
+    <dc:subject>PCR method</dc:subject>
+    <dc:subject>Raman microscopy/spectroscopy</dc:subject>
+    <dc:subject>Food biochemistry and technology</dc:subject>
+    <dc:subject>Plant sciences</dc:subject>
+    <dc:subject>Microorganisms</dc:subject>
+    <dc:subject>Fishery</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2019</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44036</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>Arts_and_Architecture</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Sharpening the Haze</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22987/1/sharpening-the-haze.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44036</dc:identifier>    <dc:identifier>ISBN: 9781911529651</dc:identifier>
+    <dc:identifier>ISBN: 9781911529644</dc:identifier>
+    <dc:identifier>ISBN: 9781911529668</dc:identifier>
+    <dc:identifier>ISBN: 9781911529675</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bcd</dc:identifier>
+    <dc:creator>Walton, Jeremy F.</dc:creator>
+    <dc:creator>Jovanović, Miloš</dc:creator>
+    <dc:creator>Kirbis, Annika</dc:creator>
+    <dc:creator>Carabelli, Giulia</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>This volume presents ten visual essays that reflect on the historical, cultural and socio-political legacies of empires. Drawing on a variety of visual genres and forms, including photographs, illustrated advertisements, stills from site-specific art performances and films, and maps, the book illuminates the contours of empire’s social worlds and its political legacies through the visual essay. The guiding, titular metaphor, sharpening the haze, captures our commitment to frame empire from different vantage points, seeking focus within its plural modes of power. We contend that critical scholarship on empires would benefit from more creative attempts to reveal and confront empire. Broadly, the essays track a course from interrogations of imperial pasts to subversive reinscriptions of imperial images in the present, even as both projects inform each author’s intervention.</dc:description>
+    <dc:subject>Visual Essays on Empire</dc:subject>
+    <dc:subject>Art-Practice</dc:subject>
+    <dc:subject>Visual cultures</dc:subject>
+    <dc:subject>Post-colonialism</dc:subject>
+    <dc:subject>Post-imperialism</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2020</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44037</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Educational visions</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22988/1/educational-visions.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44037</dc:identifier>    <dc:identifier>ISBN: 9781911529811</dc:identifier>
+    <dc:identifier>ISBN: 9781911529804</dc:identifier>
+    <dc:identifier>ISBN: 9781911529828</dc:identifier>
+    <dc:identifier>ISBN: 9781911529835</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bcg</dc:identifier>
+    <dc:creator>Scanlon , Eileen</dc:creator>
+    <dc:creator>Jones, Ann</dc:creator>
+    <dc:creator>Ferguson, Rebecca</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Educational Visions looks to future developments in educational technology by reviewing its history, covering themes such as learning analytics and design, inquiry learning, citizen science, inclusion, and learning at scale. The book shows how successful innovations can be built over time, informs readers about current practice and demonstrates how they can use this work themselves.  The chapters show how one research group has worked persistently over 40 years with four visions in mind, of a future where:  • learning is accessible for everyone  • teaching is adapted to meet learners’ needs  • teams can successfully teach any number of students at a distance  • learners engage enthusiastically with STEM learning.  Each vision is covered in a pair of chapters: the first brings together four decades of research in the area; the second introduces current work, showing how they are united by a consistent framework and a persistent vision.&quot;</dc:description>
+    <dc:subject>Learning analytics</dc:subject>
+    <dc:subject>Open education</dc:subject>
+    <dc:subject>Inclusion</dc:subject>
+    <dc:subject>MOOCs</dc:subject>
+    <dc:subject>Citizen science</dc:subject>
+    <dc:subject>Technology-enhanced learning</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2019</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44038</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Science_General</setSpec>
+<setSpec>Biology_and_Life_Sciences</setSpec>
+<setSpec>Philosophy_and_Religion</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Variance in Approach Toward a ‘Sustainable’ Coffee Industry in Costa Rica</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22989/1/variance-in-approach-toward-a-sustainable-coffee-industry-in-costa-rica.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44038</dc:identifier>    <dc:identifier>ISBN: 9781911529774</dc:identifier>
+    <dc:identifier>ISBN: 9781911529767</dc:identifier>
+    <dc:identifier>ISBN: 9781911529781</dc:identifier>
+    <dc:identifier>ISBN: 9781911529798</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bce</dc:identifier>
+    <dc:creator>Vogt, Melissa</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;The monograph considers influence over time of Fairtrade and Rainforest Alliance in 10 Costa Rican coffee farming communities. In-country perspectives and relevant historic and contemporary literature inform findings.  Misaligned intentions to outcomes; different sustainability approaches; and variable influence is observed. There is opportunity to: consider when certifications are most useful; develop locally relevant standards; vertically integrate sourcing chains; consider how complementary mechanisms can be used alongside, or to improve certification approach.  Sustainability of coffee as a cash crop, considering influence on biodiversity, and the possible implication of reduced coffee crop density for consumers, the market and farming landscapes, is considered.  &quot;</dc:description>
+    <dc:subject>Regulatory approaches</dc:subject>
+    <dc:subject>Sustainability standards</dc:subject>
+    <dc:subject>Poverty reduction</dc:subject>
+    <dc:subject>Environment</dc:subject>
+    <dc:subject>Biodiversity</dc:subject>
+    <dc:subject>Colonial and contemporary history</dc:subject>
+    <dc:subject>Costa Rica</dc:subject>
+    <dc:subject>Sustainability certification schemes</dc:subject>
+    <dc:subject>Rainforest Alliance</dc:subject>
+    <dc:subject>Fairtrade</dc:subject>
+    <dc:subject>Coffee farming landscapes</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2019</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44039</identifier>
+<datestamp>2020-05-04T10:39:15Z</datestamp>
+<setSpec>Law_and_Political_Science</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Security Sector Reform and Citizen Security</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22990/1/securing-the-city.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44039</dc:identifier>    <dc:identifier>ISBN: 9781911529736</dc:identifier>
+    <dc:identifier>ISBN: 9781911529729</dc:identifier>
+    <dc:identifier>ISBN: 9781911529743</dc:identifier>
+    <dc:identifier>ISBN: 9781911529750</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bcc</dc:identifier>
+    <dc:creator>Muggah, Robert</dc:creator>
+    <dc:creator>de Boer, John</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>While widely considered a core pillar of the peace and security architecture, Security Sector Reform (SSR) is coming under fire. SSR theory and practice are criticized for being overly focused on traditional conflict and post-conflict settings and for being unable to adjust to unconventional settings marked by chronic crime and terrorism. SSR tends to be disproportionately focused on national institutions and less amenable to engaging at the subnational scale. Drawing on the experiences of so-called ‘citizen security’ measures in cities across Latin America and the Caribbean, this paper offers some opportunities for renewing and revitalizing SSR. The emphasis of citizen security interventions on multiple forms of insecurity, data-driven and evidence-informed prevention, the promotion of social cohesion and efficacy and designing crime prevention into the social and built environment are all insights that can positively reinforce comprehensive SSR measures in the 21st century.</dc:description>
+    <dc:subject>Security Sector Reform</dc:subject>
+    <dc:subject>Urban violence</dc:subject>
+    <dc:subject>Crime prevention</dc:subject>
+    <dc:subject>Citizen security</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2019</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44397</identifier>
+<datestamp>2020-05-04T10:38:39Z</datestamp>
+<setSpec>Technology_and_Engineering</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Decentralised Energy</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22467/1/1007716.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44397</dc:identifier>    <dc:identifier>ISBN: 9781911529682</dc:identifier>
+    <dc:identifier>ISBN: 9781911529699</dc:identifier>
+    <dc:identifier>ISBN: 9781911529705</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bcf</dc:identifier>
+    <dc:creator>Weiman, Jens</dc:creator>
+    <dc:creator>Froggatt, Antony</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>As the contribution of renewable energy increases to meet climate change objectives, so does the extent to which electricity is generated by individuals and communities, moving a centralised system to a more decentralised one, with associated system management and integration challenges.  However, new digital and storage technologies are enabling local system management, and reducing the need for, and cost of, centralised planning.    Creating the right regulatory environment is crucial, but it is especially challenging given the pace of technology change. This book describes the deploying renewable energy in selected countries and describes how each stage is affected by the regulatory and industrial environments, as gives examples of how new business models that enable greater penetration of renewables and more localised grid management and consumer engagement are being deployed.</dc:description>
+    <dc:subject>Business and Economics</dc:subject>
+    <dc:subject>Renewable energy</dc:subject>
+    <dc:subject>De-carbonisation</dc:subject>
+    <dc:subject>Top-down business models</dc:subject>
+    <dc:subject>Power grid management</dc:subject>
+    <dc:subject>Regulatory environments</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2020</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44565</identifier>
+<datestamp>2020-08-04T12:43:17Z</datestamp>
+<setSpec>Languages_and_Literatures</setSpec>
+<setSpec>History_and_Archaeology</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Communicating the Past in the Digital Age</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22396/1/communicating-the-past-in-the-digital-age%20%281%29.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44565</dc:identifier>    <dc:identifier>ISBN: 9781911529859</dc:identifier>
+    <dc:identifier>ISBN: 9781911529842</dc:identifier>
+    <dc:identifier>ISBN: 9781911529866</dc:identifier>
+    <dc:identifier>ISBN: 9781911529873</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bch</dc:identifier>
+    <dc:creator>Hageneuer , Sebastian</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>&quot;Recent developments in the field of archaeology are not only progressing archaeological fieldwork but also changing the way we practise and present archaeology today. As these digital technologies are being used more and more every day on excavations or in museums, this also means that we must change the way we approach teaching and communicating archaeology as a discipline.   This volume presents the outcome of a two-day international symposium on digital methods in teaching and learning in archaeology held at the University of Cologne in October 2018. Specialists from around the world share their views on the newest developments in the field of archaeology and the way we teach these with the help of archaeogaming, augmented and virtual reality, 3D reconstruction and many more.  &quot;</dc:description>
+    <dc:subject>Teaching</dc:subject>
+    <dc:subject>Archaeogaming</dc:subject>
+    <dc:subject>Virtual Reconstructions</dc:subject>
+    <dc:subject>Augmented Reality</dc:subject>
+    <dc:subject>Virtual Reality</dc:subject>
+    <dc:subject>Archaeology</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2020</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+<identifier>oai:doab-books:44566</identifier>
+<datestamp>2020-08-04T12:43:27Z</datestamp>
+<setSpec>Science_General</setSpec>
+<setSpec>Business_and_Economics</setSpec>
+<setSpec>Biology_and_Life_Sciences</setSpec>
+<setSpec>Agriculture_and_Food_Sciences</setSpec>
+<setSpec>Social_Sciences</setSpec>
+<setSpec>publisher_1194</setSpec>
+</header>
+<metadata>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Dangerous Science</dc:title>
+    <dc:identifier>http://library.oapen.org/bitstream/20.500.12657/22397/1/dangerous-science.pdf</dc:identifier>
+    <dc:identifier>https://www.doabooks.org/doab?func=search&amp;query=rid:44566</dc:identifier>    <dc:identifier>ISBN: 9781911529897</dc:identifier>
+    <dc:identifier>ISBN: 9781911529880</dc:identifier>
+    <dc:identifier>ISBN: 9781911529903</dc:identifier>
+    <dc:identifier>ISBN: 9781911529910</dc:identifier>
+    <dc:identifier>DOI: 10.5334/bci</dc:identifier>
+    <dc:creator>Rozell, Daniel J.</dc:creator>
+       <dc:language>English</dc:language>
+    <dc:description>The public is generally enthusiastic about the latest science and technology, but sometimes research threatens the physical safety or ethical norms of society. When this happens, scientists and engineers can find themselves unprepared in the midst of an intense science policy debate. In the absence of convincing evidence, technological optimists and skeptics struggle to build consensus. In these situations, it is best to sidestep the instigating controversy by using a broad risk-benefit assessment as a risk exploration tool to help scientists and engineers accomplish their goals while avoiding physical or moral dangers. Dangerous Science explores the intersection of science policy and risk analysis to determine ways to minimize negative impacts of science and technology on society.</dc:description>
+    <dc:subject>pandemics</dc:subject>
+    <dc:subject>autonomous weapons</dc:subject>
+    <dc:subject>synthetic biology</dc:subject>
+    <dc:subject>genome editing</dc:subject>
+    <dc:subject>risk assessment</dc:subject>
+    <dc:subject>science policy</dc:subject>
+    <dc:publisher>Ubiquity Press</dc:publisher>
+    <dc:date>2020</dc:date>
+    <dc:type>book</dc:type>
+    <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+</oai_dc:dc>
+</metadata>
+</record>
+<resumptionToken cursor="0" completeListSize="66"></resumptionToken>
+</ListRecords>
+
+</OAI-PMH>

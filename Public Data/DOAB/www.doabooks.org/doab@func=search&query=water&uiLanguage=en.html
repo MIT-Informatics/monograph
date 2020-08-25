@@ -1,0 +1,1592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>DOAB: Directory of Open Access Books</title>
+    <link rel="icon" href="doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="doabCSS/jquery-ui.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="doabCSS/doab.css">
+   <link rel="stylesheet" type="text/css" href="doabCSS/jquery.window.css" />
+
+    <script type="text/javascript" src="doabJavaScripts/jquery.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery-ui-i18n.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/addthis_widget.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery.window.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/doab.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-30594439-1']);
+  _gaq.push(['_setDomainName', 'doabooks.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+ <div class="topRight">
+
+</div>
+   <noscript>
+      <style type="text/css">
+          .noScriptMessage {
+                background:#FCE9C0 url(http://www.doabooks.org/doabImages/alert.png) left no-repeat;
+                background-position: 15px;
+                border:2px solid #DBAC48;
+                padding: 25px 20px 25px 60px;
+                margin-top: 150px;
+                font-weight: bold;
+          }
+          .wholePage {display:none;}
+      </style>
+      <div class="noScriptMessage">
+         JavaScript is disabled.  The site is not able to function
+         properly without the browser having JavaScript enabled.
+         <br><a href="http://www.iatn.net/help/javascript">
+              How to Enable JavaScript in Your Browser
+          </a>
+      </div>
+    </noscript>
+
+<div class="wholePage">
+
+       <div id="logo">
+    <div style="float:left">
+      <a href="http://www.doabooks.org/doab?uiLanguage=en"><img src="doabImages/doab.png" border="0"></a> 
+    </div>
+    <div style="float:right; margin-top:0px">
+      <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en"><img src="doabImages/Scoss_button_v02_200px.png" border="0"></a> 
+ 
+    <select class="languages" name="uiLanguage" onchange="window.location.href=this.options[this.selectedIndex].value">
+     <option value="/doab?uiLanguage=en"
+        selected="selected"
+      >English</option>
+      <option value="/doab?uiLanguage=fr"
+      >Français</option>
+   </select>
+    </div>
+</div>
+  <div id="pageContainer">
+    <span id="search">
+                      <div id="menuArea">
+    <div id="menuLeft">
+      <span id="menuSearch">
+        <a href="doab@func=search&amp;uiLanguage=en.html">Search</a>
+      </span> 
+      <span class="menuSeparator"></span>
+      <span id="menuBrowse">
+        <a href="http://www.doabooks.org/doab?func=browse&amp;uiLanguage=en">Browse</a>
+      </span>
+    </div>
+
+    <div id="menuRight">
+      <span id="DOABLog">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en">SCOSS funding</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="faq">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=faq&amp;uiLanguage=en">FAQ</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="supportDOAB">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=supportDOAB&amp;uiLanguage=en">Support</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="publishers">
+       <a href="http://www.doabooks.org/doab?func=forPublishers&amp;uiLanguage=en">For publishers</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuSponsors">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=sponsors&amp;uiLanguage=en">Our supporters</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuCertification">
+        <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=OPERAS_Certification_Service_&amp;uiLanguage=en">OPERAS Certification Service</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuAbout">
+        <a href="http://www.doabooks.org/doab?func=about&amp;uiLanguage=en">About</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuFeedback">
+        <a href="javascript:openWdw2('/doab?func=feedback&uiLanguage=en','600','500','2','20','false','contact')">Contact</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuRSS">
+        <a href="http://www.doabooks.org/doab?func=rss"><img src="doabImages/rss.jpg" border="0"></a>
+      </span>
+    </div>
+    <div class="clearBoth"></div>
+  </div> <!-- menuArea-->
+    </span>
+    
+    <div id="search" style="padding-top: 30px; float: left;">
+      <form name="findBook" action="http://www.doabooks.org/doab" method="GET" class="formArea" autocomplete="off">
+        <input type="hidden" name="func" value="search">
+        <input type="hidden" name="uiLanguage" value="en">
+        <input type="hidden" name="template" value="">
+          <input onBlur="if (this.value == ''){this.value = 'Find books in DOAB...';}" onFocus="if (this.value == 'Find books in DOAB...') {this.value = '';}" name="query" size="50" value="water" style="font-size:95%" id="query">
+          <img src="doabImages/search.jpg" style="vertical-align: middle;" onClick="javascript:document.findBook.submit()">
+            <a href="doab@func=advancedSearch&amp;uiLanguage=en.html">Advanced search</a>
+      </form>
+    </div><!-- end search -->
+<!-- ########### End Search ######### -->
+
+
+<div class="clearBoth"></div>
+    <br>
+<p>
+       <p>
+<br>
+   <strong>Search results:</strong> 
+
+Found <b>677</b> 
+<p>
+
+   <div id="result">
+       <div class="resultLabel">
+
+<table width="100%" cellspacing="0" cellpading="0">
+   <tr>
+<!-- ################FORMATS############### -->
+    <td width="33%">
+    <span>
+      Listing <strong>1</strong> - <strong>10</strong> of <strong>677</strong>
+    </span>
+    </td>
+<!-- END FORMATS -->
+<!-- ###############PAGES################ -->
+     <td width="34%" align="center">
+          << 
+ 
+       page
+        <span>
+        <form style="margin: 0; padding: 0; display: inline" method="GET" name="goToPage" action="http://www.doabooks.org/doab">
+          <input style="font-size:75%;text-align:center; color:red" name="jumpToPage" value="1" size="4">
+    of 68
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="water">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+          <input type=hidden name="func" value="search">
+        </form>
+        </span>
+           <a href="http://www.doabooks.org/doab?func=search&amp;page=2&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> >></a>
+     </td>
+<!-- END PAGES -->
+
+<!-- #####################SORT################### -->
+
+     <td width="33%" align="right">
+      <!-- no sort in browse function -->
+    <div class="sort">
+     <span>
+      Sort by
+        <form style="display: inline;" method="GET" name="sorting" action="http://www.doabooks.org/doab">
+        <select name="sort" onChange="this.form.submit();">
+        <option value=""            selected="selected"         >Relevance</option>
+        <option value="yearDesc"          >Year-Descending</option>
+        <option value="yearAsc"          >Year-Ascending</option>
+         <option value="cdDesc"           >Date added-Descending</option>
+         <option value="cdAsc"           >Date added-Ascending</option>
+         </select>
+        <input type=hidden name="func" value="search">
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="water">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+        </form>
+     </span>
+         
+    </div><!-- END DIV sort -->
+<!-- end if function is search -->
+     </td>
+<!-- END SORT --> 
+ 
+  </tr>
+  </table>
+   </div> <!-- END DIV resultLabel -->
+
+
+<div id="popupDiv" class="tip" style="display:none" onClick="hideDiv('popupDiv')">
+</div>
+
+
+<!--  ##############RECORDS################ -->
+       <abbr class="unapi-id" title="18936"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record1">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=18936" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Society - Water - Technology: A Critical Appraisal of Major Water Engineering Projects </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:%22Reinhard%20F.%20H%C3%83%C2%BCttl%22&amp;uiLanguage=en">Reinhard F. Hüttl</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Oliver&#32;Bens&quot;&amp;uiLanguage=en">Oliver Bens</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Christine&#32;Bismuth&quot;&amp;uiLanguage=en">Christine Bismuth</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Sebastian&#32;Hoechstetter&quot;&amp;uiLanguage=en">Sebastian Hoechstetter</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Water Resources Development and Management
+           <strong>ISSN</strong>: 1614810X
+           <strong>ISBN</strong>: <span itemprop="isbn">9783319189703 9783319189710</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2016</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">295</span>
+           <strong>DOI</strong>: 10.1007/978-3-319-18971-0
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1161&amp;uiLanguage=">Springer Nature</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=79&amp;uiLanguage=en"> Environmental Sciences</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=107&amp;uiLanguage=en"> Environmental Technology</a>
+           <br><strong>Added to DOAB on </strong>: 2016-04-12 15:09:21
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r1">
+<h1>
+             <a href="javascript:void(0)" title="abs1" >
+               <span id="absLabel1">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw1">  
+                <span id="kwLabel1">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=18936" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=18936" class="checkAvailable" title="av1" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp1"> <span id="expLabel1">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:18936" addthis:title="DOAB: Society - Water - Technology: A Critical Appraisal of Major Water Engineering Projects"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av1" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp1" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=18936"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=18936"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=18936" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs1" class="tip">
+                     <b>Abstract</b><p>
+                    This book presents the results of the Interdisciplinary Research Group 'Society – Water – Technology' of the Berlin-Brandenburg Academy of Sciences and Humanities. It describes interdisciplinary evaluation criteria for major water engineering projects (MWEPs) and portrays an application to the Lower Jordan Valley (Middle East) and the Fergana Valley (Central Asia). Both areas are characterised by transboundary conflicts, by challenges due to demographic and climate change and by political and societal pressures. Based on the findings, the book provides recommendations for science and political decisions makers as well as for international financing institutions. In addition, it outlines research gaps from an interdisciplinary perspective.In the past, MWEPs have been used as an instrument to cope with the demands of growing populations and to enhance development progress. Experiences with MWEPs have shown that a purely technical approach has not always brought about the desired results. In many cases, MWEPs have even resulted in negative implications for society and environment. Therefore, improved management strategies and enhanced technologies for a sustainable water resource management system are a prerequisite to meet present and future challenges. And, moreover, the continuous evaluation and optimisation of these measures is, likewise, a must.
+                </div>
+                <div id="kw1" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Waste&#32;Water&#32;Technology&#32;/&#32;Water&#32;Pollution&#32;Control&#32;/&#32;Water&#32;Management&#32;/&#32;Aquatic&#32;Pollution&quot;">Waste Water Technology / Water Pollution Control / Water Management / Aquatic Pollution</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Water&#32;Industry/Water&#32;Technologies&quot;">Water Industry/Water Technologies</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Environmental&#32;Economics&quot;">Environmental Economics</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;International&#32;Environmental&#32;Law&quot;">International Environmental Law</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="21384"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record2">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=21384" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Water Security in the Middle East </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Axelrad&#32;Cahan,&#32;Jean&quot;&amp;uiLanguage=en">Axelrad Cahan, Jean</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Anthem Water Diplomacy Series
+           <strong>ISBN</strong>: <span itemprop="isbn">9781783085668 </span>
+           <strong>Year</strong>: <span itemprop="datePublished">2017</span>
+           <strong>DOI</strong>: 10.26530/oapen_626411
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1436&amp;uiLanguage=">Anthem Press</a>
+           <strong>Grant</strong>: Knowledge Unlatched - 100712
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=79&amp;uiLanguage=en"> Environmental Sciences</a>
+           <br><strong>Added to DOAB on </strong>: 2017-03-31 11:03:14
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r2">
+<h1>
+             <a href="javascript:void(0)" title="abs2" >
+               <span id="absLabel2">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw2">  
+                <span id="kwLabel2">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=21384" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=21384" class="checkAvailable" title="av2" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp2"> <span id="expLabel2">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:21384" addthis:title="DOAB: Water Security in the Middle East"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av2" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp2" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=21384"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=21384"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=21384" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs2" class="tip">
+                     <b>Abstract</b><p>
+                    Water Security in the Middle East argues that, while conflicts over transboundary water systems in the Middle East do occur, they tend not to be violent nor are they the primary cause of a war in this region. The contributors in this collection of essays place water disputes in larger political, historical and scientific contexts and discuss how the humanities and social sciences contribute towards this understanding. The authors contend that international sharing of scientific and technological advances can significantly increase access to water and improve water quality. While scientific advances can and should increase adaptability to changing environmental conditions, especially climate change, national institutional reform and the strengthening of joint commissions are vital. The contributors indicate ways in which cooperation can move from simple coordination to sophisticated, adaptive and equitable modes of water management.
+                </div>
+                <div id="kw2" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+
+                       <a itemprop="keywords"  href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Political&#32;Science&quot;">Political Science</a>
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="20485"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record3">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=20485" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Freshwater Governance for the 21st Century </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Eiman&#32;Karar&quot;&amp;uiLanguage=en">Eiman Karar</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Global Issues in Water Policy
+           <strong>ISSN</strong>: 2211-0631
+           <strong>ISBN</strong>: <span itemprop="isbn">9783319433486 9783319433509</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2017</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">250</span>
+           <strong>DOI</strong>: 10.1007/978-3-319-43350-9
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1161&amp;uiLanguage=">Springer Nature</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=79&amp;uiLanguage=en"> Environmental Sciences</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=105&amp;uiLanguage=en"> Hydraulic Engineering</a>
+           <br><strong>Added to DOAB on </strong>: 2017-02-24 12:23:33
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r3">
+<h1>
+             <a href="javascript:void(0)" title="abs3" >
+               <span id="absLabel3">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw3">  
+                <span id="kwLabel3">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=20485" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=20485" class="checkAvailable" title="av3" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp3"> <span id="expLabel3">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:20485" addthis:title="DOAB: Freshwater Governance for the 21st Century"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av3" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp3" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=20485"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=20485"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=20485" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs3" class="tip">
+                     <b>Abstract</b><p>
+                    The objective of this book is to broadly illustrate the key aspects of water governance, mapping the spectrum of decision-making from techno-centric and eco-centric approaches, to hybrid concepts and people-centric approaches. Topics covered include the challenges for water-governance models, the polycentric model, the integration challenge, water in the decision-making hierarchy, and the rise of water-sensitive design, while also taking into account interdependencies between stakeholders, as well as the issue of scale.The book’s content is presented in an integrated and comprehensive format, building on detailed case studies from around the world and the authors’ working experiences in the water sector. Combining essential insights with accessible, non-technical language, it offers a valuable resource for academics, technicians and policy-makers alike.
+                </div>
+                <div id="kw3" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;water&#32;policy&quot;">water policy</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;water&#32;governance&quot;">water governance</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;water&#32;management&quot;">water management</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;environmental&#32;law&quot;">environmental law</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;environmental&#32;sciences&quot;">environmental sciences</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;international&#32;relations&quot;">international relations</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="20421"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record4">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=20421" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Balanced Urban Development: Options and Strategies for Liveable Cities </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Basant&#32;Maheshwari&quot;&amp;uiLanguage=en">Basant Maheshwari</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Vijay&#32;P.&#32;Singh&quot;&amp;uiLanguage=en">Vijay P. Singh</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Bhadranie&#32;Thoradeniya&quot;&amp;uiLanguage=en">Bhadranie Thoradeniya</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Water Science and Technology Library
+           <strong>ISSN</strong>: 0921-092X
+           <strong>ISBN</strong>: <span itemprop="isbn">9783319281100 9783319281124</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2016</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">601</span>
+           <strong>DOI</strong>: 10.1007/978-3-319-28112-4
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1161&amp;uiLanguage=">Springer Nature</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=19&amp;uiLanguage=en"> Economics</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=80&amp;uiLanguage=en"> Ecology</a>
+           <br><strong>Added to DOAB on </strong>: 2017-02-10 14:29:44
+             <br>License: <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r4">
+<h1>
+             <a href="javascript:void(0)" title="abs4" >
+               <span id="absLabel4">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw4">  
+                <span id="kwLabel4">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=20421" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=20421" class="checkAvailable" title="av4" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp4"> <span id="expLabel4">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:20421" addthis:title="DOAB: Balanced Urban Development: Options and Strategies for Liveable Cities"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av4" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp4" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=20421"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=20421"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=20421" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs4" class="tip">
+                     <b>Abstract</b><p>
+                    This book provides a unique synthesis of concepts and tools to examine natural resource, socio-economic, legal, policy and institutional issues that are important for managing urban growth into the future. The book will particularly help the reader to understand the current issues and challenges and develop strategies and practices to cope with future pressures of urbanisation and peri-urban land, water and energy use challenges.  In particular, the book will help the reader to discover underlying principles for the planning of future cities and peri-urban regions in relation to: (i) Balanced urban development policies and institutions for future cities; (ii) Understanding the effects of land use change, population increase, and water demand on the liveability of cities; (iii) Long-term planning needs and transdisciplinary approaches to ensure the secured future for generations ahead; and (iv) Strategies to adapt the cities and land, water and energy uses for viable and liveable cities.There are growing concerns about water, food security and sustainability with increased urbanisation worldwide. For cities to be liveable and sustainable into the future there is a need to maintain the natural resource base and the ecosystem services in the peri-urban areas surrounding cities. This need is increasing under the looming spectre of global warming and climate change.This book will be of interest to policy makers, urban planners, researchers, post-graduate students in urban planning,  environmental and water resources management, and managers in municipal councils.
+                </div>
+                <div id="kw4" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;water&#32;resources&quot;">water resources</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;hydrology&quot;">hydrology</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;sustainable&#32;development&quot;">sustainable development</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;urban&#32;planning&quot;">urban planning</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="16464"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record5">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=16464" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Plant Selection for Bioretention Systems and Stormwater Treatment Practices </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;William&#32;F.&#32;Hunt&quot;&amp;uiLanguage=en">William F. Hunt</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Bill&#32;Lord&quot;&amp;uiLanguage=en">Bill Lord</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Benjamin&#32;Loh&quot;&amp;uiLanguage=en">Benjamin Loh</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Angelia&#32;Sia&quot;&amp;uiLanguage=en">Angelia Sia</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: SpringerBriefs in Water Science and Technology
+           <strong>ISSN</strong>: 21947244
+           <strong>ISBN</strong>: <span itemprop="isbn">9789812872449 9789812872456</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2015</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">59</span>
+           <strong>DOI</strong>: 10.1007/978-981-287-245-6
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1161&amp;uiLanguage=">Springer Nature</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=79&amp;uiLanguage=en"> Environmental Sciences</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=82&amp;uiLanguage=en"> Geology</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=140&amp;uiLanguage=en"> Earth Sciences</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=107&amp;uiLanguage=en"> Environmental Technology</a>
+           <br><strong>Added to DOAB on </strong>: 2014-11-12 12:05:42
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r5">
+<h1>
+             <a href="javascript:void(0)" title="abs5" >
+               <span id="absLabel5">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw5">  
+                <span id="kwLabel5">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=16464" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=16464" class="checkAvailable" title="av5" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp5"> <span id="expLabel5">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:16464" addthis:title="DOAB: Plant Selection for Bioretention Systems and Stormwater Treatment Practices"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av5" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp5" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=16464"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=16464"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=16464" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs5" class="tip">
+                     <b>Abstract</b><p>
+                    As cities develop, more land is converted into impervious surfaces, which do not allow water to infiltrate. Careful urban planning is needed to ensure that the hydrologic cycle and water quality of the catchment areas are not affected. There are techniques that can attenuate peak flow during rain events and reduce the amount of metals, nutrients, and bacteria that enter the urban water cycle. This brief gives a short introduction on bioretention systems and documents the effectiveness of some 36 plant species in removing water pollutants. A summary on the maintenance requirements is also presented.
+                </div>
+                <div id="kw5" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Landscape/Regional&#32;and&#32;Urban&#32;Planning&quot;">Landscape/Regional and Urban Planning</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Water&#32;Quality/Water&#32;Pollution&quot;">Water Quality/Water Pollution</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Hydrology/Water&#32;Resources&quot;">Hydrology/Water Resources</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Urban&#32;Ecology&#32;&quot;">Urban Ecology </a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="35821"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record6">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=35821" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Future drinking water infrastructure </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Blokker,&#32;Mirjam&quot;&amp;uiLanguage=en">Blokker, Mirjam</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:%22B%C3%83%C2%BCscher,%20Chris%22&amp;uiLanguage=en">Büscher, Chris</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Palmen,&#32;Luc&quot;&amp;uiLanguage=en">Palmen, Luc</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Agudelo-Vera,&#32;Claudia&quot;&amp;uiLanguage=en">Agudelo-Vera, Claudia</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9781789060485 </span>
+           <strong>Year</strong>: <span itemprop="datePublished">2019</span>
+           <strong>DOI</strong>: 10.2166/9781789060485
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1319&amp;uiLanguage=">IWA Publishing</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=107&amp;uiLanguage=en"> Environmental Technology</a>
+           <br><strong>Added to DOAB on </strong>: 2019-08-13 11:21:02
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r6">
+<h1>
+             <a href="javascript:void(0)" title="abs6" >
+               <span id="absLabel6">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw6">  
+                <span id="kwLabel6">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=35821" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=35821" class="checkAvailable" title="av6" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp6"> <span id="expLabel6">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:35821" addthis:title="DOAB: Future drinking water infrastructure"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av6" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp6" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=35821"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=35821"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=35821" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs6" class="tip">
+                     <b>Abstract</b><p>
+                    Future Drinking Water Infrastructure is an Open Access co-publication with KWR.
+                </div>
+                <div id="kw6" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:%22%C3%82%C2%A0Industry%20&amp;%20water%22"> Industry &amp; water</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:%22%C3%82%C2%A0Water%20supply%20&amp;%20treatment%22"> Water supply &amp; treatment</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="29100"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record7">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=29100" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Water Rites: Reimagining Water in the West </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Jim&#32;Ellis&#32;(Editor)&quot;&amp;uiLanguage=en">Jim Ellis (Editor)</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Calgary Institute for the Humanities
+           <strong>ISBN</strong>: <span itemprop="isbn">9781552389980</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2018</span>
+           <strong>Volume</strong>: 1
+           <strong>Pages</strong>: <span itemprop="numberOfPages">168</span>
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1155&amp;uiLanguage=">University of Calgary Press</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=79&amp;uiLanguage=en"> Environmental Sciences</a>
+           <br><strong>Added to DOAB on </strong>: 2018-10-11 00:53:08
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r7">
+<h1>
+             <a href="javascript:void(0)" title="abs7" >
+               <span id="absLabel7">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw7">  
+                <span id="kwLabel7">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=29100" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=29100" class="checkAvailable" title="av7" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp7"> <span id="expLabel7">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:29100" addthis:title="DOAB: Water Rites: Reimagining Water in the West"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av7" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp7" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=29100"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=29100"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=29100" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs7" class="tip">
+                     <b>Abstract</b><p>
+                    What are the challenges surrounding water in Western Canada?What are our rights to water? Does water itself have rights?Water Rites: Reimagining Water in the West documents the many ways that water flows through our lives, connecting the humans, animals, and plants that all depend on this precious and endangered resource.Essays from scholars, activists, environmentalists, and human rights advocates illuminate the diverse issues surrounding water in Alberta, including the right to access clean drinking water, the competing demands of the resource development industry and Indigenous communities, and the dwindling supply of fresh water in the face of human-caused climate change. Statements from community organizations detail the challenges facing watersheds, and the actions being taken to mitigate these problems. With a special focus on Environmental and Indigenous issues, Water Rites explores how deeply water is tied to human life.These essays are complemented by full-colour portfolios of work by contemporary painters, photographers, and installation artists who explore our relation to water.  Reproductions of historical paintings, engravings and film stills demonstrate how water has shaped our country’s cultural imaginary from its beginnings, proving that water is a vital resource for our lives and our imaginations.
+                </div>
+                <div id="kw7" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Water&quot;">Water</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Environment&quot;">Environment</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Western&#32;Canada&quot;">Western Canada</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="26843"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record8">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=26843" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">New Water Regimes </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Jacque&#32;Emel&#32;(Ed.)&quot;&amp;uiLanguage=en">Jacque Emel (Ed.)</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Alida&#32;Cantor&#32;(Ed.)&quot;&amp;uiLanguage=en">Alida Cantor (Ed.)</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9783038429630 9783038429647</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2018</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">VIII, 126</span>
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1222&amp;uiLanguage=">MDPI - Multidisciplinary Digital Publishing Institute</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=46&amp;uiLanguage=en"> Law</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=83&amp;uiLanguage=en"> Geography</a>
+           <br><strong>Added to DOAB on </strong>: 2018-05-22 09:04:54
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r8">
+<h1>
+             <a href="javascript:void(0)" title="abs8" >
+               <span id="absLabel8">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw8">  
+                <span id="kwLabel8">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=26843" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=26843" class="checkAvailable" title="av8" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp8"> <span id="expLabel8">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:26843" addthis:title="DOAB: New Water Regimes"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av8" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp8" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=26843"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=26843"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=26843" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs8" class="tip">
+                     <b>Abstract</b><p>
+                    Water resource management challenges around the world are not just hydrological issues-- they are socio-legal in nature as well.  This edited collection critically examines legal and administrative structures of water control, with the goal of imagining alternatives to entrenched systems of capitalist and anthropocentric water governance.  The collection contributes to the areas of legal geography and water resource governance. The research presented in the collection draws from numerous theoretical perspectives, including decolonial and post-anthropocentric approaches to water governance; social and environmental justice in water management; and understanding legal ecologies.  The collection addresses a variety of themes of water governance, including water allocation, groundwater management, collaborative governance, drought planning, and water quality. The papers describe and analyze water issues and new ideas in multiple countries, including Australia, Ecuador, New Zealand, India, and the United States. 
+                </div>
+                <div id="kw8" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Water&quot;">Water</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;legal&#32;geography&quot;">legal geography</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;resource&#32;management&quot;">resource management</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;water&#32;law&quot;">water law</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="16217"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record9">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=16217" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Global Water Issues and Insights </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;R.&#32;Grafton,&#32;Quentin&quot;&amp;uiLanguage=en">R. Grafton, Quentin</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Allendes,&#32;David&quot;&amp;uiLanguage=en">Allendes, David</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;White,&#32;Chris&quot;&amp;uiLanguage=en">White, Chris</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Wyrwoll,&#32;Paul&quot;&amp;uiLanguage=en">Wyrwoll, Paul</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9781925021660 </span>
+           <strong>Year</strong>: <span itemprop="datePublished">2014</span>
+           <strong>DOI</strong>: 10.26530/OAPEN_496490
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1233&amp;uiLanguage=">ANU Press</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=82&amp;uiLanguage=en"> Geology</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=140&amp;uiLanguage=en"> Earth Sciences</a>
+           <br><strong>Added to DOAB on </strong>: 2014-08-04 11:01:09
+              <br>License: <a href="http://press.anu.edu.au/about/conditions-use" target="blank">ANU Press</a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r9">
+<h1>
+             <a href="javascript:void(0)" title="abs9" >
+               <span id="absLabel9">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw9">  
+                <span id="kwLabel9">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=16217" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=16217" class="checkAvailable" title="av9" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp9"> <span id="expLabel9">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:16217" addthis:title="DOAB: Global Water Issues and Insights"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av9" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp9" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=16217"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=16217"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=16217" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs9" class="tip">
+                     <b>Abstract</b><p>
+                    This book brings together some of the world’s leading water researchers with an especially written collection of chapters on: water economics; transboundary water; water and development; water and energy; and water concepts.
+                </div>
+                <div id="kw9" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;economics&quot;">economics</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;development&quot;">development</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;transboundary&quot;">transboundary</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;water&quot;">water</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="32188"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record10">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=32188" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Alternative Water Supply Systems </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Memon,&#32;Yayyaz&quot;&amp;uiLanguage=en">Memon, Yayyaz</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Ward,&#32;Sarah&quot;&amp;uiLanguage=en">Ward, Sarah</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9781780405506 9781780405513</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2014</span>
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1319&amp;uiLanguage=">IWA Publishing</a>
+           <strong>Grant</strong>: Knowledge Unlatched - 102455
+
+           <br><strong>Added to DOAB on </strong>: 2019-02-06 08:17:52
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r10">
+<h1>
+             <a href="javascript:void(0)" title="abs10" >
+               <span id="absLabel10">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw10">  
+                <span id="kwLabel10">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=32188" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=32188" class="checkAvailable" title="av10" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp10"> <span id="expLabel10">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:32188" addthis:title="DOAB: Alternative Water Supply Systems"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av10" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp10" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=32188"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=32188"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=32188" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs10" class="tip">
+                     <b>Abstract</b><p>
+                    Owing to climate change related uncertainties and anticipated population growth, different parts of the world (particularly urban areas) are experiencing water shortages or flooding and security of fit-for-purpose supplies is becoming a major issue. The emphasis on decentralized alternative water supply systems has increased considerably. Most of the information on such systems is either scattered or focuses on large scale reuse with little consideration given to decentralized small to medium scale systems. Alternative Water Supply Systems brings together recent research into the available and innovative options and additionally shares experiences from a wide range of contexts from both developed and developing countries. Also covered are the technical, social, financial and institutional aspects associated with decentralized alternative water supply systems. These include systems for greywater recycling, rainwater harvesting, recovery of water through condensation and sewer mining.
+                </div>
+                <div id="kw10" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Environmental&#32;Sciences&quot;">Environmental Sciences</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Water&#32;resources&quot;">Water resources</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Water&#32;supply&quot;">Water supply</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+<!-- #############END RECORDS############## -->
+
+   <div id="lastRecord">
+   <div class="resultLabel2">
+<table width="100%" cellspacing="0" cellpading="0">
+   <tr>
+<!-- FORMATS -->
+    <td width="33%">
+    <span>
+      Listing <strong>1</strong> - <strong>10</strong> of <strong>677</strong>
+    </span>
+     </td>
+<!-- END FORMATS -->
+<!--PAGES -->
+     <td width="34%" align="center">
+          <<
+
+       page
+        <span>
+        <form style="margin: 0; padding: 0; display: inline" method="GET" name="goToPage" action="http://www.doabooks.org/doab">
+          <input style="font-size:75%;text-align:center; color:red" name="jumpToPage" value="1" size="4">
+    of 68
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="water">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+          <input type=hidden name="func" value="search">
+        </form>
+        </span>
+           <a href="http://www.doabooks.org/doab?func=search&amp;page=2&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> >></a>
+     </td>
+<!-- END PAGES -->
+
+<!-- SORT -->
+     <td width="33%" align="right">
+    <div class="sort">
+     <span>
+      Sort by
+        <form style="display: inline;" method="GET" name="sorting" action="http://www.doabooks.org/doab">
+        <select name="sort" onChange="this.form.submit();">
+        <option value=""            selected="selected"         >Relevance</option>
+        <option value="yearDesc"          >Year-Descending</option>
+        <option value="yearAsc"          >Year-Ascending</option>
+         <option value="cdDesc"           >Date added-Descending</option>
+         <option value="cdAsc"           >Date added-Ascending</option>
+         </select>
+        <input type=hidden name="func" value="search">
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="water">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+        </form>
+     </span>
+
+    </div><!-- END DIV sort -->
+     </td>
+<!-- END SORT -->
+<!-- end if function is search -->
+   </tr>
+  </table>
+   </div> <!-- end resultLabel div -->
+   </div> <!-- end lastRecord div -->
+
+</div> <!-- end result --> 
+
+
+<!-- FACET -->
+
+<div id="facetEntries">
+    <div id="facetEntriesLabel">
+       <strong>Narrow your search</strong>
+    </div><!-- end facetEntriesLabel -->
+    <div class="facet">
+<form name="years" action="http://www.doabooks.org/doab" method="GET" style="display:inline;">
+   <input type="hidden" name="template" value="">
+   <input type="hidden" name="query" value="water">
+   <input type="hidden" name="uiLanguage" value="en">
+   <input type="hidden" name="go" value="1">
+   <input name="func" type="hidden" value="search">
+          <br/>
+              <strong>Publisher</strong>
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;MDPI&#32;-&#32;Multidisciplinary&#32;Digital&#32;Publishing&#32;Institute&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> MDPI - Multidisciplinary Digital Publishing Institute</a> (281)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;IntechOpen&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> IntechOpen</a> (117)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Springer&#32;Nature&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Springer Nature</a> (45)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Frontiers&#32;Media&#32;SA&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Frontiers Media SA</a> (42)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;KIT&#32;Scientific&#32;Publishing&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> KIT Scientific Publishing</a> (29)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;IWA&#32;Publishing&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> IWA Publishing</a> (28)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Oxford&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Oxford University Press</a> (16)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Taylor&#32;&amp;&#32;Francis&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Taylor &amp; Francis</a> (15)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22%C3%83%C2%A9ditions%20Quae%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> éditions Quae</a> (13)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;ANU&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> ANU Press</a> (10)</p> 
+                 <span id="moreutpub" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Amsterdam&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Amsterdam University Press</a> (5)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;of&#32;Calgary&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University of Calgary Press</a> (5)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;De&#32;Gruyter&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> De Gruyter</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;IOS&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> IOS Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Tampere&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Tampere University Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;of&#32;California&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University of California Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Brill&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Brill</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Duke&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Duke University Press</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;UCL&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> UCL Press</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;AOSIS&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> AOSIS</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Athabasca&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Athabasca University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Coimbra&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Coimbra University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;EDP&#32;SCIENCES&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> EDP SCIENCES</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22IRD%20%C3%83%E2%80%B0ditions%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> IRD Éditions</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Peter&#32;Lang&#32;International&#32;Academic&#32;Publishing&#32;Group&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Peter Lang International Academic Publishing Group</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Presses%20de%20l%C3%A2%E2%82%AC%E2%84%A2Ifpo%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Presses de l’Ifpo</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;Press&#32;of&#32;Colorado&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University Press of Colorado</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Universit%C3%83%C2%A4tsverlag%20G%C3%83%C2%B6ttingen%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Universitätsverlag Göttingen</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Academia&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Academia Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Academic&#32;Studies&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Academic Studies Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Anthem&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Anthem Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Berghahn&#32;Books&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Berghahn Books</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Bloomsbury&#32;Academic&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Bloomsbury Academic</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22B%C3%83%C2%B6hlau%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Böhlau</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Coll%C3%83%C2%A8ge%20de%20France%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Collège de France</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Edward&#32;Elgar&#32;Publishing&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Edward Elgar Publishing</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Etnogr%C3%83%C2%A1fica%20Press%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Etnográfica Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Hamad&#32;Bin&#32;Khalifa&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Hamad Bin Khalifa University Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Ledizioni&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Ledizioni</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22MOM%20%C3%83%E2%80%B0ditions%22&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> MOM Éditions</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Nomos&#32;Verlagsgesellschaft&#32;mbH&#32;&amp;&#32;Co.&#32;KG&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Nomos Verlagsgesellschaft mbH &amp; Co. KG</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Open&#32;Humanities&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Open Humanities Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Policy&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Policy Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Polish&#32;Botanical&#32;Society&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Polish Botanical Society</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;The&#32;MIT&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> The MIT Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;of&#32;Adelaide&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University of Adelaide Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;of&#32;Arizona&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University of Arizona Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;of&#32;Gothenburg&#32;-&#32;Department&#32;of&#32;Historical&#32;Studies&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University of Gothenburg - Department of Historical Studies</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;University&#32;of&#32;Hawai'i&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> University of Hawai'i Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:&quot;Utah&#32;State&#32;University,&#32;University&#32;Libraries&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Utah State University, University Libraries</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('moreutpub','','','','Less ...','More ...','textIdutpub')"> <span id="textIdutpub">More...</span></a><br>
+
+          <br/>
+              <strong>License</strong>
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;by-nc-nd&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC by-nc-nd</a> (380)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;unknown&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> unknown</a> (118)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;by&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC by</a> (84)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;by-nc&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC by-nc</a> (36)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;by-sa&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC by-sa</a> (16)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;Oxford&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Oxford University Press</a> (14)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;ANU&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> ANU Press</a> (10)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;by-nc-sa&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC by-nc-sa</a> (7)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;OpenEdition&#32;Licence&#32;for&#32;Books&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> OpenEdition Licence for Books</a> (5)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;Springer&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Springer</a> (2)</p> 
+                 <span id="moreutlic" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;Amsterdam&#32;University&#32;Press&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> Amsterdam University Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;BY&#32;3.0&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC BY 3.0</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;BY&#32;IGO&#32;3.0&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC BY IGO 3.0</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;CC&#32;by-nd&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> CC by-nd</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:&quot;OpenEdition&#32;licence&#32;for&#32;Books&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> OpenEdition licence for Books</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('moreutlic','','','','Less ...','More ...','textIdutlic')"> <span id="textIdutlic">More...</span></a><br>
+
+          <br/>
+              <strong>Language</strong>
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;english&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> english</a> (600)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;eng&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> eng</a> (33)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;french&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> french</a> (14)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;german&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> german</a> (13)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;finnish&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> finnish</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;englisch&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> englisch</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;portuguese&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> portuguese</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;spanish&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> spanish</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;undetermined&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> undetermined</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;algae&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> algae</a> (1)</p> 
+                 <span id="morelang" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;alterations&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> alterations</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;amphibians&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> amphibians</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;aquatic&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> aquatic</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;bacteria&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> bacteria</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;bioassessment&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> bioassessment</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;birds&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> birds</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;catastrophes&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> catastrophes</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;co&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> co</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;culture&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> culture</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;decomposition&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> decomposition</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;dutch&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> dutch</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;environmental&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> environmental</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;fishes&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> fishes</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;fungi&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> fungi</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;hydrology&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> hydrology</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;invertebrates&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> invertebrates</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;leaf&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> leaf</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;litter&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> litter</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;mammals&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> mammals</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;organisms&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> organisms</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;plants&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> plants</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;primary&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> primary</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;production&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> production</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;reptiles&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> reptiles</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;risks&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> risks</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;rivers&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> rivers</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;safety&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> safety</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;secondary&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> secondary</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;sediments&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> sediments</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;social&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> social</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:&quot;technological&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> technological</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('morelang','','','','Less ...','More ...','textIdlang')"> <span id="textIdlang">More...</span></a><br>
+
+          <br/>
+              <strong>Year</strong>
+<br>
+<table style="display:inline; padding-left:8px" border="0" cellspacing="0" cellpading="0">
+ <tr><td>
+From <input style="font-size:80%;text-align:center;" size="3" maxlength="4" name="fromYear" value=""></td><td>To <input style="font-size:80%;text-align:center;" size="3" maxlength="4" name="toYear" value=""></td>
+
+<td>
+<a href="javascript:void(0)" onClick="document.years.submit()"> <img src="doabImages/go.jpeg" border="0" ALT="Submit"></a>
+</td></tr>
+</table>
+</form>
+
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2020&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2020</a> (85)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2019&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2019</a> (190)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2018&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2018</a> (118)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2017&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2017</a> (81)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2016&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2016</a> (46)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2015&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2015</a> (27)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2014&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2014</a> (26)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2013&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2013</a> (29)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2012&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2012</a> (14)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2011&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2011</a> (19)</p> 
+                 <span id="moreyear" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2010&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2010</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2009&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2009</a> (7)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2008&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2008</a> (8)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2007&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2007</a> (8)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2005&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2005</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;2004&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 2004</a> (5)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:&quot;1998&quot;&amp;template=&amp;fromYear=&amp;query=water&amp;toYear=&amp;uiLanguage=en"> 1998</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('moreyear','','','','Less ...','More ...','textIdyear')"> <span id="textIdyear">More...</span></a><br>
+
+    </div><!-- end facet-->
+</div><!-- end facetEntries -->
+<div style="clear:both;"></div>
+    <div class="clearBoth"></div>
+
+                                                      <div id="footer">
+
+
+
+
+  <div id="footerLeft">
+</i> Directory of Open Access Books is a joint service of <a href="http://www.oapen.org">OAPEN</a>, <a href="http://www.openedition.org">OpenEdition</a>, <a href="http://www.cnrs.fr/">CNRS</a> and <a href="https://www.univ-amu.fr/">Aix-Marseille Université</a>, provided by DOAB Foundation.
+  </div>
+  <div id="footerRight">
+    ©2020 SemperTool
+  </div>
+  <div class="clearBoth"></div>
+</div>
+  </div><!-- end pageContainer -->
+</div><!-- end whlePage -->
+
+</body>
+</html>

@@ -46,6 +46,12 @@ require(ExPanDaR)
 ```{r  }
 # read KU data frame
 KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
+# read DOAB metadata
+source('~/monograph/Public Data/DOAB/doabingest.R')
+DOABmeta.df <- doabFetch()
+```
+```{r  }
+
 
 head(KUbpc.df)
 head(summary(KUbpc.df))
