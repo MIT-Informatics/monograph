@@ -193,6 +193,8 @@ oa_time("Pluto Press")
 
 oa_time("Liverpool University Press")
 
+
+
 ```
 ### Comparison of charges by year and backlist
 ```{r}
