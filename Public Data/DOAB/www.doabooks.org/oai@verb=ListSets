@@ -1,0 +1,1639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+
+<responseDate>2020-08-24T18:51:57Z</responseDate>
+<request verb="ListSets">https://www.doabooks.org/oai</request>
+
+<ListSets>
+<set>
+  <setSpec>Agriculture_and_Food_Sciences</setSpec>
+  <setName>Agriculture and Food Sciences</setName>
+</set>
+<set>
+  <setSpec>Arts_and_Architecture</setSpec>
+  <setName>Arts and Architecture</setName>
+</set>
+<set>
+  <setSpec>Biology_and_Life_Sciences</setSpec>
+  <setName>Biology and Life Sciences</setName>
+</set>
+<set>
+  <setSpec>Business_and_Economics</setSpec>
+  <setName>Business and Economics</setName>
+</set>
+<set>
+  <setSpec>Chemistry</setSpec>
+  <setName>Chemistry</setName>
+</set>
+<set>
+  <setSpec>Earth_and_Environmental_Sciences</setSpec>
+  <setName>Earth and Environmental Sciences</setName>
+</set>
+<set>
+  <setSpec>General_Works</setSpec>
+  <setName>General Works</setName>
+</set>
+<set>
+  <setSpec>Health_Sciences</setSpec>
+  <setName>Health Sciences</setName>
+</set>
+<set>
+  <setSpec>History_and_Archaeology</setSpec>
+  <setName>History and Archaeology</setName>
+</set>
+<set>
+  <setSpec>Languages_and_Literatures</setSpec>
+  <setName>Languages and Literatures</setName>
+</set>
+<set>
+  <setSpec>Law_and_Political_Science</setSpec>
+  <setName>Law and Political Science</setName>
+</set>
+<set>
+  <setSpec>Mathematics_and_Statistics</setSpec>
+  <setName>Mathematics and Statistics</setName>
+</set>
+<set>
+  <setSpec>Philosophy_and_Religion</setSpec>
+  <setName>Philosophy and Religion</setName>
+</set>
+<set>
+  <setSpec>Physics_and_Astronomy</setSpec>
+  <setName>Physics and Astronomy</setName>
+</set>
+<set>
+  <setSpec>Science_General</setSpec>
+  <setName>Science General</setName>
+</set>
+<set>
+  <setSpec>Social_Sciences</setSpec>
+  <setName>Social Sciences</setName>
+</set>
+<set>
+  <setSpec>Technology_and_Engineering</setSpec>
+  <setName>Technology and Engineering</setName>
+</set>
+<set>
+  <setSpec>publisher_1106</setSpec>
+  <setName>Academia Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1376</setSpec>
+  <setName>Academic Studies Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1474</setSpec>
+  <setName>Accademia University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1289</setSpec>
+  <setName>African Minds</setName>
+</set>
+<set>
+  <setSpec>publisher_1597</setSpec>
+  <setName>African Studies Centre Leiden (ASCL)</setName>
+</set>
+<set>
+  <setSpec>publisher_1551</setSpec>
+  <setName>Akademie Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1558</setSpec>
+  <setName>Alliance Athéna</setName>
+</set>
+<set>
+  <setSpec>publisher_1473</setSpec>
+  <setName>Alpara</setName>
+</set>
+<set>
+  <setSpec>publisher_1089</setSpec>
+  <setName>Amsterdam University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1436</setSpec>
+  <setName>Anthem Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1203</setSpec>
+  <setName>AntropoWeb</setName>
+</set>
+<set>
+  <setSpec>publisher_1233</setSpec>
+  <setName>ANU Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1310</setSpec>
+  <setName>AOSIS</setName>
+</set>
+<set>
+  <setSpec>publisher_1546</setSpec>
+  <setName>Apress</setName>
+</set>
+<set>
+  <setSpec>publisher_1766</setSpec>
+  <setName>Arc Humanities Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1483</setSpec>
+  <setName>Arco</setName>
+</set>
+<set>
+  <setSpec>publisher_1354</setSpec>
+  <setName>Ariadna Ediciones</setName>
+</set>
+<set>
+  <setSpec>publisher_1740</setSpec>
+  <setName>Artois Presses Université</setName>
+</set>
+<set>
+  <setSpec>publisher_1697</setSpec>
+  <setName>Aschendorff Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1119</setSpec>
+  <setName>Athabasca University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1712</setSpec>
+  <setName>Ausonius Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1159</setSpec>
+  <setName>Austrian Academy of Sciences Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1087</setSpec>
+  <setName>Berg Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1269</setSpec>
+  <setName>Berghahn Books</setName>
+</set>
+<set>
+  <setSpec>publisher_1594</setSpec>
+  <setName>Birkhäuser - an imprint of De Gruyter</setName>
+</set>
+<set>
+  <setSpec>publisher_1131</setSpec>
+  <setName>Bloomsbury Academic</setName>
+</set>
+<set>
+  <setSpec>publisher_1182</setSpec>
+  <setName>Böhlau</setName>
+</set>
+<set>
+  <setSpec>publisher_1308</setSpec>
+  <setName>Boydell &amp; Brewer</setName>
+</set>
+<set>
+  <setSpec>publisher_1357</setSpec>
+  <setName>Brandeis University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1488</setSpec>
+  <setName>Brepols</setName>
+</set>
+<set>
+  <setSpec>publisher_1111</setSpec>
+  <setName>Brill</setName>
+</set>
+<set>
+  <setSpec>publisher_1656</setSpec>
+  <setName>Bristol University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1552</setSpec>
+  <setName>Brookings Institution Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1781</setSpec>
+  <setName>Brown Judaic Studies</setName>
+</set>
+<set>
+  <setSpec>publisher_1386</setSpec>
+  <setName>bu,press</setName>
+</set>
+<set>
+  <setSpec>publisher_1738</setSpec>
+  <setName>Büchner-Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1485</setSpec>
+  <setName>C.H.Beck</setName>
+</set>
+<set>
+  <setSpec>publisher_1598</setSpec>
+  <setName>CABI CAB International</setName>
+</set>
+<set>
+  <setSpec>publisher_1244</setSpec>
+  <setName>Cambridge University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1342</setSpec>
+  <setName>Canadian Institute of Ukrainian Studies Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1309</setSpec>
+  <setName>Cappelen Damm Akademisk/NOASP (Nordic Open Access Scholarly Publishing)</setName>
+</set>
+<set>
+  <setSpec>publisher_1730</setSpec>
+  <setName>Cardiff University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1409</setSpec>
+  <setName>Carl Grossmann Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1508</setSpec>
+  <setName>Carrières Sociales Editions</setName>
+</set>
+<set>
+  <setSpec>publisher_1464</setSpec>
+  <setName>Casa de Velázquez</setName>
+</set>
+<set>
+  <setSpec>publisher_1463</setSpec>
+  <setName>CEDEJ - Égypte/Soudan</setName>
+</set>
+<set>
+  <setSpec>publisher_1556</setSpec>
+  <setName>Center for Studies in Higher Education, University of California, Berkeley</setName>
+</set>
+<set>
+  <setSpec>publisher_1198</setSpec>
+  <setName>Central European University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1213</setSpec>
+  <setName>Centre for Research in Reasoning, Argumentation and Rhetoric (CRRAR): Windsor Studies in Argumentation</setName>
+</set>
+<set>
+  <setSpec>publisher_1475</setSpec>
+  <setName>Centre français des études éthiopiennes</setName>
+</set>
+<set>
+  <setSpec>publisher_1511</setSpec>
+  <setName>Centre français d’archéologie et de sciences sociales</setName>
+</set>
+<set>
+  <setSpec>publisher_1461</setSpec>
+  <setName>Centre Jacques-Berque</setName>
+</set>
+<set>
+  <setSpec>publisher_1515</setSpec>
+  <setName>Centro de estudios mexicanos y centroamericanos</setName>
+</set>
+<set>
+  <setSpec>publisher_1471</setSpec>
+  <setName>Centro de Estudos Internacionais</setName>
+</set>
+<set>
+  <setSpec>publisher_1615</setSpec>
+  <setName>Christian Archaeological Society (ChAE)</setName>
+</set>
+<set>
+  <setSpec>publisher_1356</setSpec>
+  <setName>Chronos Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1297</setSpec>
+  <setName>CNRS Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1118</setSpec>
+  <setName>Co-Action Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1616</setSpec>
+  <setName>Coimbra University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1199</setSpec>
+  <setName>Collège de France</setName>
+</set>
+<set>
+  <setSpec>publisher_1384</setSpec>
+  <setName>Cornell University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1620</setSpec>
+  <setName>CRC Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1358</setSpec>
+  <setName>Dartmouth College Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1145</setSpec>
+  <setName>De Gruyter</setName>
+</set>
+<set>
+  <setSpec>publisher_1437</setSpec>
+  <setName>De Gruyter Mouton</setName>
+</set>
+<set>
+  <setSpec>publisher_1438</setSpec>
+  <setName>De Gruyter Oldenbourg</setName>
+</set>
+<set>
+  <setSpec>publisher_1439</setSpec>
+  <setName>De Gruyter Saur</setName>
+</set>
+<set>
+  <setSpec>publisher_1559</setSpec>
+  <setName>Demopolis</setName>
+</set>
+<set>
+  <setSpec>publisher_1691</setSpec>
+  <setName>Département des études, de la prospective et des statistiques</setName>
+</set>
+<set>
+  <setSpec>publisher_1229</setSpec>
+  <setName>Duke University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1741</setSpec>
+  <setName>e-Spania Books</setName>
+</set>
+<set>
+  <setSpec>publisher_1230</setSpec>
+  <setName>Edinburgh University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1405</setSpec>
+  <setName>Edition Open Access</setName>
+</set>
+<set>
+  <setSpec>publisher_1646</setSpec>
+  <setName>Edition Open Access Max Planck Institute for the History of Science</setName>
+</set>
+<set>
+  <setSpec>publisher_1271</setSpec>
+  <setName>Edition Praesens</setName>
+</set>
+<set>
+  <setSpec>publisher_1345</setSpec>
+  <setName>Editions Alphil Presses universitaires suisses</setName>
+</set>
+<set>
+  <setSpec>publisher_1466</setSpec>
+  <setName>Éditions Contrechamps</setName>
+</set>
+<set>
+  <setSpec>publisher_1720</setSpec>
+  <setName>Éditions de l&apos;Université de Bruxelles</setName>
+</set>
+<set>
+  <setSpec>publisher_1675</setSpec>
+  <setName>Éditions de la Bibliothèque nationale de France</setName>
+</set>
+<set>
+  <setSpec>publisher_1443</setSpec>
+  <setName>Éditions de la Bibliothèque publique d’information</setName>
+</set>
+<set>
+  <setSpec>publisher_1676</setSpec>
+  <setName>Éditions de la Maison des sciences de l’homme</setName>
+</set>
+<set>
+  <setSpec>publisher_1512</setSpec>
+  <setName>Éditions de la Sorbonne</setName>
+</set>
+<set>
+  <setSpec>publisher_1183</setSpec>
+  <setName>Editions de Linguistique et de Philologie</setName>
+</set>
+<set>
+  <setSpec>publisher_1525</setSpec>
+  <setName>Éditions de l’École des hautes études en sciences sociales</setName>
+</set>
+<set>
+  <setSpec>publisher_1442</setSpec>
+  <setName>Éditions de l’IHEAL</setName>
+</set>
+<set>
+  <setSpec>publisher_1679</setSpec>
+  <setName>Éditions des maisons des sciences de l’homme associées</setName>
+</set>
+<set>
+  <setSpec>publisher_1687</setSpec>
+  <setName>Éditions du Comité des travaux historiques et scientifiques</setName>
+</set>
+<set>
+  <setSpec>publisher_1331</setSpec>
+  <setName>Editions IES</setName>
+</set>
+<set>
+  <setSpec>publisher_1742</setSpec>
+  <setName>Éditions Mélanie Seteun</setName>
+</set>
+<set>
+  <setSpec>publisher_1713</setSpec>
+  <setName>éditions Quae</setName>
+</set>
+<set>
+  <setSpec>publisher_1699</setSpec>
+  <setName>Éditions Rue d’Ulm</setName>
+</set>
+<set>
+  <setSpec>publisher_1743</setSpec>
+  <setName>Éditions Universitaires d’Avignon</setName>
+</set>
+<set>
+  <setSpec>publisher_1288</setSpec>
+  <setName>Editorial José Marti</setName>
+</set>
+<set>
+  <setSpec>publisher_1801</setSpec>
+  <setName>Editorial Uniagustiniana</setName>
+</set>
+<set>
+  <setSpec>publisher_1734</setSpec>
+  <setName>Editorial Universidad del Rosario</setName>
+</set>
+<set>
+  <setSpec>publisher_1677</setSpec>
+  <setName>Editorial UNRN</setName>
+</set>
+<set>
+  <setSpec>publisher_1621</setSpec>
+  <setName>Edizioni Casagrande</setName>
+</set>
+<set>
+  <setSpec>publisher_1505</setSpec>
+  <setName>Edizioni Kaplan</setName>
+</set>
+<set>
+  <setSpec>publisher_1218</setSpec>
+  <setName>EDP SCIENCES</setName>
+</set>
+<set>
+  <setSpec>publisher_1226</setSpec>
+  <setName>Edward Elgar Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1543</setSpec>
+  <setName>EKT National Documentation Centre</setName>
+</set>
+<set>
+  <setSpec>publisher_1235</setSpec>
+  <setName>ENS Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1599</setSpec>
+  <setName>Equinox</setName>
+</set>
+<set>
+  <setSpec>publisher_1647</setSpec>
+  <setName>Ergon</setName>
+</set>
+<set>
+  <setSpec>publisher_1680</setSpec>
+  <setName>Etnográfica Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1611</setSpec>
+  <setName>eum edizioni universita di macerata</setName>
+</set>
+<set>
+  <setSpec>publisher_1819</setSpec>
+  <setName>European Press Academic Publishing (EPAP)</setName>
+</set>
+<set>
+  <setSpec>publisher_1708</setSpec>
+  <setName>EuroPhilosophie Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1272</setSpec>
+  <setName>Fassbaender</setName>
+</set>
+<set>
+  <setSpec>publisher_1419</setSpec>
+  <setName>FedOA - Federico II University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1391</setSpec>
+  <setName>Finnish Literature Society / SKS</setName>
+</set>
+<set>
+  <setSpec>publisher_1090</setSpec>
+  <setName>Firenze University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1370</setSpec>
+  <setName>Fordham University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1305</setSpec>
+  <setName>FrancoAngeli</setName>
+</set>
+<set>
+  <setSpec>publisher_1728</setSpec>
+  <setName>Frank &amp; Timme</setName>
+</set>
+<set>
+  <setSpec>publisher_1403</setSpec>
+  <setName>Franz Steiner Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1299</setSpec>
+  <setName>Frontiers Media SA</setName>
+</set>
+<set>
+  <setSpec>publisher_1273</setSpec>
+  <setName>Georg Olms Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1454</setSpec>
+  <setName>Georg-Eckert-Institut - Leibniz-Institut für Internationale Schulbuchforschung bei Vandehoek &amp; Ruprecht</setName>
+</set>
+<set>
+  <setSpec>publisher_1574</setSpec>
+  <setName>Georgetown University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1814</setSpec>
+  <setName>Getty Publications</setName>
+</set>
+<set>
+  <setSpec>publisher_1622</setSpec>
+  <setName>Goodfellow Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1481</setSpec>
+  <setName>Gorgias Press; University of Birmingham</setName>
+</set>
+<set>
+  <setSpec>publisher_1502</setSpec>
+  <setName>Graduate Institute Publications</setName>
+</set>
+<set>
+  <setSpec>publisher_1322</setSpec>
+  <setName>Guilford Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1236</setSpec>
+  <setName>Hamad Bin Khalifa University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1093</setSpec>
+  <setName>Hamburg University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1422</setSpec>
+  <setName>Harrassowitz Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1295</setSpec>
+  <setName>Hart Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1553</setSpec>
+  <setName>HAU Books</setName>
+</set>
+<set>
+  <setSpec>publisher_1395</setSpec>
+  <setName>Heidelberg University Publishing (heiUP)</setName>
+</set>
+<set>
+  <setSpec>publisher_1729</setSpec>
+  <setName>Helsinki University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1600</setSpec>
+  <setName>Herder</setName>
+</set>
+<set>
+  <setSpec>publisher_1529</setSpec>
+  <setName>Hollitzer</setName>
+</set>
+<set>
+  <setSpec>publisher_1274</setSpec>
+  <setName>Holzhausen</setName>
+</set>
+<set>
+  <setSpec>publisher_1722</setSpec>
+  <setName>HTWK Leipzig - OA-Hochschulverlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1735</setSpec>
+  <setName>Iberoamericana Vervuert</setName>
+</set>
+<set>
+  <setSpec>publisher_1705</setSpec>
+  <setName>IFAEE</setName>
+</set>
+<set>
+  <setSpec>publisher_1517</setSpec>
+  <setName>IFRA-Nigeria</setName>
+</set>
+<set>
+  <setSpec>publisher_1601</setSpec>
+  <setName>Imprint Academic</setName>
+</set>
+<set>
+  <setSpec>publisher_1472</setSpec>
+  <setName>innsbruck university press</setName>
+</set>
+<set>
+  <setSpec>publisher_1562</setSpec>
+  <setName>Insegna del Giglio</setName>
+</set>
+<set>
+  <setSpec>publisher_1700</setSpec>
+  <setName>INSEP-Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1527</setSpec>
+  <setName>Institut de la gestion publique et du développement économique</setName>
+</set>
+<set>
+  <setSpec>publisher_1447</setSpec>
+  <setName>Institut de recherche sur le Maghreb contemporain</setName>
+</set>
+<set>
+  <setSpec>publisher_1702</setSpec>
+  <setName>Institut de recherche sur l’Asie du Sud-Est contemporaine</setName>
+</set>
+<set>
+  <setSpec>publisher_1520</setSpec>
+  <setName>Institut de recherches et d’études sur les mondes arabes et musulmans</setName>
+</set>
+<set>
+  <setSpec>publisher_1457</setSpec>
+  <setName>Institut français d’études anatoliennes</setName>
+</set>
+<set>
+  <setSpec>publisher_1510</setSpec>
+  <setName>Institut français d’études andines</setName>
+</set>
+<set>
+  <setSpec>publisher_1328</setSpec>
+  <setName>Institute for Local Self-Government and Public Procurement Maribor</setName>
+</set>
+<set>
+  <setSpec>publisher_1603</setSpec>
+  <setName>Institute of Network Cultures</setName>
+</set>
+<set>
+  <setSpec>publisher_1692</setSpec>
+  <setName>IntechOpen</setName>
+</set>
+<set>
+  <setSpec>publisher_1366</setSpec>
+  <setName>Intellect</setName>
+</set>
+<set>
+  <setSpec>publisher_1133</setSpec>
+  <setName>IOS Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1470</setSpec>
+  <setName>IRD Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1264</setSpec>
+  <setName>Istituto per la storia del pensiero filosofico e scientifico moderno - National Research Council</setName>
+</set>
+<set>
+  <setSpec>publisher_1319</setSpec>
+  <setName>IWA Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1184</setSpec>
+  <setName>Jan Sramek Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1171</setSpec>
+  <setName>John Benjamins Publishing Company</setName>
+</set>
+<set>
+  <setSpec>publisher_1783</setSpec>
+  <setName>Johns Hopkins University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1318</setSpec>
+  <setName>jovis Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1440</setSpec>
+  <setName>K. G. Saur</setName>
+</set>
+<set>
+  <setSpec>publisher_1736</setSpec>
+  <setName>Karger</setName>
+</set>
+<set>
+  <setSpec>publisher_1263</setSpec>
+  <setName>Karnac</setName>
+</set>
+<set>
+  <setSpec>publisher_1631</setSpec>
+  <setName>Karolinum Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1094</setSpec>
+  <setName>KIT Scientific Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1168</setSpec>
+  <setName>Koninklijke van Gorcum</setName>
+</set>
+<set>
+  <setSpec>publisher_1311</setSpec>
+  <setName>Konstanz University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1486</setSpec>
+  <setName>Kriterium</setName>
+</set>
+<set>
+  <setSpec>publisher_1243</setSpec>
+  <setName>Language Science Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1201</setSpec>
+  <setName>Ledizioni</setName>
+</set>
+<set>
+  <setSpec>publisher_1095</setSpec>
+  <setName>Leiden University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1683</setSpec>
+  <setName>Les Belles Lettres</setName>
+</set>
+<set>
+  <setSpec>publisher_1304</setSpec>
+  <setName>Les Presses de l’Université d’Ottawa | University of Ottawa Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1372</setSpec>
+  <setName>Leuven University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1672</setSpec>
+  <setName>Lever Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1333</setSpec>
+  <setName>Librairie Droz</setName>
+</set>
+<set>
+  <setSpec>publisher_1428</setSpec>
+  <setName>LIBRUM Publishers &amp; Editors LLC</setName>
+</set>
+<set>
+  <setSpec>publisher_1312</setSpec>
+  <setName>LIT Verlag GmbH &amp; Co. KG</setName>
+</set>
+<set>
+  <setSpec>publisher_1109</setSpec>
+  <setName>Liverpool University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1624</setSpec>
+  <setName>LSE Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1561</setSpec>
+  <setName>Lund University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1744</setSpec>
+  <setName>Maison des Sciences de l’Homme d’Aquitaine</setName>
+</set>
+<set>
+  <setSpec>publisher_1088</setSpec>
+  <setName>Manchester University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1426</setSpec>
+  <setName>Mandelbaum Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1754</setSpec>
+  <setName>Mattering Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1604</setSpec>
+  <setName>Maven Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1650</setSpec>
+  <setName>Max Planck Institute for European Legal History</setName>
+</set>
+<set>
+  <setSpec>publisher_1446</setSpec>
+  <setName>McGill University Library &amp; Archives</setName>
+</set>
+<set>
+  <setSpec>publisher_1222</setSpec>
+  <setName>MDPI - Multidisciplinary Digital Publishing Institute</setName>
+</set>
+<set>
+  <setSpec>publisher_1348</setSpec>
+  <setName>meson press</setName>
+</set>
+<set>
+  <setSpec>publisher_1373</setSpec>
+  <setName>Modern Academic Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1549</setSpec>
+  <setName>Mohr Siebeck</setName>
+</set>
+<set>
+  <setSpec>publisher_1688</setSpec>
+  <setName>MOM Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1359</setSpec>
+  <setName>Monash University Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1134</setSpec>
+  <setName>MPublishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1185</setSpec>
+  <setName>Musikantiquariat und Verlag Hans Schneider</setName>
+</set>
+<set>
+  <setSpec>publisher_1563</setSpec>
+  <setName>MWV Medizinisch Wissenschaftliche Verlagsgesellschaft</setName>
+</set>
+<set>
+  <setSpec>publisher_1554</setSpec>
+  <setName>National Taiwan University Press, Vandenhoeck &amp; Ruprecht V&amp;R Unipress</setName>
+</set>
+<set>
+  <setSpec>publisher_1606</setSpec>
+  <setName>National University of Singapore Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1360</setSpec>
+  <setName>Naturhistorisches Museum Wien</setName>
+</set>
+<set>
+  <setSpec>publisher_1152</setSpec>
+  <setName>Newfound Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1684</setSpec>
+  <setName>Nino Aragno Editore</setName>
+</set>
+<set>
+  <setSpec>publisher_1578</setSpec>
+  <setName>NKUA Applied Philosophy Research Lab Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1313</setSpec>
+  <setName>Nomos</setName>
+</set>
+<set>
+  <setSpec>publisher_1584</setSpec>
+  <setName>Nomos Verlagsgesellschaft mbH &amp; Co. KG</setName>
+</set>
+<set>
+  <setSpec>publisher_1458</setSpec>
+  <setName>Northwestern University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1186</setSpec>
+  <setName>Novalis Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1451</setSpec>
+  <setName>NUS Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1648</setSpec>
+  <setName>Ohio University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1625</setSpec>
+  <setName>OmniaScience</setName>
+</set>
+<set>
+  <setSpec>publisher_1132</setSpec>
+  <setName>Open Book Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1136</setSpec>
+  <setName>Open Humanities Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1147</setSpec>
+  <setName>OpenEdition Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1325</setSpec>
+  <setName>Orient Blackswan</setName>
+</set>
+<set>
+  <setSpec>publisher_1673</setSpec>
+  <setName>Orkana Forlag AS</setName>
+</set>
+<set>
+  <setSpec>publisher_1187</setSpec>
+  <setName>Österreichisches Archäologisches Institut</setName>
+</set>
+<set>
+  <setSpec>publisher_1210</setSpec>
+  <setName>Oxford University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1706</setSpec>
+  <setName>pacific-credo Publications</setName>
+</set>
+<set>
+  <setSpec>publisher_1112</setSpec>
+  <setName>Palgrave Macmillan</setName>
+</set>
+<set>
+  <setSpec>publisher_1361</setSpec>
+  <setName>Penn State University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1793</setSpec>
+  <setName>Pensoft Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1275</setSpec>
+  <setName>Peter Lang International Academic Publishing Group</setName>
+</set>
+<set>
+  <setSpec>publisher_1314</setSpec>
+  <setName>Phoibos Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1284</setSpec>
+  <setName>Pickering &amp; Chatto Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1362</setSpec>
+  <setName>Pluto Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1385</setSpec>
+  <setName>Policy Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1283</setSpec>
+  <setName>Polish Botanical Society</setName>
+</set>
+<set>
+  <setSpec>publisher_1380</setSpec>
+  <setName>Poznań Archaeological Museum</setName>
+</set>
+<set>
+  <setSpec>publisher_1195</setSpec>
+  <setName>Presses agronomiques de Gembloux (Liege University)</setName>
+</set>
+<set>
+  <setSpec>publisher_1701</setSpec>
+  <setName>Presses de l’enssib</setName>
+</set>
+<set>
+  <setSpec>publisher_1200</setSpec>
+  <setName>Presses de l’Ifpo</setName>
+</set>
+<set>
+  <setSpec>publisher_1528</setSpec>
+  <setName>Presses de l’Inalco</setName>
+</set>
+<set>
+  <setSpec>publisher_1355</setSpec>
+  <setName>Presses de l’Université de Montréal</setName>
+</set>
+<set>
+  <setSpec>publisher_1711</setSpec>
+  <setName>Presses de l’Université Saint-Louis</setName>
+</set>
+<set>
+  <setSpec>publisher_1686</setSpec>
+  <setName>Presses de l’Université Toulouse 1 Capitole</setName>
+</set>
+<set>
+  <setSpec>publisher_1503</setSpec>
+  <setName>Presses des Mines</setName>
+</set>
+<set>
+  <setSpec>publisher_1476</setSpec>
+  <setName>Presses Sorbonne Nouvelle</setName>
+</set>
+<set>
+  <setSpec>publisher_1690</setSpec>
+  <setName>Presses Universitaires de Bordeaux</setName>
+</set>
+<set>
+  <setSpec>publisher_1469</setSpec>
+  <setName>Presses universitaires de Caen</setName>
+</set>
+<set>
+  <setSpec>publisher_1507</setSpec>
+  <setName>Presses universitaires de la Méditerranée</setName>
+</set>
+<set>
+  <setSpec>publisher_1548</setSpec>
+  <setName>Presses Universitaires de la Méditerranée - PULM</setName>
+</set>
+<set>
+  <setSpec>publisher_1441</setSpec>
+  <setName>Presses universitaires de Liège</setName>
+</set>
+<set>
+  <setSpec>publisher_1456</setSpec>
+  <setName>Presses universitaires de Louvain</setName>
+</set>
+<set>
+  <setSpec>publisher_1745</setSpec>
+  <setName>Presses universitaires de Lyon</setName>
+</set>
+<set>
+  <setSpec>publisher_1462</setSpec>
+  <setName>Presses universitaires de Paris Nanterre</setName>
+</set>
+<set>
+  <setSpec>publisher_1703</setSpec>
+  <setName>Presses universitaires de Perpignan</setName>
+</set>
+<set>
+  <setSpec>publisher_1521</setSpec>
+  <setName>Presses universitaires de Provence</setName>
+</set>
+<set>
+  <setSpec>publisher_1430</setSpec>
+  <setName>Presses universitaires de Rennes</setName>
+</set>
+<set>
+  <setSpec>publisher_1707</setSpec>
+  <setName>Presses universitaires de Rouen et du Havre</setName>
+</set>
+<set>
+  <setSpec>publisher_1689</setSpec>
+  <setName>Presses universitaires de Strasbourg</setName>
+</set>
+<set>
+  <setSpec>publisher_1685</setSpec>
+  <setName>Presses universitaires de Vincennes</setName>
+</set>
+<set>
+  <setSpec>publisher_1424</setSpec>
+  <setName>Presses universitaires du Septentrion</setName>
+</set>
+<set>
+  <setSpec>publisher_1449</setSpec>
+  <setName>Presses universitaires d’Aix-Marseille</setName>
+</set>
+<set>
+  <setSpec>publisher_1453</setSpec>
+  <setName>Presses universitaires François-Rabelais</setName>
+</set>
+<set>
+  <setSpec>publisher_1726</setSpec>
+  <setName>Pretoria University Law Press (PULP)</setName>
+</set>
+<set>
+  <setSpec>publisher_1315</setSpec>
+  <setName>Primus Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1276</setSpec>
+  <setName>Projektverlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1504</setSpec>
+  <setName>Publicacions i Edicions de la Universitat de Barcelona</setName>
+</set>
+<set>
+  <setSpec>publisher_1749</setSpec>
+  <setName>Publicacions Universitat Rovira i Virgili</setName>
+</set>
+<set>
+  <setSpec>publisher_1499</setSpec>
+  <setName>Publicações do Cidehus</setName>
+</set>
+<set>
+  <setSpec>publisher_1557</setSpec>
+  <setName>Publications de l’École française de Rome</setName>
+</set>
+<set>
+  <setSpec>publisher_1678</setSpec>
+  <setName>Publications de l’École nationale des chartes</setName>
+</set>
+<set>
+  <setSpec>publisher_1710</setSpec>
+  <setName>Publications de l’Institut de recherches historiques du Septentrion</setName>
+</set>
+<set>
+  <setSpec>publisher_1746</setSpec>
+  <setName>Publications de l’Institut national d’histoire de l’art</setName>
+</set>
+<set>
+  <setSpec>publisher_1682</setSpec>
+  <setName>Publications des Archives nationales</setName>
+</set>
+<set>
+  <setSpec>publisher_1482</setSpec>
+  <setName>Publications du Centre Jean Bérard</setName>
+</set>
+<set>
+  <setSpec>publisher_1747</setSpec>
+  <setName>Publications scientifiques du Muséum</setName>
+</set>
+<set>
+  <setSpec>publisher_1205</setSpec>
+  <setName>punctum books</setName>
+</set>
+<set>
+  <setSpec>publisher_1234</setSpec>
+  <setName>Purdue University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1704</setSpec>
+  <setName>Quodlibet</setName>
+</set>
+<set>
+  <setSpec>publisher_1330</setSpec>
+  <setName>R. Valent</setName>
+</set>
+<set>
+  <setSpec>publisher_1764</setSpec>
+  <setName>Reimer Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1277</setSpec>
+  <setName>Rodopi</setName>
+</set>
+<set>
+  <setSpec>publisher_1465</setSpec>
+  <setName>Rosenberg &amp; Sellier</setName>
+</set>
+<set>
+  <setSpec>publisher_1278</setSpec>
+  <setName>Routledge</setName>
+</set>
+<set>
+  <setSpec>publisher_1382</setSpec>
+  <setName>Rowman &amp; Littlefield International</setName>
+</set>
+<set>
+  <setSpec>publisher_1431</setSpec>
+  <setName>Royal College of General Practitioners (RCGP)</setName>
+</set>
+<set>
+  <setSpec>publisher_1582</setSpec>
+  <setName>RTI Press/RTI International</setName>
+</set>
+<set>
+  <setSpec>publisher_1232</setSpec>
+  <setName>Rutgers University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1346</setSpec>
+  <setName>San Paolo ‒ Gregorian &amp; Biblical Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1544</setSpec>
+  <setName>Scandinavian University Press (Universitetsforlaget)</setName>
+</set>
+<set>
+  <setSpec>publisher_1423</setSpec>
+  <setName>Scheidegger &amp; Spiess</setName>
+</set>
+<set>
+  <setSpec>publisher_1340</setSpec>
+  <setName>Schwabe Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1260</setSpec>
+  <setName>SciELO Books - Centro Edelstein</setName>
+</set>
+<set>
+  <setSpec>publisher_1497</setSpec>
+  <setName>SciELO Books - Editora da UFRGS</setName>
+</set>
+<set>
+  <setSpec>publisher_1257</setSpec>
+  <setName>SciELO Books - Editora Fap-Unifesp</setName>
+</set>
+<set>
+  <setSpec>publisher_1252</setSpec>
+  <setName>SciELO Books - Editora FIOCRUZ</setName>
+</set>
+<set>
+  <setSpec>publisher_1259</setSpec>
+  <setName>SciELO Books - Editora Mackenzie</setName>
+</set>
+<set>
+  <setSpec>publisher_1444</setSpec>
+  <setName>SciELO Books - Editora UEPG</setName>
+</set>
+<set>
+  <setSpec>publisher_1560</setSpec>
+  <setName>SciELO Books - Editora UFABC</setName>
+</set>
+<set>
+  <setSpec>publisher_1748</setSpec>
+  <setName>SciELO Books - Editora UFFS</setName>
+</set>
+<set>
+  <setSpec>publisher_1618</setSpec>
+  <setName>SciELO Books - Editora UFMG</setName>
+</set>
+<set>
+  <setSpec>publisher_1251</setSpec>
+  <setName>SciELO Books - Editora UNESP</setName>
+</set>
+<set>
+  <setSpec>publisher_1496</setSpec>
+  <setName>SciELO Books - Editorial Universidad del Rosario</setName>
+</set>
+<set>
+  <setSpec>publisher_1468</setSpec>
+  <setName>SciELO Books - Editus</setName>
+</set>
+<set>
+  <setSpec>publisher_1255</setSpec>
+  <setName>SciELO Books - EDUEL</setName>
+</set>
+<set>
+  <setSpec>publisher_1258</setSpec>
+  <setName>SciELO Books - EDUEM</setName>
+</set>
+<set>
+  <setSpec>publisher_1254</setSpec>
+  <setName>SciELO Books - EDUEPB</setName>
+</set>
+<set>
+  <setSpec>publisher_1535</setSpec>
+  <setName>SciELO Books - EDUERJ</setName>
+</set>
+<set>
+  <setSpec>publisher_1253</setSpec>
+  <setName>SciELO Books - EDUFBA</setName>
+</set>
+<set>
+  <setSpec>publisher_1256</setSpec>
+  <setName>SciELO Books - EdUFSCar</setName>
+</set>
+<set>
+  <setSpec>publisher_1737</setSpec>
+  <setName>SciELO Books - EDUFU</setName>
+</set>
+<set>
+  <setSpec>publisher_1261</setSpec>
+  <setName>SciELO Books - JBRJ</setName>
+</set>
+<set>
+  <setSpec>publisher_1338</setSpec>
+  <setName>SciELO Books - ReBentos</setName>
+</set>
+<set>
+  <setSpec>publisher_1267</setSpec>
+  <setName>SciELO Books - Saúde Brasil 2030</setName>
+</set>
+<set>
+  <setSpec>publisher_1291</setSpec>
+  <setName>SciELO Books - Sociedade Brasileira de Zoologia</setName>
+</set>
+<set>
+  <setSpec>publisher_1514</setSpec>
+  <setName>Sean Kingston Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1320</setSpec>
+  <setName>Seismo</setName>
+</set>
+<set>
+  <setSpec>publisher_1478</setSpec>
+  <setName>Siglo del Hombre Editores</setName>
+</set>
+<set>
+  <setSpec>publisher_1506</setSpec>
+  <setName>Société des Océanistes</setName>
+</set>
+<set>
+  <setSpec>publisher_1657</setSpec>
+  <setName>Spartacus Forlag AS / Scandinavian Academic Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1161</setSpec>
+  <setName>Springer Nature</setName>
+</set>
+<set>
+  <setSpec>publisher_1760</setSpec>
+  <setName>Stanford University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1531</setSpec>
+  <setName>Stichting Archiefpublicaties</setName>
+</set>
+<set>
+  <setSpec>publisher_1287</setSpec>
+  <setName>Stockholm University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1188</setSpec>
+  <setName>Studien Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1429</setSpec>
+  <setName>Sydney University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1337</setSpec>
+  <setName>Tampere University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1110</setSpec>
+  <setName>Taylor &amp; Francis</setName>
+</set>
+<set>
+  <setSpec>publisher_1750</setSpec>
+  <setName>Tectum Wissenschaftsverlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1231</setSpec>
+  <setName>Temple University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1607</setSpec>
+  <setName>The Federation Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1564</setSpec>
+  <setName>The International Institute for Buddhist Studies</setName>
+</set>
+<set>
+  <setSpec>publisher_1480</setSpec>
+  <setName>The MIT Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1432</setSpec>
+  <setName>The Ohio State University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1788</setSpec>
+  <setName>The University of North Carolina Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1225</setSpec>
+  <setName>transcript Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1180</setSpec>
+  <setName>Turia und Kant</setName>
+</set>
+<set>
+  <setSpec>publisher_1194</setSpec>
+  <setName>Ubiquity Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1303</setSpec>
+  <setName>UCL Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1452</setSpec>
+  <setName>UCT Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1467</setSpec>
+  <setName>UGA Éditions</setName>
+</set>
+<set>
+  <setSpec>publisher_1608</setSpec>
+  <setName>United Nations Educational, Scientific and Cultural Organisation (UNESCO)</setName>
+</set>
+<set>
+  <setSpec>publisher_1246</setSpec>
+  <setName>Universidad Carlos III de Madrid. Figuerola Institute of Social Science History</setName>
+</set>
+<set>
+  <setSpec>publisher_1501</setSpec>
+  <setName>Universidad Externado de Colombia</setName>
+</set>
+<set>
+  <setSpec>publisher_1294</setSpec>
+  <setName>Universidad Nacional de La Plata. Facultad de Humanidades y Ciencias de la Educación</setName>
+</set>
+<set>
+  <setSpec>publisher_1609</setSpec>
+  <setName>Universidade Federal do Rio Grande do Sul</setName>
+</set>
+<set>
+  <setSpec>publisher_1092</setSpec>
+  <setName>Universitätsverlag Göttingen</setName>
+</set>
+<set>
+  <setSpec>publisher_1149</setSpec>
+  <setName>University of Adelaide Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1649</setSpec>
+  <setName>University of Arizona Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1155</setSpec>
+  <setName>University of Calgary Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1344</setSpec>
+  <setName>University of California Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1489</setSpec>
+  <setName>University of Gothenburg - Department of Historical Studies</setName>
+</set>
+<set>
+  <setSpec>publisher_1433</setSpec>
+  <setName>University of Hawai&apos;i / Hawai‘i Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1789</setSpec>
+  <setName>University of Hawai&apos;i Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1565</setSpec>
+  <setName>University of Hertfordshire Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1250</setSpec>
+  <setName>University of Huddersfield Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1663</setSpec>
+  <setName>University of London Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1139</setSpec>
+  <setName>University of Michigan Press </setName>
+</set>
+<set>
+  <setSpec>publisher_1532</setSpec>
+  <setName>University of North Carolina Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1374</setSpec>
+  <setName>University of North Texas Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1280</setSpec>
+  <setName>University of Rochester Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1566</setSpec>
+  <setName>University of South Australia Architecture Museum</setName>
+</set>
+<set>
+  <setSpec>publisher_1167</setSpec>
+  <setName>University of Tartu Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1351</setSpec>
+  <setName>University of Toronto Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1113</setSpec>
+  <setName>University of Wales Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1626</setSpec>
+  <setName>University of Washington Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1400</setSpec>
+  <setName>University of Westminster Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1352</setSpec>
+  <setName>University Press of Colorado</setName>
+</set>
+<set>
+  <setSpec>publisher_1815</setSpec>
+  <setName>University Press of Florida</setName>
+</set>
+<set>
+  <setSpec>publisher_1494</setSpec>
+  <setName>Utah State University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1153</setSpec>
+  <setName>Utah State University Press/ Computers and Composition Digital Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1146</setSpec>
+  <setName>Utah State University, University Libraries</setName>
+</set>
+<set>
+  <setSpec>publisher_1495</setSpec>
+  <setName>UTS ePRESS</setName>
+</set>
+<set>
+  <setSpec>publisher_1534</setSpec>
+  <setName>V&amp;R Academic</setName>
+</set>
+<set>
+  <setSpec>publisher_1224</setSpec>
+  <setName>V&amp;R unipress</setName>
+</set>
+<set>
+  <setSpec>publisher_1445</setSpec>
+  <setName>Vandenhoeck &amp; Ruprecht</setName>
+</set>
+<set>
+  <setSpec>publisher_1189</setSpec>
+  <setName>Verlag Barbara Budrich</setName>
+</set>
+<set>
+  <setSpec>publisher_1363</setSpec>
+  <setName>Verlag Bibliothek der Provinz GmbH</setName>
+</set>
+<set>
+  <setSpec>publisher_1181</setSpec>
+  <setName>Verlag der Österreichischen Akademie der Wissenschaften</setName>
+</set>
+<set>
+  <setSpec>publisher_1516</setSpec>
+  <setName>Verlag der Technischen Universität Graz</setName>
+</set>
+<set>
+  <setSpec>publisher_1192</setSpec>
+  <setName>Verlag des Landesmuseums für Kärnten</setName>
+</set>
+<set>
+  <setSpec>publisher_1281</setSpec>
+  <setName>Verlag Karl Alber</setName>
+</set>
+<set>
+  <setSpec>publisher_1316</setSpec>
+  <setName>Verlag Österreich GmbH</setName>
+</set>
+<set>
+  <setSpec>publisher_1753</setSpec>
+  <setName>Virginia Tech Publishing</setName>
+</set>
+<set>
+  <setSpec>publisher_1190</setSpec>
+  <setName>Vittorio Klostermann GmbH</setName>
+</set>
+<set>
+  <setSpec>publisher_1327</setSpec>
+  <setName>Vytautas Magnus University</setName>
+</set>
+<set>
+  <setSpec>publisher_1533</setSpec>
+  <setName>W. Bertelsmann Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1114</setSpec>
+  <setName>Wageningen Academic Publishers</setName>
+</set>
+<set>
+  <setSpec>publisher_1191</setSpec>
+  <setName>Wallstein Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1487</setSpec>
+  <setName>Waxmann Verlag</setName>
+</set>
+<set>
+  <setSpec>publisher_1575</setSpec>
+  <setName>Wayne State University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1571</setSpec>
+  <setName>White Rose University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1282</setSpec>
+  <setName>Wilhelm Fink</setName>
+</set>
+<set>
+  <setSpec>publisher_1417</setSpec>
+  <setName>Wits University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1326</setSpec>
+  <setName>World Scientific Publishing Co.</setName>
+</set>
+<set>
+  <setSpec>publisher_1353</setSpec>
+  <setName>Yale University Press</setName>
+</set>
+<set>
+  <setSpec>publisher_1317</setSpec>
+  <setName>Zaglossus</setName>
+</set>
+<set>
+  <setSpec>publisher_1652</setSpec>
+  <setName>Zone Books</setName>
+</set>
+</ListSets>
+
+</OAI-PMH>

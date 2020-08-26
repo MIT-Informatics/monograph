@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>DOAB: Directory of Open Access Books</title>
+    <link rel="icon" href="doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="doabCSS/jquery-ui.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="doabCSS/doab.css">
+   <link rel="stylesheet" type="text/css" href="doabCSS/jquery.window.css" />
+
+    <script type="text/javascript" src="doabJavaScripts/jquery.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery-ui-i18n.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/addthis_widget.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery.window.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/doab.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-30594439-1']);
+  _gaq.push(['_setDomainName', 'doabooks.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+ <div class="topRight">
+
+</div>
+   <noscript>
+      <style type="text/css">
+          .noScriptMessage {
+                background:#FCE9C0 url(http://www.doabooks.org/doabImages/alert.png) left no-repeat;
+                background-position: 15px;
+                border:2px solid #DBAC48;
+                padding: 25px 20px 25px 60px;
+                margin-top: 150px;
+                font-weight: bold;
+          }
+          .wholePage {display:none;}
+      </style>
+      <div class="noScriptMessage">
+         JavaScript is disabled.  The site is not able to function
+         properly without the browser having JavaScript enabled.
+         <br><a href="http://www.iatn.net/help/javascript">
+              How to Enable JavaScript in Your Browser
+          </a>
+      </div>
+    </noscript>
+
+<div class="wholePage">
+
+       <div id="logo">
+    <div style="float:left">
+      <a href="http://www.doabooks.org/doab?uiLanguage=en"><img src="doabImages/doab.png" border="0"></a> 
+    </div>
+    <div style="float:right; margin-top:0px">
+      <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en"><img src="doabImages/Scoss_button_v02_200px.png" border="0"></a> 
+ 
+    <select class="languages" name="uiLanguage" onchange="window.location.href=this.options[this.selectedIndex].value">
+     <option value="/doab?uiLanguage=en"
+        selected="selected"
+      >English</option>
+      <option value="/doab?uiLanguage=fr"
+      >Français</option>
+   </select>
+    </div>
+</div>
+  <div id="pageContainer">
+    <span id="search">
+                      <div id="menuArea">
+    <div id="menuLeft">
+      <span id="menuSearch">
+        <a href="doab@func=search&amp;uiLanguage=en.html">Search</a>
+      </span> 
+      <span class="menuSeparator"></span>
+      <span id="menuBrowse">
+        <a href="http://www.doabooks.org/doab?func=browse&amp;uiLanguage=en">Browse</a>
+      </span>
+    </div>
+
+    <div id="menuRight">
+      <span id="DOABLog">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en">SCOSS funding</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="faq">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=faq&amp;uiLanguage=en">FAQ</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="supportDOAB">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=supportDOAB&amp;uiLanguage=en">Support</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="publishers">
+       <a href="http://www.doabooks.org/doab?func=forPublishers&amp;uiLanguage=en">For publishers</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuSponsors">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=sponsors&amp;uiLanguage=en">Our supporters</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuCertification">
+        <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=OPERAS_Certification_Service_&amp;uiLanguage=en">OPERAS Certification Service</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuAbout">
+        <a href="http://www.doabooks.org/doab?func=about&amp;uiLanguage=en">About</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuFeedback">
+        <a href="javascript:openWdw2('/doab?func=feedback&uiLanguage=en','600','500','2','20','false','contact')">Contact</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuRSS">
+        <a href="http://www.doabooks.org/doab?func=rss"><img src="doabImages/rss.jpg" border="0"></a>
+      </span>
+    </div>
+    <div class="clearBoth"></div>
+  </div> <!-- menuArea-->
+    </span>
+    
+    <div id="search" style="padding-top: 30px; float: left;">
+      <form name="findBook" action="http://www.doabooks.org/doab" method="GET" class="formArea" autocomplete="off">
+        <input type="hidden" name="func" value="search">
+        <input type="hidden" name="uiLanguage" value="en">
+        <input type="hidden" name="template" value="">
+          <input onBlur="if (this.value == ''){this.value = 'Find books in DOAB...';}" onFocus="if (this.value == 'Find books in DOAB...') {this.value = '';}" name="query" size="50" value="Find books in DOAB..." style="font-size:95%" id="query">
+          <img src="doabImages/search.jpg" style="vertical-align: middle;" onClick="javascript:document.findBook.submit()">
+            <a href="doab@func=advancedSearch&amp;uiLanguage=en.html">Advanced search</a>
+      </form>
+    </div><!-- end search -->
+<!-- ########### End Search ######### -->
+
+
+<!-- SPONSORS -->
+
+
+<div id="sponsors" style="float:left; width:70%; margin-top: 25px;">
+<span align= "left" style="font-size: small; color: #f88400; text-decoration:none;"> Directory of Open Access Books is a joint service of OAPEN, OpenEdition, CNRS and Aix-Marseille Université</span>
+
+
+<center>
+
+<a href="http://www.oapen.org" target="_blank">
+<img class="sponsorImg" src="doabImages/oapenlogo_01_colour_no_text.png" title="OAPEN" ></a>
+
+<a href="https://www.openedition.org/" target="_blank">
+<img class="sponsorImg" src="doabImages/openedition_300dpi_small.png" title="OpenEdition" ></a>
+<br />
+<a href="http://www.cnrs.fr" target="_blank">
+<img class="sponsorImg" src="doabImages/LOGO_CNRS_2019_RVB.png" title="CNRS" ></a>
+
+<a href="https://www.univ-amu.fr" target="_blank">
+<img class="sponsorImg" src="doabImages/Logo_AMU_RVB.png" title="Aix-Marseille Université" ></a>
+
+
+</center>
+
+
+<p></p>
+<p></p>
+
+<p></p>
+<hr>
+<span align= "left" style="font-size: small; color: #f88400; text-decoration:none;">Generously supported by</span>
+
+<center>
+
+<a href="http://www.springeropen.com/books" target="_blank">
+<img class="sponsorImg" src="doabImages/SN_logosmall.jpg" title="Springer is a sponsor of DOAB" ></a>
+
+<a href="https://www.degruyter.com/" target="_blank">
+<img class="sponsorImg" src="doabImages/degruytersmall.jpg" title="De Gruyter is a sponsor of DOAB" ></a>
+
+
+<a href="https://www.enseignementsup-recherche.gouv.fr/pid24578/investissements-d-avenir.html" target="_blank">
+<img class="sponsorImg" src="doabImages/LOGO_Investirlavenir_CMJN.png" title="Programme Investissements d'Avenir" ></a>
+
+
+<p></p>
+</centre>
+
+
+</div>
+
+
+
+<!-- END SPONSORS -->
+
+
+<div style="width: 25%; margin-top: 30px; float: right; padding: 5px; border:1px solid #f88400; font-size:80%; line-height:2em" class="rounded">
+
+<b>29689</b> Academic peer-reviewed books from 
+<b>390</b> publishers 
+<p>
+
+<span style="color: #f88400; text-decoration:none;"><b>News</b>  
+<a href="http://eepurl.com/kDtwP" target="blank">Register for newsletter</a>
+</span>
+<ul>
+
+  <li>2020-05-27 <a href="http://www.doabooks.org/doab?func=news&amp;nId=35&amp;uiLanguage=en">Partnership Project MUSE and DOAB</a>
+  </li>
+
+  <li>2020-05-20 <a href="http://www.doabooks.org/doab?func=news&amp;nId=34&amp;uiLanguage=en">New DOAB Community Manager & SCOSS Campaign</a>
+  </li>
+
+  <li>2020-03-27 <a href="http://www.doabooks.org/doab?func=news&amp;nId=33&amp;uiLanguage=en">Growing recognition of the value of open access books</a>
+  </li>
+
+  <li>2020-03-10 <a href="http://www.doabooks.org/doab?func=news&amp;nId=32&amp;uiLanguage=en">DOAB receives SCOSS funding from French Open Science Committee</a>
+  </li>
+</ul>
+
+  <a href="http://www.doabooks.org/doab?func=news&amp;uiLanguage=en"><b>Archive</b></a>
+
+</div>
+
+<div class="clearBoth"></div>
+    <br>
+<p>
+    <div class="clearBoth"></div>
+
+                                                      <div id="footer">
+
+
+
+
+  <div id="footerLeft">
+</i> Directory of Open Access Books is a joint service of <a href="http://www.oapen.org">OAPEN</a>, <a href="http://www.openedition.org">OpenEdition</a>, <a href="http://www.cnrs.fr/">CNRS</a> and <a href="https://www.univ-amu.fr/">Aix-Marseille Université</a>, provided by DOAB Foundation.
+  </div>
+  <div id="footerRight">
+    ©2020 SemperTool
+  </div>
+  <div class="clearBoth"></div>
+</div>
+  </div><!-- end pageContainer -->
+</div><!-- end whlePage -->
+
+</body>
+</html>

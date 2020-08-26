@@ -1,0 +1,536 @@
+            
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>DOAB: Directory of Open Access Books</title>
+    <link rel="icon" href="https://www.doabooks.org/doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://www.doabooks.org/doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://www.doabooks.org/doabCSS/jquery-ui.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.doabooks.org/doabCSS/doab.css">
+   <link rel="stylesheet" type="text/css" href="https://www.doabooks.org/doabCSS/jquery.window.css" />
+
+    <script type="text/javascript" src="https://www.doabooks.org/doabJavaScripts/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.doabooks.org/doabJavaScripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.doabooks.org/doabJavaScripts/jquery-ui-i18n.min.js"></script>
+    <script type="text/javascript" src="https://www.doabooks.org/doabJavaScripts/addthis_widget.js"></script>
+    <script type="text/javascript" src="https://www.doabooks.org/doabJavaScripts/jquery.window.js"></script>
+    <script type="text/javascript" src="https://www.doabooks.org/doabJavaScripts/doab.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-30594439-1']);
+  _gaq.push(['_setDomainName', 'doabooks.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+ <div class="topRight">
+
+</div>
+   <noscript>
+      <style type="text/css">
+          .noScriptMessage {
+                background:#FCE9C0 url(https://www.doabooks.org/doabImages/alert.png) left no-repeat;
+                background-position: 15px;
+                border:2px solid #DBAC48;
+                padding: 25px 20px 25px 60px;
+                margin-top: 150px;
+                font-weight: bold;
+          }
+          .wholePage {display:none;}
+      </style>
+      <div class="noScriptMessage">
+         JavaScript is disabled.  The site is not able to function
+         properly without the browser having JavaScript enabled.
+         <br><a href="http://www.iatn.net/help/javascript">
+              How to Enable JavaScript in Your Browser
+          </a>
+      </div>
+    </noscript>
+
+<div class="wholePage">
+
+       <div id="logo">
+    <div style="float:left">
+      <a href="doab@uiLanguage=en.html"><img src="https://www.doabooks.org/doabImages/doab.png" border="0"></a> 
+    </div>
+    <div style="float:right; margin-top:0px">
+      <a href="doab@func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en.html"><img src="https://www.doabooks.org/doabImages/Scoss_button_v02_200px.png" border="0"></a> 
+ 
+    <select class="languages" name="uiLanguage" onchange="window.location.href=this.options[this.selectedIndex].value">
+     <option value="/doab?uiLanguage=en"
+        selected="selected"
+      >English</option>
+      <option value="/doab?uiLanguage=fr"
+      >Français</option>
+   </select>
+    </div>
+</div>
+  <div id="pageContainer">
+    <span id="DOABlog_link">
+                      <div id="menuArea">
+    <div id="menuLeft">
+      <span id="menuSearch">
+        <a href="https://www.doabooks.org/doab?func=search&amp;uiLanguage=en">Search</a>
+      </span> 
+      <span class="menuSeparator"></span>
+      <span id="menuBrowse">
+        <a href="doab@func=browse&amp;uiLanguage=en.html">Browse</a>
+      </span>
+    </div>
+
+    <div id="menuRight">
+      <span id="DOABLog">
+       <a href="doab@func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en.html">SCOSS funding</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="faq">
+       <a href="doab@func=loadTemplate&amp;template=faq&amp;uiLanguage=en.html">FAQ</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="supportDOAB">
+       <a href="doab@func=loadTemplate&amp;template=supportDOAB&amp;uiLanguage=en.html">Support</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="publishers">
+       <a href="doab@func=forPublishers&amp;uiLanguage=en.html">For publishers</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuSponsors">
+       <a href="doab@func=loadTemplate&amp;template=sponsors&amp;uiLanguage=en.html">Our supporters</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuCertification">
+        <a href="doab@func=loadTemplate&amp;template=OPERAS_Certification_Service_&amp;uiLanguage=en.html">OPERAS Certification Service</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuAbout">
+        <a href="doab@func=about&amp;uiLanguage=en.html">About</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuFeedback">
+        <a href="javascript:openWdw2('/doab?func=feedback&uiLanguage=en','600','500','2','20','false','contact')">Contact</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuRSS">
+        <a href="doab@func=rss.html"><img src="https://www.doabooks.org/doabImages/rss.jpg" border="0"></a>
+      </span>
+    </div>
+    <div class="clearBoth"></div>
+  </div> <!-- menuArea-->
+    </span>
+<br>
+<div style="width: 100%; line-height:1.8em">
+<h2>Deleted records</h2>
+<br>
+
+<form action="https://www.doabooks.org/doab" method=GET>
+<input type=hidden name=func value=deleted>
+ <table class="" style="font-size: 90%; empty-cells: show;" width=100%>
+    <tr>
+       <td colspan=2><b>Duration <font color=red>*</font></b>
+         <table class="">
+          <tr>
+           <td>
+            <b>From</b>
+           </td>
+
+           <td>
+            Year
+            <select name="sYear" class="select">
+                 <option value="2020"                      selected="selected"
+                   >2020
+                 <option value="2019"                   >2019
+                 <option value="2018"                   >2018
+                 <option value="2017"                   >2017
+                 <option value="2016"                   >2016
+                 <option value="2015"                   >2015
+                 <option value="2014"                   >2014
+                 <option value="2013"                   >2013
+                 <option value="2012"                   >2012
+                 <option value="2011"                   >2011
+            </select>
+
+            &nbsp; Month
+            <select name="sMonth" class="select">
+                <option value="01"                   >January
+                <option value="02"                   >February
+                <option value="03"                   >March
+                <option value="04"                   >April
+                <option value="05"                   >May
+                <option value="06"                   >June
+                <option value="07"                   >July
+                <option value="08"                     selected="selected"
+                   >August
+                <option value="09"                   >September
+                <option value="10"                   >October
+                <option value="11"                   >November
+                <option value="12"                   >December
+            </select>
+
+            &nbsp; Day
+            <select name="sDay" class="select">
+                <option value="01"                     selected="selected"
+                   >01
+                <option value="02"                   >02
+                <option value="03"                   >03
+                <option value="04"                   >04
+                <option value="05"                   >05
+                <option value="06"                   >06
+                <option value="07"                   >07
+                <option value="08"                   >08
+                <option value="09"                   >09
+                <option value="10"                   >10
+                <option value="11"                   >11
+                <option value="12"                   >12
+                <option value="13"                   >13
+                <option value="14"                   >14
+                <option value="15"                   >15
+                <option value="16"                   >16
+                <option value="17"                   >17
+                <option value="18"                   >18
+                <option value="19"                   >19
+                <option value="20"                   >20
+                <option value="21"                   >21
+                <option value="22"                   >22
+                <option value="23"                   >23
+                <option value="24"                   >24
+                <option value="25"                   >25
+                <option value="26"                   >26
+                <option value="27"                   >27
+                <option value="28"                   >28
+                <option value="29"                   >29
+                <option value="30"                   >30
+                <option value="31"                   >31
+            </select>
+            </td>
+          </tr>
+          <tr>
+           <td>
+            <b>To</b>
+           </td>
+           <td>
+             Year
+             <select name="uYear" class="select">
+                 <option value="2020"                      selected="selected"
+                   >2020
+                 <option value="2019"                   >2019
+                 <option value="2018"                   >2018
+                 <option value="2017"                   >2017
+                 <option value="2016"                   >2016
+                 <option value="2015"                   >2015
+                 <option value="2014"                   >2014
+                 <option value="2013"                   >2013
+                 <option value="2012"                   >2012
+                 <option value="2011"                   >2011
+            </select>
+
+           &nbsp; Month
+            <select name="uMonth" class="select">
+                <option value="01"                   >January
+                <option value="02"                   >February
+                <option value="03"                   >March
+                <option value="04"                   >April
+                <option value="05"                   >May
+                <option value="06"                   >June
+                <option value="07"                   >July
+                <option value="08"                   selected="selected"
+                   >August
+                <option value="09"                   >September
+                <option value="10"                   >October
+                <option value="11"                   >November
+                <option value="12"                   >December
+            </select>
+
+           &nbsp; Day
+            <select name="uDay" class="select">
+                <option value="01"                   >01
+                <option value="02"                   >02
+                <option value="03"                   >03
+                <option value="04"                   >04
+                <option value="05"                   >05
+                <option value="06"                   >06
+                <option value="07"                   >07
+                <option value="08"                   >08
+                <option value="09"                   >09
+                <option value="10"                   >10
+                <option value="11"                   >11
+                <option value="12"                   >12
+                <option value="13"                   >13
+                <option value="14"                   >14
+                <option value="15"                   >15
+                <option value="16"                   >16
+                <option value="17"                   >17
+                <option value="18"                   >18
+                <option value="19"                   >19
+                <option value="20"                   >20
+                <option value="21"                   >21
+                <option value="22"                   >22
+                <option value="23"                   >23
+                <option value="24"                   selected="selected"
+                   >24
+                <option value="25"                   >25
+                <option value="26"                   >26
+                <option value="27"                   >27
+                <option value="28"                   >28
+                <option value="29"                   >29
+                <option value="30"                   >30
+                <option value="31"                   >31
+            </select>
+
+           </td>
+           <td>
+&nbsp;&nbsp;  <input type=submit value=Submit class="button">
+           </td>
+          </tr>
+         </table>
+       </td>
+     </tr>
+   </table>
+  <br>
+</form>
+
+<table width=100% class="listTable">
+<tr>
+<th width=1%>#</th>
+<th width=55%>Title</th>
+<th width=5%>Year</th>
+<th width=10%>Record id</th>
+<th width=20>ISBN</th>
+<th width=10%>Last edited</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Cómo enseñar la historia reciente argentina : Lectura, traducción y producción en una escuela del expartido de General Sarmiento</td>
+  <td>2018</td>
+  <td>38224</td>
+  <td> 9789876303996</td>
+  <td>2020-08-04</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Marken in Jahresabschluß und Lagebericht</td>
+  <td>2018</td>
+  <td>30540</td>
+  <td>9783631373446 </td>
+  <td>2020-08-05</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Plutarco e as artes: pintura, cinema e artes decorativas (2.ª edição)</td>
+  <td>2012</td>
+  <td>32417</td>
+  <td>9789892602806</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Vidas paralelas: Demóstenes e Cícero</td>
+  <td>2012</td>
+  <td>32470</td>
+  <td>9789892602776</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Vidas paralelas: Alcibíades e Coriolano</td>
+  <td>2012</td>
+  <td>32472</td>
+  <td>9789892602783</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>software autore per la didattica</td>
+  <td>2013</td>
+  <td>15540</td>
+  <td>9788867050703</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>Aristóteles em Coimbra: Cursus Conimbricensis</td>
+  <td>2015</td>
+  <td>45615</td>
+  <td>9789892610573</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>The Coimbra Faculty of Law in Retrospect</td>
+  <td>2015</td>
+  <td>45873</td>
+  <td>9789892609799</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>A Faculdade de Direito de Coimbra em Retrospectiva</td>
+  <td>2016</td>
+  <td>45592</td>
+  <td>9789892612348</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>Vida da Faculdade de Letras 2014-2015</td>
+  <td>2016</td>
+  <td>45886</td>
+  <td>9789892611955</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>Controlo da estabilidade orçamental e limites territoriais ao poder tributário segundo a jurisprudência da UE</td>
+  <td>2017</td>
+  <td>45659</td>
+  <td>9789892614007</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>Pagar a conta da cidade</td>
+  <td>2017</td>
+  <td>45806</td>
+  <td>9789892614144</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td>Pontos nos iii Science Beer Talks</td>
+  <td>2018</td>
+  <td>45822</td>
+  <td>9789892616803</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>Mesas Luso Brasileiras I</td>
+  <td>2018</td>
+  <td>32535</td>
+  <td>9789892617183</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>AZIMUTE Aferição das orientações das vistas indicadas por Duarte de Armas, nos códices A e B do «Livro das Fortalezas»</td>
+  <td>2018</td>
+  <td>45631</td>
+  <td>9789892616766</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td>Olhares Cruzados sobre as Regiões Ultraperiféricas da União Europeia</td>
+  <td>2018</td>
+  <td>45796</td>
+  <td>9789892616452</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td>Advances in Forest Fire Research</td>
+  <td>2018</td>
+  <td>45604</td>
+  <td>9789892616490</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>Bico Bico Chão</td>
+  <td>2018</td>
+  <td>45634</td>
+  <td>9789892615141</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td>Peças para uma voz</td>
+  <td>2018</td>
+  <td>45813</td>
+  <td>9789892616568</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td>Comunicação, Política e Democracia</td>
+  <td>2019</td>
+  <td>45658</td>
+  <td>9789892617343</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>Farmacopéa lisbonense ou Colecção dos simplices, preparações, e composições mais eficazes, e de maior uso (edição fac-similada da obra “Farmocopéa Lisbonense”)</td>
+  <td>2019</td>
+  <td>45700</td>
+  <td>9789892618869</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td>Obras de Maria Helena da Rocha Pereira VIII: Receção das fontes clássicas em Portugal</td>
+  <td>2019</td>
+  <td>45793</td>
+  <td>9789892617473</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td>科英布拉大学法学院历史回顾 (A Faculdade de Direito de Coimbra em Retrospectiva)</td>
+  <td>2019</td>
+  <td>45897</td>
+  <td>9789892618821</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td>Perturbação Pós-Stress Traumático. Estudos em Angola</td>
+  <td>2020</td>
+  <td>45815</td>
+  <td>9789892615219</td>
+  <td>2020-08-12</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td>High Performance Computing</td>
+  <td>2019</td>
+  <td>45328</td>
+  <td>9783030343569 </td>
+  <td>2020-08-13</td>
+</tr>
+</table>
+</div>
+    <div class="clearBoth"></div>
+                                                      <div id="footer">
+
+
+
+
+  <div id="footerLeft">
+</i> Directory of Open Access Books is a joint service of <a href="http://www.oapen.org">OAPEN</a>, <a href="http://www.openedition.org">OpenEdition</a>, <a href="http://www.cnrs.fr/">CNRS</a> and <a href="https://www.univ-amu.fr/">Aix-Marseille Université</a>, provided by DOAB Foundation.
+  </div>
+  <div id="footerRight">
+    ©2020 SemperTool
+  </div>
+  <div class="clearBoth"></div>
+</div>
+  </div><!-- end pageContainer -->
+</div><!-- end whlePage -->
+
+</body>
+</html>

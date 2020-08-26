@@ -1,0 +1,1602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>DOAB: Directory of Open Access Books</title>
+    <link rel="icon" href="doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="doabImages/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="doabCSS/jquery-ui.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="doabCSS/doab.css">
+   <link rel="stylesheet" type="text/css" href="doabCSS/jquery.window.css" />
+
+    <script type="text/javascript" src="doabJavaScripts/jquery.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery-ui-i18n.min.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/addthis_widget.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/jquery.window.js"></script>
+    <script type="text/javascript" src="doabJavaScripts/doab.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-30594439-1']);
+  _gaq.push(['_setDomainName', 'doabooks.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+ <div class="topRight">
+
+</div>
+   <noscript>
+      <style type="text/css">
+          .noScriptMessage {
+                background:#FCE9C0 url(http://www.doabooks.org/doabImages/alert.png) left no-repeat;
+                background-position: 15px;
+                border:2px solid #DBAC48;
+                padding: 25px 20px 25px 60px;
+                margin-top: 150px;
+                font-weight: bold;
+          }
+          .wholePage {display:none;}
+      </style>
+      <div class="noScriptMessage">
+         JavaScript is disabled.  The site is not able to function
+         properly without the browser having JavaScript enabled.
+         <br><a href="http://www.iatn.net/help/javascript">
+              How to Enable JavaScript in Your Browser
+          </a>
+      </div>
+    </noscript>
+
+<div class="wholePage">
+
+       <div id="logo">
+    <div style="float:left">
+      <a href="http://www.doabooks.org/doab?uiLanguage=en"><img src="doabImages/doab.png" border="0"></a> 
+    </div>
+    <div style="float:right; margin-top:0px">
+      <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en"><img src="doabImages/Scoss_button_v02_200px.png" border="0"></a> 
+ 
+    <select class="languages" name="uiLanguage" onchange="window.location.href=this.options[this.selectedIndex].value">
+     <option value="/doab?uiLanguage=en"
+        selected="selected"
+      >English</option>
+      <option value="/doab?uiLanguage=fr"
+      >Français</option>
+   </select>
+    </div>
+</div>
+  <div id="pageContainer">
+    <span id="search">
+                      <div id="menuArea">
+    <div id="menuLeft">
+      <span id="menuSearch">
+        <a href="doab@func=search&amp;uiLanguage=en.html">Search</a>
+      </span> 
+      <span class="menuSeparator"></span>
+      <span id="menuBrowse">
+        <a href="http://www.doabooks.org/doab?func=browse&amp;uiLanguage=en">Browse</a>
+      </span>
+    </div>
+
+    <div id="menuRight">
+      <span id="DOABLog">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=scoss_funding&amp;uiLanguage=en">SCOSS funding</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="faq">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=faq&amp;uiLanguage=en">FAQ</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="supportDOAB">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=supportDOAB&amp;uiLanguage=en">Support</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="publishers">
+       <a href="http://www.doabooks.org/doab?func=forPublishers&amp;uiLanguage=en">For publishers</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuSponsors">
+       <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=sponsors&amp;uiLanguage=en">Our supporters</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuCertification">
+        <a href="http://www.doabooks.org/doab?func=loadTemplate&amp;template=OPERAS_Certification_Service_&amp;uiLanguage=en">OPERAS Certification Service</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuAbout">
+        <a href="http://www.doabooks.org/doab?func=about&amp;uiLanguage=en">About</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuFeedback">
+        <a href="javascript:openWdw2('/doab?func=feedback&uiLanguage=en','600','500','2','20','false','contact')">Contact</a>
+      </span>
+      <span class="menuSeparator"></span>
+      <span id="menuRSS">
+        <a href="http://www.doabooks.org/doab?func=rss"><img src="doabImages/rss.jpg" border="0"></a>
+      </span>
+    </div>
+    <div class="clearBoth"></div>
+  </div> <!-- menuArea-->
+    </span>
+    
+    <div id="search" style="padding-top: 30px; float: left;">
+      <form name="findBook" action="http://www.doabooks.org/doab" method="GET" class="formArea" autocomplete="off">
+        <input type="hidden" name="func" value="search">
+        <input type="hidden" name="uiLanguage" value="en">
+        <input type="hidden" name="template" value="">
+          <input onBlur="if (this.value == ''){this.value = 'Find books in DOAB...';}" onFocus="if (this.value == 'Find books in DOAB...') {this.value = '';}" name="query" size="50" value="open access" style="font-size:95%" id="query">
+          <img src="doabImages/search.jpg" style="vertical-align: middle;" onClick="javascript:document.findBook.submit()">
+            <a href="doab@func=advancedSearch&amp;uiLanguage=en.html">Advanced search</a>
+      </form>
+    </div><!-- end search -->
+<!-- ########### End Search ######### -->
+
+
+<div class="clearBoth"></div>
+    <br>
+<p>
+       <p>
+<br>
+   <strong>Search results:</strong> 
+
+Found <b>1089</b> 
+<p>
+
+   <div id="result">
+       <div class="resultLabel">
+
+<table width="100%" cellspacing="0" cellpading="0">
+   <tr>
+<!-- ################FORMATS############### -->
+    <td width="33%">
+    <span>
+      Listing <strong>1</strong> - <strong>10</strong> of <strong>1089</strong>
+    </span>
+    </td>
+<!-- END FORMATS -->
+<!-- ###############PAGES################ -->
+     <td width="34%" align="center">
+          << 
+ 
+       page
+        <span>
+        <form style="margin: 0; padding: 0; display: inline" method="GET" name="goToPage" action="http://www.doabooks.org/doab">
+          <input style="font-size:75%;text-align:center; color:red" name="jumpToPage" value="1" size="4">
+    of 109
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="open access">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+          <input type=hidden name="func" value="search">
+        </form>
+        </span>
+           <a href="http://www.doabooks.org/doab?func=search&amp;page=2&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> >></a>
+     </td>
+<!-- END PAGES -->
+
+<!-- #####################SORT################### -->
+
+     <td width="33%" align="right">
+      <!-- no sort in browse function -->
+    <div class="sort">
+     <span>
+      Sort by
+        <form style="display: inline;" method="GET" name="sorting" action="http://www.doabooks.org/doab">
+        <select name="sort" onChange="this.form.submit();">
+        <option value=""            selected="selected"         >Relevance</option>
+        <option value="yearDesc"          >Year-Descending</option>
+        <option value="yearAsc"          >Year-Ascending</option>
+         <option value="cdDesc"           >Date added-Descending</option>
+         <option value="cdAsc"           >Date added-Ascending</option>
+         </select>
+        <input type=hidden name="func" value="search">
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="open access">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+        </form>
+     </span>
+         
+    </div><!-- END DIV sort -->
+<!-- end if function is search -->
+     </td>
+<!-- END SORT --> 
+ 
+  </tr>
+  </table>
+   </div> <!-- END DIV resultLabel -->
+
+
+<div id="popupDiv" class="tip" style="display:none" onClick="hideDiv('popupDiv')">
+</div>
+
+
+<!--  ##############RECORDS################ -->
+       <abbr class="unapi-id" title="31770"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record1">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=31770" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Open Access </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Suber,&#32;Peter&quot;&amp;uiLanguage=en">Suber, Peter</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9780262300988 9780262517638</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2012</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">256</span>
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1480&amp;uiLanguage=">The MIT Press</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=147&amp;uiLanguage=en"> Science (General)</a>
+           <br><strong>Added to DOAB on </strong>: 2019-01-17 11:41:34
+              <br>License: <a href="http://creativecommons.org/licenses/by-4.0/" target="blank">The MIT Press</a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r1">
+<h1>
+             <a href="javascript:void(0)" title="abs1" >
+               <span id="absLabel1">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw1">  
+                <span id="kwLabel1">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=31770" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=31770" class="checkAvailable" title="av1" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp1"> <span id="expLabel1">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:31770" addthis:title="DOAB: Open Access"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av1" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp1" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=31770"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=31770"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=31770" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs1" class="tip">
+                     <b>Abstract</b><p>
+                    A concise introduction to the basics of open access, describing what it is (and isn't) and showing that it is easy, fast, inexpensive, legal, and beneficial.The Internet lets us share perfect copies of our work with a worldwide audience at virtually no cost. We take advantage of this revolutionary opportunity when we make our work “open access”: digital, online, free of charge, and free of most copyright and licensing restrictions. Open access is made possible by the Internet and copyright-holder consent, and many authors, musicians, filmmakers, and other creators who depend on royalties are understandably unwilling to give their consent. But for 350 years, scholars have written peer-reviewed journal articles for impact, not for money, and are free to consent to open access without losing revenue.In this concise introduction, Peter Suber tells us what open access is and isn't, how it benefits authors and readers of research, how we pay for it, how it avoids copyright problems, how it has moved from the periphery to the mainstream, and what its future may hold. Distilling a decade of Suber's influential writing and thinking about open access, this is the indispensable book on the subject for researchers, librarians, administrators, funders, publishers, and policy makers.
+                </div>
+                <div id="kw1" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+
+                       <a itemprop="keywords"  href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="23431"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record2">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=23431" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Open Education </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Bliss,&#32;TJ&quot;&amp;uiLanguage=en">Bliss, TJ</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Blessinger,&#32;Patrick&quot;&amp;uiLanguage=en">Blessinger, Patrick</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9781783742806 </span>
+           <strong>Year</strong>: <span itemprop="datePublished">2016</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">378</span>
+           <strong>DOI</strong>: 10.11647/OBP.0103
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1132&amp;uiLanguage=">Open Book Publishers</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=127&amp;uiLanguage=en"> Education</a>
+           <br><strong>Added to DOAB on </strong>: 2017-08-22 11:01:43
+             <br>License: <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r2">
+<h1>
+             <a href="javascript:void(0)" title="abs2" >
+               <span id="absLabel2">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw2">  
+                <span id="kwLabel2">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=23431" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=23431" class="checkAvailable" title="av2" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp2"> <span id="expLabel2">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:23431" addthis:title="DOAB: Open Education"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av2" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp2" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=23431"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=23431"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=23431" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs2" class="tip">
+                     <b>Abstract</b><p>
+                    "This insightful collection of essays explores the ways in which open education can democratise access to education for all. It is a rich resource that offers both research and case studies to relate the application of open technologies and approaches in education settings around the world. Global in perspective, this book argues strongly for the value of open education in both the developed and developing worlds. Through a mixture of theoretical and practical approaches, it demonstrates that open education promotes ideals of inclusion, diversity, and social justice to achieve the vision of education as a fundamental human right.  A must-read for practitioners, policy-makers, scholars and students in the field of education."
+                </div>
+                <div id="kw2" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;social&#32;justice&quot;">social justice</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;democratisation&quot;">democratisation</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;education&quot;">open education</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;technologies&quot;">open technologies</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;inclusion&quot;">inclusion</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="22196"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record3">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=22196" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Fare Open Access </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Simone&#32;Aliprandi&quot;&amp;uiLanguage=en">Simone Aliprandi</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Copyleft Italia
+           <strong>ISBN</strong>: <span itemprop="isbn">9788867056019</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2017</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">194</span>
+           <strong>Language</strong>: Italian
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1201&amp;uiLanguage=">Ledizioni</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=129&amp;uiLanguage=en"> Library and Information Science</a>
+           <br><strong>Added to DOAB on </strong>: 2017-05-31 11:13:41
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r3">
+<h1>
+             <a href="javascript:void(0)" title="abs3" >
+               <span id="absLabel3">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw3">  
+                <span id="kwLabel3">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=22196" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=22196" class="checkAvailable" title="av3" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp3"> <span id="expLabel3">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:22196" addthis:title="DOAB: Fare Open Access"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av3" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp3" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=22196"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=22196"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=22196" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs3" class="tip">
+                     <b>Abstract</b><p>
+                    “Fare Open Access” affronta con approccio positivo e operativo il tema strategico della diffusione del sapere scientifico in ottica open.L’Open Access è diventato uno degli obiettivi chiave delle politiche dell’innovazione dell’Unione Europea e dei princi­pali paesi industrializzati; ed è fondamentale conoscerne i lineamenti teorici e le concrete potenzialità.Gli autori sono tutti professionisti attivi da molti anni in questo campo e hanno quindi il polso delle questioni emergenti e delle maggiori criticità non solo da un punto vista teorico-dottrinale. Ognuno di loro affronta da diverse prospettive il tema più generale della comunicazione scientifica e quello pratico di come fare Open Access nell’attuale panorama ormai fortemente volto al digitale.Il testo è completato da un’utile appendice con i documenti di riferimento, come i principali testi-manifesto e le norme attualmente in vigore a livello nazionale e internazionale.
+                </div>
+                <div id="kw3" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+
+                       <a itemprop="keywords"  href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access,&#32;open,&#32;conoscenza,&#32;digitale&quot;">open access, open, conoscenza, digitale</a>
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="26887"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record4">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=26887" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Praxishandbuch Open Access </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:%22S%C3%83%C2%B6llner,%20Konstanze%22&amp;uiLanguage=en">Söllner, Konstanze</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Mittermaier,&#32;Bernhard&quot;&amp;uiLanguage=en">Mittermaier, Bernhard</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: De Gruyter Praxishandbuch
+           <strong>ISBN</strong>: <span itemprop="isbn">9783110494068</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2017</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">363</span>
+           <strong>DOI</strong>: 10.1515/9783110494068
+           <strong>Language</strong>: German
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1145&amp;uiLanguage=">De Gruyter</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=129&amp;uiLanguage=en"> Library and Information Science</a>
+           <br><strong>Added to DOAB on </strong>: 2018-05-31 14:06:11
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r4">
+<h1>
+             <a href="javascript:void(0)" title="abs4" >
+               <span id="absLabel4">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw4">  
+                <span id="kwLabel4">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=26887" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=26887" class="checkAvailable" title="av4" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp4"> <span id="expLabel4">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:26887" addthis:title="DOAB: Praxishandbuch Open Access"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av4" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp4" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=26887"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=26887"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=26887" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs4" class="tip">
+                     <b>Abstract</b><p>
+                    This book introduces open access publishing from the perspective of the author and the institution. It describes workflows and important tools while also offering a classification of various business models. While the book focuses on the publication of manuscripts, it also surveys data publishing.
+                </div>
+                <div id="kw4" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+
+                       <a itemprop="keywords"  href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Open&#32;access&#32;publishing&quot;">Open access publishing</a>
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="21601"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record5">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=21601" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Open </span></b>
+
+           <a href="javascript:openWdw2('/doab?func=prInfo&rid=21601&uiLanguage=en','700','500','2','20','false','Peer Review Info')"><img src="doabImages/prCertificate.png"></a>
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Biswas-Diener,&#32;Robert&quot;&amp;uiLanguage=en">Biswas-Diener, Robert</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Jhangiani,&#32;Rajiv&quot;&amp;uiLanguage=en">Jhangiani, Rajiv</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9781911529002 9781911529019 9781911529026 9781911529033</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2017</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">302</span>
+           <strong>DOI</strong>: 10.5334/bbc
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1194&amp;uiLanguage=">Ubiquity Press</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=114&amp;uiLanguage=en"> Computer Science</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=147&amp;uiLanguage=en"> Science (General)</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=127&amp;uiLanguage=en"> Education</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=128&amp;uiLanguage=en"> Psychology</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=88&amp;uiLanguage=en"> Social Sciences</a>
+           <br><strong>Added to DOAB on </strong>: 2017-04-08 11:01:35
+             <br>License: <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r5">
+<h1>
+             <a href="javascript:void(0)" title="abs5" >
+               <span id="absLabel5">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw5">  
+                <span id="kwLabel5">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=21601" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=21601" class="checkAvailable" title="av5" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp5"> <span id="expLabel5">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:21601" addthis:title="DOAB: Open"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av5" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp5" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=21601"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=21601"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=21601" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs5" class="tip">
+                     <b>Abstract</b><p>
+                    "Affordable education. Transparent science. Accessible scholarship. These ideals are slowly becoming a reality thanks to the open education, open science, and open access movements. Running separate—if parallel—courses, they all share a philosophy of equity, progress, and justice. This book shares the stories, motives, insights, and practical tips from global leaders in the open movement."
+                </div>
+                <div id="kw5" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;psychology&quot;">psychology</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;educational&#32;resources&quot;">open educational resources</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;pedagogy&quot;">open pedagogy</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;science&quot;">open science</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;textbooks&quot;">open textbooks</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="40577"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record6">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=40577" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Open Education : International Perspectives in Higher Education </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Patrick&#32;Blessinger&quot;&amp;uiLanguage=en">Patrick Blessinger</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;TJ&#32;Bliss&quot;&amp;uiLanguage=en">TJ Bliss</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9782821883987</span>
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1132&amp;uiLanguage=">Open Book Publishers</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=127&amp;uiLanguage=en"> Education</a>
+           <br><strong>Added to DOAB on </strong>: 2019-12-06 13:15:39
+             <br>License: <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r6">
+<h1>
+             <a href="javascript:void(0)" title="abs6" >
+               <span id="absLabel6">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw6">  
+                <span id="kwLabel6">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=40577" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=40577" class="checkAvailable" title="av6" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp6"> <span id="expLabel6">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:40577" addthis:title="DOAB: Open Education : International Perspectives in Higher Education"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av6" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp6" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=40577"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=40577"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=40577" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs6" class="tip">
+                     <b>Abstract</b><p>
+                    Open Education provides a great mix of research and authentic application of "open" in éducation which is global in perspective. The contributions provide insightful evidence that open education as an ecosystem is on the tipping point of crossing the chasm from sharing to learn to learning to share. This book is a must-read for those who care about more sustainable education futures showing that open is a viable pathway to realising education as a fundamental human right. — Wayne Mackintosh, Founding Director of the OER Foundation and the OER Universitas  In a time of openness vs closure, collaboration vs competition, elitism vs democratisation, this volume presents a range of perspectives that make a strong case for open education in both the developed and developing worlds. A recommended read for all those interested in transforming higher education. This book is a rich resource that illuminates the different dimensions of open education and its critical link to human rights. This delivers a very important message: that open education is a powerful tool to throw open the ivory towers and transform higher education in the 21st century. — Asha Kanwar, President &amp; CEO, Commonwealth of Learning  Sustainable Development Goal 4 (United Nations) enjoins us to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. While we cannot rely on our current rigid and closed educational traditions to meet this goal, the concepts of the open education movement provide some promise. The importance of this book lies in its analysis of these concepts through the lens of the democratisation of education. Open is taken to enable far more than access - rather it focuses in on ideals of diversity, inclusion, agency, equity and social justice, towards the final goal of improving learning for all. — Jenny Glennie, Head of Saide
+                </div>
+                <div id="kw6" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;democratisation&quot;">democratisation</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;education&quot;">open education</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;technologies&quot;">open technologies</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;inclusion&quot;">inclusion</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="32891"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record7">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=32891" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">The deliverance of open access books </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Snijder,&#32;Ronald&quot;&amp;uiLanguage=en">Snijder, Ronald</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9789085551201 </span>
+           <strong>Year</strong>: <span itemprop="datePublished">2019</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">234</span>
+           <strong>DOI</strong>: 10.26530/OAPEN_1004809
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1089&amp;uiLanguage=">Amsterdam University Press</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=147&amp;uiLanguage=en"> Science (General)</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=159&amp;uiLanguage=en"> Information theory</a>
+           <br><strong>Added to DOAB on </strong>: 2019-04-11 11:21:03
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r7">
+<h1>
+             <a href="javascript:void(0)" title="abs7" >
+               <span id="absLabel7">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw7">  
+                <span id="kwLabel7">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=32891" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=32891" class="checkAvailable" title="av7" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp7"> <span id="expLabel7">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:32891" addthis:title="DOAB: The deliverance of open access books"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av7" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp7" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=32891"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=32891"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=32891" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs7" class="tip">
+                     <b>Abstract</b><p>
+                    In many scholarly disciplines, books - not articles - are the norm. As print runs become smaller, the question arises whether publishing monographs in open access helps to make their contents globally accessible. To answer this question, the results of multiple studies on the usage of open access books are presented. The research focuses on three areas: economic viability; optimization of open access monographs infrastructure and measuring the effects of open access in terms of scholarly impact and societal influence. Each chapter reviews a different aspect: book sales, digital dissemination, open licenses, user communities, measuring usage, developing countries and the effects on citations and social media.
+                </div>
+                <div id="kw7" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Open&#32;Access&quot;">Open Access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Monographs&quot;">Monographs</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;OAPEN&#32;Library&quot;">OAPEN Library</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Directory&#32;of&#32;Open&#32;Access&#32;Books&quot;">Directory of Open Access Books</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="13090"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record8">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=13090" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Rechtliche Rahmenbedingungen von Open Access-Publikationen </span></b>
+
+           <a href="javascript:openWdw2('/doab?func=prInfo&rid=13090&uiLanguage=en','700','500','2','20','false','Peer Review Info')"><img src="doabImages/prCertificate.png"></a>
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Spindler,&#32;Gerald,&quot;&amp;uiLanguage=en">Spindler, Gerald,</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9783938616451 </span>
+           <strong>Year</strong>: <span itemprop="datePublished">2006</span>
+           <strong>DOI</strong>: 10.17875/gup2006-115
+           <strong>Language</strong>: German
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1092&amp;uiLanguage=">Universitätsverlag Göttingen</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=46&amp;uiLanguage=en"> Law</a>
+                      ---
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=114&amp;uiLanguage=en"> Computer Science</a>
+           <br><strong>Added to DOAB on </strong>: 2011-11-04 00:00:00
+             <br>License: <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r8">
+<h1>
+             <a href="javascript:void(0)" title="abs8" >
+               <span id="absLabel8">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw8">  
+                <span id="kwLabel8">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=13090" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=13090" class="checkAvailable" title="av8" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp8"> <span id="expLabel8">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:13090" addthis:title="DOAB: Rechtliche Rahmenbedingungen von Open Access-Publikationen"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av8" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp8" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=13090"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=13090"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=13090" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs8" class="tip">
+                     <b>Abstract</b><p>
+                    Even earlier than other sectors of society, science was confronted with the Internet as a new communication medium. Yet it has lasted several years until the Internet has gained reputation as a publication medium for scientists. This development is accompanied by an increasing concentration on the side of scientific publishers, which has lead for some disciplines to almost monopolistic situations. Conversely, the financial resources to purchase and provide access to scientific publications are shrinking on the side of the customers - libraries and researchers, but also other sectors of the public. This results in a disastrous spiral, known as the so-called "publication crisis." As one solution to this crisis new publication concepts using the internet have emerged. They are characterized by the fact that they provide access to scientific works largely free and unrestricted - Open Access. This book "Legal Framework for Open Access" is designed as a practical guide and aims to help authors who want to publish Open Access. The content includes: Introduction to Open Access • Facts on Copyrights • Open Access in Universities • Open Access Licenses • Technical protection measures and Open Access • Retrodigitalisation issues • Liability of institutional repositories for archived Open Access publications • Implications regarding competition law • Public legal and organizational framework for Open Access
+                </div>
+                <div id="kw8" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;legal&#32;framework&quot;">legal framework</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;legal&#32;protection&quot;">legal protection</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;publishing&quot;">publishing</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="15937"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="record" id="record9">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=15937" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Open Access. L'accesso aperto alla letteratura scientifica. </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Author</strong>: <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Ernest&#32;Abadal&quot;&amp;uiLanguage=en">Ernest Abadal</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>Book Series</strong>: Editoria - Presente e Futuro
+           <strong>ISBN</strong>: <span itemprop="isbn">9788867051717</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2014</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">123</span>
+           <strong>Language</strong>: Italian
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1201&amp;uiLanguage=">Ledizioni</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=129&amp;uiLanguage=en"> Library and Information Science</a>
+           <br><strong>Added to DOAB on </strong>: 2014-03-20 15:02:17
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r9">
+<h1>
+             <a href="javascript:void(0)" title="abs9" >
+               <span id="absLabel9">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw9">  
+                <span id="kwLabel9">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=15937" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=15937" class="checkAvailable" title="av9" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp9"> <span id="expLabel9">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:15937" addthis:title="DOAB: Open Access. L'accesso aperto alla letteratura scientifica."><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av9" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp9" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=15937"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=15937"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=15937" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs9" class="tip">
+                     <b>Abstract</b><p>
+                    Nonostante l’Open Access, vale a dire la disponibilità libera e gratuita dei contenuti in internet, sia ormai un’iniziativa conosciuta, ci sono ancora idee molto confuse e interpretazioni erronee su alcune delle sue caratteristiche e sul suo funzionamento. In quest’opera, Ernest Abadal ha l’obiettivo di chiarire i dubbi e fraintendimenti più frequenti riguardo l’Open Access, presentando le basi teoriche di questo sistema, il ruolo delle riviste scientifiche e l’attitudine dei ricercatori, nonché una stima di quali siano le prospettive future.Questa guida si rivolge tanto agli accademici e ai dirigenti universitari, quanto agli editori e ai professionisti in ambito bibliotecario.L’edizione italiana è stata realizzata con la collaborazione di Maria Teresa Miconi, professoressa di Bibliografia e Biblioteconomia dell’Università di Macerata e riconosciuta esperta di Open Access.La prefazione è a cura di Giovanni Solimine, professore di Biblioteconomia all’Università di Roma La Sapienza, dove è anche presidente del Sistema bibliotecario di Ateneo e direttore della Scuola di Specializzazione in beni archivistici e librari.
+                </div>
+                <div id="kw9" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+
+                       <a itemprop="keywords"  href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Open&#32;Access,&#32;accesso&#32;aperto&quot;">Open Access, accesso aperto</a>
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+       <abbr class="unapi-id" title="32849"></abbr>
+
+<div itemscope itemtype="http://schema.org/Book"> <!-- start schema.org - search engine optimization -->
+
+
+   <div class="recordColored" id="record10">
+
+       <div class="imageDiv">
+             <img src="doab@func=cover&amp;rid=32849" width="110" height="155" border=0>
+       </div><!-- END imageDiv -->
+
+       <div class="data">
+        <b><span itemprop="name">Open Access and the Library </span></b>
+
+
+        <p>
+           <div style="color: #585858">
+           <!-- author (s) -->
+                   <strong>Authors</strong>:
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:%22Oberl%C3%83%C2%A4nder,%20Anja%22&amp;uiLanguage=en">Oberländer, Anja</a>
+                         ---
+                      <a itemprop="author" href="http://www.doabooks.org/doab?func=search&amp;query=au:&quot;Reimer,&#32;Torsten&quot;&amp;uiLanguage=en">Reimer, Torsten</a>
+                <br/>
+              <!-- End Loop_au if-->
+
+           <strong>ISBN</strong>: <span itemprop="isbn">9783038977407</span>
+           <strong>Year</strong>: <span itemprop="datePublished">2019</span>
+           <strong>Pages</strong>: <span itemprop="numberOfPages">142</span>
+           <strong>DOI</strong>: 10.3390/books978-3-03897-741-4
+           <strong>Language</strong>: English
+
+           <br><strong>Publisher</strong>: <a itemprop="publisher" href="http://www.doabooks.org/doab?func=publisher&amp;pId=1222&amp;uiLanguage=">MDPI - Multidisciplinary Digital Publishing Institute</a>
+
+               <br><strong>Subject</strong>:
+                  <a itemprop="about" href="http://www.doabooks.org/doab?func=subject&amp;cpId=130&amp;uiLanguage=en"> Media and communication</a>
+           <br><strong>Added to DOAB on </strong>: 2019-04-05 10:34:31
+             <br>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="blank"><img src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png"> </a>
+           </div><!-- End color #585858 -->
+           <p>
+           <div class="recordLinks" id="r10">
+<h1>
+             <a href="javascript:void(0)" title="abs10" >
+               <span id="absLabel10">Abstract</span>
+             </a> |
+
+             <a href="javascript:void(0)" title="kw10">  
+                <span id="kwLabel10">Keywords</span>
+             </a> |
+            
+               <a itemprop="url" href="http://www.doabooks.org/doab?func=fulltext&amp;uiLanguage=en&amp;rid=32849" target="_blank">Free access</a>
+              |
+           <a href="http://www.doabooks.org/doab?func=checkAvailability&amp;uiLanguage=en&amp;rid=32849" class="checkAvailable" title="av10" >Buy the book</a>
+              | 
+           <a href="javascript:void(0)" title="exp10"> <span id="expLabel10">Export citation</span></font></a>
+              | 
+           <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300" addthis:url="https://www.doabooks.org/doab?func=search&query=rid:32849" addthis:title="DOAB: Open Access and the Library"><img style="border:0" alt="Share" src="doabImages/addThis.gif"> </a>
+
+           
+</h1>
+           </div> <!-- END recordLinks -->
+           <div class="linkContent">
+<div id="av10" class="tip dyn" ><img src="doabImages/spinner.gif">
+Loading...</div>
+                <div id="exp10" class="tip">
+                   <b>Export citation</b>
+                   <p>
+                     Choose an application
+                   <ul>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=referenceManager&amp;query=32849"> Reference Manager</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=endNote&amp;query=32849"> EndNote</a></li>
+                       <li><a href="http://www.doabooks.org/doab?func=export&amp;uiLanguage=en&amp;application=refworks&amp;query=32849" target="RefWorksMain"> RefWorks</a> (Direct export to RefWorks)</li>
+                   </ul>
+                </div>
+
+                <div itemprop="description" id="abs10" class="tip">
+                     <b>Abstract</b><p>
+                    Libraries are places of learning and knowledge creation. Over the last two decades, digital technology—and the changes that came with it—have accelerated this transformation to a point where evolution starts to become a revolution.The wider Open Science movement, and Open Access in particular, is one of these changes and is already having a profound impact. Under the subscription model, the role of libraries was to buy or license content on behalf of their users and then act as gatekeepers to regulate access on behalf of rights holders. In a world where all research is open, the role of the library is shifting from licensing and disseminating to facilitating and supporting the publishing process itself.This requires a fundamental shift in terms of structures, tasks, and skills. It also changes the idea of a library’s collection. Under the subscription model, contemporary collections largely equal content bought from publishers. Under an open model, the collection is more likely to be the content created by the users of the library (researchers, staff, students, etc.), content that is now curated by the library.Instead of selecting external content, libraries have to understand the content created by their own users and help them to make it publicly available—be it through a local repository, payment of article processing charges, or through advice and guidance. Arguably, this is an overly simplified model that leaves aside special collections and other areas. Even so, it highlights the changes that research libraries are undergoing, changes that are likely to accelerate as a result of initiatives such as Plan S.This Special Issue investigates some of the changes in today’s library services that relate to open access.
+                </div>
+                <div id="kw10" class="tip">
+                   <b>Keywords</b><p>
+                   <!-- Multi -->
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;research&#32;libraries&quot;">research libraries</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;science&quot;">open science</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;research&#32;support&#32;services&quot;">research support services</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;publishing&quot;">publishing</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;library&quot;">library</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;journals&quot;">journals</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;monographs&quot;">monographs</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;scholarly&#32;communications&quot;">scholarly communications</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;social&#32;media&quot;">social media</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;CERN&quot;">CERN</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;journal&#32;flipping&quot;">journal flipping</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;gold&#32;open&#32;access&quot;">gold open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;particle&#32;physics&quot;">particle physics</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;SCOAP3&quot;">SCOAP3</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;staff&quot;">staff</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;library&quot;">library</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;research&#32;support&quot;">research support</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;scholarly&#32;communication&quot;">scholarly communication</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;APC&quot;">APC</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;workflow&quot;">workflow</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;journal&#32;subscription&quot;">journal subscription</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;offsetting&quot;">offsetting</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;publication&#32;fee&quot;">publication fee</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;monitoring&quot;">monitoring</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;transition&quot;">transition</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;repositories&quot;">repositories</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;library-mediated&#32;deposit&quot;">library-mediated deposit</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;researcher&#32;engagement&quot;">researcher engagement</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;scholarly&#32;communication&quot;">scholarly communication</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;repositories&quot;">repositories</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;compliance&quot;">compliance</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;REF&#32;2021&quot;">REF 2021</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Research&#32;Excellence&#32;Framework&quot;">Research Excellence Framework</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;research&#32;information&#32;systems&quot;">research information systems</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;UK&#32;funder&#32;policies&quot;">UK funder policies</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;information&#32;services&quot;">information services</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;training&quot;">training</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;publishing&#32;literacy&quot;">publishing literacy</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;marketing&quot;">marketing</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;science&quot;">open science</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;open&#32;access&quot;">open access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;service&#32;portfolio&quot;">service portfolio</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;publishing&quot;">publishing</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;repositories&quot;">repositories</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;research&#32;information&quot;">research information</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;Open&#32;Access&quot;">Open Access</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;vocational&#32;education&#32;and&#32;training&#32;research&quot;">vocational education and training research</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;social&#32;sciences&quot;">social sciences</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;humanities&quot;">humanities</a>
+                      ---
+                          <a itemprop="keywords" href="http://www.doabooks.org/doab?func=search&amp;uiLanguage=en&amp;query=kw:&quot;sociology&#32;of&#32;science&quot;">sociology of science</a>
+
+                </div>
+            </div> <!-- END linkContent -->
+       </div> <!-- END data -->
+       <div style="clear:both"></div>
+   </div> <!-- END record --->
+</div> <!-- END schema.org div --> 
+<!-- #############END RECORDS############## -->
+
+   <div id="lastRecord">
+   <div class="resultLabel2">
+<table width="100%" cellspacing="0" cellpading="0">
+   <tr>
+<!-- FORMATS -->
+    <td width="33%">
+    <span>
+      Listing <strong>1</strong> - <strong>10</strong> of <strong>1089</strong>
+    </span>
+     </td>
+<!-- END FORMATS -->
+<!--PAGES -->
+     <td width="34%" align="center">
+          <<
+
+       page
+        <span>
+        <form style="margin: 0; padding: 0; display: inline" method="GET" name="goToPage" action="http://www.doabooks.org/doab">
+          <input style="font-size:75%;text-align:center; color:red" name="jumpToPage" value="1" size="4">
+    of 109
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="open access">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+          <input type=hidden name="func" value="search">
+        </form>
+        </span>
+           <a href="http://www.doabooks.org/doab?func=search&amp;page=2&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> >></a>
+     </td>
+<!-- END PAGES -->
+
+<!-- SORT -->
+     <td width="33%" align="right">
+    <div class="sort">
+     <span>
+      Sort by
+        <form style="display: inline;" method="GET" name="sorting" action="http://www.doabooks.org/doab">
+        <select name="sort" onChange="this.form.submit();">
+        <option value=""            selected="selected"         >Relevance</option>
+        <option value="yearDesc"          >Year-Descending</option>
+        <option value="yearAsc"          >Year-Ascending</option>
+         <option value="cdDesc"           >Date added-Descending</option>
+         <option value="cdAsc"           >Date added-Ascending</option>
+         </select>
+        <input type=hidden name="func" value="search">
+          <input type=hidden name="template" value="">
+          <input type=hidden name="fromYear" value="">
+          <input type=hidden name="query" value="open access">
+          <input type=hidden name="toYear" value="">
+          <input type=hidden name="uiLanguage" value="en">
+        </form>
+     </span>
+
+    </div><!-- END DIV sort -->
+     </td>
+<!-- END SORT -->
+<!-- end if function is search -->
+   </tr>
+  </table>
+   </div> <!-- end resultLabel div -->
+   </div> <!-- end lastRecord div -->
+
+</div> <!-- end result --> 
+
+
+<!-- FACET -->
+
+<div id="facetEntries">
+    <div id="facetEntriesLabel">
+       <strong>Narrow your search</strong>
+    </div><!-- end facetEntriesLabel -->
+    <div class="facet">
+<form name="years" action="http://www.doabooks.org/doab" method="GET" style="display:inline;">
+   <input type="hidden" name="template" value="">
+   <input type="hidden" name="query" value="open access">
+   <input type="hidden" name="uiLanguage" value="en">
+   <input type="hidden" name="go" value="1">
+   <input name="func" type="hidden" value="search">
+          <br/>
+              <strong>Publisher</strong>
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Springer%20Nature%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Springer Nature</a> (572)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Cappelen%20Damm%20Akademisk/NOASP%20(Nordic%20Open%20Access%20Scholarly%20Publishing)%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Cappelen Damm Akademisk/NOASP (Nordic Open Access Scholarly Publishing)</a> (112)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22FrancoAngeli%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> FrancoAngeli</a> (59)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Edition%20Open%20Access%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Edition Open Access</a> (36)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Palgrave%20Macmillan%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Palgrave Macmillan</a> (31)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Policy%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Policy Press</a> (27)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Taylor%20&amp;%20Francis%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Taylor &amp; Francis</a> (24)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Brill%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Brill</a> (20)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22De%20Gruyter%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> De Gruyter</a> (16)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Open%20Book%20Publishers%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Open Book Publishers</a> (16)</p> 
+                 <span id="moreutpub" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22MDPI%20-%20Multidisciplinary%20Digital%20Publishing%20Institute%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> MDPI - Multidisciplinary Digital Publishing Institute</a> (14)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22IntechOpen%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> IntechOpen</a> (13)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Frontiers%20Media%20SA%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Frontiers Media SA</a> (9)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Amsterdam%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Amsterdam University Press</a> (7)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Ledizioni%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Ledizioni</a> (7)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Universit%C3%83%C2%A4tsverlag%20G%C3%83%C2%B6ttingen%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Universitätsverlag Göttingen</a> (7)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Cambridge%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Cambridge University Press</a> (6)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22OpenEdition%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> OpenEdition Press</a> (6)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22HTWK%20Leipzig%20-%20OA-Hochschulverlag%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> HTWK Leipzig - OA-Hochschulverlag</a> (5)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Berghahn%20Books%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Berghahn Books</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Bloomsbury%20Academic%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Bloomsbury Academic</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Edinburgh%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Edinburgh University Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Purdue%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Purdue University Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Temple%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Temple University Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22The%20MIT%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> The MIT Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Ubiquity%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Ubiquity Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22University%20of%20Toronto%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> University of Toronto Press</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Fordham%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Fordham University Press</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22IWA%20Publishing%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> IWA Publishing</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Pretoria%20University%20Law%20Press%20(PULP)%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Pretoria University Law Press (PULP)</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22University%20of%20Michigan%20Press%20%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> University of Michigan Press </a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Yale%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Yale University Press</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22African%20Minds%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> African Minds</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Bristol%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Bristol University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22FedOA%20-%20Federico%20II%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> FedOA - Federico II University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Leiden%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Leiden University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Liverpool%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Liverpool University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Manchester%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Manchester University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Nomos%20Verlagsgesellschaft%20mbH%20&amp;%20Co.%20KG%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Nomos Verlagsgesellschaft mbH &amp; Co. KG</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Pluto%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Pluto Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Rutgers%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Rutgers University Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22University%20Press%20of%20Colorado%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> University Press of Colorado</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22World%20Scientific%20Publishing%20Co.%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> World Scientific Publishing Co.</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22meson%20press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> meson press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22punctum%20books%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> punctum books</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22ANU%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> ANU Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Athabasca%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Athabasca University Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Brandeis%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Brandeis University Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Carl%20Grossmann%20Verlag%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Carl Grossmann Verlag</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utpub:%22Cornell%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Cornell University Press</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('moreutpub','','','','Less ...','More ...','textIdutpub')"> <span id="textIdutpub">More...</span></a><br>
+
+          <br/>
+              <strong>License</strong>
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20by%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC by</a> (637)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20by-nc-nd%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC by-nc-nd</a> (234)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20by-nc%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC by-nc</a> (101)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20by-nc-sa%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC by-nc-sa</a> (43)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22Springer%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Springer</a> (18)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22unknown%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> unknown</a> (15)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22Cappelen%20Damm%20Akademisk/NOASP%20(Nordic%20Open%20Access%20Scholarly%20Publishing)%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Cappelen Damm Akademisk/NOASP (Nordic Open Access Scholarly Publishing)</a> (12)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20by-sa%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC by-sa</a> (10)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20by-nd%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC by-nd</a> (6)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22OpenEdition%20licence%20for%20Books%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> OpenEdition licence for Books</a> (5)</p> 
+                 <span id="moreutlic" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22The%20MIT%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> The MIT Press</a> (2)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22ANU%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> ANU Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22African%20Minds%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> African Minds</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC%20BY%20IGO%203.0%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC BY IGO 3.0</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22CC-BY-4.0%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> CC-BY-4.0</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22Hamburg%20University%20Press%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Hamburg University Press</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=utlic:%22Taylor%20&amp;%20Francis%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> Taylor &amp; Francis</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('moreutlic','','','','Less ...','More ...','textIdutlic')"> <span id="textIdutlic">More...</span></a><br>
+
+          <br/>
+              <strong>Language</strong>
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22english%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> english</a> (864)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22german%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> german</a> (73)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22italian%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> italian</a> (61)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22norwegian%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> norwegian</a> (42)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22uncoded%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> uncoded</a> (21)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22deutsch%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> deutsch</a> (7)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22eng%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> eng</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22danish%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> danish</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22french%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> french</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22undetermined%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> undetermined</a> (2)</p> 
+                 <span id="morelang" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22finnish%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> finnish</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=lang:%22swedish%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> swedish</a> (1)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('morelang','','','','Less ...','More ...','textIdlang')"> <span id="textIdlang">More...</span></a><br>
+
+          <br/>
+              <strong>Year</strong>
+<br>
+<table style="display:inline; padding-left:8px" border="0" cellspacing="0" cellpading="0">
+ <tr><td>
+From <input style="font-size:80%;text-align:center;" size="3" maxlength="4" name="fromYear" value=""></td><td>To <input style="font-size:80%;text-align:center;" size="3" maxlength="4" name="toYear" value=""></td>
+
+<td>
+<a href="javascript:void(0)" onClick="document.years.submit()"> <img src="doabImages/go.jpeg" border="0" ALT="Submit"></a>
+</td></tr>
+</table>
+</form>
+
+          <br/> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222021%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2021</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222020%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2020</a> (266)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222019%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2019</a> (298)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222018%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2018</a> (221)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222017%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2017</a> (79)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222016%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2016</a> (92)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222015%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2015</a> (37)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222014%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2014</a> (31)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222013%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2013</a> (27)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222012%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2012</a> (8)</p> 
+                 <span id="moreyear" style="display: none">
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222011%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2011</a> (9)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222010%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2010</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222009%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2009</a> (1)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222008%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2008</a> (4)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222007%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2007</a> (3)</p> 
+            <p><img src="doabImages/square.gif" border="0" />
+            <a href="http://www.doabooks.org/doab?func=search&amp;addFilter=year:%222006%22&amp;template=&amp;fromYear=&amp;query=open%20access&amp;toYear=&amp;uiLanguage=en"> 2006</a> (2)</p> 
+
+             </span> 
+             <a href="javascript:void(0)" onClick="showHide('moreyear','','','','Less ...','More ...','textIdyear')"> <span id="textIdyear">More...</span></a><br>
+
+    </div><!-- end facet-->
+</div><!-- end facetEntries -->
+<div style="clear:both;"></div>
+    <div class="clearBoth"></div>
+
+                                                      <div id="footer">
+
+
+
+
+  <div id="footerLeft">
+</i> Directory of Open Access Books is a joint service of <a href="http://www.oapen.org">OAPEN</a>, <a href="http://www.openedition.org">OpenEdition</a>, <a href="http://www.cnrs.fr/">CNRS</a> and <a href="https://www.univ-amu.fr/">Aix-Marseille Université</a>, provided by DOAB Foundation.
+  </div>
+  <div id="footerRight">
+    ©2020 SemperTool
+  </div>
+  <div class="clearBoth"></div>
+</div>
+  </div><!-- end pageContainer -->
+</div><!-- end whlePage -->
+
+</body>
+</html>
