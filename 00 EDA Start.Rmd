@@ -271,11 +271,11 @@ oa_time("Liverpool University Press")
 
 ```
 ## Idea: Revenue vs. OA
-## Question: What revenue are publishers receiving each year?
+## Question: What total revenue are publishers receiving each year?
 ## Observation: 
 ```{r  }
 
-# Finding revenue for each publisher
+# Finding total revenue for each publisher
 
 revenue_finder <- function(pub_name) {
   pub_filtered <- filter(filtered, filtered$publisher == pub_name)
@@ -296,12 +296,51 @@ print(revenue_df)
 publisher_revenue <- revenue_df %>%
   ggplot(data = revenue_df, mapping = aes(x = revenue_df$publisher, y = revenue_df$revenue), fill = revenue_df$revenue) +
   geom_col() +
-  labs(title = "Revenue for Publishers", x = "Top 25% of Publishers", y = "Revenue", color = 'Types of OA') +
+  labs(title = "Total Revenue for Publishers", x = "Top 25% of Publishers", y = "Revenue (Euro)", color = 'Types of OA') +
   theme(axis.text = element_text(size = rel(0.75))) +
   scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17)) +
   scale_fill_brewer(palette = "Set1")
 
 ggplotly(publisher_revenue)
+
+
+```
+## Idea: Revenue vs. OA
+## Question: What revenue are publishers receiving per year?
+## Observation: 
+```{r  }
+
+# Finding total revenue for each publisher
+
+revlist_2017 <- c()
+revlist_2018 <- c()
+revlist_2019 <- c()
+
+for (name in top25_list) {
+  pub_name <- filter(filtered, filtered$publisher == name)
+  rev_2017 = sum(pub_name[pub_name$period == 2017,]$euro)
+  revlist_2017 <- c(revlist_2017, rev_2017)
+  rev_2018 = sum(pub_name[pub_name$period == 2018,]$euro)
+  revlist_2018 <- c(revlist_2018, rev_2018)
+  rev_2019 = sum(pub_name[pub_name$period == 2019,]$euro)
+  revlist_2019 <- c(revlist_2019, rev_2019)
+}
+
+revenue_df <- data.frame("publisher" = top25_list)
+revenue_df$'2017' <- c(revlist_2017)
+revenue_df$'2018' <- c(revlist_2018)
+revenue_df$'2019' <- c(revlist_2019)
+
+print(revenue_df)
+
+# ggplot:
+pub_year_revenue <- revenue_df %>%
+  ggplot(data = revenue_df, mapping = aes(x = c('2017', '2018', '2019'), y = c(revenue_df$'2017', revenue_df$'2018', revenue_df$'2019'), group = revenue_df$publisher)) +
+  geom_line() + geom_point() +
+  labs(title = "Total Revenue for Publishers", x = "Year", y = "Revenue (Euro)", color = 'Publishers') +
+  theme(axis.text = element_text(size = rel(0.75)))
+
+ggplotly(pub_year_revenue)
 
 
 ```
