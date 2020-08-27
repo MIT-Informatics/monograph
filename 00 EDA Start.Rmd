@@ -145,6 +145,8 @@ bscols(cross_ft)
 
 head(filtered)
 
+# Does Type of OA impact the particular division of charges?
+
 euro_oa_publisher <- filtered %>% 
   ggplot(data = filtered, mapping = aes(x = filtered$backlist_oa, y = filtered$euro), 
          aes(x = filtered$backlist_oa, y = filtered$euro)) + 
@@ -168,6 +170,34 @@ cross_ft <- bscols(
 )
 
 bscols(cross_ft)
+
+
+# Does Year impact the particular division of charges?
+
+euro_year_publisher <- filtered %>% 
+  ggplot(data = filtered, mapping = aes(x = filtered$period, y = filtered$euro), 
+         aes(x = filtered$period, y = filtered$euro)) + 
+  geom_count(aes(color = ..n.., group = euro)) + 
+  scale_size_area(max_size = 10) + 
+  theme(axis.text = element_text(size = rel(0.75))) +
+  labs(title = "How Year Impacts Price Division of Charges", x = "Year", y = "Price (Euro)", color = 'Number of Copies')
+
+# ggplot:
+ggplotly(euro_year_publisher)
+
+# crosstalk:
+ft <- highlight_key(filtered)
+gg_ft <- ggplot(data = ft, mapping = aes(x = filtered$period, y = filtered$euro)) + 
+  geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  labs(title = "How Year Impacts Division of Charges", x = "Year", y = "Price (Euro)", color = 'Number of Copies')
+cross_ft <- bscols(
+  filter_select("publisher", "Select a publisher", ft, ~publisher),
+  ggplotly(gg_ft, dynamicTicks = TRUE),
+  widths = c(12, 12)
+)
+
+bscols(cross_ft)
+
 
 ```
 ## Question: What type of business model do the top 25% publishers use?
