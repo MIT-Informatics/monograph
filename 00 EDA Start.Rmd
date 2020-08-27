@@ -47,8 +47,8 @@ require(ExPanDaR)
 # read KU data frame
 KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 # read DOAB metadata
-source('~/monograph/Public Data/DOAB/doabingest.R')
-DOABmeta.df <- doabFetch()
+# source('~/monograph/Public Data/DOAB/doabingest.R')
+# DOABmeta.df <- doabFetch()
 ```
 ```{r  }
 
@@ -79,6 +79,7 @@ institution_euro <- KUbpc.df %>% ggplot(data = KUbpc.df, mapping = aes(x = KUbpc
 ggplotly(institution_euro)
 
 ```
+## Idea: Publishers vs. Charges
 ## Question: How do the top 25% of publishers divide up charges (in Euro)?
 ## Observation: Charges are grouped around ~2000 Euros and ~8000 Euros. 
 ```{r  }
@@ -139,6 +140,7 @@ bscols(cross_ft)
 
 
 ```
+## Idea: Publishers' Charges vs. Year/OA Type
 ## Sub-Question: What best explains the particular division of charges? (Year, OA Type)
 ## Observation: Charges seem to be grouped by type of OA business model. 
 ```{r  }
@@ -200,7 +202,9 @@ bscols(cross_ft)
 
 
 ```
+## Idea: Publishers vs. OA
 ## Question: What type of business model do the top 25% publishers use?
+## Observation: Most have a higher proportion of True (moved to OA from traditional publishing) than False (already published OA).
 ```{r  }
 
 oa_type <- filtered %>% 
@@ -230,7 +234,9 @@ oa_ft <- ggplot(data = ft, mapping = aes(x = ft$publisher, colour = ft$backlist_
 
 
 ```
+## Idea: Publishers' OA vs. Year
 ## Question: Did OA business models of the top 25% publishers change per year?
+## Observation:
 ```{r  }
 
 oa_time <- function(pub_name) {
@@ -249,6 +255,8 @@ oa_time <- function(pub_name) {
   
 }
 
+top25_list = c("transcript Verlag", "Duke University Press", "University of Michigan Press", "Manchester University Press", "Pluto Press", "Liverpool University Press")
+
 oa_time("transcript Verlag")
 
 oa_time("Duke University Press")
@@ -261,6 +269,39 @@ oa_time("Pluto Press")
 
 oa_time("Liverpool University Press")
 
+```
+## Idea: Revenue vs. OA
+## Question: What revenue are publishers receiving each year?
+## Observation: 
+```{r  }
+
+# Finding revenue for each publisher
+
+revenue_finder <- function(pub_name) {
+  pub_filtered <- filter(filtered, filtered$publisher == pub_name)
+  rev = sum(pub_filtered$euro)
+}
+
+revenue_df <- data.frame("publisher" = top25_list)
+revenue_list <- c()
+
+for (i in top25_list) {
+  revenue_list<-c(revenue_list,revenue_finder(i))
+}
+
+revenue_df$revenue <- c(revenue_list)
+print(revenue_df)
+
+# ggplot:
+publisher_revenue <- revenue_df %>%
+  ggplot(data = revenue_df, mapping = aes(x = revenue_df$publisher, y = revenue_df$revenue), fill = revenue_df$revenue) +
+  geom_col() +
+  labs(title = "Revenue for Publishers", x = "Top 25% of Publishers", y = "Revenue", color = 'Types of OA') +
+  theme(axis.text = element_text(size = rel(0.75))) +
+  scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 17)) +
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(publisher_revenue)
 
 
 ```
