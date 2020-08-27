@@ -142,7 +142,7 @@ bscols(cross_ft)
 ```
 ## Idea: Publishers' Charges vs. Year/OA Type
 ## Sub-Question: What best explains the particular division of charges? (Year, OA Type)
-## Observation: Charges seem to be grouped by type of OA business model. 
+## Observation: The low and high charge groups seem to be defined by the type of OA business model, whereas the slight differences within each group seem to be defined by the year. 
 ```{r  }
 
 head(filtered)
