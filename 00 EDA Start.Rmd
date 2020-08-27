@@ -80,6 +80,7 @@ ggplotly(institution_euro)
 
 ```
 ## Question: How do the top 25% of publishers divide up charges (in Euro)?
+## Observation: Charges are grouped around ~2000 Euros and ~8000 Euros. 
 ```{r  }
 
 publisher_counts <- KUbpc.df %>%
@@ -136,6 +137,37 @@ bscols(cross_ft)
 # leaflet(shared_euro_publisher) %>% addMarkers()
 # data.table::data.table(shared_euro_publisher)
 
+
+```
+## Sub-Question: What explains the particular division of charges? 
+## Observation: Charges seem to be grouped by type of OA business model. 
+```{r  }
+
+head(filtered)
+
+euro_oa_publisher <- filtered %>% 
+  ggplot(data = filtered, mapping = aes(x = filtered$backlist_oa, y = filtered$euro), 
+         aes(x = filtered$backlist_oa, y = filtered$euro)) + 
+  geom_count(aes(color = ..n.., group = euro)) + 
+  scale_size_area(max_size = 10) + 
+  theme(axis.text = element_text(size = rel(0.75))) +
+  labs(title = "How OA Impacts Price Division of Charges", x = "Type of OA", y = "Price (Euro)", color = 'Number of Copies')
+
+# ggplot:
+ggplotly(euro_oa_publisher)
+
+# crosstalk:
+ft <- highlight_key(filtered)
+gg_ft <- ggplot(data = ft, mapping = aes(x = filtered$backlist_oa, y = filtered$euro)) + 
+  geom_count(aes(color = ..n.., size = after_stat(prop), group = euro)) + 
+  labs(title = "How OA Impacts Division of Charges", x = "Type of OA", y = "Price (Euro)", color = 'Number of Copies')
+cross_ft <- bscols(
+  filter_select("publisher", "Select a publisher", ft, ~publisher),
+  ggplotly(gg_ft, dynamicTicks = TRUE),
+  widths = c(12, 12)
+)
+
+bscols(cross_ft)
 
 ```
 ## Question: What type of business model do the top 25% publishers use?
