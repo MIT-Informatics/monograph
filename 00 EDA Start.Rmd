@@ -139,7 +139,7 @@ bscols(cross_ft)
 
 
 ```
-## Sub-Question: What explains the particular division of charges? 
+## Sub-Question: What best explains the particular division of charges? (Year, OA Type)
 ## Observation: Charges seem to be grouped by type of OA business model. 
 ```{r  }
 
