@@ -327,10 +327,6 @@ for (name in top25_list) {
   revlist_2019 <- c(revlist_2019, rev_2019)
 }
 
-# want x axis to be year
-# want y axis to be total revenue
-# want publisher by year
-
 revenue_df <- data.frame("publisher" = top25_list)
 revenue_df$'2017' <- c(revlist_2017)
 revenue_df$'2018' <- c(revlist_2018)
@@ -338,8 +334,8 @@ revenue_df$'2019' <- c(revlist_2019)
 
 print(revenue_df)
 
-# revenue_year <- c(revenue_df$'2017', revenue_df$'2018', revenue_df$'2019')
-# year <- c('2017', '2018', '2019')
+revenue_year <- c(revenue_df$'2017', revenue_df$'2018', revenue_df$'2019')
+year <- c('2017', '2018', '2019')
 
 # ggplot:
 pub_year_revenue1 <- revenue_df %>%
