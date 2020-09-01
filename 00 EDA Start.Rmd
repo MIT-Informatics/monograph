@@ -367,6 +367,7 @@ pub_year_revenue3 <- revenue_df %>%
 
 ggplotly(pub_year_revenue3)
 
+revenue_df %>% gather('2017','2018','2019', key="year", value="Euro") %>% ggplot(aes(x=publisher,y=Euro),fill=publisher) + geom_bar(stat="identity") + facet_wrap("year")
 
 ```
 ### Continued, tried putting it into one graph. 
