@@ -47,8 +47,13 @@ require(ExPanDaR)
 # read KU data frame
 KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 # read DOAB metadata
+<<<<<<< HEAD
 source('~/monograph/Public Data/DOAB/doabingest.R')
 # DOABmeta.df <- doabFetch()
+=======
+source('~/RStudio/monograph/Public Data/DOAB/doabingest.R')
+DOABmeta.df <- doabFetch()
+>>>>>>> 248ca69e362e1c95526a4adeca84b40cd517b650
 ```
 ```{r  }
 
@@ -142,7 +147,7 @@ bscols(cross_ft)
 ```
 ## Idea: Publishers' Charges vs. Year/OA Type
 ## Sub-Question: What best explains the particular division of charges? (Year, OA Type)
-## Observation: Charges seem to be grouped by type of OA business model. 
+## Observation: The low and high charge groups seem to be defined by the type of OA business model, whereas the slight differences within each group seem to be defined by the year. 
 ```{r  }
 
 head(filtered)
