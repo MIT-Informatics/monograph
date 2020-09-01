@@ -325,7 +325,7 @@ for (name in top25_list) {
   revlist_2017 <- c(revlist_2017, rev_2017)
   rev_2018 = sum(pub_name[pub_name$period == 2018,]$euro)
   revlist_2018 <- c(revlist_2018, rev_2018)
-  rev_2019 = sum(pub_name[pub_name$period == 2019,]$euro)
+  rev_2019 = sum(pub_name[pub_name$period == 2019,]$euro) 
   revlist_2019 <- c(revlist_2019, rev_2019)
 }
 
