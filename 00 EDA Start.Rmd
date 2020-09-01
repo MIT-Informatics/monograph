@@ -337,14 +337,36 @@ revenue_df$'2019' <- c(revlist_2019)
 
 print(revenue_df)
 
+# revenue_year <- c(revenue_df$'2017', revenue_df$'2018', revenue_df$'2019')
+# year <- c('2017', '2018', '2019')
+
 # ggplot:
-pub_year_revenue <- revenue_df %>%
-  ggplot(data = revenue_df, mapping = aes(x = c('2017', '2018', '2019'), y = c(revenue_df$'2017', revenue_df$'2018', revenue_df$'2019'), group = revenue_df$publisher)) +
-  geom_line() + geom_point() +
+pub_year_revenue1 <- revenue_df %>%
+  
+  ggplot(data = revenue_df, mapping = aes(x = '2017', y = revenue_df$'2017', fill = revenue_df$publisher)) +
+  geom_bar(position="dodge", stat="identity") +
   labs(title = "Total Revenue for Publishers", x = "Year", y = "Revenue (Euro)", color = 'Publishers') +
   theme(axis.text = element_text(size = rel(0.75)))
 
-ggplotly(pub_year_revenue)
+ggplotly(pub_year_revenue1)
+
+pub_year_revenue2 <- revenue_df %>%
+  
+  ggplot(data = revenue_df, mapping = aes(x = '2018', y = revenue_df$'2018', fill = revenue_df$publisher)) +
+  geom_bar(position="dodge", stat="identity") +
+  labs(title = "Total Revenue for Publishers", x = "Year", y = "Revenue (Euro)", color = 'Publishers') +
+  theme(axis.text = element_text(size = rel(0.75)))
+
+ggplotly(pub_year_revenue2)
+
+pub_year_revenue3 <- revenue_df %>%
+  
+  ggplot(data = revenue_df, mapping = aes(x = '2019', y = revenue_df$'2019', fill = revenue_df$publisher)) +
+  geom_bar(position="dodge", stat="identity") +
+  labs(title = "Total Revenue for Publishers", x = "Year", y = "Revenue (Euro)", color = 'Publishers') +
+  theme(axis.text = element_text(size = rel(0.75)))
+
+ggplotly(pub_year_revenue3)
 
 
 ```
