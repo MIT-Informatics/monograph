@@ -317,6 +317,8 @@ revlist_2017 <- c()
 revlist_2018 <- c()
 revlist_2019 <- c()
 
+revlist <- c()
+
 for (name in top25_list) {
   pub_name <- filter(filtered, filtered$publisher == name)
   rev_2017 = sum(pub_name[pub_name$period == 2017,]$euro)
@@ -365,6 +367,59 @@ pub_year_revenue3 <- revenue_df %>%
 
 ggplotly(pub_year_revenue3)
 
+
+```
+### Continued, tried putting it into one graph. 
+```{r}
+
+revlist <- c()
+revlist_2017 <- c()
+revlist_2018 <- c()
+revlist_2019 <- c()
+
+for (name in top25_list) {
+  pub_name <- filter(filtered, filtered$publisher == name)
+  rev_2017 = sum(pub_name[pub_name$period == 2017,]$euro)
+  revlist_2017 <- c(revlist_2017, rev_2017)
+  rev_2018 = sum(pub_name[pub_name$period == 2018,]$euro)
+  revlist_2018 <- c(revlist_2018, rev_2018)
+  rev_2019 = sum(pub_name[pub_name$period == 2019,]$euro)
+  revlist_2019 <- c(revlist_2019, rev_2019)
+}
+
+revlist <- c(revlist_2017, revlist_2018, revlist_2019)
+
+print(revlist)
+
+nrev <- matrix(revlist, ncol=6, byrow=TRUE)
+colnames(nrev) <- top25_list
+rownames(nrev) <- c("2017", "2018", "2019")
+nrev <- as.table(nrev)
+nrev <- as.data.frame.matrix(nrev)
+
+print(nrev)
+
+#, nrev$`Duke University Press`, nrev$`University of Michigan Press`, nrev$`Pluto Press`, nrev$`Manchester University Press`, nrev$`Liverpool University Press`
+
+pub_year_rev <- nrev %>%
+  
+  ggplot(data = nrev, mapping = aes(x = c("2017", "2018", "2019"), y = c(nrev$"transcript Verlag"), fill = nrev$publisher)) +
+  geom_bar(position="dodge", stat="identity") +
+  labs(title = "Total Revenue for Publishers", x = "Year", y = "Revenue (Euro)", color = 'Publishers') +
+  theme(axis.text = element_text(size = rel(0.75)))
+
+ggplotly(pub_year_rev)
+
+```
+## Idea: DOAB analysis
+## Question: What is the average time gap between year of publication and added on date? 
+## Observation: 
+```{r}
+
+DOABmeta.df <- filter(DOABmeta.df, is.na(DOABmeta.df$Year.of.publication))
+print(DOABmeta.df$Year.of.publication[1:4])
+gap = mean(DOABmeta.df$Added.on.date - DOABmeta.df$Year.of.publication[1:3])
+print(gap)
 
 ```
 ### Comparison of charges by year and backlist
