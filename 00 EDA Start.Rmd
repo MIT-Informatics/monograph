@@ -422,10 +422,11 @@ ggplotly(pub_year_rev)
 ## Observation: 
 ```{r}
 
-DOABmeta.df <- filter(DOABmeta.df, is.na(DOABmeta.df$Year.of.publication))
-print(DOABmeta.df$Year.of.publication[1:4])
-gap = mean(DOABmeta.df$Added.on.date - DOABmeta.df$Year.of.publication[1:3])
-print(gap)
+back_true <- filter(KUbpc.df, KUbpc.df$doab == 'TRUE')
+back_true <- gsub("-", "", back_true$isbn)
+
+# merged <- merge(back_true, DOABmeta.df)
+# view(merged)
 
 ```
 ### Comparison of charges by year and backlist
