@@ -367,7 +367,12 @@ pub_year_revenue3 <- revenue_df %>%
 
 ggplotly(pub_year_revenue3)
 
-revenue_df %>% gather('2017','2018','2019', key="year", value="Euro") %>% ggplot(aes(x=publisher,y=Euro),fill=publisher) + geom_bar(stat="identity") + facet_wrap("year")
+revenue_df %>% gather('2017','2018','2019', key="year", value="Euro") %>% 
+  ggplot(mapping = aes(x=publisher, y=Euro, fill=publisher)) + geom_bar(stat="identity") + 
+  facet_wrap("year") + 
+  labs(title = "Total Revenue for Publishers", x = "Year", y = "Revenue (Euro)", color = 'Publishers') +
+  scale_x_discrete(labels = function(x) str_wrap(str_replace_all(x, "foo", " "), width = 8)) +
+  theme(axis.text = element_text(size = rel(0.3)))
 
 ```
 ### Continued, tried putting it into one graph. 
