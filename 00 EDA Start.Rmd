@@ -423,7 +423,20 @@ ggplotly(pub_year_rev)
 ```{r}
 
 back_true <- filter(KUbpc.df, KUbpc.df$doab == 'TRUE')
-back_true <- gsub("-", "", back_true$isbn)
+back_true$isbn <- gsub("-", "", back_true$isbn)
+
+colnames(DOABmeta.df)[2] <- "isbn"
+
+DOABmeta.df$isbn <- as.character(DOABmeta.df$isbn)
+back_true$isbn <- as.character(back_true$isbn)
+
+
+DOABmeta.df %>%
+  right_join(back_true, by = 'isbn')
+
+added_on_year = substr(DOABmeta.df$Added.on.date, 1, 4)
+print(DOABmeta.df$period)
+# print(added_on_year)
 
 # merged <- merge(back_true, DOABmeta.df)
 # view(merged)
