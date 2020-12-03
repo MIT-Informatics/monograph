@@ -1,1 +1,6 @@
 Repository for monograph analysis projects
+
+NOTES
+
+1. Use Submodules: Use 'git submodule update --init' after cloning 
+2. See Makefile for options on building analysis
