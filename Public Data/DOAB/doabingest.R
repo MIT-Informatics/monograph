@@ -6,7 +6,7 @@ doabFetch<-function(refresh=FALSE) {
   } else {
     doabsource <- file("Public Data/DOAB/www.doabooks.org/doab@func=csv")
   }
-  doab.df<-read.csv(doabsource)
+  doab.df<-read_csv(doabsource)
   return(doab.df)
 }
 
