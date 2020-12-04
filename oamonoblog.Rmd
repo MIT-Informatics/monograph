@@ -1,0 +1,157 @@
+---
+title: "Exploring the Public Evidence on Open Access Monographs"
+output: html_document
+bibliography: oamonreferences.bib
+---
+
+```{r, setup, include=FALSE}
+# core datascience
+require(tidyverse)
+require(magrittr)
+
+# reading additional file formats
+require(readxl)
+require(haven)
+
+# debugging
+# require(tidylog) # additional logging
+
+# visual analysis
+require(ggplot2)
+require(GGally) # extensions to ggplot
+require(gt) # well formatted tables
+
+# graph analysis
+require(DiagrammeR)
+require(tidygraph)
+require(igraph)
+require(ggraph)
+
+# client-side interactive publishable graphics
+require(plotly)
+require(leaflet)
+require(crosstalk)
+require(htmlwidgets)
+require(highcharter)
+#require(i2dash)
+require(DT)
+
+#polish
+require(ggthemes)
+```
+
+# **Exploring the Public Evidence on Open Access Monographs**
+
+Micah Altman, CREOS Research Scientist
+
+*[Draft: 12/1/2020]*
+
+```{r, doab_load, include=FALSE}
+base::source('./Public Data/DOAB/doabingest.R')
+DOABmeta.df <- doabFetch()
+KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
+```
+
+# Introduction
+
+There is ongoing tension between the desire of scholars to share their work widely and openly, and the need to fund the infrastructure and labor of publishing. One place in which this tension is most evident is in the sale of scholarly monographs. While they are a only a small fraction of scholarly communications volume, market, and readership -- academic monographs continue to play an important role in the humanities and social sciences. They represent an important form of long-form scholarship -- not readily expressible through journal-length publications. And, as such, monograph publication through a university press forms a critical component of tenure evaluation -- sometimes independent of the extent to which the monograph itself is purchased, read, or cited. [@eve2014; @crossick2016]
+
+```{r include=FALSE}
+# Find oldest book
+# TODO: automatically extract first page image from PDF
+
+oldbook.doi <- DOABmeta.df %>% arrange(`Year of publication`) %>% head(n=1L) 
+
+```
+
+![Die Mitschuldigen -- One of the Oldest OA Monographs](DieMitschuldigen.png){width="430"}
+
+## Economic Pressures on Monograph Publishing
+
+Monograph publication has been in crisis for approximately two decades. Changes in academic library collection policies --- driven, in part, by the serials crisis and the greater integration of purchase-on-demand workflows -- have led to traditional monograph publishing becoming generally unprofitable. [@crowa; @spence2018a] At the same time, there is an increasing demand among scholars, research funders, and the public that the outputs of scholarship be made open access. [@guédon2019; @scienceeurope]
+
+There are many potential funding models for open monographs[@penierizabella2020; @adema]. Currently, a number of initiatives seek to promote consortial models involving both publishers and groups of libraries. These consortial models include library crowdfunding, membership fees, subscribe-to-open transition, and the direct funding of shared infrastructure. These models act to coordinate disciplinary communities (usually through libraries as representatives); enable publishers to streamline workflow for open digital publication; and reduce potential cost-risk (to publisher and reader).
+
+These initiatives notwithstanding, open access monographs constitute a small fraction of the total monograph titles and in the near future, and will likely make up a few percent of monograph titles published annually. [@grimme2019]
+
+## Reviewing the Evidence
+
+Open monograph publishing remains in its early stages. The [CREOS](https://libraries.mit.edu/creos/) "The Economics of Scholarly Monographs" project is an examination of this area. This fall, as an initial step, we published an [annotated bibliography](https://libraries.mit.edu/creos/research/economics-of-scholarly-monographs/) that serves as a jumping off point for scholars to explore the effects of open availability on monograph revenues.
+
+In this blog post we look at the open data available on monograph publication, and use it to explore patterns and trends in open monograph publishing. This blog post takes the form of a guided, interactive, reproducible data analysis based on currently available public data.[^1] We aim for this exploration to inform libraries, publishers, and authors about the landscape, and prepare for future transitions to open access.
+
+[^1]: Since this blog takes the form of a fully replicable analysis, new versions will be released as the data sources it relies on are updated.
+
+# Accessible Data on Open Monographs
+
+The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data. In the table below you can browse or edit this.
+
+```{r, doab_run, echo=FALSE, warning=FALSE}
+datatable(head(DOABmeta.df,n=1000L), class = 'cell-border stripe',caption="Directory of Open Access Books - Catalog Example",options=list(pageLength=5), extensions="Responsive")
+# TODO: address head/size
+```
+
+Two other data sources are designed to provide additional information[^2] specifically about open access monograph titles:
+
+[^2]: Note that additional care is necessary when combining multiple data sources about monographs. Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential (ISBNtools is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number). instead of ISBN. Generally the correspondence across identifiers must be resolved using an index -- while is a partial mapping between ASIN's and ISBN's -- ASIN's for printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
+
+-   The [OpenAPC](https://www.intact-project.org/openapc/) project provides title-level data on processing charges, supplied by a number of consortial initiatives.
+
+-   [OpenBookPublishers](https://www.openbookpublishers.com/section/92/1) provides title-level usage data on the titles it publishes. [^3]
+
+[^3]: There are two other potential general usage sources outside of data collected by individual publishers and platforms: First, [oaopen.org](https://oapen.org/librarians/13678551-services-libraries) (in collaboration with IRUS-UK) collects counter-compliant title-level usage data for the monographs disseminated through its platforms, however this data is restricted to consortium members. Second, the Mellon-supported [Data Trust for Open Access E-Book Usage](https://educopia.org/data_trust/) aims to collect and aggregate title-level information for community use -- however the project is in its early stages, and no data has yet been made available.
+
+In addition there are a number of publicly accessible (not necessarily open) sources of metadata about large collections books generally. The most notable comprise:
+
+-   *Descriptive Metadata:* ISBN registries including the service provided by [OpenLibrary](https://openlibrary.org/) can be used to obtain additional descriptive metadata for titles, including subject headings. The open [ISBNtools](https://pypi.org/project/isbntools/) package provides a standardized way of retrieving this data from a range of registries.
+
+-   *Citations*: A limited number of monographs are assigned DOI's indexed in [CrossRef]{.ul}, open citation data is available through the [I40C initiative](https://i4oc.org/#faqs). Commercial citation services such as Google Scholar and Scopus, also include some citation information for selected books. This information is challenging to access systematically, but small collections can be extracted using Harzing's [Publish or Perish](https://harzing.com/resources/publish-or-perish) tool.
+
+-   *Public domain works.* A range of books, including some monographs, are now open by virtue of coming out-of-copyright and into the open domain. These are not listed in DOAB -- however API's for [HathiTrust](https://www.hathitrust.org/data) and [JSTOR](https://www.jstor.org/dfr/) provide descriptive metadata, rights metadata, and text-analytic metdata (e.g. ngrams) for the (open) books in their collection.
+
+-   *Prices:* Amazon provides [pricing API's](https://webservices.amazon.com/paapi5/documentation/use-cases/buying-price.html) that can be applied to monograph titles, and a number of third parties track Amazon price histories. This data is available under restrictive terms, and in small quantities.
+
+# Explorations
+
+## Trends
+
+### OA Monographs Year of Publication
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+TMP.plot <- DOABmeta.df %>% group_by(`Year of publication`) %>% summarize(total=n()) %>% ggplot() + aes(x=`Year of publication`,y=`total`) + geom_bar(stat="identity") + geom_smooth() +
+  scale_color_fivethirtyeight() +
+  theme_fivethirtyeight()
+ggplotly(TMP.plot)
+```
+
+### When Monographs Become Open
+
+## Patterns
+
+### Publisher Revenues from APC's
+
+### Pricing Changes
+
+## Connections
+
+### Citations Across the Open Landscape
+
+# Puzzles
+
+The exploration above raises a number of questions -- under what conditions does the open availability of the monograph impact prices and sales? What are mediating factors -- does the length or subject of the monograph mediate sales effects? What are potential mechanisms at play?
+
+This exploration is limited by existing data. Each individual press has information on the sales, costs, and usage of the monographs they publish. If pooled, this data could answer potentially answer deeper questions about the economics and utility academic monographs, and could guide a transition to open access models.
+
+# About this Document
+
+This is a reproducible document. The source, along with necessary data is available here: <https://github.com/MIT-Informatics/monograph> . The code relies primarily on the [R]{.ul} language, the [Plot.ly]{.ul} graphics package, and open R libraries (especially [tidyverse]{.ul}, [i2dash]{.ul}, [htmlwidgets]{.ul}, and [crosstalk]{.ul} and Baker's [R Makefiles](https://www.jstatsoft.org/article/view/v094c01)). All references in this document are managed in [Zotero,]{.ul} The most straightforward way to examine and modify the source is to clone the module using [git]{.ul} and then load the project using [Rstudio]{.ul}.
+
+The authors describe contributions to this Essay using a standard taxonomy (see [\@allen2014]) Micah Altman provided the core formulation of the essay's goals and aims, and led the writing, methodology, data curation, and visualization. Chris Bourg and Sue Kriegsman contributed to conceptualization and provided review. CREOS research assistant Shelley Choi provided assistance with preliminary data visualization and software implementation.
+
+This work is Copyright 2020 Micah Altman, and is Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This work was conducted with support from the Center for Research and Equitable and Open Scholarship at the Massachusetts Institute of technology.
+
+# References
