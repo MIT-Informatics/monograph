@@ -10,8 +10,10 @@ isbn_tools_init <- function() {
   conda_install(packages="isbntools", pip=TRUE)
 }
 
-isbntools <-function() {
+load_isbntools <-function() {
   use_condaenv("isbntools-env")
   ret_fun <-import("isbntools")
   return(ret_fun)
 }
+
+isbntools<-load_isbntools()
