@@ -1,4 +1,4 @@
-# setup python environmenty to use isbntools library
+# setup python environment to use isbntools library
 #
 # see: https://pypi.org/project/isbntools/ 
 
@@ -12,7 +12,7 @@ isbn_tools_init <- function() {
 
 load_isbntools <-function() {
   use_condaenv("isbntools-env")
-  ret_fun <-import("isbntools")
+  ret_fun <-import("isbnlib")
   return(ret_fun)
 }
 
