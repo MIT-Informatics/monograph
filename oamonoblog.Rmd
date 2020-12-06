@@ -1,43 +1,74 @@
 ---
 title: "Exploring the Public Evidence on Open Access Monographs"
-output: html_document
 bibliography: oamonreferences.bib
+output: 
+  html_document: 
+    toc: true
+    toc_depth: 2
+    number_section: true
+    theme: journal
+    highlight: zenburn
+    code_folding: hide
+    toc_float: 
+        collapsed: true
+        smooth_scroll: true
 ---
 
-```{r, setup, include=FALSE}
-# core datascience
-require(tidyverse)
-require(magrittr)
+```{r, knitr_setup, include=FALSE}
+## options for this document
+doc_refresh_data <- FALSE
+doc_debug <- FALSE
+knitr::opts_chunk$set("message" = doc_debug)
+knitr::opts_chunk$set("warning" = doc_refresh_data)
+knitr::opts_chunk$set("tidy" = TRUE)
 
-# reading additional file formats
-require(readxl)
-require(haven)
 
-# debugging
-# require(tidylog) # additional logging
+## local cached paths
+doc_sample_pdf_path <- "oldmono.pdf"
+doc_sample_image_path <- "oldmono_first.png"
+```
 
-# visual analysis
-require(ggplot2)
-require(GGally) # extensions to ggplot
-require(gt) # well formatted tables
+```{css, css_setup, echo=FALSE}
+img
+{
+    display:block; 
+    float:none; 
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+}
+```
 
-# graph analysis
-require(DiagrammeR)
-require(tidygraph)
-require(igraph)
-require(ggraph)
+```{r, r_setup}
+## core datascience framework
+library(tidyverse)
+library(magrittr)
+if (doc_debug) {
+  require(tidylog)
+}
 
-# client-side interactive publishable graphics
-require(plotly)
-require(leaflet)
-require(crosstalk)
-require(htmlwidgets)
-require(highcharter)
-#require(i2dash)
-require(DT)
+## extensions for theming and presentation
+# require(GGally) # extensions to ggplot
+# require(gt) # well formatted tables
+library(ggthemes)
 
-#polish
-require(ggthemes)
+## client-side interactive  graphics
+library(plotly)
+library(DT)
+# require(leaflet)
+# require(crosstalk)
+# require(htmlwidgets)
+# require(DT)
+
+## reading additional file formats
+# require(readxl)
+# require(haven)
+
+## graph analysis
+# require(DiagrammeR)
+# require(tidygraph)
+# require(igraph)
+# require(ggraph)
 ```
 
 # **Exploring the Public Evidence on Open Access Monographs**
@@ -47,24 +78,46 @@ Micah Altman, CREOS Research Scientist
 *[Draft: 12/1/2020]*
 
 ```{r, doab_load, include=FALSE}
-base::source('./Public Data/DOAB/doabingest.R')
-DOABmeta.df <- doabFetch()
-KUbpc.df <- read_csv("Public Data/openapc-de/data/bpc.csv")
+library(tidyverse)
+library(magrittr)
+
+base::source("./Public Data/DOAB/doabingest.R")
+doab_df <- doabFetch()
+ku_df <- read_csv("Public Data/openapc-de/data/bpc.csv")
 ```
 
 # Introduction
 
 There is ongoing tension between the desire of scholars to share their work widely and openly, and the need to fund the infrastructure and labor of publishing. One place in which this tension is most evident is in the sale of scholarly monographs. While they are a only a small fraction of scholarly communications volume, market, and readership -- academic monographs continue to play an important role in the humanities and social sciences. They represent an important form of long-form scholarship -- not readily expressible through journal-length publications. And, as such, monograph publication through a university press forms a critical component of tenure evaluation -- sometimes independent of the extent to which the monograph itself is purchased, read, or cited. [@eve2014; @crossick2016]
 
-```{r include=FALSE}
-# Find oldest book
-# TODO: automatically extract first page image from PDF
+```{r, getmonoimage}
+# Capture image of first page of oldest open monograph
 
-oldbook.doi <- DOABmeta.df %>% arrange(`Year of publication`) %>% head(n=1L) 
+library(rvest)
 
+# find the oldest book in DOAB and extract its URL
+oldbook_url <- doab_df %>%
+  arrange(`Year of publication`) %>%
+  head(n = 1L) %>%
+  select(`Full text`) %>%
+  as.character()
+
+if (doc_refresh_data) {
+  # retrieve book page follow metdata embedded in webpage
+  require(rvest)
+  oldbook_pg <- read_html(oldbook_url)
+  pdf_url <- oldbook_pg %>%
+    html_nodes(xpath = '//meta[@name="citation_pdf_url"]') %>%
+    html_attr("content")
+
+  # retrieve book and extract first page as image
+  require(pdftools)
+  download.file(pdf_url, doc_sample_pdf_path)
+  pdf_convert(doc_sample_pdf_path, page = 1, dpi = 300, file = doc_sample_image_path)
+}
 ```
 
-![Die Mitschuldigen -- One of the Oldest OA Monographs](DieMitschuldigen.png){width="430"}
+![A Page from the Oldest Open Monograph](`r doc_sample_image_path`)
 
 ## Economic Pressures on Monograph Publishing
 
@@ -80,14 +133,16 @@ Open monograph publishing remains in its early stages. The [CREOS](https://libra
 
 In this blog post we look at the open data available on monograph publication, and use it to explore patterns and trends in open monograph publishing. This blog post takes the form of a guided, interactive, reproducible data analysis based on currently available public data.[^1] We aim for this exploration to inform libraries, publishers, and authors about the landscape, and prepare for future transitions to open access.
 
-[^1]: Since this blog takes the form of a fully replicable analysis, new versions will be released as the data sources it relies on are updated.
+[^1]: The source for the document is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd). Since this blog takes the form of a fully replicable analysis, new versions may be released as the data sources it relies on are updated.
 
 # Accessible Data on Open Monographs
 
-The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data. In the table below you can browse or edit this.
+The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data. In the table below you can browse a sample of titles:
 
-```{r, doab_run, echo=FALSE, warning=FALSE}
-datatable(head(DOABmeta.df,n=1000L), class = 'cell-border stripe',caption="Directory of Open Access Books - Catalog Example",options=list(pageLength=5), extensions="Responsive")
+```{r, doab_run}
+doab_df %>% 
+  head(n = 1000L) %>%
+  datatable(class = "cell-border stripe", caption = "Sample of DOAB Catalog", options = list(pageLength = 5), extensions = "Responsive")
 # TODO: address head/size
 ```
 
@@ -117,11 +172,17 @@ In addition there are a number of publicly accessible (not necessarily open) sou
 
 ### OA Monographs Year of Publication
 
-```{r message=FALSE, warning=FALSE, echo=FALSE}
-TMP.plot <- DOABmeta.df %>% group_by(`Year of publication`) %>% summarize(total=n()) %>% ggplot() + aes(x=`Year of publication`,y=`total`) + geom_bar(stat="identity") + geom_smooth() +
+```{r, timetrend}
+tmp_plot <- doab_df %>%
+  group_by(`Year of publication`) %>%
+  summarize(total = n()) %>%
+  ggplot() +
+  aes(x = `Year of publication`, y = `total`) +
+  geom_bar(stat = "identity") +
+  geom_smooth() +
   scale_color_fivethirtyeight() +
   theme_fivethirtyeight()
-ggplotly(TMP.plot)
+ggplotly(tmp_plot)
 ```
 
 ### When Monographs Become Open
@@ -144,7 +205,11 @@ This exploration is limited by existing data. Each individual press has informat
 
 # About this Document
 
-This is a reproducible document. The source, along with necessary data is available here: <https://github.com/MIT-Informatics/monograph> . The code relies primarily on the [R]{.ul} language, the [Plot.ly]{.ul} graphics package, and open R libraries (especially [tidyverse]{.ul}, [i2dash]{.ul}, [htmlwidgets]{.ul}, and [crosstalk]{.ul} and Baker's [R Makefiles](https://www.jstatsoft.org/article/view/v094c01)). All references in this document are managed in [Zotero,]{.ul} The most straightforward way to examine and modify the source is to clone the module using [git]{.ul} and then load the project using [Rstudio]{.ul}.
+This is a reproducible document. The most straightforward way to examine and modify the source is to clone the module using [git]{.ul} and then load the project using [Rstudio]{.ul}. The source is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd), and follows tidyverse style guidelines (using [styler]{.ul} and [lintr]{.ul} for conformance checking).
+
+This analysis relies primarily on the [R]{.ul} language, with [python]{.ul} for the [ISBBNtools]{.ul} library. We make extensive use of the [Plot.ly]{.ul} graphics package, and open R libraries (especially [tidyverse]{.ul}, [i2dash]{.ul}, [htmlwidgets]{.ul}, and [crosstalk]{.ul} and [Baker's R Makefiles]{.ul}).
+
+All references in this document are managed in [Zotero,]{.ul} We use tidyverse style guidelines
 
 The authors describe contributions to this Essay using a standard taxonomy (see [\@allen2014]) Micah Altman provided the core formulation of the essay's goals and aims, and led the writing, methodology, data curation, and visualization. Chris Bourg and Sue Kriegsman contributed to conceptualization and provided review. CREOS research assistant Shelley Choi provided assistance with preliminary data visualization and software implementation.
 

@@ -1,23 +1,17 @@
-getBookMeta<-function(ids=NULL,idtype=c("ISBN13"), service=c("openLibrary"),apikeys=NULL) {
-  if (!isTRUE(validateSyntax(ids,service))) {
-    warning("Invalid id syntax")
-    return(NULL)
-  }
-  
-  # TODO: retrieving and merging across multiple services
-  
+# setup python environmenty to use isbntools library
+#
+# see: https://pypi.org/project/isbntools/ 
+
+library(reticulate)
+
+isbn_tools_init <- function() {
+  conda_create("isbntools-env")
+  conda_install(packages="r-reticulate")
+  conda_install(packages="isbntools", pip=TRUE)
 }
 
-getItems<-function(ids,service) {
-  # extend to multiple services
-  if (service != "openLibrary") {
-    warning("service not supported")
-    return(NULL)
-  }
-  
-}
-
-validateSyntax<-function(ids,idtype) {
-  #TODO: STUB
-  return(TRUE)
+isbntools <-function() {
+  use_condaenv("isbntools-env")
+  ret_fun <-import("isbntools")
+  return(ret_fun)
 }
