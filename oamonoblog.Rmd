@@ -19,12 +19,10 @@ output:
 doc_refresh_data <- FALSE
 doc_debug <- FALSE
 knitr::opts_chunk$set("message" = doc_debug)
-knitr::opts_chunk$set("warning" = doc_refresh_data)
-knitr::opts_chunk$set("tidy" = TRUE)
-
+knitr::opts_chunk$set("warning" = doc_debug)
+knitr::opts_chunk$set("tidy" = FALSE) # already tidyed using stylr
 
 ## local cached paths
-doc_sample_pdf_path <- "oldmono.pdf"
 doc_sample_image_path <- "oldmono_first.png"
 ```
 
@@ -36,86 +34,27 @@ img
     margin-left:auto;
     margin-right:auto;
     width:80%;
+    text-align:center;
+}
+.caption
+{
+    display:block; 
+    float:none; 
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    text-align:center;
 }
 ```
-
-```{r, r_setup}
-## core datascience framework
-library(tidyverse)
-library(magrittr)
-if (doc_debug) {
-  require(tidylog)
-}
-
-## extensions for theming and presentation
-# require(GGally) # extensions to ggplot
-# require(gt) # well formatted tables
-library(ggthemes)
-
-## client-side interactive  graphics
-library(plotly)
-library(DT)
-# require(leaflet)
-# require(crosstalk)
-# require(htmlwidgets)
-# require(DT)
-
-## reading additional file formats
-# require(readxl)
-# require(haven)
-
-## graph analysis
-# require(DiagrammeR)
-# require(tidygraph)
-# require(igraph)
-# require(ggraph)
-```
-
 # **Exploring the Public Evidence on Open Access Monographs**
 
 Micah Altman, CREOS Research Scientist
 
 *[Draft: 12/1/2020]*
 
-```{r, doab_load, include=FALSE}
-library(tidyverse)
-library(magrittr)
-
-base::source("./Public Data/DOAB/doabingest.R")
-doab_df <- doabFetch()
-ku_df <- read_csv("Public Data/openapc-de/data/bpc.csv")
-```
-
 # Introduction
 
 There is ongoing tension between the desire of scholars to share their work widely and openly, and the need to fund the infrastructure and labor of publishing. One place in which this tension is most evident is in the sale of scholarly monographs. While they are a only a small fraction of scholarly communications volume, market, and readership -- academic monographs continue to play an important role in the humanities and social sciences. They represent an important form of long-form scholarship -- not readily expressible through journal-length publications. And, as such, monograph publication through a university press forms a critical component of tenure evaluation -- sometimes independent of the extent to which the monograph itself is purchased, read, or cited. [@eve2014; @crossick2016]
-
-```{r, getmonoimage}
-# Capture image of first page of oldest open monograph
-
-library(rvest)
-
-# find the oldest book in DOAB and extract its URL
-oldbook_url <- doab_df %>%
-  arrange(`Year of publication`) %>%
-  head(n = 1L) %>%
-  select(`Full text`) %>%
-  as.character()
-
-if (doc_refresh_data) {
-  # retrieve book page follow metdata embedded in webpage
-  require(rvest)
-  oldbook_pg <- read_html(oldbook_url)
-  pdf_url <- oldbook_pg %>%
-    html_nodes(xpath = '//meta[@name="citation_pdf_url"]') %>%
-    html_attr("content")
-
-  # retrieve book and extract first page as image
-  require(pdftools)
-  download.file(pdf_url, doc_sample_pdf_path)
-  pdf_convert(doc_sample_pdf_path, page = 1, dpi = 300, file = doc_sample_image_path)
-}
-```
 
 ![A Page from the Oldest Open Monograph](`r doc_sample_image_path`)
 
@@ -138,23 +77,81 @@ In this blog post we look at the open data available on monograph publication, a
 # Accessible Data on Open Monographs
 
 The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data. In the table below you can browse a sample of titles:
+```{r, r_setup}
+# core libraries for tidy data science in R
+library(tidyverse)
+library(magrittr)
+if (doc_debug) {
+  require(tidylog)
+}
 
-```{r, doab_run}
-doab_df %>% 
-  head(n = 1000L) %>%
-  datatable(class = "cell-border stripe", caption = "Sample of DOAB Catalog", options = list(pageLength = 5), extensions = "Responsive")
-# TODO: address head/size
+## the details of data retrieval in a separate module, included in our repository
+## mono_load_* loads the named data as a R data frame from cache in github
+## mono_fetch_* routines are used to retrieve a new version of data from canonical source
+
+source("fetch_data.R")
+
+## ISBN normalization and retrieval of open descriptive metadata based on 
+## these are implemented through the isbntools python module
+## we install these and provide a simple R wrapper (based on reticulate)
+source("isbntools.R")
+
+if (doc_refresh_data) {
+  isbn_tools_init()
+  mono_fetch_doab()
+  mono_fetch_oapc()
+  mono_fetch_hathi()
+}
+doab_df <- mono_load_doab()
+oapc_df <- mono_load_oapc()
 ```
 
-Two other data sources are designed to provide additional information[^2] specifically about open access monograph titles:
+```{r, doab_run}
+## interactive sample data table
+library(DT)
+doab_df %>% 
+  head(n = 1000L) %>%
+  datatable(class = "cell-border stripe", caption = "Sample of DOAB Catalog",
+            options = list(pageLength = 5), extensions = "Responsive")
+```
 
-[^2]: Note that additional care is necessary when combining multiple data sources about monographs. Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential (ISBNtools is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number). instead of ISBN. Generally the correspondence across identifiers must be resolved using an index -- while is a partial mapping between ASIN's and ISBN's -- ASIN's for printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
+The DOAB data provides links to the open monograph itself. The monograph content content is thus potentially available for harvesting, analysis, etc -- although some web navigation may be required. (The code below provides an example, which was used to produce the figure above.)
+
+```{r, getmonoimage}
+### Capture image of first page of oldest open monograph
+library(rvest)
+
+## find the oldest book in DOAB and extract its URL
+oldbook_url <- doab_df %>%
+  arrange(`Year of publication`) %>%
+  head(n = 1L) %>%
+  select(`Full text`) %>%
+  as.character()
+
+if (doc_refresh_data) {
+  ## retrieve book page follow metdata embedded in webpage
+  require(rvest)
+  oldbook_pg <- read_html(oldbook_url)
+  pdf_url <- oldbook_pg %>%
+    html_nodes(xpath = '//meta[@name="citation_pdf_url"]') %>%
+    html_attr("content")
+
+  ## retrieve book and extract first page as image
+  require(pdftools)
+  pdf_tmpfile <- tempfile(fileext=".pdf")
+
+  download.file(pdf_url, pdf_tmpfile)
+  pdf_convert(pdf_tmpfile, page = 1, dpi = 300, file = doc_sample_image_path)
+}
+```
+
+Two other data sources are designed to provide additional information specifically about open access monograph titles:
 
 -   The [OpenAPC](https://www.intact-project.org/openapc/) project provides title-level data on processing charges, supplied by a number of consortial initiatives.
 
--   [OpenBookPublishers](https://www.openbookpublishers.com/section/92/1) provides title-level usage data on the titles it publishes. [^3]
+-   [OpenBookPublishers](https://www.openbookpublishers.com/section/92/1) provides title-level usage data on the titles it publishes. [^2]
 
-[^3]: There are two other potential general usage sources outside of data collected by individual publishers and platforms: First, [oaopen.org](https://oapen.org/librarians/13678551-services-libraries) (in collaboration with IRUS-UK) collects counter-compliant title-level usage data for the monographs disseminated through its platforms, however this data is restricted to consortium members. Second, the Mellon-supported [Data Trust for Open Access E-Book Usage](https://educopia.org/data_trust/) aims to collect and aggregate title-level information for community use -- however the project is in its early stages, and no data has yet been made available.
+[^2]: Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential (ISBNtools is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number). instead of ISBN. Generally the correspondence across identifiers must be resolved using an index -- while is a partial mapping between ASIN's and ISBN's -- ASIN's for printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
 
 In addition there are a number of publicly accessible (not necessarily open) sources of metadata about large collections books generally. The most notable comprise:
 
@@ -166,13 +163,66 @@ In addition there are a number of publicly accessible (not necessarily open) sou
 
 -   *Prices:* Amazon provides [pricing API's](https://webservices.amazon.com/paapi5/documentation/use-cases/buying-price.html) that can be applied to monograph titles, and a number of third parties track Amazon price histories. This data is available under restrictive terms, and in small quantities.
 
+These sources can be merged using the ISBN key, and care but some care is required to standardize the identifier, dates and other field.[^3] (This is illustrated in the code below.)
+
+[^3]: Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential (ISBNtools is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number). instead of ISBN. Generally the correspondence across identifiers must be resolved using an index -- while is a partial mapping between ASIN's and ISBN's -- ASIN's for printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
+
+```{r, doab_clean}
+### Data Cleaning 
+## address basic issues with:
+## - date standardization 
+## - ISBN list packing
+## - ISBN format standardization 
+## - non-monograph entries
+
+library(lubridate)
+
+## DOAB data cleaning 
+doab_df <- mono_load_doab()
+doab_df %<>%
+  filter(`Type` == "book") %>% 
+  mutate(
+    DT_PUBLISHED_YR = year(parse_date_time(`Year of publication`, "y")),
+    DT_ADDED_YR = year(parse_date_time(`Added on date`, "ymd HMS")),
+      LS_ID_ISBNS = str_split(
+           str_replace_all(ISBN, "[^0-9\\s]X*", ""),"\\s+")
+     )  %>%
+  mutate(LS_ID_ISBNS =lapply(LS_ID_ISBNS,isbntools,meth="ean13"))
+```
 # Explorations
 
-## Trends
+License, Language, Publisher, Gender
+## Gender
+```{r, doab_gender}
+ibrary(gender)
+library(genderdata)
+# NOTE, must use devtools:: install_github("ropensci/genderdata") for all methods to function
+library(humaniformat)        )
 
-### OA Monographs Year of Publication
+doab_df %<>% mutate(LS_NM_AUTHORS=str_split(`Authors`,";"))
 
+# parse_names fails on empty strings, wrap it# gender can fail on genderize method
+safe_first_name <- possibly(first_name, otherwise="")
+safe_format_reverse <- possibly(format_reverse, otherwise="")
+safe_gender <- possibly(gender, otherwise=list(gender=""))
+
+doab_df %<>% rowwise() %>% mutate(LS_NM_AUTHORS_R = list(safe_format_reverse (str_squish(`LS_NM_AUTHORS`))))
+
+doab_df %<>% rowwise() %>% mutate(LS_NM_AUTHOR_FIRST=list(safe_first_name(`LS_NM_AUTHORS_R`)))
+
+doab_df %<>% ungroup() %>% rowwise() %>% mutate(LS_CAT_GENDERS = list(safe_gender(`LS_NM_AUTHOR_FIRST`,method="kantrow")[["gender"]]))
+
+doab_df %<>% rowwise() %>% mutate(
+  N_GENDER_MALE=sum(LS_CAT_GENDERS=="male",na.rm=TRUE),  N_GENDER_FEMALE=sum(LS_CAT_GENDERS=="female",na.rm=TRUE),
+  )
+
+```
+
+
+Year of Pub, Year of Release, Gender Ratio
 ```{r, timetrend}
+library(plotly)
+library(ggthemes)
 tmp_plot <- doab_df %>%
   group_by(`Year of publication`) %>%
   summarize(total = n()) %>%
@@ -184,18 +234,32 @@ tmp_plot <- doab_df %>%
   theme_fivethirtyeight()
 ggplotly(tmp_plot)
 ```
-
 ### When Monographs Become Open
 
 ## Patterns
 
-### Publisher Revenues from APC's
+### APCs
 
-### Pricing Changes
+```{r}
+library(lubridate)
+## oapc cleaning
+oapc_df <- mono_load_oapc()
+oapc_df %<>%
+  mutate(
+    DT_ADDED_YR = year(parse_date_time(`period`, "y")),
+    ID_ISBN_PRINT = lapply(`isbn_print`, isbntools, meth="ean13"),
+    ID_ISBN_MAIN = sapply(`isbn`, isbntools, meth="ean13"), 
+    ID_DOI_ISBNA =  lapply(`isbn`, isbntools, meth="doi"), 
+    )
+oapc_df %<>% 
+  rowwise()%>%
+  mutate(LS_ID_ISBNS = list(
+    setdiff(unique(c(`ID_ISBN_PRINT`,`ID_ISBN_MAIN`)), "")
+            ))
+```
 
-## Connections
+# Pricing Changes
 
-### Citations Across the Open Landscape
 
 # Puzzles
 
@@ -207,7 +271,7 @@ This exploration is limited by existing data. Each individual press has informat
 
 This is a reproducible document. The most straightforward way to examine and modify the source is to clone the module using [git]{.ul} and then load the project using [Rstudio]{.ul}. The source is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd), and follows tidyverse style guidelines (using [styler]{.ul} and [lintr]{.ul} for conformance checking).
 
-This analysis relies primarily on the [R]{.ul} language, with [python]{.ul} for the [ISBBNtools]{.ul} library. We make extensive use of the [Plot.ly]{.ul} graphics package, and open R libraries (especially [tidyverse]{.ul}, [i2dash]{.ul}, [htmlwidgets]{.ul}, and [crosstalk]{.ul} and [Baker's R Makefiles]{.ul}).
+This analysis relies primarily on the [R]{.ul} language, with [python]{.ul} for the [ISBBNtools]{.ul} library. We make extensive use of the [Plot.ly]{.ul} graphics package, and open R libraries (especially [tidyverse]{.ul}, [gender]{.ul}, [htmlwidgets]{.ul}, and [crosstalk]{.ul} and [Baker's R Makefiles]{.ul}).
 
 All references in this document are managed in [Zotero,]{.ul} We use tidyverse style guidelines
 

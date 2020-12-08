@@ -2,6 +2,7 @@
 #
 # see: https://pypi.org/project/isbntools/ 
 
+library(tidyverse)
 library(reticulate)
 
 isbn_tools_init <- function() {
@@ -16,4 +17,12 @@ load_isbntools <-function() {
   return(ret_fun)
 }
 
-isbntools<-load_isbntools()
+isbntools <- local ({
+  isbntools_ <- load_isbntools()
+  xfun <- function (meth,x,...) {
+  return( 
+    sapply(x, isbntools_[as.character(meth)], ...,
+           simplify=TRUE, USE.NAMES=FALSE )
+    )
+  }
+})
