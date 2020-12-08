@@ -19,10 +19,15 @@ load_isbntools <-function() {
 
 isbntools <- local ({
   isbntools_ <- load_isbntools()
-  xfun <- function (meth,x,...) {
-  return( 
-    sapply(x, isbntools_[as.character(meth)], ...,
-           simplify=TRUE, USE.NAMES=FALSE )
+ 
+  isbntools_fun <- function(meth,x,...) {
+    isbntools_[as.character(meth)](x,...)
+  }
+  safe_isbntools_fun <- possibly(isbntools_fun, otherwise=NA)
+  safe_isbntools_list_fun <- function (meth,xlist,...) {
+    return( 
+      sapply(xlist, safe_isbntools_fun, meth=meth, ...,
+             simplify=TRUE, USE.NAMES=FALSE )
     )
   }
-})
+  })

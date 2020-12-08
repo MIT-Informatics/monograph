@@ -24,6 +24,7 @@ knitr::opts_chunk$set("tidy" = FALSE) # already tidyed using stylr
 
 ## local cached paths
 doc_sample_image_path <- "oldmono_first.png"
+doc_sample_thumbnail_path <- "newcover.jpeg"
 ```
 
 ```{css, css_setup, echo=FALSE}
@@ -46,6 +47,7 @@ img
     text-align:center;
 }
 ```
+
 # **Exploring the Public Evidence on Open Access Monographs**
 
 Micah Altman, CREOS Research Scientist
@@ -56,7 +58,7 @@ Micah Altman, CREOS Research Scientist
 
 There is ongoing tension between the desire of scholars to share their work widely and openly, and the need to fund the infrastructure and labor of publishing. One place in which this tension is most evident is in the sale of scholarly monographs. While they are a only a small fraction of scholarly communications volume, market, and readership -- academic monographs continue to play an important role in the humanities and social sciences. They represent an important form of long-form scholarship -- not readily expressible through journal-length publications. And, as such, monograph publication through a university press forms a critical component of tenure evaluation -- sometimes independent of the extent to which the monograph itself is purchased, read, or cited. [@eve2014; @crossick2016]
 
-![A Page from the Oldest Open Monograph](`r doc_sample_image_path`)
+![First Page from the Oldest Open Monograph](oldmono_first.png){width="360"}
 
 ## Economic Pressures on Monograph Publishing
 
@@ -76,7 +78,8 @@ In this blog post we look at the open data available on monograph publication, a
 
 # Accessible Data on Open Monographs
 
-The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data. In the table below you can browse a sample of titles:
+The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data.
+
 ```{r, r_setup}
 # core libraries for tidy data science in R
 library(tidyverse)
@@ -106,16 +109,26 @@ doab_df <- mono_load_doab()
 oapc_df <- mono_load_oapc()
 ```
 
-```{r, doab_run}
-## interactive sample data table
-library(DT)
-doab_df %>% 
-  head(n = 1000L) %>%
-  datatable(class = "cell-border stripe", caption = "Sample of DOAB Catalog",
-            options = list(pageLength = 5), extensions = "Responsive")
+The unique identifiers in the DOAB can be used to link it with other data sources.As an example, we can use the ISBN as a key to retrieve information from [Google Books]{.ul}. For example, we can retrieve and display the cover of the most recently added title:
+
+```{r}
+latest_book_isbns <- doab_df %>%
+  arrange(`Added on date`) %>% 
+  ungroup %>% slice_tail() %>% 
+  select(`ISBN`) %>% 
+  str_split(" ") %>% unlist() %>% as.character() 
+
+if (doc_refresh_data) {
+  cover_uri <- isbntools("cover",latest_book_isbns[1])[1,]
+  # increase zoom level
+  cover_uri %<>% str_replace("zoom=5","zoom=10")
+  download.file(cover_uri, doc_sample_thumbnail_path )
+}
 ```
 
-The DOAB data provides links to the open monograph itself. The monograph content content is thus potentially available for harvesting, analysis, etc -- although some web navigation may be required. (The code below provides an example, which was used to produce the figure above.)
+![Cover of Latest Monograph, Retrieved from Google Books](newcover.jpeg){width="310"}
+
+The DOAB data also provides links to the text of open monograph itself. The monograph content content is thus potentially available for harvesting, analysis, and integration with other sources. In practice, however, retrieving the content through DOAB may require some additional web scraping, as demonstrated below. For books also available in [Hathitrust]{.ul} obtaining the content through their apis is more reliable and straightforward.
 
 ```{r, getmonoimage}
 ### Capture image of first page of oldest open monograph
@@ -149,9 +162,7 @@ Two other data sources are designed to provide additional information specifical
 
 -   The [OpenAPC](https://www.intact-project.org/openapc/) project provides title-level data on processing charges, supplied by a number of consortial initiatives.
 
--   [OpenBookPublishers](https://www.openbookpublishers.com/section/92/1) provides title-level usage data on the titles it publishes. [^2]
-
-[^2]: Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential (ISBNtools is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number). instead of ISBN. Generally the correspondence across identifiers must be resolved using an index -- while is a partial mapping between ASIN's and ISBN's -- ASIN's for printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
+-   [OpenBookPublishers](https://www.openbookpublishers.com/section/92/1) provides title-level usage data on the titles it publishes.
 
 In addition there are a number of publicly accessible (not necessarily open) sources of metadata about large collections books generally. The most notable comprise:
 
@@ -163,9 +174,24 @@ In addition there are a number of publicly accessible (not necessarily open) sou
 
 -   *Prices:* Amazon provides [pricing API's](https://webservices.amazon.com/paapi5/documentation/use-cases/buying-price.html) that can be applied to monograph titles, and a number of third parties track Amazon price histories. This data is available under restrictive terms, and in small quantities.
 
-These sources can be merged using the ISBN key, and care but some care is required to standardize the identifier, dates and other field.[^3] (This is illustrated in the code below.)
+# Explorations
 
-[^3]: Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential (ISBNtools is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number). instead of ISBN. Generally the correspondence across identifiers must be resolved using an index -- while is a partial mapping between ASIN's and ISBN's -- ASIN's for printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
+In the table below you can browse a sample of titles:
+
+```{r, doab_run}
+## interactive sample data table
+library(DT)
+doab_df %>% 
+  ungroup() %>% slice_head(n = 1000) %>%
+  datatable(class = "cell-border stripe", caption = "Sample of DOAB Catalog",
+            options = list(pageLength = 5), extensions = "Responsive")
+```
+
+## Dirty Data: Lather, Rinse, Repeat.
+
+After browsing the DOAB sample for a short while, you will likely notice glitches There are many,including missing fields, typos; undocumented and inconsistent formats for names, dates, and identifiers; multiple values packed into a single field in undocumented and inconsistent ways. These 'dirty data' issues are not unique to DOAB, and are in fact, ubiquitous across the data sources we examined. For further data integration, at mininum, standardization of date and ISBN fields is required, as illustrated in the code below. [^2]
+
+[^2]: Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential ([ISBNtools]{.ul} is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number),instead of an ISBN. Generally the correspondence across identifiers must be resolved using an index: For DOI's there is a programatical mapping in theory to an ISBN13, but this often does not work in practice; and ASIN's printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
 
 ```{r, doab_clean}
 ### Data Cleaning 
@@ -177,8 +203,7 @@ These sources can be merged using the ISBN key, and care but some care is requir
 
 library(lubridate)
 
-## DOAB data cleaning 
-doab_df <- mono_load_doab()
+## DOAB  basic data cleaning 
 doab_df %<>%
   filter(`Type` == "book") %>% 
   mutate(
@@ -189,15 +214,42 @@ doab_df %<>%
      )  %>%
   mutate(LS_ID_ISBNS =lapply(LS_ID_ISBNS,isbntools,meth="ean13"))
 ```
-# Explorations
 
-License, Language, Publisher, Gender
-## Gender
+## Looking at Change over Time
+
+Following a basic cleaning, we can use the DOAB to examine broad trends and patterns in open monograph publishing. For example, consider this summary of open monograph publication volume over time:
+
+```{r, timetrend}
+library(plotly)
+library(ggthemes)
+tmp_plot <- doab_df %>%
+  group_by(`DT_ADDED_YR`) %>%
+  summarize(total = n()) %>%
+  ggplot() +
+  aes(x = `DT_ADDED_YR` , y = `total`) +
+  geom_bar(stat = "identity") +
+  geom_smooth() +
+  scale_color_fivethirtyeight() +
+  scale_x_continuous( breaks = c(2010,2012,2014,2016,2018,2020)) +
+  theme_fivethirtyeight()
+ggplotly(tmp_plot)
+```
+
+From this longitudinal overview, we can see that open monograph publishing is in its very early stages. Volume was quite small until five years ago, but has rapidly accelerated since then. However, progress is uneven, and after a record 2019 volume, there is a sharp downturn so far this year (noting that data for this year is not final) -- possibly due to the pandemic.
+
+## Seeking Inclusion!
+
+Since CREOS seeks apply evidence to understand how disparate communities can participate in scholarship with minimal bias or barriers, it is of particular interest to understand the communities of authors that are currently included in open monograph publishing. The DOAB database includes additional information about each title, such as the year of original publication, names of authors, and subject fields (and we can add to that through linking to other sources through the ISBN) -- however it contains no direct information about the characteristics of authors.
+
+We can do better. As an early step, we can impute gender based on author names, and explore the inclusion of works authored by men and women over time.[^3]
+
+[^3]: These imputations should be considered a very preliminary estimate, created for the purpose of promoting general discussion, potential issue spotting, and hypothesis generation. The process of imputation reflects only point estimates, and does not reflect uncertainty from several sources: including omissions in the original data sources, heuristic name extraction, and uncertainty in name to gender assignment. Further, the analysis treats gender as a binary category, and elides questions of adjusting for multiple authors.
+
 ```{r, doab_gender}
-ibrary(gender)
+library(gender)
 library(genderdata)
 # NOTE, must use devtools:: install_github("ropensci/genderdata") for all methods to function
-library(humaniformat)        )
+library(humaniformat)        
 
 doab_df %<>% mutate(LS_NM_AUTHORS=str_split(`Authors`,";"))
 
@@ -215,30 +267,30 @@ doab_df %<>% ungroup() %>% rowwise() %>% mutate(LS_CAT_GENDERS = list(safe_gende
 doab_df %<>% rowwise() %>% mutate(
   N_GENDER_MALE=sum(LS_CAT_GENDERS=="male",na.rm=TRUE),  N_GENDER_FEMALE=sum(LS_CAT_GENDERS=="female",na.rm=TRUE),
   )
-
 ```
 
-
-Year of Pub, Year of Release, Gender Ratio
-```{r, timetrend}
-library(plotly)
-library(ggthemes)
-tmp_plot <- doab_df %>%
-  group_by(`Year of publication`) %>%
-  summarize(total = n()) %>%
-  ggplot() +
-  aes(x = `Year of publication`, y = `total`) +
-  geom_bar(stat = "identity") +
-  geom_smooth() +
-  scale_color_fivethirtyeight() +
-  theme_fivethirtyeight()
-ggplotly(tmp_plot)
+```{r, pivotgender}
+library(rpivotTable)
+doab_pivot_df <- doab_df %>% transmute (
+  'Publisher' = `Publisher`,
+  'Opened Year' = `DT_ADDED_YR`,
+  'Any Female Authors' = `N_GENDER_FEMALE`>0,
+  'Number of Female Authors' = `N_GENDER_FEMALE`
+)
+doab_pivot_df %>% 
+  rpivotTable(rows = "Any Female Authors", cols="Opened Year", vals = "Female Authors", aggregatorName = "Count as Fraction of Columns", rendererName = "Table Barchart"
+              )
 ```
-### When Monographs Become Open
 
-## Patterns
+This preliminary estimate indicates that roughly thirty percent of open access monographs have at least one female author. And this proportion remains roughly steady over time. As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) this suggest a need to evaluate systemic bias in who is included in open monograph publishing.[^4]
 
-### APCs
+[^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does noty imply that bias in OA, if any, is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established.
+
+## Follow the Money?
+
+Business and economic models will need to evolve in order for monograph publishing to continue. The available data provides some hints (but only hints) on the economics of OA monograph production. The most comprehensive data fully-open data is provided through the OAPC project, and records book processing charges for the major consortial monograph purchasing initiatives.
+
+Estimates of cost of producing monographs vary considerably, the most extensive study to date, estimated a range of average costs of approximately thirty to forty thousand dollars per title. [@maron2016]
 
 ```{r}
 library(lubridate)
@@ -258,10 +310,7 @@ oapc_df %<>%
             ))
 ```
 
-# Pricing Changes
-
-
-# Puzzles
+# Future Puzzles ...
 
 The exploration above raises a number of questions -- under what conditions does the open availability of the monograph impact prices and sales? What are mediating factors -- does the length or subject of the monograph mediate sales effects? What are potential mechanisms at play?
 
