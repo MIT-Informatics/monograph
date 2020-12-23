@@ -1,6 +1,15 @@
 ---
 title: "Exploring the Public Evidence on Open Access Monographs"
 bibliography: oamonreferences.bib
+description: Observations on the state of open monograph data -- based on available publication data. 
+author:
+  - name: Micah Altman
+    url: https://micahaltman.com
+    affiliation: Center for Research on Equitable and Open Scholarshop
+    affiliation_url: https://libraries.mit.edu/creos/
+    orcid_id: 0000-0001-7382-6960
+date: "`r Sys.Date()`"
+
 output: 
   html_document: 
     toc: true
@@ -13,7 +22,6 @@ output:
         collapsed: true
         smooth_scroll: true
 ---
-
 ```{r, knitr_setup, include=FALSE}
 ## options for this document
 doc_refresh_data <- FALSE
@@ -45,6 +53,10 @@ img
     margin-right:auto;
     width:80%;
     text-align:center;
+}
+aside {
+    float: right;
+    color: blue;
 }
 ```
 
@@ -109,7 +121,7 @@ doab_df <- mono_load_doab()
 oapc_df <- mono_load_oapc()
 ```
 
-The unique identifiers in the DOAB can be used to link it with other data sources.As an example, we can use the ISBN as a key to retrieve information from [Google Books]{.ul}. For example, we can retrieve and display the cover of the most recently added title:
+The unique identifiers in the DOAB can be used to link it with other data sources. As an example, we can use the ISBN as a key to retrieve information from [Google Books]{.ul}. For example, we can retrieve and display the cover of the most recently added title:
 
 ```{r}
 latest_book_isbns <- doab_df %>%
@@ -268,7 +280,6 @@ doab_df %<>% rowwise() %>% mutate(
   N_GENDER_MALE=sum(LS_CAT_GENDERS=="male",na.rm=TRUE),  N_GENDER_FEMALE=sum(LS_CAT_GENDERS=="female",na.rm=TRUE),
   )
 ```
-
 ```{r, pivotgender}
 library(rpivotTable)
 doab_pivot_df <- doab_df %>% transmute (
@@ -281,7 +292,6 @@ doab_pivot_df %>%
   rpivotTable(rows = "Any Female Authors", cols="Opened Year", vals = "Female Authors", aggregatorName = "Count as Fraction of Columns", rendererName = "Table Barchart"
               )
 ```
-
 This preliminary estimate indicates that roughly thirty percent of open access monographs have at least one female author. And this proportion remains roughly steady over time. As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) this suggest a need to evaluate systemic bias in who is included in open monograph publishing.[^4]
 
 [^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does noty imply that bias in OA, if any, is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established.
@@ -331,11 +341,7 @@ rev_plot <- publisher_df %>%
   coord_flip()
 ggplotly(rev_plot)
 ```
-
-
 Estimates of cost of producing monographs vary considerably, the most extensive study to date, estimated a range of average costs of approximately thirty to forty thousand dollars per title. [@maron2016] What does the OAPC data show?
-
-
 ```{r  }
 library(plotly)
 library(crosstalk)
@@ -348,6 +354,7 @@ ggplotly(fees_plot)
 
 ```
 The most typical book charges in the data are approximately two thosand euros  and  ten thousand euros for converted-to-open and published-as-open monographs (respectively). These modes and the overall range is  substantially under the range that would be expected from prior surveys. [^5]
+
 [^5]: Note that the BPC charge does not necessarily reflect the entire cost of publication. However, the consortial initiatives included in the data above aim for the BPC to recover the costs of publication for born open materials. So the range of BPC charges should include the range of publication costs.
 
 # Future Puzzles ...
@@ -366,10 +373,11 @@ All references in this document are managed in [Zotero,]{.ul} We use tidyverse s
 
 The authors describe contributions to this Essay using a standard taxonomy (see [\@allen2014]) Micah Altman provided the core formulation of the essay's goals and aims, and led the writing, methodology, data curation, and visualization. Chris Bourg and Sue Kriegsman contributed to conceptualization and provided review. CREOS research assistant Shelley Choi provided assistance with preliminary data visualization and software implementation.
 
-This work is Copyright 2020 Micah Altman, and is Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+<aside>
+This work is Copyright 2020 Massachusetts Institute of Technology, and is Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 This work was conducted with support from the Center for Research and Equitable and Open Scholarship at the Massachusetts Institute of technology.
-
+</aside>
 # References
