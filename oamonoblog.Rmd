@@ -9,6 +9,17 @@ author:
     affiliation_url: https://libraries.mit.edu/creos/
     orcid_id: 0000-0001-7382-6960
 date: "`r Sys.Date()`"
+params:   
+  doc_refresh_data:   
+    value: FALSE   
+    choices:   
+      - TRUE   
+      - FALSE 
+  doc_debug:   
+    value: FALSE   
+    choices:   
+      - TRUE   
+      - FALSE 
 
 output: 
   html_document: 
@@ -18,14 +29,17 @@ output:
     theme: journal
     highlight: zenburn
     code_folding: hide
+    includes:
+      in_header: "header.html" 
     toc_float: 
         collapsed: true
         smooth_scroll: true
 ---
+
 ```{r, knitr_setup, include=FALSE}
 ## options for this document
-doc_refresh_data <- FALSE
-doc_debug <- FALSE
+doc_debug <- params$doc_debug
+doc_refresh_data <- params$doc_refresh_data
 knitr::opts_chunk$set("message" = doc_debug)
 knitr::opts_chunk$set("warning" = doc_debug)
 knitr::opts_chunk$set("tidy" = FALSE) # already tidyed using stylr
@@ -36,6 +50,10 @@ doc_sample_thumbnail_path <- "newcover.jpeg"
 ```
 
 ```{css, css_setup, echo=FALSE}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+body {
+  font-family: 'Libre Baskerville', serif;
+}
 img
 {
     display:block; 
@@ -57,6 +75,21 @@ img
 aside {
     float: right;
     color: blue;
+}
+
+/* aside mod from tufte.css but remapped to aside element */
+
+aside {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
 }
 ```
 
@@ -280,6 +313,7 @@ doab_df %<>% rowwise() %>% mutate(
   N_GENDER_MALE=sum(LS_CAT_GENDERS=="male",na.rm=TRUE),  N_GENDER_FEMALE=sum(LS_CAT_GENDERS=="female",na.rm=TRUE),
   )
 ```
+
 ```{r, pivotgender}
 library(rpivotTable)
 doab_pivot_df <- doab_df %>% transmute (
@@ -292,6 +326,7 @@ doab_pivot_df %>%
   rpivotTable(rows = "Any Female Authors", cols="Opened Year", vals = "Female Authors", aggregatorName = "Count as Fraction of Columns", rendererName = "Table Barchart"
               )
 ```
+
 This preliminary estimate indicates that roughly thirty percent of open access monographs have at least one female author. And this proportion remains roughly steady over time. As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) this suggest a need to evaluate systemic bias in who is included in open monograph publishing.[^4]
 
 [^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does noty imply that bias in OA, if any, is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established.
@@ -301,6 +336,7 @@ This preliminary estimate indicates that roughly thirty percent of open access m
 Business and economic models will need to evolve in order for monograph publishing to continue. The available data provides some hints (but only hints) on the economics of OA monograph production. The most comprehensive data fully-open data is provided through the OAPC project, and records book processing charges for the major consortial monograph purchasing initiatives.
 
 We can use this data to look at fee-based revenue for presses participating in consortial open-monograph publishing arrangementgs. The most 'profitable' publishers are shown below:
+
 ```{r}
 library(lubridate)
 ## oapc cleaning
@@ -318,6 +354,7 @@ oapc_df %<>%
     setdiff(unique(c(`ID_ISBN_PRINT`,`ID_ISBN_MAIN`)), "")
             ))
 ```
+
 ```{r }
 library(scales)
 publisher_df <- oapc_df %>%
@@ -341,7 +378,9 @@ rev_plot <- publisher_df %>%
   coord_flip()
 ggplotly(rev_plot)
 ```
+
 Estimates of cost of producing monographs vary considerably, the most extensive study to date, estimated a range of average costs of approximately thirty to forty thousand dollars per title. [@maron2016] What does the OAPC data show?
+
 ```{r  }
 library(plotly)
 library(crosstalk)
@@ -353,7 +392,8 @@ fees_plot <- oapc_df %>% ggplot(aes(euro,DT_ADDED_YR)) + geom_bin2d(bins=10)+
 ggplotly(fees_plot)
 
 ```
-The most typical book charges in the data are approximately two thosand euros  and  ten thousand euros for converted-to-open and published-as-open monographs (respectively). These modes and the overall range is  substantially under the range that would be expected from prior surveys. [^5]
+
+The most typical book charges in the data are approximately two thosand euros and ten thousand euros for converted-to-open and published-as-open monographs (respectively). These modes and the overall range is substantially under the range that would be expected from prior surveys. [^5]
 
 [^5]: Note that the BPC charge does not necessarily reflect the entire cost of publication. However, the consortial initiatives included in the data above aim for the BPC to recover the costs of publication for born open materials. So the range of BPC charges should include the range of publication costs.
 
@@ -374,10 +414,13 @@ All references in this document are managed in [Zotero,]{.ul} We use tidyverse s
 The authors describe contributions to this Essay using a standard taxonomy (see [\@allen2014]) Micah Altman provided the core formulation of the essay's goals and aims, and led the writing, methodology, data curation, and visualization. Chris Bourg and Sue Kriegsman contributed to conceptualization and provided review. CREOS research assistant Shelley Choi provided assistance with preliminary data visualization and software implementation.
 
 <aside>
+
 This work is Copyright 2020 Massachusetts Institute of Technology, and is Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 This work was conducted with support from the Center for Research and Equitable and Open Scholarship at the Massachusetts Institute of technology.
+
 </aside>
+
 # References
