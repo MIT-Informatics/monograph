@@ -1,39 +1,42 @@
 ---
 title: "Exploring the Public Evidence on Open Access Monographs"
-bibliography: oamonreferences.bib
-description: Observations on the state of open monograph data -- based on available publication data. 
 author:
-  - name: Micah Altman
-    url: https://micahaltman.com
-    affiliation: Center for Research on Equitable and Open Scholarshop
-    affiliation_url: https://libraries.mit.edu/creos/
-    orcid_id: 0000-0001-7382-6960
+- name: Micah Altman
+  url: https://micahaltman.com
+  affiliation: Center for Research on Equitable and Open Scholarshop
+  affiliation_url: https://libraries.mit.edu/creos/
+  orcid_id: 0000-0001-7382-6960
 date: "`r Sys.Date()`"
-params:   
-  doc_refresh_data:   
-    value: FALSE   
-    choices:   
-      - TRUE   
-      - FALSE 
-  doc_debug:   
-    value: FALSE   
-    choices:   
-      - TRUE   
-      - FALSE 
-
-output: 
-  html_document: 
-    toc: true
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+  html_document:
+    toc: yes
     toc_depth: 2
-    number_section: true
+    number_section: yes
     theme: journal
     highlight: zenburn
     code_folding: hide
     includes:
-      in_header: "header.html" 
-    toc_float: 
-        collapsed: true
-        smooth_scroll: true
+      in_header: header.html
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+description: Observations on the state of open monograph data -- based on available
+  publication data.
+params:
+  doc_refresh_data:
+    value: no
+    choices:
+    - yes
+    - no
+  doc_debug:
+    value: no
+    choices:
+    - yes
+    - no
+bibliography: oamonreferences.bib
 ---
 
 ```{r, knitr_setup, include=FALSE}
@@ -47,6 +50,15 @@ knitr::opts_chunk$set("tidy" = FALSE) # already tidyed using stylr
 ## local cached paths
 doc_sample_image_path <- "oldmono_first.png"
 doc_sample_thumbnail_path <- "newcover.jpeg"
+
+## check for webshot if pdf output
+doc_is_pdf <- 
+  try (("pdf_document" %in% rmarkdown::all_output_formats(knit ::current_input())), silent=TRUE)
+doc_is_pdf <- (doc_is_pdf == TRUE)
+if (doc_is_pdf) {
+  require("webshot")
+  webshot::install_phantomjs()
+}
 ```
 
 ```{css, css_setup, echo=FALSE}
@@ -148,7 +160,6 @@ if (doc_refresh_data) {
   isbn_tools_init()
   mono_fetch_doab()
   mono_fetch_oapc()
-  mono_fetch_hathi()
 }
 doab_df <- mono_load_doab()
 oapc_df <- mono_load_oapc()
@@ -213,7 +224,7 @@ In addition there are a number of publicly accessible (not necessarily open) sou
 
 -   *Descriptive Metadata:* ISBN registries including the service provided by [OpenLibrary](https://openlibrary.org/) can be used to obtain additional descriptive metadata for titles, including subject headings. The open [ISBNtools](https://pypi.org/project/isbntools/) package provides a standardized way of retrieving this data from a range of registries.
 
--   *Citations*: A limited number of monographs are assigned DOI's indexed in [CrossRef]{.ul}, open citation data is available through the [I40C initiative](https://i4oc.org/#faqs). Commercial citation services such as Google Scholar and Scopus, also include some citation information for selected books. This information is challenging to access systematically, but small collections can be extracted using Harzing's [Publish or Perish](https://harzing.com/resources/publish-or-perish) tool.
+-   *Citations*: A limited number of monographs are assigned DOI's indexed in [CrossRef]{.ul}, open citation data is available through the [I40C initiative](https://i4oc.org/#faqs). Commercial services such as [Google Scholar]{.ul}, [Dimensions]{.ul}, and [Scopus]{.ul}, also include some citation information for selected books. This information is challenging to access systematically, but small collections can be extracted using Harzing's [Publish or Perish](https://harzing.com/resources/publish-or-perish) tool.
 
 -   *Public domain works.* A range of books, including some monographs, are now open by virtue of coming out-of-copyright and into the open domain. These are not listed in DOAB -- however API's for [HathiTrust](https://www.hathitrust.org/data) and [JSTOR](https://www.jstor.org/dfr/) provide descriptive metadata, rights metadata, and text-analytic metdata (e.g. ngrams) for the (open) books in their collection.
 
