@@ -1,0 +1,78 @@
+TO DO:
+- Pull & merge edits
+- alternate BPC figure
+
+
+Future exploration:
+- rcrossref citation counts
+- citecorp - citation network
+- iheatmap
+- isbn description / topic text analysis
+- jstor data
+- amazon pricing data
+- leaflet mapping
+- Webshot debug
+- Plotly aggregation/sliders/pulldown
+- Multiple tests of gender - cite to sugimoto
+- cache cflag
+- Hathi trust robustness
+- Additional exploration: year of pub, language, licences
+- Updates: final coding style check / reformatting,  makefile
+- Bug reports: rstudio: zooming with additional source pane, closing source pane, visual mode and interpolated variables in markdown, cut and paste of footnoted text, headings, footnote numbering
+
+ADDED
+- plotly treemap function
+- EDA trend - publication year
+- EDA pattern - gender
+- favicon
+- CSS <aside> floats
+- new font
+- YAML parameterizations
+- Git Tag
+- rpivotable
+- refactor to use setup knitr options in one place
+- refactor to set debug options
+- identify coding style / reformatting
+- refactor for inline coding
+- github submodule setup 
+- github web pages directory setup as submodule & branch
+- select visualization libs
+- select web interactive libs
+- select tables libs
+- characterize public data
+- self document as reproducible doc
+- retheme ggplot
+- build tools config
+- outline
+- background
+- Rmarkdown styling: toc, code-folding, themes
+- Zotero integration
+- DOAB ingest
+- OAPC ingest
+- book image retrieval
+- CSS styling: image centering 
+- adjust code tidying
+- refresh DOAB
+- refresh OAPC
+- reticulate setup for Python libraries
+- refactor libraries to specific code use
+- date normalize
+- isbn normalize
+- center image caption
+- gender matching
+- purr wrappers
+- webshot pdf figure rendering attempt
+
+Evaluated - declined:
+- Highcharts
+- flexdashboard
+- Manipulatewidget
+- Distill
+
+Languages/markup used:
+- Primary:  R, Markdown
+- Secondary: Python, CSS, YAML, XPATH, PCRE-Regex, HTML, JSON
+
+Future options:
+- graph analysis: Diagrammer, Tidygraph, ggraph
+
