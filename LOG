@@ -1,26 +1,28 @@
 TO DO:
 - Pull & merge edits
-- alternate BPC figure
-
+- citecorp - citation network
+- Plotly aggregation/sliders/pulldown
+- Multiple tests of gender - cite to sugimoto
+- Hathi trust robustness
+- Final checks: final coding style check / reformatting,  makefile
 
 Future exploration:
-- rcrossref citation counts
-- citecorp - citation network
-- iheatmap
-- isbn description / topic text analysis
 - jstor data
 - amazon pricing data
 - leaflet mapping
+- isbn description / topic text analysis/ interactive-linked wordclouds
+- graph analysis: Diagrammer, Tidygraph, ggraph 
+- rcrossref citation counts analysis
+- heatmap analysis with iheatmap
 - Webshot debug
-- Plotly aggregation/sliders/pulldown
-- Multiple tests of gender - cite to sugimoto
-- cache cflag
-- Hathi trust robustness
 - Additional exploration: year of pub, language, licences
-- Updates: final coding style check / reformatting,  makefile
-- Bug reports: rstudio: zooming with additional source pane, closing source pane, visual mode and interpolated variables in markdown, cut and paste of footnoted text, headings, footnote numbering
+- Bug duplication & reports: rstudio: zooming with additional source pane, closing source pane, visual mode and interpolated variables in markdown, cut and paste of footnoted text, headings, footnote numbering, caching based on params
+
 
 ADDED
+- Alternate BPC figure
+- Combining graphs / subplot layouts
+- knitr caching
 - plotly treemap function
 - EDA trend - publication year
 - EDA pattern - gender
@@ -64,15 +66,21 @@ ADDED
 - webshot pdf figure rendering attempt
 
 Evaluated - declined:
-- Highcharts
-- flexdashboard
-- Manipulatewidget
-- Distill
+- Highcharts (commercial, plotly dominates)
+- flexdashboard (not compatible with bookdown)
+- Distill (incompatible with some bookdown features)
+- Egg (dominated by patchwork)
+- rwordcloud, d3wordcloud - alpha
+- wordcloud2 - shiny only
+- R2D3 - file output only
+
+Evaluated - for later:
+- patchwork - great for ggplots, but doesn't work correctly with ggplotly()
+- iheatmap
+- ggraph, Diagrammr
+- rcrossref
 
 Languages/markup used:
 - Primary:  R, Markdown
 - Secondary: Python, CSS, YAML, XPATH, PCRE-Regex, HTML, JSON
-
-Future options:
-- graph analysis: Diagrammer, Tidygraph, ggraph
 

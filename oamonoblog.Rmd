@@ -3,14 +3,11 @@ title: "Exploring the Public Evidence on Open Access Monographs"
 author:
 - name: Micah Altman
   url: https://micahaltman.com
-  affiliation: Center for Research on Equitable and Open Scholarshop
+  affiliation: Center for Research on Equitable and Open Scholarship
   affiliation_url: https://libraries.mit.edu/creos/
   orcid_id: 0000-0001-7382-6960
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: '2'
   html_document:
     toc: yes
     toc_depth: 2
@@ -23,29 +20,35 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
 description: Observations on the state of open monograph data -- based on available
   publication data.
 params:
   doc_refresh_data:
-    value: no
+    value: FALSE
     choices:
-    - yes
-    - no
+    - TRUE
+    - FALSE
   doc_debug:
-    value: no
+    value: FALSE
     choices:
-    - yes
-    - no
+    - TRUE
+    - FALSE
 bibliography: oamonreferences.bib
 ---
 
-```{r, knitr_setup, include=FALSE}
+```{r label=setup, include=FALSE}
+library(knitr)
 ## options for this document
 doc_debug <- params$doc_debug
 doc_refresh_data <- params$doc_refresh_data
 knitr::opts_chunk$set("message" = doc_debug)
 knitr::opts_chunk$set("warning" = doc_debug)
 knitr::opts_chunk$set("tidy" = FALSE) # already tidyed using stylr
+knitr::opts_chunk$set(autodep=TRUE)
+
 
 ## local cached paths
 doc_sample_image_path <- "oldmono_first.png"
@@ -53,15 +56,17 @@ doc_sample_thumbnail_path <- "newcover.jpeg"
 
 ## check for webshot if pdf output
 doc_is_pdf <- 
-  try (("pdf_document" %in% rmarkdown::all_output_formats(knit ::current_input())), silent=TRUE)
+  try (("pdf_document" %in% rmarkdown::all_output_formats(knit::current_input())), silent=TRUE)
 doc_is_pdf <- (doc_is_pdf == TRUE)
 if (doc_is_pdf) {
   require("webshot")
   webshot::install_phantomjs()
 }
+# works in knit, but not in other environments
+try(knitr::dep_auto())
 ```
 
-```{css, css_setup, echo=FALSE}
+```{css css-setup, echo=FALSE}
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 body {
   font-family: 'Libre Baskerville', serif;
@@ -105,12 +110,6 @@ aside {
 }
 ```
 
-# **Exploring the Public Evidence on Open Access Monographs**
-
-Micah Altman, CREOS Research Scientist
-
-*[Draft: 12/1/2020]*
-
 # Introduction
 
 There is ongoing tension between the desire of scholars to share their work widely and openly, and the need to fund the infrastructure and labor of publishing. One place in which this tension is most evident is in the sale of scholarly monographs. While they are a only a small fraction of scholarly communications volume, market, and readership -- academic monographs continue to play an important role in the humanities and social sciences. They represent an important form of long-form scholarship -- not readily expressible through journal-length publications. And, as such, monograph publication through a university press forms a critical component of tenure evaluation -- sometimes independent of the extent to which the monograph itself is purchased, read, or cited. [@eve2014; @crossick2016]
@@ -137,7 +136,7 @@ In this blog post we look at the open data available on monograph publication, a
 
 The most complete index of open access monographs is the [Directory of Open Access Books](https://www.doabooks.org/) (DOAB), which lists tens of thousands of individual monographs (also known as 'titles'). DOAB makes its metadata index available as open data.
 
-```{r, r_setup}
+```{r r-setup}
 # core libraries for tidy data science in R
 library(tidyverse)
 library(magrittr)
@@ -156,6 +155,9 @@ source("fetch_data.R")
 ## we install these and provide a simple R wrapper (based on reticulate)
 source("isbntools.R")
 
+## Helper functions for data visualization
+source("plotly_helper.R")
+
 if (doc_refresh_data) {
   isbn_tools_init()
   mono_fetch_doab()
@@ -167,7 +169,7 @@ oapc_df <- mono_load_oapc()
 
 The unique identifiers in the DOAB can be used to link it with other data sources. As an example, we can use the ISBN as a key to retrieve information from [Google Books]{.ul}. For example, we can retrieve and display the cover of the most recently added title:
 
-```{r}
+```{r cover-gen}
 latest_book_isbns <- doab_df %>%
   arrange(`Added on date`) %>% 
   ungroup %>% slice_tail() %>% 
@@ -186,7 +188,7 @@ if (doc_refresh_data) {
 
 The DOAB data also provides links to the text of open monograph itself. The monograph content content is thus potentially available for harvesting, analysis, and integration with other sources. In practice, however, retrieving the content through DOAB may require some additional web scraping, as demonstrated below. For books also available in [Hathitrust]{.ul} obtaining the content through their apis is more reliable and straightforward.
 
-```{r, getmonoimage}
+```{r getmonoimage}
 ### Capture image of first page of oldest open monograph
 library(rvest)
 
@@ -234,9 +236,9 @@ In addition there are a number of publicly accessible (not necessarily open) sou
 
 In the table below you can browse a sample of titles:
 
-```{r, doab_run}
-## interactive sample data table
+```{r doab_run}
 library(DT)
+## interactive sample data table
 doab_df %>% 
   ungroup() %>% slice_head(n = 1000) %>%
   datatable(class = "cell-border stripe", caption = "Sample of DOAB Catalog",
@@ -249,15 +251,18 @@ After browsing the DOAB sample for a short while, you will likely notice glitche
 
 [^2]: Monographs are typically uniquely identified through an ISBN, which is also a common choice when linking across databases. However, each ISBN is associated with specific formats (e.g. paper, hardcover, digital), so a single work published in multiple formats will have multiple ISBN's. Further, the same ISBN may be expressed in multiple forms -- so normalization is essential ([ISBNtools]{.ul} is useful for this). Finally some databases will use DOI (digital object identifiers) or ASIN (Amazon standard identification number),instead of an ISBN. Generally the correspondence across identifiers must be resolved using an index: For DOI's there is a programatical mapping in theory to an ISBN13, but this often does not work in practice; and ASIN's printed works generally match the ISBN number, but kindle editions (and related digital works) are assigned new ASIN's.
 
-```{r, doab_clean}
+```{r lib-lubridate, include=FALSE}
+library(lubridate)
+```
+
+```{r doab_clean, cache=TRUE, dependson=knitr::dep_auto()}
+library(lubridate)
 ### Data Cleaning 
 ## address basic issues with:
 ## - date standardization 
 ## - ISBN list packing
 ## - ISBN format standardization 
 ## - non-monograph entries
-
-library(lubridate)
 
 ## DOAB  basic data cleaning 
 doab_df %<>%
@@ -275,7 +280,12 @@ doab_df %<>%
 
 Following a basic cleaning, we can use the DOAB to examine broad trends and patterns in open monograph publishing. For example, consider this summary of open monograph publication volume over time:
 
-```{r, timetrend}
+```{r lib-gthemes, include=FALSE}
+library(plotly)
+library(ggthemes)
+```
+
+```{r timetrend, cache=TRUE, dependson=knitr::dep_auto()}
 library(plotly)
 library(ggthemes)
 tmp_plot <- doab_df %>%
@@ -301,11 +311,18 @@ We can do better. As an early step, we can impute gender based on author names, 
 
 [^3]: These imputations should be considered a very preliminary estimate, created for the purpose of promoting general discussion, potential issue spotting, and hypothesis generation. The process of imputation reflects only point estimates, and does not reflect uncertainty from several sources: including omissions in the original data sources, heuristic name extraction, and uncertainty in name to gender assignment. Further, the analysis treats gender as a binary category, and elides questions of adjusting for multiple authors.
 
-```{r, doab_gender}
+```{r lib-gender, include=FALSE}
 library(gender)
 library(genderdata)
 # NOTE, must use devtools:: install_github("ropensci/genderdata") for all methods to function
-library(humaniformat)        
+library(humaniformat) 
+```
+
+```{r doab_gender, cache=TRUE, dependson=knitr::dep_auto()}
+library(gender)
+library(genderdata)
+library(humaniformat) 
+gender_meth <- "kantrow"
 
 doab_df %<>% mutate(LS_NM_AUTHORS=str_split(`Authors`,";"))
 
@@ -318,14 +335,18 @@ doab_df %<>% rowwise() %>% mutate(LS_NM_AUTHORS_R = list(safe_format_reverse (st
 
 doab_df %<>% rowwise() %>% mutate(LS_NM_AUTHOR_FIRST=list(safe_first_name(`LS_NM_AUTHORS_R`)))
 
-doab_df %<>% ungroup() %>% rowwise() %>% mutate(LS_CAT_GENDERS = list(safe_gender(`LS_NM_AUTHOR_FIRST`,method="kantrow")[["gender"]]))
+doab_df %<>% ungroup() %>% rowwise() %>% mutate(LS_CAT_GENDERS = list(safe_gender(`LS_NM_AUTHOR_FIRST`,method=gender_meth)[["gender"]]))
 
 doab_df %<>% rowwise() %>% mutate(
   N_GENDER_MALE=sum(LS_CAT_GENDERS=="male",na.rm=TRUE),  N_GENDER_FEMALE=sum(LS_CAT_GENDERS=="female",na.rm=TRUE),
   )
 ```
 
-```{r, pivotgender}
+```{r lib-pivot, include=FALSE}
+library(rpivotTable)
+```
+
+```{r pivotgender, cache=TRUE, dependson=knitr::dep_auto()}
 library(rpivotTable)
 doab_pivot_df <- doab_df %>% transmute (
   'Publisher' = `Publisher`,
@@ -348,8 +369,7 @@ Business and economic models will need to evolve in order for monograph publishi
 
 We can use this data to look at fee-based revenue for presses participating in consortial open-monograph publishing arrangementgs. The most 'profitable' publishers are shown below:
 
-```{r}
-library(lubridate)
+```{r oapc-clean}
 ## oapc cleaning
 oapc_df <- mono_load_oapc()
 oapc_df %<>%
@@ -366,7 +386,7 @@ oapc_df %<>%
             ))
 ```
 
-```{r }
+```{r revenue}
 library(scales)
 publisher_df <- oapc_df %>%
     group_by(publisher) %>%
@@ -392,16 +412,34 @@ ggplotly(rev_plot)
 
 Estimates of cost of producing monographs vary considerably, the most extensive study to date, estimated a range of average costs of approximately thirty to forty thousand dollars per title. [@maron2016] What does the OAPC data show?
 
-```{r  }
+```{r bpc}
 library(plotly)
-library(crosstalk)
 library(ggthemes)
-fees_plot <- oapc_df %>% ggplot(aes(euro,DT_ADDED_YR)) + geom_bin2d(bins=10)+ 
- scale_color_fivethirtyeight() +
-  theme_fivethirtyeight() +
-   labs(title = "Book Processing Charges (in Euro) by Year", x = "Charge (Euro)", y = "Year)", color = "Number of Publications") 
-ggplotly(fees_plot)
+library(manipulateWidget)
 
+fees_plot_1 <-
+  {
+    oapc_df %>% ungroup() %>%
+      mutate(year = factor(DT_ADDED_YR, ordered = TRUE))  %>%
+      ggplot(aes(x =year, y = euro)) + geom_violin() +
+      scale_color_fivethirtyeight() +
+      theme_fivethirtyeight() +
+      labs(title = "Book Processing Charges (in Euro) by Year", 
+           x = "Charge (Euro)", y = "Year)")
+  } %>% ggplotly()
+
+fees_plot_2 <-
+  oapc_df %>% mutate(
+    `Born Open` = !backlist_oa,
+    `Year` = as.factor(DT_ADDED_YR),
+    Fee = euro
+  ) %>%  xtabs( ~ `Born Open` + Year + Fee , data = .) %>% table_to_plotly_treemap()
+
+# use combineWidgets, because subplot doesn't behave with treemaps, etc.
+# see: https://github.com/ropensci/plotly/issues/655 and patchwork doesn't 
+# work with plotly
+
+combineWidgets(fees_plot_1, fees_plot_2, ncol = 2)
 ```
 
 The most typical book charges in the data are approximately two thosand euros and ten thousand euros for converted-to-open and published-as-open monographs (respectively). These modes and the overall range is substantially under the range that would be expected from prior surveys. [^5]

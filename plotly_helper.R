@@ -47,8 +47,6 @@ table_to_plotly_treemap <- function(the_table=Titanic, root_label="Total", ... )
     treemap_table %<>% bind_rows(treemap_table_leaf)
   } 
   
-  print (treemap_table)
-  
   fig <- plot_ly(
     type='treemap',
     ids=treemap_table$ids,
