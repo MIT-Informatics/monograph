@@ -1,18 +1,15 @@
 TO DO:
-- Pull & merge edits
-- citecorp - citation network
-- Plotly aggregation/sliders/pulldown
 - Multiple tests of gender - cite to sugimoto
-- Hathi trust robustness
 - Final checks: final coding style check / reformatting,  makefile
 
 Future exploration:
-- jstor data
+- jstor/hathi trust data
 - amazon pricing data
 - leaflet mapping
 - isbn description / topic text analysis/ interactive-linked wordclouds
 - graph analysis: Diagrammer, Tidygraph, ggraph 
 - rcrossref citation counts analysis
+- citecorp - citation network
 - heatmap analysis with iheatmap
 - Webshot debug
 - Additional exploration: year of pub, language, licences
@@ -20,7 +17,9 @@ Future exploration:
 
 
 ADDED
-- Alternate BPC figure
+- Plotly/crosstalk aggregation/sliders/pulldown
+- Pull & merge edits
+- Alternate BPC figure - violin plots and treemaps
 - Combining graphs / subplot layouts
 - knitr caching
 - plotly treemap function

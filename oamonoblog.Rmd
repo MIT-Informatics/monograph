@@ -288,7 +288,7 @@ library(ggthemes)
 ```{r timetrend, cache=TRUE, dependson=knitr::dep_auto()}
 library(plotly)
 library(ggthemes)
-tmp_plot <- doab_df %>%
+time_plot <- { doab_df %>%
   group_by(`DT_ADDED_YR`) %>%
   summarize(total = n()) %>%
   ggplot() +
@@ -297,8 +297,9 @@ tmp_plot <- doab_df %>%
   geom_smooth() +
   scale_color_fivethirtyeight() +
   scale_x_continuous( breaks = c(2010,2012,2014,2016,2018,2020)) +
-  theme_fivethirtyeight()
-ggplotly(tmp_plot)
+  theme_fivethirtyeight() } %>% ggplotly()
+time_plot %>% 
+  rangeslider(start = 2010, end=2020, thickness=.05)
 ```
 
 From this longitudinal overview, we can see that open monograph publishing is in its very early stages. Volume was quite small until five years ago, but has rapidly accelerated since then. However, progress is uneven, and after a record 2019 volume, there is a sharp downturn so far this year (noting that data for this year is not final) -- possibly due to the pandemic.
@@ -307,7 +308,7 @@ From this longitudinal overview, we can see that open monograph publishing is in
 
 Since CREOS seeks to apply evidence to understand how disparate communities can participate in scholarship with minimal bias or barriers, it is of particular interest to understand the communities of authors that are currently included in open monograph publishing. The DOAB database includes additional information about each title, such as the year of original publication, names of authors, and subject fields (and we can add to that through linking to other sources through the ISBN) -- however it contains no direct information about the characteristics of authors.
 
-We can do better. As an early step, we can impute gender based on author names, and explore the inclusion of works authored by men and women over time.[^3] 
+We can do better -- making scholarship more inclusive requires making the characteristics of those participating visible: A more open & equitable scholarly knowledge ecosystem should support inclusion, self-descriptin, and information agency [altman2018grand] Because no system public data on self-reported author characteristics exists, however, research on participation in scholarly publications must use bibliometric methods to impute gender from author names.[see for example @lariviere2013bibliometrics]  As an prelimary analysis, we use a method based on analysis of historical censuses [@blevins2015jane] to impute gender based on author names, and use this imputation to explore the inclusion of works authored by men and women over time.[^3] 
 
 [^3]: These imputations should be considered a very preliminary aggregate estimate, created for the purpose of promoting general discussion, potential issue spotting, and hypothesis generation. This method is  intended for aggregate analysis and not for individual-level analysis -- e.g. the assignment of an pronoun to an  author. Further the  reported imputation describes only point estimates, and does not reflect uncertainty from several sources: including omissions in the original data sources, heuristic name extraction, and uncertainty in name to gender assignment.  Further, the analysis treats gender as a binary category, and thus will structurally omit non-binary gender categories. 
 
@@ -322,7 +323,7 @@ library(humaniformat)
 library(gender)
 library(genderdata)
 library(humaniformat) 
-gender_meth <- "kantrow"
+gender_meth <- "ipums"
 
 doab_df %<>% mutate(LS_NM_AUTHORS=str_split(`Authors`,";"))
 
@@ -359,9 +360,9 @@ doab_pivot_df %>%
               )
 ```
 
-This preliminary estimate indicates that roughly thirty percent of open access monographs have at least one female author. This proportion remains roughly steady over time. As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) are women this indicates a need to evaluate systemic bias of who is included in open monograph publishing.[^4]
+This preliminary estimate indicates that roughly thirty-six percent of open access monographs published in the last ten years have at least one female author. (This proportion remains roughly varies over time -- but does not show a clear time trend.) As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) are women, this indicates a need to evaluate systemic bias of who is included in open monograph publishing.[^4]
 
-[^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does not imply that bias in OA is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established.
+[^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does not imply that bias in OA is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established. The classification reported in the table is based on the IPUMS corpus. As a sensitivity check we evaluated using two other method:  Use of historical Social Security Administration database yields a higher estimate of participation by at least one female author, but still lower than baseline expection. Use of the popular 'Kantrowitz' method, which is based on a much smaller corpus -- yields significantly lower estimates of female author participation. Notwithstanding -- the range of estimates does not alter the overall substantive conclusions reported above. 
 
 ## Follow the Money?
 
@@ -396,19 +397,36 @@ publisher_df <- oapc_df %>%
       TOTAL_REVENUE = sum(euro), 
       AVG_CHARGE = TOTAL_REVENUE/N_PUBS
     ) %>% 
-    arrange(desc(TOTAL_REVENUE))
+    arrange(desc(TOTAL_REVENUE)) %>% 
+    mutate(publishers=str_trunc(publisher, 20))
 
 
-rev_plot <- publisher_df %>% 
-    slice_head(n=25) %>% 
-    ggplot(aes(x=reorder(publisher,TOTAL_REVENUE),y=TOTAL_REVENUE)) + 
+library(crosstalk)
+
+pub_key <- highlight_key(publisher_df)
+
+rev_plot <- { pub_key %>% 
+    ggplot(aes(x=reorder(publishers,TOTAL_REVENUE),y=TOTAL_REVENUE)) + 
     geom_bar(stat="identity") +
     scale_color_fivethirtyeight() +
     scale_y_continuous(label=comma)+
     theme_fivethirtyeight() +
-   labs(title = "Total Revenue (Euros) by Top Publishers", x = "Publisher", y = "Revenue") +
-  coord_flip()
-ggplotly(rev_plot)
+   labs(title = "Total Revenue (Euros) by Top Publishers", x = "Publisher", y = "Revenue") + coord_flip()
+  } %>% 
+  ggplotly(dynamicTicks=TRUE) %>%
+  slice(1:25)
+
+revSlider <-  filter_slider("revenue", "Revenue",
+           pub_key, "TOTAL_REVENUE", round=TRUE, dragRange=TRUE,min=10000, ticks=FALSE)
+
+
+library(manipulateWidget)
+combineWidgets(ncol=1,
+               rowsize=c(9,2),
+               rev_plot,
+               revSlider
+               )
+
 ```
 
 Estimates of cost of producing monographs vary considerably, the most extensive study to date, estimated a range of average costs of approximately thirty to forty thousand dollars per title. [@maron2016] What does the OAPC data show?
@@ -443,7 +461,9 @@ fees_plot_2 <-
 combineWidgets(fees_plot_1, fees_plot_2, ncol = 2)
 ```
 
-The most typical book charges in the data are approximately two thousand euros and ten thousand euros for converted-to-open and published-as-open monographs (respectively). These modes and the overall range is substantially under the range that would be [^5]: Note that the BPC charge does not necessarily reflect the entire cost of publication. However, the consortial initiatives included in the data above aim for the BPC to recover the costs of publication for born open materials. So the range of BPC charges should include the range of publication costs.
+The most typical book charges in the data are approximately two thousand euros and ten thousand euros for converted-to-open and published-as-open monographs (respectively). These modes and the overall range is substantially under the range that would be expected from prior surveys. [^5]
+
+[^5]: Note that the BPC charge does not necessarily reflect the entire cost of publication. However, the consortial initiatives included in the data above aim for the BPC to recover the costs of publication for born open materials. So the range of BPC charges should include the range of publication costs.
 
 # Future Puzzles ...
 
