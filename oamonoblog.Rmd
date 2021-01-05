@@ -3,7 +3,7 @@ title: "Exploring the Public Evidence on Open Access Monographs"
 author:
 - name: Micah Altman
   url: https://micahaltman.com
-  affiliation: Center for Research on Equitable and Open Scholarship
+  affiliation: MIT Libraries -- Center for Research on Equitable and Open Scholarship
   affiliation_url: https://libraries.mit.edu/creos/
   orcid_id: 0000-0001-7382-6960
 date: "`r Sys.Date()`"
@@ -308,7 +308,7 @@ From this longitudinal overview, we can see that open monograph publishing is in
 
 Since CREOS seeks to apply evidence to understand how disparate communities can participate in scholarship with minimal bias or barriers, it is of particular interest to understand the communities of authors that are currently included in open monograph publishing. The DOAB database includes additional information about each title, such as the year of original publication, names of authors, and subject fields (and we can add to that through linking to other sources through the ISBN) -- however it contains no direct information about the characteristics of authors.
 
-We can do better -- making scholarship more inclusive requires making the characteristics of those participating visible: A more open & equitable scholarly knowledge ecosystem should support inclusion, self-descriptin, and information agency [altman2018grand] Because no system public data on self-reported author characteristics exists, however, research on participation in scholarly publications must use bibliometric methods to impute gender from author names.[see for example @lariviere2013bibliometrics]  As an prelimary analysis, we use a method based on analysis of historical censuses [@blevins2015jane] to impute gender based on author names, and use this imputation to explore the inclusion of works authored by men and women over time.[^3] 
+We can do better -- making scholarship more inclusive requires making the characteristics of those participating visible: A more open & equitable scholarly knowledge ecosystem should support inclusion, self-descriptin, and information agency [altman2018grand] Because no systematic public data on self-reported author characteristics exists, however, research on participation in scholarly publications must use bibliometric methods to impute gender from author names.[see for example @lariviere2013bibliometrics]  As an prelimary analysis, we use a method based on analysis of historical censuses [@blevins2015jane] to impute gender based on author names, and use this imputation to explore the inclusion of works authored by men and women over time.[^3] 
 
 [^3]: These imputations should be considered a very preliminary aggregate estimate, created for the purpose of promoting general discussion, potential issue spotting, and hypothesis generation. This method is  intended for aggregate analysis and not for individual-level analysis -- e.g. the assignment of an pronoun to an  author. Further the  reported imputation describes only point estimates, and does not reflect uncertainty from several sources: including omissions in the original data sources, heuristic name extraction, and uncertainty in name to gender assignment.  Further, the analysis treats gender as a binary category, and thus will structurally omit non-binary gender categories. 
 
