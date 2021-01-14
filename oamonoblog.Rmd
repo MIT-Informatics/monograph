@@ -130,7 +130,7 @@ Open monograph publishing remains in its early stages. The [CREOS](https://libra
 
 In this blog post we look at the open data available on monograph publication, and use it to explore patterns and trends in open monograph publishing. This blog post takes the form of a guided, interactive, reproducible data analysis based on currently available public data.[^1] We aim for this exploration to inform libraries, publishers, and authors about the landscape, and prepare for future transitions to open access.
 
-[^1]: The source for the document is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd). Since this blog takes the form of a fully replicable analysis, new versions may be released as the data sources it relies on are updated.
+[^1]: The source for the document is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd). Since this blog takes the form of a fully replicable analysis, new versions can be generated as the data sources it relies on are updated.
 
 # Accessible Data on Open Monographs
 
@@ -443,7 +443,7 @@ fees_plot_1 <-
       ggplot(aes(x =year, y = euro)) + geom_violin() +
       scale_color_fivethirtyeight() +
       theme_fivethirtyeight() +
-      labs(title = "Book Processing Charges (in Euro) by Year", 
+      labs(title = str_wrap("BPCs(€) by Year", width=15), 
            x = "Charge (Euro)", y = "Year)")
   } %>% ggplotly()
 
@@ -451,7 +451,7 @@ fees_plot_2 <-
   oapc_df %>% mutate(
     `Born Open` = !backlist_oa,
     `Year` = as.factor(DT_ADDED_YR),
-    Fee = euro
+    Fee = paste("€",euro,sep="")
   ) %>%  xtabs( ~ `Born Open` + Year + Fee , data = .) %>% table_to_plotly_treemap()
 
 # use combineWidgets, because subplot doesn't behave with treemaps, etc.
