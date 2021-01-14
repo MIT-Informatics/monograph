@@ -3,7 +3,7 @@ title: "Exploring the Public Evidence on Open Access Monographs"
 author:
 - name: Micah Altman
   url: https://micahaltman.com
-  affiliation: MIT Libraries -- Center for Research on Equitable and Open Scholarship
+  affiliation: MIT Libraries -- [Center for Research on Equitable and Open Scholarship]( https://libraries.mit.edu/creos/)
   affiliation_url: https://libraries.mit.edu/creos/
   orcid_id: 0000-0001-7382-6960
 date: "`r Sys.Date()`"
