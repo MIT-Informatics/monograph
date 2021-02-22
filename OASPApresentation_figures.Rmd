@@ -1,0 +1,180 @@
+---
+title: "OASPSA Presentation Figures"
+output: html_notebook
+params:
+  doc_refresh_data:
+    value: FALSE
+    choices:
+    - TRUE
+    - FALSE
+  doc_debug:
+    value: FALSE
+    choices:
+    - TRUE
+    - FALSE
+---
+```{r label=setup, include=FALSE}
+library(knitr)
+## options for this document
+doc_debug <- params$doc_debug
+doc_refresh_data <- params$doc_refresh_data
+knitr::opts_chunk$set("message" = doc_debug)
+knitr::opts_chunk$set("warning" = doc_debug)
+knitr::opts_chunk$set("tidy" = FALSE) # already tidyed using stylr
+knitr::opts_chunk$set(autodep=TRUE)
+
+## check for webshot if pdf output
+doc_is_pdf <- 
+  try (("pdf_document" %in% rmarkdown::all_output_formats(knit::current_input())), silent=TRUE)
+doc_is_pdf <- (doc_is_pdf == TRUE)
+if (doc_is_pdf) {
+  require("webshot")
+  webshot::install_phantomjs()
+}
+# works in knit, but not in other environments
+try(knitr::dep_auto())
+```
+```{r r-setup}
+# core libraries for tidy data science in R
+library(tidyverse)
+library(magrittr)
+if (doc_debug) {
+  require(tidylog)
+}
+
+## the details of data retrieval in a separate module, included in our repository
+## mono_load_* loads the named data as a R data frame from cache in github
+## mono_fetch_* routines are used to retrieve a new version of data from canonical source
+
+source("fetch_data.R")
+
+## ISBN normalization and retrieval of open descriptive metadata based on 
+## these are implemented through the isbntools python module
+## we install these and provide a simple R wrapper (based on reticulate)
+source("isbntools.R")
+
+## Helper functions for data visualization
+source("plotly_helper.R")
+
+if (doc_refresh_data) {
+  isbn_tools_init()
+  mono_fetch_doab()
+  mono_fetch_oapc()
+}
+doab_df <- mono_load_doab()
+oapc_df <- mono_load_oapc()
+```
+
+```{r cover-gen}
+latest_book_isbns <- doab_df %>%
+  filter(`Type` == "book") %>% 
+  arrange(`Added on date`) %>% 
+  ungroup %>% 
+  select(`ISBN`) %>% 
+  rowwise() %>%
+  transmute(
+    FIRSTI=str_split(ISBN," ")[[1]][1]
+    ) %>%
+  pull(FIRSTI)
+
+fetch_thumb<-safely(function(x){
+    cover_meta <- isbntools("cover",x)
+    cover_uri <- as.character(cover_meta["smallThumbnail",1])
+    result<- download.file(cover_uri, targetfile )
+    result==0
+})
+
+if (doc_refresh_data) {
+
+targetdir <- "covers"
+for (i in latest_book_isbns) {
+  targetfile <- paste(targetdir,"/",i,".jpeg", sep="")
+  if (file.exists(targetfile)) next
+  fetch_thumb(i)
+}
+}
+```
+```{r}
+library(RsimMosaic)
+
+# Set the folder where the original images are located
+pathToOriginalImages <- paste(targetdir,sep="")
+pathToOriginalImages<- "/home/maltman/GitCheckouts/monograph/covers"
+
+# Set the folder where the tiles will be stored. It will be created if it does not exists.
+pathToTileImages <- 'imgtiles'
+
+# RsimMosaic: creatTiles assumes that input images are square
+#   modified functiions to correct this.
+createTilesRescaled <-function (inPath, outPath, tileHeight = 30, verbose = FALSE, 
+                                overwrite = FALSE ) 
+{
+    filesCount <-0 
+    if (!dir.exists(outPath)) {
+      warn("Output directory does not exists")
+      return(filesCount)
+    }
+
+    filenameArray <- list.files(pathToOriginalImages, pattern="(.jpg)|(.jpeg)")
+    for (i in filenameArray) {
+        outfile <- paste(outPath, i, sep = "/") 
+        if (!overwrite & file.exists(outfile )) {
+          next
+        }
+        if (verbose) {
+          cat(i,"\n")
+        }
+     
+        try( {
+        img <- jpeg::readJPEG(paste(inPath, "/", i, sep = ""))
+        img.x <- dim(img)[1]
+        img.y <- dim(img)[2]
+        th.x <- th.y <- tileHeight
+        if (img.x < img.y)  {
+           th.y <- tileHeight / img.x * img.y
+        } else {
+           th.x <- tileHeight / img.y * img.x
+        }
+        intrpArray <- array(dim = c(th.x, th.y, 3))
+        intrpArray[, , 1] <- bilinearInterpolator(img[, , 1], 
+            dim(intrpArray)[1], dim(intrpArray)[2])
+        intrpArray[, , 2] <- bilinearInterpolator(img[, , 2], 
+            dim(intrpArray)[1], dim(intrpArray)[2])
+        intrpArray[, , 3] <- bilinearInterpolator(img[, , 3], 
+            dim(intrpArray)[1], dim(intrpArray)[2])
+        jpeg::writeJPEG(intrpArray[1:tileHeight, 1:tileHeight, 
+            ], outfile )
+        filesCount <- filesCount + 1
+        } )
+    }
+    return(filesCount)
+}
+
+if (doc_refresh_data)  {
+  createTilesRescaled(pathToOriginalImages, pathToTileImages, tileHeight=30, verbose=TRUE)
+}
+
+composeMosaicFromImageRandomOptim("open_access.jpg","mosaic.jpg",pathToTileImages)
+```
+
+
+```{r}
+doab_df %>% 
+  count(Language) %>%
+  arrange(desc(n))
+
+licenses_sum <- doab_df %>% 
+  count(License) %>%
+  arrange(desc(n)) %>% 
+  filter(n>10) %>% 
+  replace_na(list(License="NONE")) %>%
+  rename("Licences"=n)
+  
+
+library(radarchart)
+chartJSRadar(scores=licenses_sum)
+
+
+
+```
+
