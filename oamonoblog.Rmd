@@ -126,11 +126,11 @@ These initiatives notwithstanding, open access monographs constitute a small fra
 
 ## Reviewing the Evidence
 
-Open monograph publishing remains in its early stages. The [CREOS](https://libraries.mit.edu/creos/) "The Economics of Scholarly Monographs" project is an examination of this area. This fall, as an initial step, we published an [annotated bibliography](https://libraries.mit.edu/creos/research/economics-of-scholarly-monographs/) that serves as a jumping off point for scholars to explore the effects of open availability on monograph revenues.
+Open monograph publishing remains in its early stages. The [CREOS](https://libraries.mit.edu/creos/) "The Economics of Scholarly Monographs" project is an examination of this area. As an initial step, we published an [annotated bibliography](https://libraries.mit.edu/creos/research/economics-of-scholarly-monographs/) that serves as a jumping off point for scholars to explore the effects of open availability on monograph revenues.
 
-In this blog post we look at the open data available on monograph publication, and use it to explore patterns and trends in open monograph publishing. This blog post takes the form of a guided, interactive, reproducible data analysis based on currently available public data.[^1] We aim for this exploration to inform libraries, publishers, and authors about the landscape, and prepare for future transitions to open access.
+In this white paper we look at the open data available on monograph publication, and use it to explore patterns and trends in open monograph publishing. This white paper takes the form of a guided, interactive, reproducible data analysis based on currently available public data.[^1] We aim for this exploration to inform libraries, publishers, and authors about the landscape, and prepare for future transitions to open access.
 
-[^1]: The source for the document is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd). Since this blog takes the form of a fully replicable analysis, new versions can be generated as the data sources it relies on are updated.
+[^1]: The source for the document is available [here](https://github.com/MIT-Informatics/monograph/blob/master/oamonoblog.Rmd). Since this white paper takes the form of a fully replicable analysis, new versions can be generated as the data sources it relies on are updated.
 
 # Accessible Data on Open Monographs
 
@@ -222,13 +222,13 @@ Two other data sources are designed to provide additional information specifical
 
 -   [OpenBookPublishers](https://www.openbookpublishers.com/section/92/1) provides title-level usage data on the titles it publishes.
 
-In addition there are a number of publicly accessible (not necessarily open) sources of metadata about large collections of books generally. The most notable comprise:
+In addition there are a number of publicly accessible (not necessarily open) sources of metadata about large collections of books generally. The most notable comprise the following:
 
 -   *Descriptive Metadata:* ISBN registries including the service provided by [OpenLibrary](https://openlibrary.org/) can be used to obtain additional descriptive metadata for titles, including subject headings. The open [ISBNtools](https://pypi.org/project/isbntools/) package provides a standardized way of retrieving this data from a range of registries.
 
--   *Citations*: A limited number of monographs are assigned DOI's indexed in [CrossRef]{.ul}, open citation data is available through the [I40C initiative](https://i4oc.org/#faqs). Commercial services such as [Google Scholar]{.ul}, [Dimensions]{.ul}, and [Scopus]{.ul}, also include some citation information for selected books. This information is challenging to access systematically, but small collections can be extracted using Harzing's [Publish or Perish](https://harzing.com/resources/publish-or-perish) tool.
+-   *Citations*: A limited number of monographs are assigned DOI's indexed in [CrossRef]{.ul}, open citation data is available through the [I40C initiative](https://i4oc.org/#faqs). Commercial services such as [Google Scholar]{.ul}, [Dimensions]{.ul}, and [Scopus]{.ul} also include some citation information for selected books. This information is challenging to access systematically, but small collections can be extracted using Harzing's [Publish or Perish](https://harzing.com/resources/publish-or-perish) tool.
 
--   *Public domain works.* A range of books, including some monographs, are now open by virtue of coming out-of-copyright and into the open domain. These are not listed in DOAB -- however API's for [HathiTrust](https://www.hathitrust.org/data) and [JSTOR](https://www.jstor.org/dfr/) provide descriptive metadata, rights metadata, and text-analytic metdata (e.g. ngrams) for the (open) books in their collection.
+-   *Public domain works.* A range of books, including some monographs, are now open by virtue of coming out of copyright and into the open domain. These are not listed in DOAB -- however API's for [HathiTrust](https://www.hathitrust.org/data) and [JSTOR](https://www.jstor.org/dfr/) provide descriptive metadata, rights metadata, and text-analytic metdata (e.g. ngrams) for the (open) books in their collection.
 
 -   *Prices:* Amazon provides [pricing API's](https://webservices.amazon.com/paapi5/documentation/use-cases/buying-price.html) that can be applied to monograph titles, and a number of third parties track Amazon price histories. This data is available under restrictive terms, and in small quantities.
 
@@ -302,15 +302,15 @@ time_plot %>%
   rangeslider(start = 2010, end=2020, thickness=.05)
 ```
 
-From this longitudinal overview, we can see that open monograph publishing is in its very early stages. Volume was quite small until five years ago, but has rapidly accelerated since then. However, progress is uneven, and after a record 2019 volume, there is a sharp downturn so far this year (noting that data for this year is not final) -- possibly due to the pandemic.
+From this longitudinal overview, we can see that open monograph publishing is in its very early stages. Volume was quite small until five years ago, but has rapidly accelerated since then. However, progress is uneven, and after a record 2019 volume, there is a sharp downturn in 2020 (noting that data for this year was not final at the time of analysis) -- possibly due to the pandemic.
 
 ## Seeking Inclusion!
 
 Since CREOS seeks to apply evidence to understand how disparate communities can participate in scholarship with minimal bias or barriers, it is of particular interest to understand the communities of authors that are currently included in open monograph publishing. The DOAB database includes additional information about each title, such as the year of original publication, names of authors, and subject fields (and we can add to that through linking to other sources through the ISBN) -- however it contains no direct information about the characteristics of authors.
 
-We can do better -- making scholarship more inclusive requires making the characteristics of those participating visible: A more open & equitable scholarly knowledge ecosystem should support inclusion, self-descriptin, and information agency [@altman2018grand] Because no systematic public data on self-reported author characteristics exists, however, research on participation in scholarly publications must use bibliometric methods to impute gender from author names.[See, for example, @lariviere2013bibliometrics .]  As an preliminary analysis, we apply a method that is commonly used in scientometric analysis and which is based on analysis of historical censuses [@blevins2015jane] to impute gender based on author names. We then  use this imputation to explore the inclusion of works authored by men and women over time.[^3] 
+We can do better -- making scholarship more inclusive requires making the characteristics of those participating visible: A more open & equitable scholarly knowledge ecosystem should support inclusion, self-description, and information agency [@altman2018grand] Because no systematic public data on self-reported author characteristics exists, however, research on participation in scholarly publications must use bibliometric methods to impute gender from author names. [See, for example, @lariviere2013bibliometrics .] As an preliminary analysis, we apply a method that is commonly used in scientometric analysis and which is based on analysis of historical censuses [@blevins2015jane] to impute gender based on author names. We then use this imputation to explore the inclusion of works authored by men and women over time.[^3]
 
-[^3]: These imputations should be considered a very preliminary aggregate estimate, created for the purpose of promoting general discussion, potential issue spotting, and hypothesis generation. This method is  intended for aggregate analysis and not for individual-level analysis -- e.g. the assignment of an pronoun to an  author. Further the  reported imputation describes only point estimates, and does not reflect uncertainty from several sources: including omissions in the original data sources, heuristic name extraction, and uncertainty in name to gender assignment.  Further, the analysis treats gender as a binary category, and thus will structurally omit non-binary gender categories. 
+[^3]: These imputations should be considered a very preliminary aggregate estimate, created for the purpose of promoting general discussion, potential issue spotting, and hypothesis generation. This method is intended for aggregate analysis and not for individual-level analysis -- e.g. the assignment of an pronoun to an author. Further the reported imputation describes only point estimates, and does not reflect uncertainty from several sources: including omissions in the original data sources, heuristic name extraction, and uncertainty in name to gender assignment. Further, the analysis treats gender as a binary category, and thus will structurally omit non-binary gender categories.
 
 ```{r lib-gender, include=FALSE}
 library(gender)
@@ -360,9 +360,9 @@ doab_pivot_df %>%
               )
 ```
 
-This preliminary estimate indicates that roughly thirty-six percent of open access monographs published in the last ten years have at least one female author. (This proportion remains roughly varies over time -- but does not show a clear time trend.) As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) are women, this indicates a need to evaluate systemic bias of who is included in open monograph publishing.[^4]
+This preliminary estimate indicates that roughly thirty-six percent of open access monographs published in the last ten years have at least one female author. (This proportion varies to a limited extent over time -- but does not show a clear time trend.) As OA monographs are dominated by the humanities, where over fifty percent of US Ph.D. recipients (and over forty percent of faculty in most humanities disciplines) are women, this indicates a need to evaluate systemic bias of who is included in open monograph publishing.[^4]
 
-[^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does not imply that bias in OA is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established. The classification reported in the table is based on the IPUMS corpus. As a sensitivity check we evaluated using two other method:  Use of historical Social Security Administration database yields a higher estimate of participation by at least one female author, but still lower than baseline expection. Use of the popular 'Kantrowitz' method, which is based on a much smaller corpus -- yields significantly lower estimates of female author participation. Notwithstanding -- the range of estimates does not alter the overall substantive conclusions reported above. 
+[^4]: This is a formative, not summative analysis, and should be approached with caution. The gender imputation process contains many sources of unmodeled uncertainty; the analysis uses a US baseline, but the data does not support excluding non-US authors. Further this does not imply that bias in OA is worse than in scholarly publishing in general, since no baseline for gender inclusion in a comparable sample of non-open monographs has been established. The classification reported in the table is based on the IPUMS corpus. As a sensitivity check we evaluated using two other method: Use of historical Social Security Administration database yields a higher estimate of participation by at least one female author, but still lower than baseline expection. Use of the popular 'Kantrowitz' method, which is based on a much smaller corpus -- yields significantly lower estimates of female author participation. Notwithstanding -- the range of estimates does not alter the overall substantive conclusions reported above.
 
 ## Follow the Money?
 
@@ -413,8 +413,7 @@ rev_plot <- { pub_key %>%
     theme_fivethirtyeight() +
    labs(title = "Total Revenue (Euros) by Top Publishers", x = "Publisher", y = "Revenue") + coord_flip()
   } %>% 
-  ggplotly(dynamicTicks=TRUE) %>%
-  slice(1:25)
+  ggplotly(dynamicTicks=TRUE) 
 
 revSlider <-  filter_slider("revenue", "Revenue",
            pub_key, "TOTAL_REVENUE", round=TRUE, dragRange=TRUE,min=10000, ticks=FALSE)
@@ -469,7 +468,7 @@ The most typical book charges in the data are approximately two thousand euros a
 
 The exploration above raises a number of questions -- under what conditions does the open availability of the monograph impact prices and sales? What are mediating factors -- does the length or subject of the monograph mediate sales effects? What are potential mechanisms at play?
 
-This exploration is limited by existing data. Each individual press has information on the sales, costs, and usage of the monographs they publish. If pooled, this data could  potentially answer deeper questions about the economics and utility of academic monographs, and could guide a transition to open access models.
+This exploration is limited by existing data. Each individual press has information on the sales, costs, and usage of the monographs they publish. If pooled, this data could potentially answer deeper questions about the economics and utility of academic monographs, and could guide a transition to open access models.
 
 # About this Document
 
@@ -479,7 +478,7 @@ This analysis relies primarily on the [R]{.ul} language, with [python]{.ul} for 
 
 All references in this document are managed in [Zotero,]{.ul} We use tidyverse style guidelines.
 
-The authors describe contributions to this Essay using a standard taxonomy (see [\@allen2014]) Micah Altman provided the core formulation of the essay's goals and aims, and led the writing, methodology, data curation, and visualization. Chris Bourg and Sue Kriegsman contributed to conceptualization and provided review. CREOS research assistant Shelley Choi provided assistance with preliminary data visualization and software implementation.
+The authors describe contributions to this white paper using a standard taxonomy (see [@allen2014]). Micah Altman provided the core formulation of the essay's goals and aims, and led the writing, methodology, data curation, and visualization. Chris Bourg and Sue Kriegsman contributed to conceptualization and provided review. CREOS research assistant Shelley Choi provided assistance with preliminary data visualization and software implementation.
 
 <aside>
 
