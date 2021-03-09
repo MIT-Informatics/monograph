@@ -1,0 +1,17 @@
+---
+title: "package reproducibility notes"
+output: html_notebook
+---
+
+Results of SessionInfo after running oamono notebook
+```{r}
+sessionInfo()
+```
+
+
+Notes:
+- using library with versions::install.date() of 3/5/2021 for the  above packages should work.
+
+- renv() would be preferred in future -- but appears to currently have conflicts with conda and rstudio. With renv active, python imports of installed libs fail / rstudio crashes on restart.
+
+   
